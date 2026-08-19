@@ -11,7 +11,7 @@ confirmation from the ORIE office.*
 
 **Instructor:** Peter Frazier
 **Lectures:** MWF 9:05am - 9:55am, starting **[TBD --- confirm first day of classes]**
-**Location:** **[TBD]** in Ithaca, and via zoom from **[TBD]** at Cornell Tech
+**Location:** Upson Hall 222 in Ithaca. Available online for students at Cornell Tech.
 **Credits:** S/U, can be taken for 2 or 3 credits
 **Last updated:** **[TBD]**
 
@@ -147,5 +147,5 @@ comments 35%, project 50%. 2-credit: max of the two homework scores 30%, article
 
 **Piazza:** **[TBD --- new signup link, or drop Piazza.]**
 
-**Zoom:** **[TBD --- new meeting link for the Cornell Tech section and for days when the
+**Zoom:** **[TBD --- new meeting link, for Cornell Tech students and for days when the
 instructor is traveling.]**

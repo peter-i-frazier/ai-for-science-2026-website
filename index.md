@@ -1,7 +1,7 @@
 ## Cornell ORIE, Fall 2026
 
 **Instructor:** [Peter Frazier](https://people.orie.cornell.edu/pfrazier/)
-**Meetings:** MWF 9:05am - 9:55am *(room TBD)*, streamed to Cornell Tech *(room TBD)*
+**Meetings:** MWF 9:05am - 9:55am, Upson Hall 222. Available online for Cornell Tech students.
 **Credits:** 2 or 3, S/U
 **Syllabus:** [full syllabus](syllabus.html) *(draft)*
 
