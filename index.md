@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 ## Cornell ORIE, Fall 2026
 
 **Instructor:** [Peter Frazier](https://people.orie.cornell.edu/pfrazier/)
@@ -12,17 +16,10 @@ Applied Operations Research."** Register for **ORIE 7190**.
 
 ## What the course is
 
-Tools from AI and machine learning --- deep-learning protein structure prediction,
-machine-learned interatomic potentials, language-model agents that plan experiments --- are
-delivering real value in chemistry, physics, biology, and materials science. Problems from the
-sciences, such as the need to integrate first-principles knowledge into empirically-driven
-predictions, are at the same time driving AI/ML methodology. This course introduces students to
-the research and the opportunities at that intersection.
+Tools from AI and machine learning --- deep-learning protein structure prediction, machine-learned interatomic potentials, language-model agents that plan experiments --- are delivering real value in chemistry, physics, biology, and materials science. Problems from the sciences, such as the need to integrate first-principles knowledge into empirically-driven predictions, are at the same time driving AI/ML methodology. This course introduces students to the research and the opportunities at that intersection.
 
 The format is a paper-reading seminar. Each session takes a paper, or a small group of related
-papers, and works through it. Lectures supply the AI/ML methodology and the scientific context a
-paper needs, and then we discuss the paper. Students read before class and submit a few thoughts
-beforehand.
+papers, and works through it. Lectures supply the AI/ML methodology and the scientific context a paper needs, and then we discuss the paper. Students read before class and submit a few thoughts beforehand.
 
 The course ends with an optional computational project, solo or in a pair. Students taking the
 project earn 3 credits; others earn 2.

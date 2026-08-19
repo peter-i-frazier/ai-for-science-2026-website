@@ -3,3 +3,10 @@ description: Cornell ORIE, Fall 2026. A paper-reading seminar on modern AI for s
 theme: jekyll-theme-cayman
 url: https://peter-i-frazier.github.io
 baseurl: /ai-for-science-2026-website
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .obsidian
+  - README.md
