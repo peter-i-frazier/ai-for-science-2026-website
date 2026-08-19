@@ -4,59 +4,94 @@ title: Topics
 
 # Topics and resources
 
-A working list. Topics may be added, dropped, or reordered during the semester based on time and
-student interest. To suggest a topic or a paper, open an issue or a pull request on
+A working list, in roughly the order we will cover it. Topics may be added, dropped, or reordered
+during the semester based on time and student interest. To suggest a topic or a paper, open an
+issue or a pull request on
 [the repo](https://github.com/peter-i-frazier/ai-for-science-2026-website).
 
 [Back to the course page](index.html)
 
 ---
 
-## Machine-learned interatomic potentials (MLIPs)
+## 1. Supervised learning in science: property prediction
 
-- *resources TBD*
+The core methods, and the setting where they are most mature. Molecular and materials property
+prediction is where representation choice, benchmarking, and data scarcity all show up first.
 
-## Protein language models and structure prediction
+- *Neural Message Passing for Quantum Chemistry* (ICML 2017) — [arXiv:1704.01212](https://arxiv.org/abs/1704.01212)
+- Heid et al., *Chemprop: A Machine Learning Package for Chemical Property Prediction*, J. Chem. Inf. Model. — [doi:10.1021/acs.jcim.3c01250](https://doi.org/10.1021/acs.jcim.3c01250)
+- Dunn et al., *Benchmarking materials property prediction methods: the Matbench test set*, npj Comput. Mater. 2020 — [doi:10.1038/s41524-020-00406-3](https://doi.org/10.1038/s41524-020-00406-3)
 
-- AlphaFold --- using OpenFold
-- ESM3
-- *more TBD*
+## 2. Machine-learned interatomic potentials
 
-## Discrete diffusion for protein generation
+- *E(3)-equivariant graph neural networks for data-efficient and accurate interatomic potentials* (NequIP), Nature Communications 2022 — [doi:10.1038/s41467-022-29939-5](https://doi.org/10.1038/s41467-022-29939-5)
+- *MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields* (NeurIPS 2022) — [arXiv:2206.07697](https://arxiv.org/abs/2206.07697)
+- *A foundation model for atomistic materials chemistry* (MACE-MP-0) — [arXiv:2401.00096](https://arxiv.org/abs/2401.00096)
+- Dataset: *Open Materials 2024 (OMat24)* — [arXiv:2410.12771](https://arxiv.org/abs/2410.12771)
 
-- ESM3 100B uses masked diffusion for training and sampling (Science, 2025)
-- work by Volodymyr Kuleshov's group at Cornell Tech
-- background: discrete diffusion
+## 3. Protein language models and structure prediction
 
-## Generative models for design in science
+- Jumper et al., *Highly accurate protein structure prediction with AlphaFold*, Nature 2021 — [doi:10.1038/s41586-021-03819-2](https://doi.org/10.1038/s41586-021-03819-2)
+- *Evolutionary-scale prediction of atomic-level protein structure with a language model* (ESMFold), Science 2023 — [doi:10.1126/science.ade2574](https://doi.org/10.1126/science.ade2574)
+- Abramson et al., *Accurate structure prediction of biomolecular interactions with AlphaFold 3*, Nature 2024 — [doi:10.1038/s41586-024-07487-w](https://doi.org/10.1038/s41586-024-07487-w)
+- Hayes et al., *Simulating 500 million years of evolution with a language model* (ESM3), Science 2025 — [doi:10.1126/science.ads0018](https://doi.org/10.1126/science.ads0018)
 
-- diffusion models for generation in science
+## 4. Generative models for design
 
-## Black-box optimization
+Merges what were separate topics: discrete diffusion for protein generation, and generative
+design in materials and chemistry. Same machinery, different domains.
 
-- AlphaEvolve
-- LLOME
+- Watson et al., *De novo design of protein structure and function with RFdiffusion*, Nature 2023 — [doi:10.1038/s41586-023-06415-8](https://doi.org/10.1038/s41586-023-06415-8)
+- Zeni et al., *A generative model for inorganic materials design* (MatterGen), Nature 2025 — [doi:10.1038/s41586-025-08628-5](https://doi.org/10.1038/s41586-025-08628-5)
+- *Simple and Effective Masked Diffusion Language Models* (NeurIPS 2024) — [arXiv:2406.07524](https://arxiv.org/abs/2406.07524) — Kuleshov group, Cornell Tech
+- *Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution* (SEDD, ICML 2024) — [arXiv:2310.16834](https://arxiv.org/abs/2310.16834)
 
-## Agents for science
+ESM3 (above) also belongs here — it trains and samples with masked diffusion.
 
-- AI co-scientist systems, plus the language-modeling background needed to understand them
-- Alán Aspuru-Guzik's papers
-- FutureHouse
-- work from Yisong Yue's group
+## 5. Black-box optimization for design
 
-## Self-driving labs
+- *AlphaEvolve: A coding agent for scientific and algorithmic discovery* — [arXiv:2506.13131](https://arxiv.org/abs/2506.13131)
+- *Generalists vs. Specialists: Evaluating LLMs on Highly-Constrained Biophysical Sequence Optimization Problems* (LLOME) — [arXiv:2410.22296](https://arxiv.org/abs/2410.22296)
 
-- *resources TBD*
+## 6. Uncertainty quantification and active learning
 
-## Computer vision for characterization and robotics
+*(proposed addition)* The thread connecting optimization, self-driving labs, and MLIP data
+efficiency. Every method above that chooses its next experiment needs a calibrated notion of what
+it does not know.
 
-- *resources TBD*
+- Hirschfeld et al., *Uncertainty Quantification Using Neural Networks for Molecular Property Prediction*, J. Chem. Inf. Model. 2020 — [doi:10.1021/acs.jcim.0c00502](https://doi.org/10.1021/acs.jcim.0c00502)
 
-## Inverse problems with generative models
+## 7. Agents for science
 
-- electron ptychography (Christian's work)
-- InverseBench (ICLR 2025)
+- Boiko et al., *Autonomous chemical research with large language models* (Coscientist), Nature 2023 — [doi:10.1038/s41586-023-06792-0](https://doi.org/10.1038/s41586-023-06792-0)
+- *Language agents achieve superhuman synthesis of scientific knowledge* (PaperQA2) — [arXiv:2409.13740](https://arxiv.org/abs/2409.13740)
 
-## Extracting information from the literature
+## 8. Self-driving labs
 
-- Jake's papers
+- Burger et al., *A mobile robotic chemist*, Nature 2020 — [doi:10.1038/s41586-020-2442-2](https://doi.org/10.1038/s41586-020-2442-2)
+- MacLeod et al., *Self-driving laboratory for accelerated discovery of thin-film materials*, Science Advances 2020 — [doi:10.1126/sciadv.aaz8867](https://doi.org/10.1126/sciadv.aaz8867)
+- Szymanski et al., *An autonomous laboratory for the accelerated synthesis of inorganic materials* (A-Lab), Nature 2023 — [doi:10.1038/s41586-023-06734-w](https://doi.org/10.1038/s41586-023-06734-w)
+- Leeman et al., *Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis*, PRX Energy 2024 — [doi:10.1103/PRXEnergy.3.011002](https://doi.org/10.1103/PRXEnergy.3.011002) — the critique of A-Lab; read the two together
+
+## 9. Neural surrogates for simulation
+
+*(proposed addition)* Weather is the clearest case of AI displacing a mature physics-based
+pipeline in operational use, which makes it the right place to ask what made that domain tractable.
+
+- Lam et al., *Learning skillful medium-range global weather forecasting* (GraphCast), Science 2023 — [doi:10.1126/science.adi2336](https://doi.org/10.1126/science.adi2336)
+- Price et al., *Probabilistic weather forecasting with machine learning* (GenCast), Nature 2024 — [doi:10.1038/s41586-024-08252-9](https://doi.org/10.1038/s41586-024-08252-9)
+- *Fourier Neural Operator for Parametric Partial Differential Equations* — [arXiv:2010.08895](https://arxiv.org/abs/2010.08895)
+
+## 10. Computer vision for characterization
+
+- Zhong et al., *CryoDRGN: reconstruction of heterogeneous cryo-EM structures using neural networks*, Nature Methods 2021 — [doi:10.1038/s41592-020-01049-4](https://doi.org/10.1038/s41592-020-01049-4)
+- *Atom identification in bilayer moiré materials with Gomb-Net* — [arXiv:2502.09791](https://arxiv.org/abs/2502.09791)
+
+## 11. Inverse problems with generative models
+
+- *Diffusion Posterior Sampling for General Noisy Inverse Problems* (ICLR 2023) — [arXiv:2209.14687](https://arxiv.org/abs/2209.14687)
+- *InverseBench: Benchmarking Plug-and-Play Diffusion Priors for Inverse Problems in Physical Sciences* (ICLR 2025) — [arXiv:2503.11043](https://arxiv.org/abs/2503.11043)
+
+## 12. Extracting information from the literature
+
+- Dagdelen et al., *Structured information extraction from scientific text with large language models*, Nature Communications 2024 — [doi:10.1038/s41467-024-45563-x](https://doi.org/10.1038/s41467-024-45563-x)

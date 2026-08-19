@@ -14,19 +14,16 @@ Applied Operations Research."** Register for **ORIE 7190**.
 
 ---
 
-## What the course is
+## Course Description
 
-Tools from AI and machine learning --- deep-learning protein structure prediction, machine-learned interatomic potentials, language-model agents that plan experiments --- are delivering real value in chemistry, physics, biology, and materials science. Problems from the sciences, such as the need to integrate first-principles knowledge into empirically-driven predictions, are at the same time driving AI/ML methodology. This course introduces students to the research and the opportunities at that intersection.
+2026 is an exciting time in AI for science. Deep-learning-based protein structure prediction, machine-learned interatomic potentials, language-model agents that plan experiments, and self-driving labs are all accelerating the pace of progress in chemistry, physics, biology, materials science, and other scientific domains. Problems from the sciences, such as the need to integrate first-principles knowledge into empirically-driven predictions, are simultaneously inspiring AI/ML methodology development. Commercially, venture capital, tech companies like Google and Anthropic, and the pharmaceutical industry are all making major investments with the expectation that AI for science will pay massive dividends.
 
-The format is a paper-reading seminar. Each session takes a paper, or a small group of related
-papers, and works through it. Lectures supply the AI/ML methodology and the scientific context a paper needs, and then we discuss the paper. Students read before class and submit a few thoughts beforehand.
+This course brings together students from both mathematical/computational and scientific backgrounds. For students from the sciences, the course offers an accessible introduction to core AI concepts and methods that can accelerate your science. For students with a mathematical or computational background, the course introduces important scientific problems where AI is having an impact, state of the art methods for these problems, and research questions that, if answered, would accelerate this impact.
 
-The course ends with an optional computational project, solo or in a pair. Students taking the
-project earn 3 credits; others earn 2.
 
 ---
 
-## Who it's for
+## Intended Audience and Prerequisites
 
 PhD students in three groups:
 
@@ -35,16 +32,14 @@ PhD students in three groups:
 - already working at the AI/ML-science intersection, want to broaden
 
 **Prerequisites:** ability to write python, and probability/statistics/ML at an undergraduate
-level (e.g., comparable to ORIE 3120). No scientific background is assumed. Scientific concepts
+level. No scientific background is assumed. Scientific concepts
 will be explained in an accessible way.
 
 ---
 
 ## Topics
 
-The planned topic list is on the [topics page](topics.html). It is a working document ---
-students in the course are asked to help build it, and suggestions are welcome throughout the
-semester.
+The planned topic list is on the [topics page](topics.html). 
 
 ---
 
