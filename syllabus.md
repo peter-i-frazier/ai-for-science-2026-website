@@ -20,15 +20,19 @@ title: Syllabus
 
 This course brings together students from both mathematical/computational and scientific backgrounds. For students from the sciences, the course offers an accessible introduction to core AI concepts and methods that can accelerate your science. For students with a mathematical or computational background, the course introduces important scientific problems where AI is having an impact and research questions that, if answered, would accelerate this impact.
 
-The course uses lectures and homework to teach core AI concepts
-
 It also aims to 
 
 This class will introduce students to emerging research and opportunities at this intersection through discussion of papers.
 
 ## Course format
 
-The course is a paper-reading seminar. Each session takes a paper, or a small group of related
+The course has two components: lectures and homeworks are used to teach the core AI concepts 
+
+
+
+
+
+is a paper-reading seminar. Each session takes a paper, or a small group of related
 papers, and works through it. The instructor will first introduce the background needed to
 understand an area in a lecture format, including both the AI/ML methodology and the scientific
 context. We will then discuss the papers. Students are expected to read the papers before the
@@ -37,18 +41,33 @@ in-class discussion and to offer a few thoughts beforehand via a google form.
 Students are welcome from a variety of backgrounds and it is likely that some will have a
 stronger AI/ML or mathematical background while others will have a stronger background in a
 scientific domain. This will create an opportunity to practice inclusivity, including being
-patient when questions are asked and discussing papers in a way that helps everyone in the class
-understand and participate.
+patient when questions are asked and discussing papers in a way that helps everyone in the class understand and participate.
 
-Students will help build the topic list. The running list is on the
-[topics page](topics.html), and suggestions are welcome throughout the semester.
+Students will help build the topic list. The running list is on the [topics page](topics.html), and suggestions are welcome throughout the semester.
 
-**[TBD --- Fall 2023 opened with two homework assignments and a two-week crash course in
-supervised learning, so that students with less AI/ML background could follow the paper-reading
-part of the course. The first homework let students assess their own background; the second was
-optional for those who did well on the first. That scaffolding is dropped in this draft because
-Fall 2026 is planned as a pure paper-reading seminar. Reinstate it here, and in the assessment
-weights below, if you want the background check back.]**
+## Homework
+
+The course is not only a paper-reading seminar. It opens with a crash course in the AI/ML
+background the papers assume, and there are four homework assignments through the semester,
+designed to reinforce the core ideas. The goal is that a student who arrives with a weak AI/ML
+background leaves understanding how these methods actually work.
+
+**Each assignment has two parts.**
+
+**Part A --- no AI assistance.** Short conceptual questions you answer in your own words. These
+exist so you can find out what you actually understand. They are graded on evidence of thought
+rather than on correctness, so there is nothing to be gained by getting the "right" answer some
+other way, and a lot to lose. Expect roughly 30 minutes.
+
+**Part B --- AI assistance encouraged.** The implementation and experimentation. Use whatever
+tools you would use in your own research. Because these tools make the mechanical parts cheap,
+Part B asks for more than a comparable assignment would have a few years ago.
+
+Note at the top of each submission which tools you used and where. This is not a compliance
+exercise. Being explicit about it is a skill worth having.
+
+**[TBD --- decide whether to keep the 2023 structure where HW1 doubles as a background
+self-assessment and later work is calibrated to it.]**
 
 ## Topics
 
@@ -117,22 +136,33 @@ to national AI computing infrastructure for courses.]**
 
 ## Assessment
 
-The course will be graded S/U. Grading on assignments will be generous with a focus on competence
-rather than perfection but the bar for an S will be higher than usual: to earn an S, students
-must get 80% of the points in the course.
+You choose how much to take on. There are three ways to register.
 
-For students taking the 3-credit version of the course, points will be awarded according to the
-following breakdown:
+| | Attend + paper comments | Homework | Project | Credits | Grading |
+|---|---|---|---|---|---|
+| **Seminar** | ✓ | | | 2 | S/U |
+| **Seminar + homework** | ✓ | ✓ | | 2 | letter |
+| **Full** | ✓ | ✓ | ✓ | 3 | letter |
 
-- Comments on research articles in submitted google forms (50%)
-- Project report and presentation (50%)
+Everyone reads the papers and submits brief comments beforehand. That is what makes the
+discussion work, so it is required at every level. It is a low bar --- a few sentences per paper.
 
-For students taking the 2-credit version:
+The letter-graded tracks exist for students who want to be held to something. Grading is generous
+and focused on competence rather than perfection: **competence plus consistent effort earns an
+A-**. Opting into a grade should not be a gamble, and if you are on the fence, it is a reason to
+opt in rather than a reason not to.
 
-- Comments on research articles in submitted google forms (100%)
+Points:
 
-**[TBD --- 2023 weights, for reference. 3-credit: max of the two homework scores 15%, article
-comments 35%, project 50%. 2-credit: max of the two homework scores 30%, article comments 70%.]**
+| | Paper comments | Homework | Project |
+|---|---|---|---|
+| Seminar (2cr, S/U) | 100% | | |
+| Seminar + homework (2cr, letter) | 40% | 60% | |
+| Full (3cr, letter) | 25% | 35% | 40% |
+
+For the S/U track, the bar for an S is higher than usual: 80% of the available points.
+
+The deadline for switching between tracks is **[TBD]**.
 
 ## Course schedule
 
