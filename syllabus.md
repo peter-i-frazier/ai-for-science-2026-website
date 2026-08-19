@@ -78,6 +78,12 @@ In the course roster, this course is listed under a different name: **"Selected 
 Operations Research."** "Selected Topics in X" is the generic name given to 7000-level courses. Because they are typically offered on a one-time-only basis, they receive a generic name rather
 than one specific to their contents. Register for **ORIE 7190**.
 
+## Relation to CS 6703
+
+There is another course called "AI for Science", CS 6703, taught by Carla Gomes. It meets on
+Fridays from 2:00-4:30pm. The two courses, ORIE 7190 and CS 6703, are complementary. Students
+interested in AI for Science may want to come to the first meeting of both classes.
+
 ## Zoom
 
 **[Zoom link](https://cornell.zoom.us/j/97944463031?pwd=xgX3YdpRwdS9FpqQSebKg2CteNFsvL.1)** 
