@@ -4,6 +4,12 @@ theme: jekyll-theme-cayman
 url: https://peter-i-frazier.github.io
 baseurl: /ai-for-science-2026-website
 
+# Cayman renders the stylesheet href as "style.css?v={{ site.github.build_revision }}".
+# Locally that is empty, so the URL never changes and browsers serve a stale cached copy.
+# Bump this string whenever a CSS change needs to reach an already-loaded browser.
+github:
+  build_revision: css-4
+
 defaults:
   - scope:
       path: ""

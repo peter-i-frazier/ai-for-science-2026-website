@@ -48,6 +48,10 @@ The planned topic list is on the [topics page](topics.html).
 Questions about whether the course is a fit: email Peter at `pf98@cornell.edu`.
 
 <p class="image-credit" markdown="0">
+Claude was used in the preparation of this webpage.
+</p>
+
+<p class="image-credit" markdown="0">
 Banner: scanning electron micrograph of an indium phosphide nanocrystalline surface, with
 flower-like indium oxide crystals formed by electrochemical etching.
 &ldquo;<a href="https://commons.wikimedia.org/wiki/File:Stone_Flower_(%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B0_%D0%BA%D0%B2%D1%96%D1%82%D0%BA%D0%B0).jpg">Stone Flower</a>&rdquo;

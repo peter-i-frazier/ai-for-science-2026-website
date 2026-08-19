@@ -80,7 +80,7 @@ than one specific to their contents. Register for **ORIE 7190**.
 
 ## Zoom
 
-**[Zoom link][https://cornell.zoom.us/j/97944463031?pwd=xgX3YdpRwdS9FpqQSebKg2CteNFsvL.1]** 
+**[Zoom link](https://cornell.zoom.us/j/97944463031?pwd=xgX3YdpRwdS9FpqQSebKg2CteNFsvL.1)** 
 
 Email Peter (pf98@cornell.edu) for the passcode or join from your Cornell zoom account.
 

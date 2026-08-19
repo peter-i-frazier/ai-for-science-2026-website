@@ -18,12 +18,10 @@ Classical supervised learning methods applied to important problems in science. 
 - Heid et al., *Chemprop: A Machine Learning Package for Chemical Property Prediction*, J. Chem. Inf. Model. — [doi:10.1021/acs.jcim.3c01250](https://doi.org/10.1021/acs.jcim.3c01250)
 - Dunn et al., *Benchmarking materials property prediction methods: the Matbench test set*, npj Comput. Mater. 2020 — [doi:10.1038/s41524-020-00406-3](https://doi.org/10.1038/s41524-020-00406-3)
 
-## 2. Computer vision and inverse problems in characterization
+## 2. Agents for science
 
-Recovering structure from measurements. Cryo-EM reconstruction and diffusion-prior methods for inverse problems are the same problem viewed two ways.
-
-- Zhong et al., *CryoDRGN: reconstruction of heterogeneous cryo-EM structures using neural networks*, Nature Methods 2021 — [doi:10.1038/s41592-020-01049-4](https://doi.org/10.1038/s41592-020-01049-4)
-- *InverseBench: Benchmarking Plug-and-Play Diffusion Priors for Inverse Problems in Physical Sciences* (ICLR 2025) — [arXiv:2503.11043](https://arxiv.org/abs/2503.11043)
+- Boiko et al., *Autonomous chemical research with large language models* (Coscientist), Nature 2023 — [doi:10.1038/s41586-023-06792-0](https://doi.org/10.1038/s41586-023-06792-0)
+- *Language agents achieve superhuman synthesis of scientific knowledge* (PaperQA2) — [arXiv:2409.13740](https://arxiv.org/abs/2409.13740)
 
 ## 3. Machine-learned interatomic potentials
 
@@ -46,8 +44,6 @@ Recovering structure from measurements. Cryo-EM reconstruction and diffusion-pri
 - *Simple and Effective Masked Diffusion Language Models* (NeurIPS 2024) — [arXiv:2406.07524](https://arxiv.org/abs/2406.07524) — Kuleshov group, Cornell Tech
 - *Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution* (SEDD, ICML 2024) — [arXiv:2310.16834](https://arxiv.org/abs/2310.16834)
 
-ESM3 (above) also belongs here — it trains and samples with masked diffusion.
-
 ## 6. Uncertainty quantification, active learning, and Bayesian optimization
 
 - Frazier, *A Tutorial on Bayesian Optimization* — [arXiv:1807.02811](https://arxiv.org/abs/1807.02811)
@@ -65,32 +61,18 @@ ESM3 (above) also belongs here — it trains and samples with masked diffusion.
 - Szymanski et al., *An autonomous laboratory for the accelerated synthesis of inorganic materials* (A-Lab), Nature 2023 — [doi:10.1038/s41586-023-06734-w](https://doi.org/10.1038/s41586-023-06734-w)
 - Leeman et al., *Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis*, PRX Energy 2024 — [doi:10.1103/PRXEnergy.3.011002](https://doi.org/10.1103/PRXEnergy.3.011002) — the critique of A-Lab; read the two together
 
-## 9. Agents for science
+## 9. Computer vision and inverse problems in characterization
 
-- Boiko et al., *Autonomous chemical research with large language models* (Coscientist), Nature 2023 — [doi:10.1038/s41586-023-06792-0](https://doi.org/10.1038/s41586-023-06792-0)
-- *Language agents achieve superhuman synthesis of scientific knowledge* (PaperQA2) — [arXiv:2409.13740](https://arxiv.org/abs/2409.13740)
+- Zhong et al., *CryoDRGN: reconstruction of heterogeneous cryo-EM structures using neural networks*, Nature Methods 2021 — [doi:10.1038/s41592-020-01049-4](https://doi.org/10.1038/s41592-020-01049-4)
+- *InverseBench: Benchmarking Plug-and-Play Diffusion Priors for Inverse Problems in Physical Sciences* (ICLR 2025) — [arXiv:2503.11043](https://arxiv.org/abs/2503.11043)
 
 ## 10. Neural surrogates for simulation: PINNs, neural operators, and weather
-
-Three ways to put a neural network where a solver used to be, and they are not interchangeable. A
-PINN puts the physics in the loss and solves one problem instance. A neural operator learns the
-solution map across instances from data. A weather model replaces an entire operational pipeline.
-Weather is the clearest case of AI displacing mature physics-based software in production, which
-makes it the right place to ask what made that domain tractable when others have not been.
-
-**Physics-informed neural networks**
 
 - Raissi et al., *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear PDEs*, J. Comput. Phys. 2019 — [doi:10.1016/j.jcp.2018.10.045](https://doi.org/10.1016/j.jcp.2018.10.045)
 - Karniadakis et al., *Physics-informed machine learning*, Nature Reviews Physics 2021 — [doi:10.1038/s42254-021-00314-5](https://doi.org/10.1038/s42254-021-00314-5)
 - *Characterizing possible failure modes in physics-informed neural networks* (NeurIPS 2021) — [arXiv:2109.01050](https://arxiv.org/abs/2109.01050)
 - McGreivy & Hakim, *Weak baselines and reporting biases lead to overoptimism in machine learning for fluid-related partial differential equations*, Nature Machine Intelligence 2024 — [doi:10.1038/s42256-024-00897-5](https://doi.org/10.1038/s42256-024-00897-5)
-
-**Neural operators**
-
 - *Fourier Neural Operator for Parametric Partial Differential Equations* — [arXiv:2010.08895](https://arxiv.org/abs/2010.08895)
-
-**Weather**
-
 - Lam et al., *Learning skillful medium-range global weather forecasting* (GraphCast), Science 2023 — [doi:10.1126/science.adi2336](https://doi.org/10.1126/science.adi2336)
 - Price et al., *Probabilistic weather forecasting with machine learning* (GenCast), Nature 2024 — [doi:10.1038/s41586-024-08252-9](https://doi.org/10.1038/s41586-024-08252-9)
 
