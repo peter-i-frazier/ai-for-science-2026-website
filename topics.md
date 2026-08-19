@@ -18,10 +18,12 @@ Classical supervised learning methods applied to important problems in science. 
 - Heid et al., *Chemprop: A Machine Learning Package for Chemical Property Prediction*, J. Chem. Inf. Model. — [doi:10.1021/acs.jcim.3c01250](https://doi.org/10.1021/acs.jcim.3c01250)
 - Dunn et al., *Benchmarking materials property prediction methods: the Matbench test set*, npj Comput. Mater. 2020 — [doi:10.1038/s41524-020-00406-3](https://doi.org/10.1038/s41524-020-00406-3)
 
-## 2. Computer vision for characterization
+## 2. Computer vision and inverse problems in characterization
+
+Recovering structure from measurements. Cryo-EM reconstruction and diffusion-prior methods for inverse problems are the same problem viewed two ways.
 
 - Zhong et al., *CryoDRGN: reconstruction of heterogeneous cryo-EM structures using neural networks*, Nature Methods 2021 — [doi:10.1038/s41592-020-01049-4](https://doi.org/10.1038/s41592-020-01049-4)
-- *Atom identification in bilayer moiré materials with Gomb-Net* — [arXiv:2502.09791](https://arxiv.org/abs/2502.09791)
+- *InverseBench: Benchmarking Plug-and-Play Diffusion Priors for Inverse Problems in Physical Sciences* (ICLR 2025) — [arXiv:2503.11043](https://arxiv.org/abs/2503.11043)
 
 ## 3. Machine-learned interatomic potentials
 
@@ -48,35 +50,33 @@ ESM3 (above) also belongs here — it trains and samples with masked diffusion.
 
 ## 6. Uncertainty quantification, active learning, and Bayesian optimization
 
+- Frazier, *A Tutorial on Bayesian Optimization* — [arXiv:1807.02811](https://arxiv.org/abs/1807.02811)
 - Hirschfeld et al., *Uncertainty Quantification Using Neural Networks for Molecular Property Prediction*, J. Chem. Inf. Model. 2020 — [doi:10.1021/acs.jcim.0c00502](https://doi.org/10.1021/acs.jcim.0c00502)
+
 ## 7. LLMs for black-box optimization
 
 - *AlphaEvolve: A coding agent for scientific and algorithmic discovery* — [arXiv:2506.13131](https://arxiv.org/abs/2506.13131)
 - *Generalists vs. Specialists: Evaluating LLMs on Highly-Constrained Biophysical Sequence Optimization Problems* (LLOME) — [arXiv:2410.22296](https://arxiv.org/abs/2410.22296)
 
-## 8. Agents for science
+## 8. Self-driving labs
+
+- Gongora et al., *A Bayesian experimental autonomous researcher for mechanical design* (BEAR), Science Advances 2020 — [doi:10.1126/sciadv.aaz1708](https://doi.org/10.1126/sciadv.aaz1708) — Keith Brown's group
+- Burger et al., *A mobile robotic chemist*, Nature 2020 — [doi:10.1038/s41586-020-2442-2](https://doi.org/10.1038/s41586-020-2442-2)
+- Szymanski et al., *An autonomous laboratory for the accelerated synthesis of inorganic materials* (A-Lab), Nature 2023 — [doi:10.1038/s41586-023-06734-w](https://doi.org/10.1038/s41586-023-06734-w)
+- Leeman et al., *Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis*, PRX Energy 2024 — [doi:10.1103/PRXEnergy.3.011002](https://doi.org/10.1103/PRXEnergy.3.011002) — the critique of A-Lab; read the two together
+
+## 9. Agents for science
 
 - Boiko et al., *Autonomous chemical research with large language models* (Coscientist), Nature 2023 — [doi:10.1038/s41586-023-06792-0](https://doi.org/10.1038/s41586-023-06792-0)
 - *Language agents achieve superhuman synthesis of scientific knowledge* (PaperQA2) — [arXiv:2409.13740](https://arxiv.org/abs/2409.13740)
 
-## 9. Self-driving labs
-
-- Burger et al., *A mobile robotic chemist*, Nature 2020 — [doi:10.1038/s41586-020-2442-2](https://doi.org/10.1038/s41586-020-2442-2)
-- MacLeod et al., *Self-driving laboratory for accelerated discovery of thin-film materials*, Science Advances 2020 — [doi:10.1126/sciadv.aaz8867](https://doi.org/10.1126/sciadv.aaz8867)
-- Szymanski et al., *An autonomous laboratory for the accelerated synthesis of inorganic materials* (A-Lab), Nature 2023 — [doi:10.1038/s41586-023-06734-w](https://doi.org/10.1038/s41586-023-06734-w)
-- Leeman et al., *Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis*, PRX Energy 2024 — [doi:10.1103/PRXEnergy.3.011002](https://doi.org/10.1103/PRXEnergy.3.011002) — the critique of A-Lab; read the two together
-## 12. Extracting information from the literature
-
-- Dagdelen et al., *Structured information extraction from scientific text with large language models*, Nature Communications 2024 — [doi:10.1038/s41467-024-45563-x](https://doi.org/10.1038/s41467-024-45563-x)
-
 ## 10. Neural surrogates for simulation: PINNs, neural operators, and weather
 
-*(proposed addition)* Three ways to put a neural network where a solver used to be, and they are
-not interchangeable. A PINN puts the physics in the loss and solves one problem instance. A
-neural operator learns the solution map across instances from data. A weather model replaces an
-entire operational pipeline. Weather is the clearest case of AI displacing mature physics-based
-software in production, which makes it the right place to ask what made that domain tractable
-when others have not been.
+Three ways to put a neural network where a solver used to be, and they are not interchangeable. A
+PINN puts the physics in the loss and solves one problem instance. A neural operator learns the
+solution map across instances from data. A weather model replaces an entire operational pipeline.
+Weather is the clearest case of AI displacing mature physics-based software in production, which
+makes it the right place to ask what made that domain tractable when others have not been.
 
 **Physics-informed neural networks**
 
@@ -94,8 +94,6 @@ when others have not been.
 - Lam et al., *Learning skillful medium-range global weather forecasting* (GraphCast), Science 2023 — [doi:10.1126/science.adi2336](https://doi.org/10.1126/science.adi2336)
 - Price et al., *Probabilistic weather forecasting with machine learning* (GenCast), Nature 2024 — [doi:10.1038/s41586-024-08252-9](https://doi.org/10.1038/s41586-024-08252-9)
 
-## 11. Inverse problems with generative models
+## 11. Extracting information from the literature
 
-- *Diffusion Posterior Sampling for General Noisy Inverse Problems* (ICLR 2023) — [arXiv:2209.14687](https://arxiv.org/abs/2209.14687)
-- *InverseBench: Benchmarking Plug-and-Play Diffusion Priors for Inverse Problems in Physical Sciences* (ICLR 2025) — [arXiv:2503.11043](https://arxiv.org/abs/2503.11043)
-
+- Dagdelen et al., *Structured information extraction from scientific text with large language models*, Nature Communications 2024 — [doi:10.1038/s41467-024-45563-x](https://doi.org/10.1038/s41467-024-45563-x)
