@@ -4,6 +4,12 @@ theme: jekyll-theme-cayman
 url: https://peter-i-frazier.github.io
 baseurl: /ai-for-science-2026-website
 
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
 exclude:
   - Gemfile
   - Gemfile.lock
