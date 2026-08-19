@@ -51,3 +51,33 @@ semester.
 ## Contact
 
 Questions about whether the course is a fit: email Peter at `pf98@cornell.edu`.
+
+---
+
+## The instructor
+
+<style>
+.photo-strip { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
+.photo-strip figure { flex: 1 1 200px; max-width: 240px; margin: 0; }
+.photo-strip img { width: 100%; height: 240px; object-fit: cover; border-radius: 6px; display: block; }
+.photo-strip figcaption { font-size: 0.9rem; margin-top: 0.4rem; text-align: center; }
+</style>
+
+<div class="photo-strip" markdown="0">
+  <figure>
+    <img src="{{ '/images/peter.png' | relative_url }}" alt="Peter Frazier">
+    <figcaption>Peter</figcaption>
+  </figure>
+  <!-- Drop unicycle.jpg into images/ and uncomment:
+  <figure>
+    <img src="{{ '/images/unicycle.jpg' | relative_url }}" alt="Peter on his unicycle">
+    <figcaption>On the unicycle</figcaption>
+  </figure>
+  -->
+  <!-- Drop gracie.jpg into images/ and uncomment:
+  <figure>
+    <img src="{{ '/images/gracie.jpg' | relative_url }}" alt="Gracie">
+    <figcaption>Gracie</figcaption>
+  </figure>
+  -->
+</div>
