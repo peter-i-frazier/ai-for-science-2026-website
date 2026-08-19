@@ -8,7 +8,11 @@ baseurl: /ai-for-science-2026-website
 # Locally that is empty, so the URL never changes and browsers serve a stale cached copy.
 # Bump this string whenever a CSS change needs to reach an already-loaded browser.
 github:
-  build_revision: css-4
+  build_revision: css-5
+  # Suppresses Cayman's "View on GitHub" banner button.
+  is_project_page: false
+
+show_downloads: false
 
 defaults:
   - scope:
