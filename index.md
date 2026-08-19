@@ -52,32 +52,10 @@ semester.
 
 Questions about whether the course is a fit: email Peter at `pf98@cornell.edu`.
 
----
-
-## The instructor
-
-<style>
-.photo-strip { display: flex; flex-wrap: wrap; gap: 1rem; margin: 1.5rem 0; }
-.photo-strip figure { flex: 1 1 200px; max-width: 240px; margin: 0; }
-.photo-strip img { width: 100%; height: 240px; object-fit: cover; border-radius: 6px; display: block; }
-.photo-strip figcaption { font-size: 0.9rem; margin-top: 0.4rem; text-align: center; }
-</style>
-
-<div class="photo-strip" markdown="0">
-  <figure>
-    <img src="{{ '/images/peter.png' | relative_url }}" alt="Peter Frazier">
-    <figcaption>Peter</figcaption>
-  </figure>
-  <!-- Drop unicycle.jpg into images/ and uncomment:
-  <figure>
-    <img src="{{ '/images/unicycle.jpg' | relative_url }}" alt="Peter on his unicycle">
-    <figcaption>On the unicycle</figcaption>
-  </figure>
-  -->
-  <!-- Drop gracie.jpg into images/ and uncomment:
-  <figure>
-    <img src="{{ '/images/gracie.jpg' | relative_url }}" alt="Gracie">
-    <figcaption>Gracie</figcaption>
-  </figure>
-  -->
-</div>
+<p class="image-credit" markdown="0">
+Banner: scanning electron micrograph of an indium phosphide nanocrystalline surface, with
+flower-like indium oxide crystals formed by electrochemical etching.
+&ldquo;<a href="https://commons.wikimedia.org/wiki/File:Stone_Flower_(%D0%9A%D0%B0%D0%BC%E2%80%99%D1%8F%D0%BD%D0%B0_%D0%BA%D0%B2%D1%96%D1%82%D0%BA%D0%B0).jpg">Stone Flower</a>&rdquo;
+by Yana Suchikova and Sergey Kovachov, licensed
+<a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+</p>

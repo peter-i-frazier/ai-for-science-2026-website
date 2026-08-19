@@ -1,0 +1,31 @@
+---
+---
+
+@import 'jekyll-theme-cayman';
+
+// Banner background: SEM of an indium phosphide nanocrystalline surface.
+// Dark overlay keeps the white banner text readable over the bright crystals.
+.page-header {
+  background-color: #1b2430;
+  background-image:
+    linear-gradient(rgba(12, 18, 26, 0.62), rgba(12, 18, 26, 0.72)),
+    url("../../images/banner.jpg");
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.page-header .project-name,
+.page-header .project-tagline {
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.55);
+}
+
+.image-credit {
+  font-size: 0.8rem;
+  color: #7a8288;
+  margin-top: 2rem;
+}
+
+.image-credit a {
+  color: #7a8288;
+  text-decoration: underline;
+}

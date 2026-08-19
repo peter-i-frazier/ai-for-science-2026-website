@@ -4,28 +4,27 @@ title: Syllabus
 
 # AI for Science (ORIE 7190) --- Fall 2026 Syllabus
 
-*Draft. Based on the Fall 2023 syllabus. Items marked **[TBD]** still need a decision or a
-confirmation from the ORIE office.*
-
 [Back to the course page](index.html)
 
 **Instructor:** Peter Frazier
-**Lectures:** MWF 9:05am - 9:55am, starting **[TBD --- confirm first day of classes]**
+**Lectures:** MWF 9:05am - 9:55am, starting August 24
 **Location:** Upson Hall 222 in Ithaca. Available online for students at Cornell Tech.
-**Credits:** S/U, can be taken for 2 or 3 credits
-**Last updated:** **[TBD]**
+**Credits:** 2 credits (S/U or Graded) or 3 credits (Graded)
+**Last updated:** August 18
 
 ---
 
 ## Description
 
-Tools from artificial intelligence and machine learning, such as deep-learning-based protein
-structure prediction, machine-learned interatomic potentials, and language-model agents that
-plan experiments, are delivering great value within chemistry, physics, biology, materials
-science, and other scientific domains. Problems from the sciences, such as the need to integrate
-first-principles knowledge into empirically-driven predictions, are simultaneously inspiring
-AI/ML methodology development. This class will introduce students to emerging research and
-opportunities at this intersection through discussion of papers.
+2026 is an exciting time in AI for science. Deep-learning-based protein structure prediction, machine-learned interatomic potentials, language-model agents that plan experiments, and self-driving labs are all accelerating the pace of progress in chemistry, physics, biology, materials science, and other scientific domains. Problems from the sciences, such as the need to integrate first-principles knowledge into empirically-driven predictions, are simultaneously inspiring AI/ML methodology development. Commercially, venture capital, tech companies like Google and Anthropic, and the pharmaceutical industry are all making major investments with the expectation that AI for science will pay massive dividends.
+
+This course brings together students from both mathematical/computational and scientific backgrounds. For students from the sciences, the course offers an accessible introduction to core AI concepts and methods that can accelerate your science. For students with a mathematical or computational background, the course introduces important scientific problems where AI is having an impact and research questions that, if answered, would accelerate this impact.
+
+The course uses lectures and homework to teach core AI concepts
+
+It also aims to 
+
+This class will introduce students to emerging research and opportunities at this intersection through discussion of papers.
 
 ## Course format
 
