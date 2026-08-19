@@ -73,14 +73,30 @@ it does not know.
 - Szymanski et al., *An autonomous laboratory for the accelerated synthesis of inorganic materials* (A-Lab), Nature 2023 — [doi:10.1038/s41586-023-06734-w](https://doi.org/10.1038/s41586-023-06734-w)
 - Leeman et al., *Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis*, PRX Energy 2024 — [doi:10.1103/PRXEnergy.3.011002](https://doi.org/10.1103/PRXEnergy.3.011002) — the critique of A-Lab; read the two together
 
-## 9. Neural surrogates for simulation
+## 9. Neural surrogates for simulation: PINNs, neural operators, and weather
 
-*(proposed addition)* Weather is the clearest case of AI displacing a mature physics-based
-pipeline in operational use, which makes it the right place to ask what made that domain tractable.
+*(proposed addition)* Three ways to put a neural network where a solver used to be, and they are
+not interchangeable. A PINN puts the physics in the loss and solves one problem instance. A
+neural operator learns the solution map across instances from data. A weather model replaces an
+entire operational pipeline. Weather is the clearest case of AI displacing mature physics-based
+software in production, which makes it the right place to ask what made that domain tractable
+when others have not been.
+
+**Physics-informed neural networks**
+
+- Raissi et al., *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear PDEs*, J. Comput. Phys. 2019 — [doi:10.1016/j.jcp.2018.10.045](https://doi.org/10.1016/j.jcp.2018.10.045)
+- Karniadakis et al., *Physics-informed machine learning*, Nature Reviews Physics 2021 — [doi:10.1038/s42254-021-00314-5](https://doi.org/10.1038/s42254-021-00314-5)
+- *Characterizing possible failure modes in physics-informed neural networks* (NeurIPS 2021) — [arXiv:2109.01050](https://arxiv.org/abs/2109.01050)
+- McGreivy & Hakim, *Weak baselines and reporting biases lead to overoptimism in machine learning for fluid-related partial differential equations*, Nature Machine Intelligence 2024 — [doi:10.1038/s42256-024-00897-5](https://doi.org/10.1038/s42256-024-00897-5)
+
+**Neural operators**
+
+- *Fourier Neural Operator for Parametric Partial Differential Equations* — [arXiv:2010.08895](https://arxiv.org/abs/2010.08895)
+
+**Weather**
 
 - Lam et al., *Learning skillful medium-range global weather forecasting* (GraphCast), Science 2023 — [doi:10.1126/science.adi2336](https://doi.org/10.1126/science.adi2336)
 - Price et al., *Probabilistic weather forecasting with machine learning* (GenCast), Nature 2024 — [doi:10.1038/s41586-024-08252-9](https://doi.org/10.1038/s41586-024-08252-9)
-- *Fourier Neural Operator for Parametric Partial Differential Equations* — [arXiv:2010.08895](https://arxiv.org/abs/2010.08895)
 
 ## 10. Computer vision for characterization
 
