@@ -1,6 +1,13 @@
 title: AI for Science (ORIE 7190)
-description: Cornell ORIE, Fall 2026. A graduate course bridging AI methods and problems from the sciences.
+description: Cornell ORIE, Fall 2026. A graduate course bridging AI methods and the sciences.
 theme: jekyll-theme-cayman
+
+# GitHub Pages enables jekyll-titles-from-headings by default. It sets page.title
+# from a page's first heading, and Cayman's banner renders page.title in preference
+# to site.title -- so index.md's first "##" was replacing "AI for Science (ORIE 7190)"
+# in the banner on the published site but not locally. Turn it off so both match.
+titles_from_headings:
+  enabled: false
 url: https://peter-i-frazier.github.io
 baseurl: /ai-for-science-2026-website
 
