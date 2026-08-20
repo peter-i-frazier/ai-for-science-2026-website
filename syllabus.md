@@ -1,16 +1,15 @@
 ---
-title: Syllabus
+layout: default
 ---
-
-# AI for Science (ORIE 7190) --- Fall 2026 Syllabus
+# Syllabus
 
 [Back to the course page](index.html)
 
-**Instructor:** Peter Frazier
-**Lectures:** MWF 9:05am - 9:55am, starting August 24
-**Location:** Upson Hall 222 in Ithaca. Available [online](#zoom) for students at Cornell Tech.
-**Credits:** 2 credits (S/U or Graded) or 3 credits (Graded)
-**Last updated:** August 20
+- **Instructor:** Peter Frazier
+- **Lectures:** MWF 9:05am - 9:55am, starting August 24
+- **Location:** Upson Hall 222 in Ithaca. Available [online](#zoom) for students at Cornell Tech.
+- **Credits:** 2 credits (S/U or graded) or 3 credits (graded)
+- **Last updated:** August 20
 
 ---
 

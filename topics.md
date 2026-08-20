@@ -1,10 +1,10 @@
 ---
-title: Topics
+layout: default
 ---
 
-# Topics and resources
+# Topics
 
-This list is **tentative**. The topics are reasonably firm but we may reorder or drop some. The papers listed under each topic are likely to change and are just shown to give a sense for the topic.
+This list is **tentative**. The topics are reasonably firm but we may reorder or drop some. The papers listed under each topic will change and are shown to give a sense for what the topic includes.
 
 [Back to the course page](index.html)
 
