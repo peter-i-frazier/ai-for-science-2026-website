@@ -37,36 +37,47 @@ Classical supervised learning methods applied to important problems in science. 
 - Abramson et al., *Accurate structure prediction of biomolecular interactions with AlphaFold 3*, Nature 2024 — [doi:10.1038/s41586-024-07487-w](https://doi.org/10.1038/s41586-024-07487-w)
 - Hayes et al., *Simulating 500 million years of evolution with a language model* (ESM3), Science 2025 — [doi:10.1126/science.ads0018](https://doi.org/10.1126/science.ads0018)
 
-## 5. Generative models for chemical and materials design
+## 5. Virtual cell models
+
+Foundation models trained on single-cell transcriptomics, aiming at a model that predicts how a
+cell responds to a perturbation it has never seen. Same recipe as protein language models — mask,
+pretrain at scale, fine-tune — applied to a much noisier measurement.
+
+- Cui et al., *scGPT: toward building a foundation model for single-cell multi-omics using generative AI*, Nature Methods 2024 — [doi:10.1038/s41592-024-02201-0](https://doi.org/10.1038/s41592-024-02201-0)
+- Theodoris et al., *Transfer learning enables predictions in network biology* (Geneformer), Nature 2023 — [doi:10.1038/s41586-023-06139-9](https://doi.org/10.1038/s41586-023-06139-9)
+- Hao et al., *Large-scale foundation model on single-cell transcriptomics* (scFoundation), Nature Methods 2024 — [doi:10.1038/s41592-024-02305-7](https://doi.org/10.1038/s41592-024-02305-7)
+- Kedzierska et al., *Zero-shot evaluation reveals limitations of single-cell foundation models*, Genome Biology 2025 — [doi:10.1186/s13059-025-03574-x](https://doi.org/10.1186/s13059-025-03574-x) — read against scGPT and Geneformer
+
+## 6. Generative models for chemical and materials design
 
 - Watson et al., *De novo design of protein structure and function with RFdiffusion*, Nature 2023 — [doi:10.1038/s41586-023-06415-8](https://doi.org/10.1038/s41586-023-06415-8)
 - Zeni et al., *A generative model for inorganic materials design* (MatterGen), Nature 2025 — [doi:10.1038/s41586-025-08628-5](https://doi.org/10.1038/s41586-025-08628-5)
 - *Simple and Effective Masked Diffusion Language Models* (NeurIPS 2024) — [arXiv:2406.07524](https://arxiv.org/abs/2406.07524) — Kuleshov group, Cornell Tech
 - *Discrete Diffusion Modeling by Estimating the Ratios of the Data Distribution* (SEDD, ICML 2024) — [arXiv:2310.16834](https://arxiv.org/abs/2310.16834)
 
-## 6. Uncertainty quantification, active learning, and Bayesian optimization
+## 7. Uncertainty quantification, active learning, and Bayesian optimization
 
 - Frazier, *A Tutorial on Bayesian Optimization* — [arXiv:1807.02811](https://arxiv.org/abs/1807.02811)
 - Hirschfeld et al., *Uncertainty Quantification Using Neural Networks for Molecular Property Prediction*, J. Chem. Inf. Model. 2020 — [doi:10.1021/acs.jcim.0c00502](https://doi.org/10.1021/acs.jcim.0c00502)
 
-## 7. LLMs for black-box optimization
+## 8. LLMs for black-box optimization
 
 - *AlphaEvolve: A coding agent for scientific and algorithmic discovery* — [arXiv:2506.13131](https://arxiv.org/abs/2506.13131)
 - *Generalists vs. Specialists: Evaluating LLMs on Highly-Constrained Biophysical Sequence Optimization Problems* (LLOME) — [arXiv:2410.22296](https://arxiv.org/abs/2410.22296)
 
-## 8. Self-driving labs
+## 9. Self-driving labs
 
 - Gongora et al., *A Bayesian experimental autonomous researcher for mechanical design* (BEAR), Science Advances 2020 — [doi:10.1126/sciadv.aaz1708](https://doi.org/10.1126/sciadv.aaz1708) — Keith Brown's group
 - Burger et al., *A mobile robotic chemist*, Nature 2020 — [doi:10.1038/s41586-020-2442-2](https://doi.org/10.1038/s41586-020-2442-2)
 - Szymanski et al., *An autonomous laboratory for the accelerated synthesis of inorganic materials* (A-Lab), Nature 2023 — [doi:10.1038/s41586-023-06734-w](https://doi.org/10.1038/s41586-023-06734-w)
 - Leeman et al., *Challenges in High-Throughput Inorganic Materials Prediction and Autonomous Synthesis*, PRX Energy 2024 — [doi:10.1103/PRXEnergy.3.011002](https://doi.org/10.1103/PRXEnergy.3.011002) — the critique of A-Lab; read the two together
 
-## 9. Computer vision and inverse problems in characterization
+## 10. Computer vision and inverse problems in characterization
 
 - Zhong et al., *CryoDRGN: reconstruction of heterogeneous cryo-EM structures using neural networks*, Nature Methods 2021 — [doi:10.1038/s41592-020-01049-4](https://doi.org/10.1038/s41592-020-01049-4)
 - *InverseBench: Benchmarking Plug-and-Play Diffusion Priors for Inverse Problems in Physical Sciences* (ICLR 2025) — [arXiv:2503.11043](https://arxiv.org/abs/2503.11043)
 
-## 10. Neural surrogates for simulation: PINNs, neural operators, and weather
+## 11. Neural surrogates for simulation: PINNs, neural operators, and weather
 
 - Raissi et al., *Physics-informed neural networks: A deep learning framework for solving forward and inverse problems involving nonlinear PDEs*, J. Comput. Phys. 2019 — [doi:10.1016/j.jcp.2018.10.045](https://doi.org/10.1016/j.jcp.2018.10.045)
 - Karniadakis et al., *Physics-informed machine learning*, Nature Reviews Physics 2021 — [doi:10.1038/s42254-021-00314-5](https://doi.org/10.1038/s42254-021-00314-5)
@@ -76,6 +87,6 @@ Classical supervised learning methods applied to important problems in science. 
 - Lam et al., *Learning skillful medium-range global weather forecasting* (GraphCast), Science 2023 — [doi:10.1126/science.adi2336](https://doi.org/10.1126/science.adi2336)
 - Price et al., *Probabilistic weather forecasting with machine learning* (GenCast), Nature 2024 — [doi:10.1038/s41586-024-08252-9](https://doi.org/10.1038/s41586-024-08252-9)
 
-## 11. Extracting information from the literature
+## 12. Extracting information from the literature
 
 - Dagdelen et al., *Structured information extraction from scientific text with large language models*, Nature Communications 2024 — [doi:10.1038/s41467-024-45563-x](https://doi.org/10.1038/s41467-024-45563-x)
