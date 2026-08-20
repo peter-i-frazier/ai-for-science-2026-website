@@ -57,13 +57,13 @@ Homework will be used to help students practice core ideas, where this practice 
 
 **Each assignment has two parts.**
 
-**Part A --- no AI assistance.** Questions you should answer on your own. These exist so you can find out what you actually understand and fill gaps. They are graded on evidence of thought rather than on correctness, so there is nothing to be gained by getting the "right" answer some other way, and a lot to lose.
+**Part A --- no AI assistance.** Questions you should answer on your own. These exist so you can find out what you actually understand and fill gaps.
 
-**Part B --- AI assistance encouraged.** The implementation and experimentation. Use whatever AI tools you would like, as long as you understand the core of what the tools are doing. If someone were to ask you to explain how the code works or what the AI tool is doing, you should know the answer.
+**Part B --- AI assistance encouraged.** The implementation and experimentation. Use whatever AI tools you would like, as long as you understand the core of what the tools are doing. If someone were to ask you to explain how the code works or what the AI tool is doing, you should be able to do so.
 
 Note at the top of each submission which AI tools you used and where.
 
-The homework is designed to teach core concepts. If you are a senior PhD student working in AI or ML, you may already have a firm grasp of these concepts. If this is the case and you want to take the course for a grade, talk to the instructor.  He may say that you won't benefit much by doing the homework and waive the requirement. In its place, he will ask you to do a more substantial project, targeting something that has a path toward publication.
+The homework is designed to teach core concepts. If you are a senior PhD student working in AI or ML, you may already have a firm grasp of these concepts. If this is the case and you want to take the course for a grade, talk to the instructor.  He may say that you won't benefit much by doing the homework and waive the requirement. In its place, he will ask you to do a more substantial project, targeting something that has a more direct path toward publication and/or can appear in your dissertation.
 ## Papers
 
 Students will be asked to read the papers discussed in class before the discussion and to submit comments and questions via a google form.
@@ -86,11 +86,7 @@ graded once the system is updated.
 
 ## Relation to CS 6703
 
-There is another course called "AI for Science", CS 6703, taught by Carla Gomes. It meets on
-Fridays from 2:00-4:30pm and is built around the Eric and Wendy Schmidt AI in Science
-Postdoctoral Fellows, who take part in it and present their research at its end-of-year showcase.
-The two courses, ORIE 7190 and CS 6703, are complementary. Students interested in AI for Science
-may want to come to the first meeting of both classes.
+There is another course called "AI for Science", [CS 6703](https://classes.cornell.edu/browse/roster/FA26/class/CS/6703), being taught in Fall 2026. It meets on Fridays from 2:00-4:30pm and leverages the Eric and Wendy Schmidt AI for Science postdoctoral fellowship program.  The two courses, ORIE 7190 and CS 6703, are complementary. CS 6703 is a studio-style course emphasizing collaborative learning while ORIE 7190 is structured around lectures and reading pre-assigned papers.  Students interested in AI for Science may want to come to the first meeting of both classes.
 
 ## Zoom
 
