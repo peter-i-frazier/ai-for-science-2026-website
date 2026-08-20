@@ -10,7 +10,7 @@ title: Syllabus
 **Lectures:** MWF 9:05am - 9:55am, starting August 24
 **Location:** Upson Hall 222 in Ithaca. Available online for students at Cornell Tech.
 **Credits:** 2 credits (S/U or Graded) or 3 credits (Graded)
-**Last updated:** August 18
+**Last updated:** August 20
 
 ---
 
@@ -78,11 +78,19 @@ In the course roster, this course is listed under a different name: **"Selected 
 Operations Research."** "Selected Topics in X" is the generic name given to 7000-level courses. Because they are typically offered on a one-time-only basis, they receive a generic name rather
 than one specific to their contents. Register for **ORIE 7190**.
 
+## Registering for a grade
+
+The course registration system does not currently show that this course can be taken for a
+letter grade. This will be fixed. In the meantime, go ahead and **register S/U**, and switch to
+graded once the system is updated.
+
 ## Relation to CS 6703
 
 There is another course called "AI for Science", CS 6703, taught by Carla Gomes. It meets on
-Fridays from 2:00-4:30pm. The two courses, ORIE 7190 and CS 6703, are complementary. Students
-interested in AI for Science may want to come to the first meeting of both classes.
+Fridays from 2:00-4:30pm and is built around the Eric and Wendy Schmidt AI in Science
+Postdoctoral Fellows, who take part in it and present their research at its end-of-year showcase.
+The two courses, ORIE 7190 and CS 6703, are complementary. Students interested in AI for Science
+may want to come to the first meeting of both classes.
 
 ## Zoom
 
