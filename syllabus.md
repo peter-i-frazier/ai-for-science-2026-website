@@ -3,7 +3,7 @@ layout: default
 ---
 # Syllabus
 
-[Back to the course page](index.html)
+[Back to the course page](index.html) &nbsp;·&nbsp; [Schedule](schedule.html) &nbsp;·&nbsp; [Topics and papers](topics.html)
 
 - **Instructor:** Peter Frazier
 - **Lectures:** MWF 9:05am - 9:55am, starting August 24
@@ -23,7 +23,7 @@ This course brings together students from both mathematical/computational and sc
 
 The course will use traditional lectures, class discussions of research papers, homeworks, and a project. The course will be divided into units, each on a different area of AI for science (e.g., protein structure prediction, or machine learned interatomic potentials). Each unit contains (1) one or more lectures on AI methods and scientific background; (2) an in-class discussion of recent research papers; (3) for units involving more difficult-to-grasp AI concepts, a homework assignment that helps solidify these concepts. The course will culminate with a project. Students are expected to read the papers before the in-class discussion and to offer a few thoughts beforehand via a google form.
 
-The running list of topics is on the [topics page](topics.html). Additional suggestions are welcome. 
+The running list of topics is on the [topics page](topics.html). Additional suggestions are welcome. Meeting dates, the university calendar, the planned unit order, and homework release dates are on the [schedule page](schedule.html).
 
 Students may take the course in one of three ways:
 - For 3 credits, graded. All course assignments are required.

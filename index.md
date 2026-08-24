@@ -7,6 +7,7 @@ layout: default
 - **Meetings:** MWF 9:05am - 9:55am, Upson Hall 222. Available [online](syllabus.html#zoom) for Cornell Tech students.
 - **Credits:** 2 credits (S/U or graded) or 3 credits (graded)
 - **Syllabus:** [full syllabus](syllabus.html)
+- **Schedule:** [meeting dates, units, homework, and reading](schedule.html)
 
 In the course roster this is listed under the generic 7000-level name **"Selected Topics in
 Applied Operations Research."** Register for **ORIE 7190**.
@@ -38,7 +39,14 @@ will be explained in an accessible way.
 
 ## Topics
 
-The planned topic list is on the [topics page](topics.html). 
+The planned topic list is on the [topics page](topics.html).
+
+---
+
+## Schedule
+
+Meeting dates, the university calendar, the planned unit order, homework release dates, and where
+the slides go are on the [schedule page](schedule.html).
 
 ---
 
