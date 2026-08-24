@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 # AI for Science (ORIE 7190, Fall 2026, Cornell)
 

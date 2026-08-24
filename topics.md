@@ -1,5 +1,4 @@
 ---
-layout: default
 ---
 
 <!-- ===================================================================
@@ -37,8 +36,6 @@ layout: default
 Papers here show what each topic covers. **The list is provisional and still being built out ---
 the reading for each session is announced beforehand.** Topics are reasonably firm; we may still
 reorder or drop some.
-
-[Back to the course page](index.html) &nbsp;·&nbsp; [Schedule](schedule.html) &nbsp;·&nbsp; [Syllabus](syllabus.html)
 
 ---
 

@@ -35,3 +35,41 @@
   color: #7a8288;
   text-decoration: underline;
 }
+
+// Site-wide navigation, emitted by _layouts/page.html as the first child of
+// .main-content. Cayman pads .main-content by 2rem on top; the negative top
+// margin cancels it so the links sit just under the banner with a rule beneath
+// them. The `.main-content` prefix is required -- the theme's
+// `.main-content :first-child { margin-top: 0 }` otherwise outranks a bare
+// `.site-nav`. Left flush with the body text rather than bled to the viewport
+// edges: .main-content is a centred max-width box, so a full-bleed bar needs
+// 100vw tricks that add a horizontal scrollbar wherever scrollbars take space.
+.main-content .site-nav {
+  margin: -1.4rem 0 2.2rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid #e1e4e8;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.main-content .site-nav a {
+  display: inline-block;
+  margin-right: 1.8rem;
+  white-space: nowrap;
+  color: #606c71;
+  text-decoration: none;
+}
+
+.main-content .site-nav a:hover {
+  color: #1e6bb8;
+  text-decoration: underline;
+}
+
+.main-content .site-nav a.current {
+  color: #159957;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 42em) {
+  .main-content .site-nav a { margin-right: 1.2rem; }
+}

@@ -1,9 +1,6 @@
 ---
-layout: default
 ---
 # Schedule
-
-[Back to the course page](index.html) &nbsp;·&nbsp; [Syllabus](syllabus.html) &nbsp;·&nbsp; [Topics and papers](topics.html)
 
 Fixed dates are fixed. **Planned** will shift by a session or two.
 
@@ -22,9 +19,9 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 
 ---
 
-## Planned Lecture Topics and Links to Slides
+## Planned Lectures and Links to Slides
 
-| Lecture Topic w/ Link to Slides | Num. Sessions | Planned dates |
+| Lecture w/ Link to Slides | Num. Sessions | Planned dates |
 |---|---|---|
 | [Course introduction](slides/day-1/day-1.html)  | 1 | Mon, Aug 24 |
 | [Supervised learning](slides/supervised-learning/supervised-learning.html) | 1 | Wed, Aug 26 |

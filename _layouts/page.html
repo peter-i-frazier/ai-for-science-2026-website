@@ -1,0 +1,30 @@
+---
+layout: default
+---
+{%- comment -%}
+  Site-wide navigation. Cayman (the theme gem) has no nav hook, so this thin
+  child layout wraps the gem's `default` layout rather than forking it -- the
+  banner, SEO tags, and footer keep coming from the gem, and a gem bump can't
+  silently drift from a forked copy.
+
+  Add an entry to nav_items and it appears on every page at once. `page.url`
+  carries no baseurl (and is "/" for index), so it is normalised below before
+  comparing; hrefs go through relative_url so they survive the
+  /ai-for-science-2026-website baseurl on GitHub Pages.
+
+  Keep real whitespace between the <a> tags -- do not add hyphens to the Liquid
+  delimiters around them. The links are inline-blocks, so with the whitespace
+  stripped the row has no soft-wrap opportunity and cannot break onto a second
+  line in a narrow viewport.
+{%- endcomment -%}
+{%- assign here = page.url -%}
+{%- if here == "/" -%}{%- assign here = "/index.html" -%}{%- endif -%}
+{%- assign nav_items = "/index.html,Home|/schedule.html,Schedule|/syllabus.html,Syllabus|/topics.html,Topics" | split: "|" -%}
+<nav class="site-nav" role="navigation" aria-label="Course pages">
+  {% for item in nav_items %}{% assign parts = item | split: "," %}
+  {% if parts[0] == here %}<a href="{{ parts[0] | relative_url }}" class="current" aria-current="page">{{ parts[1] }}</a>
+  {% else %}<a href="{{ parts[0] | relative_url }}">{{ parts[1] }}</a>
+  {% endif %}{% endfor %}
+</nav>
+
+{{ content }}

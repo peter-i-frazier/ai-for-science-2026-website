@@ -1,9 +1,6 @@
 ---
-layout: default
 ---
 # Syllabus
-
-[Back to the course page](index.html) &nbsp;·&nbsp; [Schedule](schedule.html) &nbsp;·&nbsp; [Topics and papers](topics.html)
 
 - **Instructor:** Peter Frazier
 - **Lectures:** MWF 9:05am - 9:55am, starting August 24
