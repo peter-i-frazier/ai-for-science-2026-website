@@ -23,7 +23,7 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 
 | Lecture w/ Link to Slides | Num. Sessions | Planned dates |
 |---|---|---|
-| [Course introduction](slides/day-1/day-1.html) and [TB-Science](slides/day-1/2026-08-24-TBScience.pdf)  | 1 | Mon, Aug 24 |
+| [Course introduction](slides/day-1/day-1.html) and [Terminal-Bench Science](slides/day-1/2026-08-24-TBScience.pdf) (guest slides, Anmol Kabra) | 1 | Mon, Aug 24 |
 | [Supervised learning](slides/supervised-learning/supervised-learning.html) | 1 | Wed, Aug 26 |
 | Deep learning | 2 | Fri, Aug 28 -- Mon, Aug 31 |
 | Vibe coding | 1 | Wed, Sep 2 |
@@ -73,7 +73,8 @@ registration option requires.
 
 ## Slides and reading
 
-I aim to post slide decks before lecture.
+I aim to post slide decks before lecture. Lecture recordings go on Canvas, not here ---
+[why](syllabus.html#recordings).
 
 **The reading for each unit is announced before the session.** The
 [topics page](topics.html) shows the kind of paper each topic covers, but that list is provisional
