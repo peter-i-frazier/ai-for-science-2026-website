@@ -25,7 +25,7 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 |---|---|---|
 | [Course introduction](slides/day-1/day-1.html) and [Terminal-Bench Science](slides/day-1/2026-08-24-TBScience.pdf) (guest slides, Anmol Kabra) | 1 | Mon, Aug 24 |
 | [Supervised learning](slides/supervised-learning/supervised-learning.html) | 1 | Wed, Aug 26 |
-| Deep learning | 2 | Fri, Aug 28 -- Mon, Aug 31 |
+| [Deep learning](slides/deep-learning/deep-learning.html) | 2 | Fri, Aug 28 -- Mon, Aug 31 |
 | Vibe coding | 1 | Wed, Sep 2 |
 | Molecular representations and property prediction | 1 | Fri, Sep 4 |
 | Graph neural networks | 2 | Wed, Sep 9 -- Fri, Sep 11 |
