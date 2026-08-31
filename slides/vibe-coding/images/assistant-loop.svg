@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 400" width="1000" height="400" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#B31B1B"/>
+    </marker>
+    <marker id="arrowgrey" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#888"/>
+    </marker>
+  </defs>
+
+  <!-- YOU -->
+  <rect x="25" y="120" width="215" height="132" rx="10" fill="#FDF3F3" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="132" y="158" text-anchor="middle" font-size="21" font-weight="bold" fill="#B31B1B">YOU</text>
+  <text x="132" y="192" text-anchor="middle" font-size="17" fill="#333">Say what you want,</text>
+  <text x="132" y="216" text-anchor="middle" font-size="17" fill="#333">in plain English</text>
+
+  <!-- machine container -->
+  <rect x="305" y="45" width="670" height="212" rx="12" fill="#FAFAFA" stroke="#999" stroke-width="1.5" stroke-dasharray="7 5"/>
+  <text x="640" y="72" text-anchor="middle" font-size="16" fill="#777">The assistant does this part on its own</text>
+
+  <!-- inner boxes -->
+  <rect x="325" y="92" width="180" height="84" rx="8" fill="#ffffff" stroke="#B31B1B" stroke-width="1.8"/>
+  <text x="415" y="126" text-anchor="middle" font-size="17" font-weight="bold" fill="#222">Edits a file</text>
+  <text x="415" y="150" text-anchor="middle" font-size="14" fill="#666">shows you a diff</text>
+
+  <rect x="545" y="92" width="180" height="84" rx="8" fill="#ffffff" stroke="#B31B1B" stroke-width="1.8"/>
+  <text x="635" y="126" text-anchor="middle" font-size="17" font-weight="bold" fill="#222">Runs the code</text>
+  <text x="635" y="150" text-anchor="middle" font-size="14" fill="#666">in your terminal</text>
+
+  <rect x="765" y="92" width="180" height="84" rx="8" fill="#ffffff" stroke="#B31B1B" stroke-width="1.8"/>
+  <text x="855" y="126" text-anchor="middle" font-size="17" font-weight="bold" fill="#222">Reads the output</text>
+  <text x="855" y="150" text-anchor="middle" font-size="14" fill="#666">and the traceback</text>
+
+  <!-- arrows between inner boxes -->
+  <line x1="507" y1="134" x2="541" y2="134" stroke="#B31B1B" stroke-width="2.2" marker-end="url(#arrow)"/>
+  <line x1="727" y1="134" x2="761" y2="134" stroke="#B31B1B" stroke-width="2.2" marker-end="url(#arrow)"/>
+
+  <!-- return loop -->
+  <path d="M 855 178 L 855 208 L 415 208 L 415 180" fill="none" stroke="#888" stroke-width="2" marker-end="url(#arrowgrey)"/>
+  <text x="635" y="232" text-anchor="middle" font-size="15" fill="#777">repeats until it runs &#8212; often several times, without asking you</text>
+
+  <!-- you -> machine -->
+  <line x1="244" y1="151" x2="299" y2="151" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- machine -> bottom -->
+  <line x1="640" y1="259" x2="640" y2="296" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- bottom box -->
+  <rect x="230" y="300" width="745" height="80" rx="10" fill="#FDF3F3" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="602" y="331" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">Then it stops and shows you everything it changed.</text>
+  <text x="602" y="358" text-anchor="middle" font-size="16" fill="#444">Reading that is your job. It is most of this lecture.</text>
+</svg>
