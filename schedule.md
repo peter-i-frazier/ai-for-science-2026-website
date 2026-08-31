@@ -61,7 +61,7 @@ the units; due dates are confirmed at release.
 
 | | Topic | Released | Due |
 |---|---|---|---|
-| **HW1** | Supervised learning for molecular property prediction | Wed, Sep 2 | Fri, Sep 18 |
+| **[HW1](homework/hw1.pdf)** | Supervised learning for molecular property prediction | Sun, Aug 30 | Fri, Sep 11 |
 | **HW2** | Build a language model, then use one | Wed, Oct 7 | Wed, Oct 21 |
 | **HW3** | Build your own AI co-scientist | Fri, Oct 23 | Fri, Nov 6 |
 | **HW4** | Black-box optimization for design | Wed, Nov 11 | Mon, Nov 23 |
