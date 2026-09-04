@@ -27,7 +27,7 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 | [Supervised learning](slides/supervised-learning/supervised-learning.html) | 1 | Wed, Aug 26 |
 | [Deep learning](slides/deep-learning/deep-learning.html) | 2 | Fri, Aug 28 -- Mon, Aug 31 |
 | [Vibe coding](slides/vibe-coding/vibe-coding.html) | 1 | Wed, Sep 2 |
-| Molecular representations and property prediction | 1 | Fri, Sep 4 |
+| [Molecular representations and property prediction](slides/molecular-representation/molecular-representations.html) | 1 | Fri, Sep 4 |
 | Graph neural networks | 2 | Wed, Sep 9 -- Fri, Sep 11 |
 | Machine-learned interatomic potentials | 2 | Mon, Sep 14 -- Wed, Sep 16 |
 | CNNs and ResNets | 1 | Fri, Sep 18 |
