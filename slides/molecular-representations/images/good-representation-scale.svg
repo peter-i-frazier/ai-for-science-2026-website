@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 590" font-family="Helvetica, Arial, sans-serif">
+  <text x="200" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">How well can a simple model</text>
+  <text x="200" y="46" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">solve the task from this?</text>
+
+  <!-- ================= TASK 1 ================= -->
+  <text x="200" y="82" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">Task: aqueous solubility</text>
+  <line x1="98" y1="100" x2="98" y2="240" stroke="#555" stroke-width="2.5"/>
+  <text x="88" y="106" text-anchor="end" font-size="12" fill="#777">easy</text>
+  <text x="88" y="238" text-anchor="end" font-size="12" fill="#777">impossible</text>
+  <g stroke="#555" stroke-width="2">
+    <line x1="92" y1="118" x2="104" y2="118"/>
+    <line x1="92" y1="170" x2="104" y2="170"/>
+    <line x1="92" y1="225" x2="104" y2="225"/>
+  </g>
+  <circle cx="98" cy="118" r="6" fill="#2e7d5b"/>
+  <text x="114" y="123" font-size="13" fill="#333">logP + TPSA + MW</text>
+  <circle cx="98" cy="170" r="6" fill="#c8860d"/>
+  <text x="114" y="175" font-size="13" fill="#333">ECFP4 bits</text>
+  <circle cx="98" cy="225" r="6" fill="#a33"/>
+  <text x="114" y="230" font-size="13" fill="#333">molecular weight alone</text>
+
+  <line x1="20" y1="268" x2="380" y2="268" stroke="#ddd" stroke-width="1.5"/>
+
+  <!-- ================= TASK 2 ================= -->
+  <text x="200" y="296" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">Task: hERG cardiotoxicity</text>
+  <line x1="98" y1="314" x2="98" y2="454" stroke="#555" stroke-width="2.5"/>
+  <text x="88" y="320" text-anchor="end" font-size="12" fill="#777">easy</text>
+  <text x="88" y="452" text-anchor="end" font-size="12" fill="#777">impossible</text>
+  <g stroke="#555" stroke-width="2">
+    <line x1="92" y1="332" x2="104" y2="332"/>
+    <line x1="92" y1="384" x2="104" y2="384"/>
+    <line x1="92" y1="439" x2="104" y2="439"/>
+  </g>
+  <circle cx="98" cy="332" r="6" fill="#2e7d5b"/>
+  <text x="114" y="337" font-size="13" fill="#333">ECFP4 bits</text>
+  <circle cx="98" cy="384" r="6" fill="#c8860d"/>
+  <text x="114" y="389" font-size="13" fill="#333">full descriptor set</text>
+  <circle cx="98" cy="439" r="6" fill="#a33"/>
+  <text x="114" y="444" font-size="13" fill="#333">logP + TPSA + MW</text>
+
+  <!-- punchline -->
+  <rect x="30" y="478" width="340" height="66" rx="8" fill="#fbeeee" stroke="#B31B1B" stroke-width="2"/>
+  <text x="200" y="500" text-anchor="middle" font-size="14" font-weight="bold" fill="#B31B1B">The same representation moved</text>
+  <text x="200" y="519" text-anchor="middle" font-size="14" font-weight="bold" fill="#B31B1B">from the top to the bottom.</text>
+  <text x="200" y="537" text-anchor="middle" font-size="12.5" fill="#8a3030">Only the task changed.</text>
+</svg>

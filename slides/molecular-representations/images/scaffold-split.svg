@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" font-family="Helvetica, Arial, sans-serif">
+  <!-- ============= LEFT: RANDOM SPLIT ============= -->
+  <text x="235" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#B31B1B">Random split</text>
+  <rect x="20" y="42" width="430" height="196" rx="10" fill="#fafafa" stroke="#ccc"/>
+
+  <!-- three scaffold clusters, each split across train/test -->
+  <g>
+    <!-- cluster A -->
+    <ellipse cx="105" cy="105" rx="62" ry="42" fill="none" stroke="#bbb" stroke-dasharray="4,3"/>
+    <text x="105" y="60" text-anchor="middle" font-size="12" fill="#999">scaffold A</text>
+    <circle cx="80" cy="95" r="9" fill="#4a7fb5"/><circle cx="112" cy="88" r="9" fill="#4a7fb5"/>
+    <circle cx="132" cy="112" r="9" fill="#d98324"/><circle cx="88" cy="122" r="9" fill="#4a7fb5"/>
+    <circle cx="112" cy="120" r="9" fill="#d98324"/>
+    <!-- cluster B -->
+    <ellipse cx="235" cy="175" rx="62" ry="42" fill="none" stroke="#bbb" stroke-dasharray="4,3"/>
+    <text x="235" y="228" text-anchor="middle" font-size="12" fill="#999">scaffold B</text>
+    <circle cx="210" cy="165" r="9" fill="#4a7fb5"/><circle cx="242" cy="158" r="9" fill="#d98324"/>
+    <circle cx="262" cy="182" r="9" fill="#4a7fb5"/><circle cx="218" cy="192" r="9" fill="#4a7fb5"/>
+    <circle cx="248" cy="190" r="9" fill="#d98324"/>
+    <!-- cluster C -->
+    <ellipse cx="365" cy="105" rx="62" ry="42" fill="none" stroke="#bbb" stroke-dasharray="4,3"/>
+    <text x="365" y="60" text-anchor="middle" font-size="12" fill="#999">scaffold C</text>
+    <circle cx="340" cy="95" r="9" fill="#d98324"/><circle cx="372" cy="88" r="9" fill="#4a7fb5"/>
+    <circle cx="392" cy="112" r="9" fill="#4a7fb5"/><circle cx="348" cy="122" r="9" fill="#4a7fb5"/>
+    <circle cx="378" cy="120" r="9" fill="#d98324"/>
+  </g>
+
+  <text x="235" y="262" text-anchor="middle" font-size="15" fill="#a33" font-weight="bold">every test molecule has a close analog in train</text>
+  <text x="235" y="284" text-anchor="middle" font-size="14" fill="#777">the model interpolates → optimistic R²</text>
+
+  <!-- ============= RIGHT: SCAFFOLD SPLIT ============= -->
+  <text x="725" y="26" text-anchor="middle" font-size="19" font-weight="bold" fill="#B31B1B">Scaffold split</text>
+  <rect x="510" y="42" width="430" height="196" rx="10" fill="#fafafa" stroke="#ccc"/>
+
+  <g>
+    <ellipse cx="595" cy="105" rx="62" ry="42" fill="none" stroke="#bbb" stroke-dasharray="4,3"/>
+    <text x="595" y="60" text-anchor="middle" font-size="12" fill="#999">scaffold A</text>
+    <circle cx="570" cy="95" r="9" fill="#4a7fb5"/><circle cx="602" cy="88" r="9" fill="#4a7fb5"/>
+    <circle cx="622" cy="112" r="9" fill="#4a7fb5"/><circle cx="578" cy="122" r="9" fill="#4a7fb5"/>
+    <circle cx="602" cy="120" r="9" fill="#4a7fb5"/>
+
+    <ellipse cx="725" cy="175" rx="62" ry="42" fill="none" stroke="#d98324" stroke-width="2"/>
+    <text x="725" y="228" text-anchor="middle" font-size="12" fill="#d98324" font-weight="bold">scaffold B — held out whole</text>
+    <circle cx="700" cy="165" r="9" fill="#d98324"/><circle cx="732" cy="158" r="9" fill="#d98324"/>
+    <circle cx="752" cy="182" r="9" fill="#d98324"/><circle cx="708" cy="192" r="9" fill="#d98324"/>
+    <circle cx="738" cy="190" r="9" fill="#d98324"/>
+
+    <ellipse cx="855" cy="105" rx="62" ry="42" fill="none" stroke="#bbb" stroke-dasharray="4,3"/>
+    <text x="855" y="60" text-anchor="middle" font-size="12" fill="#999">scaffold C</text>
+    <circle cx="830" cy="95" r="9" fill="#4a7fb5"/><circle cx="862" cy="88" r="9" fill="#4a7fb5"/>
+    <circle cx="882" cy="112" r="9" fill="#4a7fb5"/><circle cx="838" cy="122" r="9" fill="#4a7fb5"/>
+    <circle cx="868" cy="120" r="9" fill="#4a7fb5"/>
+  </g>
+
+  <text x="725" y="262" text-anchor="middle" font-size="15" fill="#2e7d5b" font-weight="bold">test molecules come from an unseen chemical series</text>
+  <text x="725" y="284" text-anchor="middle" font-size="14" fill="#777">the model must extrapolate → honest R²</text>
+
+  <!-- legend -->
+  <g>
+    <circle cx="428" cy="18" r="8" fill="#4a7fb5"/>
+    <text x="441" y="23" font-size="13" fill="#555">train</text>
+    <circle cx="490" cy="18" r="8" fill="#d98324"/>
+    <text x="503" y="23" font-size="13" fill="#555">test</text>
+  </g>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 250" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#B31B1B"/>
+    </marker>
+  </defs>
+
+  <!-- molecule -->
+  <rect x="10" y="55" width="180" height="140" rx="10" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+  <text x="100" y="80" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">a molecule</text>
+  <!-- tiny molecular graph -->
+  <g stroke="#555" stroke-width="2">
+    <line x1="45" y1="140" x2="80" y2="120"/>
+    <line x1="80" y1="120" x2="115" y2="140"/>
+    <line x1="115" y1="140" x2="150" y2="120"/>
+    <line x1="80" y1="120" x2="80" y2="165"/>
+  </g>
+  <g fill="#4a7fb5">
+    <circle cx="45" cy="140" r="8"/><circle cx="80" cy="120" r="8"/>
+    <circle cx="115" cy="140" r="8"/><circle cx="150" cy="120" r="8"/>
+    <circle cx="80" cy="165" r="8"/>
+  </g>
+  <text x="100" y="190" text-anchor="middle" font-size="14" fill="#777">variable size, no ordering</text>
+
+  <!-- arrow 1 : the representation -->
+  <line x1="200" y1="125" x2="365" y2="125" stroke="#B31B1B" stroke-width="3.5" marker-end="url(#ar)"/>
+  <text x="282" y="112" text-anchor="middle" font-size="19" fill="#B31B1B" font-weight="bold">representation</text>
+  <text x="282" y="150" text-anchor="middle" font-size="16" fill="#B31B1B">THIS UNIT</text>
+
+  <!-- vector -->
+  <rect x="375" y="55" width="180" height="140" rx="10" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+  <text x="465" y="80" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">a vector x ∈ ℝᵈ</text>
+  <g>
+    <rect x="402" y="105" width="126" height="20" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="402" y="105" width="18" height="20" fill="#4a7fb5"/>
+    <rect x="438" y="105" width="18" height="20" fill="#4a7fb5"/>
+    <rect x="492" y="105" width="18" height="20" fill="#4a7fb5"/>
+    <rect x="402" y="133" width="126" height="20" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="420" y="133" width="18" height="20" fill="#4a7fb5"/>
+    <rect x="474" y="133" width="18" height="20" fill="#4a7fb5"/>
+  </g>
+  <text x="465" y="190" text-anchor="middle" font-size="14" fill="#777">fixed size, consistent slots</text>
+
+  <!-- arrow 2 : the model -->
+  <line x1="565" y1="125" x2="730" y2="125" stroke="#888" stroke-width="3.5" marker-end="url(#ar)"/>
+  <text x="647" y="112" text-anchor="middle" font-size="19" fill="#555" font-weight="bold">model</text>
+  <text x="647" y="150" text-anchor="middle" font-size="16" fill="#555">ALREADY COVERED</text>
+
+  <!-- prediction -->
+  <rect x="740" y="55" width="180" height="140" rx="10" fill="#fff" stroke="#bbb" stroke-width="1.5"/>
+  <text x="830" y="80" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">a prediction ŷ</text>
+  <text x="830" y="122" text-anchor="middle" font-size="20" fill="#333">solubility = −3.1</text>
+  <text x="830" y="150" text-anchor="middle" font-size="20" fill="#333">toxic? p = 0.07</text>
+  <text x="830" y="190" text-anchor="middle" font-size="14" fill="#777">linear model · RF · DNN</text>
+
+  <!-- underline the left half -->
+  <path d="M10,218 L555,218" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="282" y="240" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">everything in this unit lives here</text>
+</svg>

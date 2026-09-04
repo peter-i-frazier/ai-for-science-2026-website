@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 304" font-family="Helvetica, Arial, sans-serif">
+<text x="200" y="38" text-anchor="middle" font-size="16" fill="#B31B1B" font-family="Helvetica, Arial, sans-serif" font-weight="bold">Water: 3 atoms &#8594; a 3&#215;3 matrix</text>
+<rect x="14" y="50" width="372" height="224" rx="8" fill="#fafafa" stroke="#ccc"/>
+<g transform="translate(26,70)">
+<path class='bond-0 atom-0 atom-1' d='M 47.2,25.8 L 63.6,25.8' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-0 atom-0 atom-1' d='M 63.6,25.8 L 79.9,25.8' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-0 atom-2' d='M 36.0,36.9 L 31.4,50.0' style='fill:none;fill-rule:evenodd;stroke:#FF0000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-0 atom-2' d='M 31.4,50.0 L 26.8,63.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='34.2' y='35.3' class='atom-0' style='font-size:19px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#FF0000' >O</text>
+<text x='81.5' y='35.3' class='atom-1' style='font-size:19px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='18.5' y='79.9' class='atom-2' style='font-size:19px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >H</text>
+</g>
+<text x="82" y="184" text-anchor="middle" font-size="13" fill="#333" font-family="Helvetica, Arial, sans-serif" font-weight="bold">water</text>
+<text x="196" y="84" text-anchor="middle" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif" font-weight="bold">O</text>
+<text x="252" y="84" text-anchor="middle" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif" font-weight="bold">H</text>
+<text x="308" y="84" text-anchor="middle" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif" font-weight="bold">H</text>
+<text x="158" y="112" text-anchor="end" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif" font-weight="bold">O</text>
+<text x="158" y="142" text-anchor="end" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif" font-weight="bold">H</text>
+<text x="158" y="172" text-anchor="end" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif" font-weight="bold">H</text>
+<rect x="168" y="92" width="56" height="30" fill="#eef3f8" stroke="#4a7fb5" stroke-width="1.4"/>
+<text x="196" y="112" text-anchor="middle" font-size="14" fill="#24445f" font-family="Menlo, Consolas, monospace" font-weight="bold">73.52</text>
+<rect x="224" y="92" width="56" height="30" fill="#fbeeee" stroke="#B31B1B" stroke-width="1.4"/>
+<text x="252" y="112" text-anchor="middle" font-size="14" fill="#B31B1B" font-family="Menlo, Consolas, monospace" font-weight="bold">4.37</text>
+<rect x="280" y="92" width="56" height="30" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="308" y="112" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">4.37</text>
+<rect x="168" y="122" width="56" height="30" fill="#fbeeee" stroke="#B31B1B" stroke-width="1.4"/>
+<text x="196" y="142" text-anchor="middle" font-size="14" fill="#B31B1B" font-family="Menlo, Consolas, monospace" font-weight="bold">4.37</text>
+<rect x="224" y="122" width="56" height="30" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="252" y="142" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.50</text>
+<rect x="280" y="122" width="56" height="30" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="308" y="142" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.35</text>
+<rect x="168" y="152" width="56" height="30" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="196" y="172" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">4.37</text>
+<rect x="224" y="152" width="56" height="30" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="252" y="172" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.35</text>
+<rect x="280" y="152" width="56" height="30" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="308" y="172" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.50</text>
+<rect x="30" y="192" width="13" height="13" fill="#fbeeee" stroke="#B31B1B" stroke-width="1.4"/>
+<text x="51" y="202" text-anchor="start" font-size="13" fill="#B31B1B" font-family="Helvetica, Arial, sans-serif" font-weight="bold">off-diagonal: 8 &#215; 1 / 1.83 = 4.37</text>
+<rect x="30" y="214" width="13" height="13" fill="#eef3f8" stroke="#4a7fb5" stroke-width="1.4"/>
+<text x="51" y="224" text-anchor="start" font-size="13" fill="#4a7fb5" font-family="Helvetica, Arial, sans-serif" font-weight="bold">diagonal: 0.5 &#215; 8^2.4 = 73.52</text>
+<text x="30" y="246" text-anchor="start" font-size="12" fill="#777" font-family="Helvetica, Arial, sans-serif">charges and distances only, in atomic units:</text>
+<text x="30" y="262" text-anchor="start" font-size="12" fill="#777" font-family="Helvetica, Arial, sans-serif">the O&#8211;H bond is 0.97 &#197; = 1.83 bohr</text>
+<line x1="390" y1="140" x2="408" y2="140" stroke="#B31B1B" stroke-width="2.5"/>
+<path d="M 416,140 L 405,134 L 405,146 Z" fill="#B31B1B"/>
+<text x="518" y="38" text-anchor="middle" font-size="15" fill="#B31B1B" font-family="Helvetica, Arial, sans-serif" font-weight="bold">Diagonalize, sort by |&#955;|</text>
+<rect x="420" y="50" width="196" height="224" rx="8" fill="#fafafa" stroke="#ccc"/>
+<line x1="464" y1="72" x2="464" y2="184" stroke="#555" stroke-width="1.6"/>
+<line x1="464" y1="72" x2="472" y2="72" stroke="#555" stroke-width="1.6"/>
+<line x1="464" y1="184" x2="472" y2="184" stroke="#555" stroke-width="1.6"/>
+<line x1="572" y1="72" x2="572" y2="184" stroke="#555" stroke-width="1.6"/>
+<line x1="572" y1="72" x2="564" y2="72" stroke="#555" stroke-width="1.6"/>
+<line x1="572" y1="184" x2="564" y2="184" stroke="#555" stroke-width="1.6"/>
+<text x="518" y="96" text-anchor="middle" font-size="18" fill="#333" font-family="Menlo, Consolas, monospace" font-weight="bold">74.04</text>
+<text x="518" y="132" text-anchor="middle" font-size="18" fill="#333" font-family="Menlo, Consolas, monospace" font-weight="bold">0.33</text>
+<text x="518" y="168" text-anchor="middle" font-size="18" fill="#333" font-family="Menlo, Consolas, monospace" font-weight="bold">0.15</text>
+<text x="518" y="210" text-anchor="middle" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif" font-weight="bold">3 atoms &#8594; 3 numbers</text>
+<text x="518" y="234" text-anchor="middle" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif">renumbering the atoms</text>
+<text x="518" y="252" text-anchor="middle" font-size="13" fill="#777" font-family="Helvetica, Arial, sans-serif">does not change them</text>
+<line x1="633" y1="62" x2="633" y2="268" stroke="#ccc" stroke-width="1.4" stroke-dasharray="4,5"/>
+<text x="838" y="38" text-anchor="middle" font-size="16" fill="#B31B1B" font-family="Helvetica, Arial, sans-serif" font-weight="bold">A different molecule, a different length</text>
+<rect x="650" y="50" width="376" height="224" rx="8" fill="#fafafa" stroke="#ccc"/>
+<g transform="translate(668,58)">
+<path class='bond-0 atom-0 atom-1' d='M 56.1,39.9 L 73.1,39.9' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-1 atom-0 atom-2' d='M 46.4,49.7 L 42.3,61.4' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-2 atom-0 atom-3' d='M 45.4,33.7 L 39.1,24.7' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<path class='bond-3 atom-0 atom-4' d='M 43.6,40.8 L 26.9,43.1' style='fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.0px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1' />
+<text x='44.6' y='48.8' class='atom-0' style='font-size:17px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >C</text>
+<text x='74.0' y='48.8' class='atom-1' style='font-size:17px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='34.7' y='76.6' class='atom-2' style='font-size:17px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='27.5' y='24.7' class='atom-3' style='font-size:17px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >H</text>
+<text x='15.4' y='52.8' class='atom-4' style='font-size:17px;font-style:normal;font-weight:normal;fill-opacity:1;stroke:none;font-family:Helvetica, Arial, sans-serif;text-anchor:start;fill:#000000' >H</text>
+</g>
+<text x="778" y="92" text-anchor="start" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif">Methane has 5 atoms,</text>
+<text x="778" y="114" text-anchor="start" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif">so its spectrum has 5</text>
+<text x="778" y="136" text-anchor="start" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif">numbers, not 3.</text>
+<text x="676" y="168" text-anchor="start" font-size="13" fill="#B31B1B" font-family="Helvetica, Arial, sans-serif" font-weight="bold">methane</text>
+<rect x="676" y="174" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="708" y="193" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">37.79</text>
+<rect x="740" y="174" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="772" y="193" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.46</text>
+<rect x="804" y="174" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="836" y="193" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.20</text>
+<rect x="868" y="174" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="900" y="193" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.20</text>
+<rect x="932" y="174" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="964" y="193" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.20</text>
+<text x="676" y="222" text-anchor="start" font-size="13" fill="#B31B1B" font-family="Helvetica, Arial, sans-serif" font-weight="bold">water, extended with zeros</text>
+<rect x="676" y="228" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="708" y="247" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">74.04</text>
+<rect x="740" y="228" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="772" y="247" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.33</text>
+<rect x="804" y="228" width="64" height="28" fill="#ffffff" stroke="#ccc" stroke-width="1.4"/>
+<text x="836" y="247" text-anchor="middle" font-size="14" fill="#555" font-family="Menlo, Consolas, monospace">0.15</text>
+<rect x="868" y="228" width="64" height="28" fill="#fbeeee" stroke="#B31B1B" stroke-width="1.4" stroke-dasharray="4,3"/>
+<text x="900" y="247" text-anchor="middle" font-size="14" fill="#B31B1B" font-family="Menlo, Consolas, monospace" font-weight="bold">0.00</text>
+<rect x="932" y="228" width="64" height="28" fill="#fbeeee" stroke="#B31B1B" stroke-width="1.4" stroke-dasharray="4,3"/>
+<text x="964" y="247" text-anchor="middle" font-size="14" fill="#B31B1B" font-family="Menlo, Consolas, monospace" font-weight="bold">0.00</text>
+<text x="838" y="270" text-anchor="middle" font-size="12" fill="#777" font-family="Helvetica, Arial, sans-serif">the shorter one is padded, one comparison at a time</text>
+<text x="530" y="296" text-anchor="middle" font-size="14" fill="#555" font-family="Helvetica, Arial, sans-serif">Rupp et al. never build one feature vector: they compare two molecules by the distance between these spectra.</text>
+</svg>
