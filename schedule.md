@@ -28,8 +28,9 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 | [Deep learning](slides/deep-learning/deep-learning.html) | 2 | Fri, Aug 28 -- Mon, Aug 31 |
 | [Vibe coding](slides/vibe-coding/vibe-coding.html) | 1 | Wed, Sep 2 |
 | [Molecular representations and property prediction](slides/molecular-representations/molecular-representations.html) | 1 | Fri, Sep 4 |
-| Graph neural networks | 2 | Wed, Sep 9 -- Fri, Sep 11 |
-| Machine-learned interatomic potentials | 2 | Mon, Sep 14 -- Wed, Sep 16 |
+| [Graph neural networks](slides/gnn/gnn.html) | 1 | Wed, Sep 9 |
+| Machine-learned interatomic potentials | 2 | Fri Sep 11 --- Mon, Sep 14 |
+| Paper Discussion: Antibiotics and Graph Neural Networks | 1 | Wed Sep 16 |
 | CNNs and ResNets | 1 | Fri, Sep 18 |
 | Materials characterization | 2 | Mon, Sep 21 -- Wed, Sep 23 |
 | Transformers | 2 | Fri, Sep 25 -- Mon, Sep 28 |
