@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 250" font-family="Helvetica, Arial, sans-serif">
+  <!-- a small chain-with-branches graph, repeated 3x with growing shading -->
+
+  <!-- ============ K = 1 ============ -->
+  <text x="150" y="24" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">After 1 round</text>
+  <rect x="20" y="36" width="260" height="150" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <g stroke="#bbb" stroke-width="2">
+    <line x1="60" y1="110" x2="105" y2="110"/>
+    <line x1="105" y1="110" x2="150" y2="110"/>
+    <line x1="150" y1="110" x2="195" y2="110"/>
+    <line x1="195" y1="110" x2="240" y2="110"/>
+    <line x1="150" y1="110" x2="150" y2="158"/>
+  </g>
+  <circle cx="150" cy="110" r="30" fill="#f5c9c9" opacity="0.55" stroke="none"/>
+  <g>
+    <circle cx="60" cy="110" r="11" fill="#e8e8e8" stroke="#aaa" stroke-width="1.5"/>
+    <circle cx="105" cy="110" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+    <circle cx="150" cy="110" r="13" fill="#B31B1B" stroke="#7d1212" stroke-width="2"/>
+    <circle cx="195" cy="110" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+    <circle cx="240" cy="110" r="11" fill="#e8e8e8" stroke="#aaa" stroke-width="1.5"/>
+    <circle cx="150" cy="158" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+  </g>
+  <text x="150" y="208" text-anchor="middle" font-size="14" fill="#555">sees 3 neighbors</text>
+
+  <!-- ============ K = 2 ============ -->
+  <text x="470" y="24" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">After 2 rounds</text>
+  <rect x="340" y="36" width="260" height="150" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <g stroke="#bbb" stroke-width="2">
+    <line x1="380" y1="110" x2="425" y2="110"/>
+    <line x1="425" y1="110" x2="470" y2="110"/>
+    <line x1="470" y1="110" x2="515" y2="110"/>
+    <line x1="515" y1="110" x2="560" y2="110"/>
+    <line x1="470" y1="110" x2="470" y2="158"/>
+  </g>
+  <circle cx="470" cy="110" r="30" fill="#f5c9c9" opacity="0.55" stroke="none"/>
+  <ellipse cx="470" cy="118" rx="72" ry="56" fill="#f5c9c9" opacity="0.3" stroke="none"/>
+  <g>
+    <circle cx="380" cy="110" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+    <circle cx="425" cy="110" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+    <circle cx="470" cy="110" r="13" fill="#B31B1B" stroke="#7d1212" stroke-width="2"/>
+    <circle cx="515" cy="110" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+    <circle cx="560" cy="110" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+    <circle cx="470" cy="158" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2"/>
+  </g>
+  <text x="470" y="208" text-anchor="middle" font-size="14" fill="#555">sees everything within 2 bonds</text>
+
+  <!-- ============ K = 5 ============ -->
+  <text x="790" y="24" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">After many rounds</text>
+  <rect x="660" y="36" width="260" height="150" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <g stroke="#bbb" stroke-width="2">
+    <line x1="700" y1="110" x2="745" y2="110"/>
+    <line x1="745" y1="110" x2="790" y2="110"/>
+    <line x1="790" y1="110" x2="835" y2="110"/>
+    <line x1="835" y1="110" x2="880" y2="110"/>
+    <line x1="790" y1="110" x2="790" y2="158"/>
+  </g>
+  <ellipse cx="790" cy="122" rx="118" ry="62" fill="#b0b0b0" opacity="0.35" stroke="none"/>
+  <g>
+    <circle cx="700" cy="110" r="11" fill="#b8b8b8" stroke="#888" stroke-width="2"/>
+    <circle cx="745" cy="110" r="11" fill="#b8b8b8" stroke="#888" stroke-width="2"/>
+    <circle cx="790" cy="110" r="13" fill="#b8b8b8" stroke="#888" stroke-width="2"/>
+    <circle cx="835" cy="110" r="11" fill="#b8b8b8" stroke="#888" stroke-width="2"/>
+    <circle cx="880" cy="110" r="11" fill="#b8b8b8" stroke="#888" stroke-width="2"/>
+    <circle cx="790" cy="158" r="11" fill="#b8b8b8" stroke="#888" stroke-width="2"/>
+  </g>
+  <text x="790" y="208" text-anchor="middle" font-size="14" fill="#8a3030" font-weight="bold">over-smoothing: every node alike</text>
+
+  <!-- caption -->
+  <text x="470" y="238" text-anchor="middle" font-size="15" fill="#B31B1B" font-weight="bold">Depth buys range, then destroys resolution. For molecules, K = 3 to 5.</text>
+</svg>

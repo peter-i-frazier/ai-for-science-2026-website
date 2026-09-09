@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 312" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- global attribute: the whole graph -->
+  <text x="20" y="34" font-size="17" font-weight="bold" fill="#B31B1B">u</text>
+  <text x="36" y="34" font-size="15" fill="#666">— global (whole-graph) attributes</text>
+  <rect x="20" y="48" width="480" height="244" rx="14"
+        fill="#fbfbfb" stroke="#B31B1B" stroke-width="2" stroke-dasharray="7 5"/>
+
+  <!-- edges -->
+  <g stroke="#ccc" stroke-width="2.5" stroke-linecap="round">
+    <line x1="110" y1="128" x2="250" y2="103"/>
+    <line x1="250" y1="103" x2="270" y2="223"/>
+    <line x1="400" y1="153" x2="270" y2="223"/>
+    <line x1="270" y1="223" x2="120" y2="253"/>
+    <line x1="110" y1="128" x2="120" y2="253"/>
+  </g>
+
+  <!-- the labelled edge -->
+  <line x1="250" y1="103" x2="400" y2="153" stroke="#B31B1B" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- nodes -->
+  <g stroke="#4a7fb5" stroke-width="2" fill="#cfe0f0">
+    <circle cx="250" cy="103" r="18"/>
+    <circle cx="400" cy="153" r="18"/>
+    <circle cx="270" cy="223" r="18"/>
+    <circle cx="120" cy="253" r="18"/>
+  </g>
+
+  <!-- the labelled node -->
+  <circle cx="110" cy="128" r="19" fill="#f5c9c9" stroke="#B31B1B" stroke-width="3"/>
+
+  <!-- node label -->
+  <text x="110" y="74" text-anchor="middle" font-size="14" fill="#666">node attributes</text>
+  <text x="110" y="96" text-anchor="middle" font-size="18" font-weight="bold" fill="#B31B1B">v</text>
+  <text x="121" y="101" font-size="13" font-style="italic" fill="#B31B1B">i</text>
+  <line x1="110" y1="103" x2="110" y2="108" stroke="#999" stroke-width="1.5"/>
+
+  <!-- edge label -->
+  <text x="352" y="88" text-anchor="middle" font-size="14" fill="#666">edge attributes</text>
+  <text x="345" y="110" text-anchor="middle" font-size="18" font-weight="bold" fill="#B31B1B">e</text>
+  <text x="355" y="115" font-size="13" font-style="italic" fill="#B31B1B">ij</text>
+  <line x1="349" y1="117" x2="336" y2="130" stroke="#999" stroke-width="1.5"/>
+
+</svg>

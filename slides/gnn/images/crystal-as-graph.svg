@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 470 300" font-family="Helvetica, Arial, sans-serif">
+
+  <!-- neighbouring images of the cell -->
+  <g fill="none" stroke="#ccc" stroke-width="1.5" stroke-dasharray="5 4">
+    <rect x="60"  y="60" width="120" height="120"/>
+    <rect x="300" y="60" width="120" height="120"/>
+  </g>
+  <!-- the unit cell itself -->
+  <rect x="180" y="60" width="120" height="120" fill="#fafafa" stroke="#555" stroke-width="2"/>
+
+  <!-- cutoff sphere around the highlighted atom, reaching past the wall -->
+  <circle cx="200" cy="120" r="70" fill="none" stroke="#B31B1B" stroke-width="1.4" stroke-dasharray="4 4" opacity="0.65"/>
+  <text x="252" y="70" font-size="13" font-style="italic" fill="#B31B1B">r</text>
+
+  <!-- edges inside the cell -->
+  <g stroke="#999" stroke-width="2.5" stroke-linecap="round">
+    <line x1="200" y1="120" x2="245" y2="90"/>
+    <line x1="245" y1="90"  x2="280" y2="150"/>
+  </g>
+
+  <!-- edges that wrap across the periodic boundary -->
+  <g stroke="#B31B1B" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round">
+    <line x1="200" y1="120" x2="160" y2="150"/>
+    <line x1="280" y1="150" x2="320" y2="120"/>
+  </g>
+
+  <!-- atoms in the neighbouring images -->
+  <g fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2" opacity="0.4">
+    <circle cx="80"  cy="120" r="13"/>
+    <circle cx="125" cy="90"  r="13"/>
+    <circle cx="365" cy="90"  r="13"/>
+    <circle cx="400" cy="150" r="13"/>
+  </g>
+  <g fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2" opacity="0.75">
+    <circle cx="160" cy="150" r="13"/>
+    <circle cx="320" cy="120" r="13"/>
+  </g>
+
+  <!-- atoms in the unit cell -->
+  <circle cx="245" cy="90"  r="14" fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2.5"/>
+  <circle cx="280" cy="150" r="14" fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2.5"/>
+  <circle cx="200" cy="120" r="15" fill="#f5c9c9" stroke="#B31B1B" stroke-width="3"/>
+
+  <text x="240" y="199" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">the unit cell</text>
+  <text x="120" y="199" text-anchor="middle" font-size="12" fill="#888">image</text>
+  <text x="360" y="199" text-anchor="middle" font-size="12" fill="#888">image</text>
+
+  <!-- legend -->
+  <circle cx="70" cy="235" r="10" fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2"/>
+  <text x="88" y="240" font-size="14" fill="#333">atom = node</text>
+
+  <line x1="240" y1="235" x2="262" y2="235" stroke="#999" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="270" y="240" font-size="14" fill="#333">neighbour within <tspan font-style="italic">r</tspan> = edge</text>
+
+  <line x1="60" y1="272" x2="82" y2="272" stroke="#B31B1B" stroke-width="2.5" stroke-dasharray="6 4" stroke-linecap="round"/>
+  <text x="90" y="277" font-size="14" fill="#B31B1B">the same edge wraps into the next image of the cell</text>
+</svg>

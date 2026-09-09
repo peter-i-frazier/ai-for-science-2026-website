@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 300" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="f1" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#B31B1B"/>
+    </marker>
+  </defs>
+
+  <!-- 1 molecule -->
+  <rect x="14" y="60" width="150" height="140" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <text x="89" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="#B31B1B">molecule</text>
+  <g stroke="#777" stroke-width="2">
+    <line x1="48" y1="140" x2="80" y2="118"/>
+    <line x1="80" y1="118" x2="112" y2="140"/>
+    <line x1="80" y1="118" x2="80" y2="170"/>
+    <line x1="112" y1="140" x2="140" y2="120"/>
+  </g>
+  <g fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2">
+    <circle cx="48" cy="140" r="10"/><circle cx="80" cy="118" r="10"/>
+    <circle cx="112" cy="140" r="10"/><circle cx="80" cy="170" r="10"/>
+    <circle cx="140" cy="120" r="10"/>
+  </g>
+  <text x="89" y="192" text-anchor="middle" font-size="11.5" fill="#777">SMILES → RDKit</text>
+
+  <line x1="170" y1="130" x2="200" y2="130" stroke="#B31B1B" stroke-width="3" marker-end="url(#f1)"/>
+
+  <!-- 2 featurize -->
+  <rect x="206" y="60" width="150" height="140" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <text x="281" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="#B31B1B">featurize</text>
+  <g>
+    <rect x="228" y="82" width="106" height="14" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="228" y="100" width="106" height="14" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="228" y="118" width="106" height="14" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="228" y="136" width="106" height="14" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="228" y="154" width="106" height="14" fill="#e8eef5" stroke="#4a7fb5"/>
+    <rect x="234" y="82" width="9" height="14" fill="#4a7fb5"/>
+    <rect x="264" y="100" width="9" height="14" fill="#4a7fb5"/>
+    <rect x="294" y="118" width="9" height="14" fill="#4a7fb5"/>
+    <rect x="249" y="136" width="9" height="14" fill="#4a7fb5"/>
+    <rect x="309" y="154" width="9" height="14" fill="#4a7fb5"/>
+  </g>
+  <text x="281" y="192" text-anchor="middle" font-size="11.5" fill="#777">one vector per atom</text>
+
+  <line x1="362" y1="130" x2="392" y2="130" stroke="#B31B1B" stroke-width="3" marker-end="url(#f1)"/>
+
+  <!-- 3 message passing xK -->
+  <rect x="398" y="60" width="200" height="140" rx="8" fill="#fbeeee" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="498" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="#B31B1B">K rounds of message passing</text>
+  <g stroke="#d99" stroke-width="2">
+    <line x1="440" y1="140" x2="472" y2="118"/>
+    <line x1="472" y1="118" x2="504" y2="140"/>
+    <line x1="472" y1="118" x2="472" y2="170"/>
+    <line x1="504" y1="140" x2="532" y2="120"/>
+  </g>
+  <g fill="#f5c9c9" stroke="#B31B1B" stroke-width="2">
+    <circle cx="440" cy="140" r="10"/><circle cx="472" cy="118" r="10"/>
+    <circle cx="504" cy="140" r="10"/><circle cx="472" cy="170" r="10"/>
+    <circle cx="532" cy="120" r="10"/>
+  </g>
+  <path d="M556,96 a26,26 0 1,1 -6,-16" fill="none" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#f1)"/>
+  <text x="498" y="192" text-anchor="middle" font-size="11.5" fill="#8a3030">atoms learn their neighborhoods</text>
+
+  <line x1="604" y1="130" x2="634" y2="130" stroke="#B31B1B" stroke-width="3" marker-end="url(#f1)"/>
+
+  <!-- 4 readout -->
+  <rect x="640" y="60" width="150" height="140" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <text x="715" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="#B31B1B">pool</text>
+  <g>
+    <rect x="662" y="80" width="106" height="12" fill="#f5e2c9" stroke="#d98324"/>
+    <rect x="662" y="96" width="106" height="12" fill="#f5e2c9" stroke="#d98324"/>
+    <rect x="662" y="112" width="106" height="12" fill="#f5e2c9" stroke="#d98324"/>
+  </g>
+  <text x="715" y="140" text-anchor="middle" font-size="20" fill="#B31B1B">Σ</text>
+  <g>
+    <rect x="662" y="150" width="106" height="18" fill="#d98324" stroke="#a8620d"/>
+  </g>
+  <text x="715" y="192" text-anchor="middle" font-size="11.5" fill="#777">one vector per molecule</text>
+
+  <line x1="796" y1="130" x2="826" y2="130" stroke="#B31B1B" stroke-width="3" marker-end="url(#f1)"/>
+
+  <!-- 5 predict -->
+  <rect x="832" y="60" width="174" height="140" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <text x="919" y="46" text-anchor="middle" font-size="15" font-weight="bold" fill="#B31B1B">predict</text>
+  <rect x="866" y="86" width="106" height="30" rx="5" fill="#e8eef5" stroke="#4a7fb5" stroke-width="1.5"/>
+  <text x="919" y="106" text-anchor="middle" font-size="13" fill="#333">linear layer</text>
+  <text x="919" y="146" text-anchor="middle" font-size="17" fill="#333">ŷ = −3.1</text>
+  <text x="919" y="172" text-anchor="middle" font-size="13" fill="#a33">loss(ŷ, y)</text>
+
+  <!-- gradient arrow back -->
+  <path d="M960,214 L120,214" fill="none" stroke="#2e7d5b" stroke-width="3" marker-end="url(#f1)" stroke-dasharray="8,5"/>
+  <path d="M126,214 L136,209 M126,214 L136,219" stroke="#2e7d5b" stroke-width="3" fill="none"/>
+  <text x="540" y="236" text-anchor="middle" font-size="15" font-weight="bold" fill="#2e7d5b">gradients flow all the way back to the atom features</text>
+
+  <rect x="14" y="252" width="992" height="38" rx="8" fill="#eef6f1" stroke="#2e7d5b" stroke-width="2"/>
+  <text x="510" y="276" text-anchor="middle" font-size="16" font-weight="bold" fill="#2e7d5b">The representation and the predictor are fitted together. That is the whole difference from ECFP + random forest.</text>
+</svg>

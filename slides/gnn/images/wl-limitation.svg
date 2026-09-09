@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 830 300" font-family="Helvetica, Arial, sans-serif">
+  <!-- ============ LEFT : one 6-cycle ============ -->
+  <text x="180" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">One 6-membered ring</text>
+  <rect x="40" y="40" width="280" height="180" rx="10" fill="#fafafa" stroke="#ccc"/>
+  <g stroke="#777" stroke-width="2.5" fill="none">
+    <polygon points="180,70 227,97 227,151 180,178 133,151 133,97"/>
+  </g>
+  <g fill="#cfe0f0" stroke="#4a7fb5" stroke-width="2.5">
+    <circle cx="180" cy="70" r="14"/><circle cx="227" cy="97" r="14"/>
+    <circle cx="227" cy="151" r="14"/><circle cx="180" cy="178" r="14"/>
+    <circle cx="133" cy="151" r="14"/><circle cx="133" cy="97" r="14"/>
+  </g>
+  <text x="180" y="205" text-anchor="middle" font-size="14" fill="#555">6 nodes · every node has degree 2</text>
+
+  <!-- vs -->
+  <text x="415" y="140" text-anchor="middle" font-size="22" font-weight="bold" fill="#B31B1B">vs</text>
+
+  <!-- ============ RIGHT : two triangles ============ -->
+  <text x="650" y="26" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">Two 3-membered rings</text>
+  <rect x="510" y="40" width="280" height="180" rx="10" fill="#fafafa" stroke="#ccc"/>
+  <g stroke="#777" stroke-width="2.5" fill="none">
+    <polygon points="580,72 618,138 542,138"/>
+    <polygon points="722,72 760,138 684,138"/>
+  </g>
+  <g fill="#f5e2c9" stroke="#d98324" stroke-width="2.5">
+    <circle cx="580" cy="72" r="14"/><circle cx="618" cy="138" r="14"/><circle cx="542" cy="138" r="14"/>
+    <circle cx="722" cy="72" r="14"/><circle cx="760" cy="138" r="14"/><circle cx="684" cy="138" r="14"/>
+  </g>
+  <text x="650" y="205" text-anchor="middle" font-size="14" fill="#555">6 nodes · every node has degree 2</text>
+
+  <!-- punchline -->
+  <rect x="40" y="238" width="750" height="52" rx="8" fill="#fbeeee" stroke="#B31B1B" stroke-width="2"/>
+  <text x="415" y="260" text-anchor="middle" font-size="16.5" font-weight="bold" fill="#B31B1B">Message passing gives every node in both graphs the identical vector, at every round.</text>
+  <text x="415" y="281" text-anchor="middle" font-size="14" fill="#8a3030">No depth, no width, and no choice of weights will ever tell these two apart.</text>
+</svg>
