@@ -29,7 +29,7 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 | [Vibe coding](slides/vibe-coding/vibe-coding.html) | 1 | Wed, Sep 2 |
 | [Molecular representations and property prediction](slides/molecular-representations/molecular-representations.html) | 1 | Fri, Sep 4 |
 | [Graph neural networks](slides/gnn/gnn.html) | 1 | Wed, Sep 9 |
-| Machine-learned interatomic potentials | 2 | Fri Sep 11 --- Mon, Sep 14 |
+| [Machine-learned interatomic potentials](slides/mlip/mlip.html) | 2 | Fri Sep 11 --- Mon, Sep 14 |
 | Paper Discussion: Antibiotics and Graph Neural Networks | 1 | Wed Sep 16 |
 | CNNs and ResNets | 1 | Fri, Sep 18 |
 | Materials characterization | 2 | Mon, Sep 21 -- Wed, Sep 23 |

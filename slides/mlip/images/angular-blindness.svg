@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="Helvetica, Arial, sans-serif">
+  <!-- Two environments with identical center-neighbor distance sets but different angles -->
+
+  <!-- ===== left: trigonal ===== -->
+  <rect x="25" y="30" width="410" height="192" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <circle cx="230" cy="140" r="70" fill="none" stroke="#ddd" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <g stroke="#bbb" stroke-width="2.5">
+    <line x1="230" y1="140" x2="230" y2="70"/>
+    <line x1="230" y1="140" x2="169" y2="175"/>
+    <line x1="230" y1="140" x2="291" y2="175"/>
+  </g>
+  <circle cx="230" cy="70" r="12" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <circle cx="169" cy="175" r="12" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <circle cx="291" cy="175" r="12" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <circle cx="230" cy="140" r="14" fill="#B31B1B" stroke="#7d1212" stroke-width="2.5"/>
+  <text x="230" y="248" text-anchor="middle" font-size="16" fill="#333">distances to center: { r, r, r }</text>
+
+  <!-- ===== right: bunched ===== -->
+  <rect x="465" y="30" width="410" height="192" rx="8" fill="#fafafa" stroke="#ccc"/>
+  <circle cx="670" cy="140" r="70" fill="none" stroke="#ddd" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <g stroke="#bbb" stroke-width="2.5">
+    <line x1="670" y1="140" x2="705" y2="79"/>
+    <line x1="670" y1="140" x2="670" y2="70"/>
+    <line x1="670" y1="140" x2="635" y2="79"/>
+  </g>
+  <circle cx="705" cy="79" r="12" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <circle cx="670" cy="70" r="12" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <circle cx="635" cy="79" r="12" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <circle cx="670" cy="140" r="14" fill="#B31B1B" stroke="#7d1212" stroke-width="2.5"/>
+  <text x="670" y="248" text-anchor="middle" font-size="16" fill="#333">distances to center: { r, r, r }</text>
+
+  <text x="450" y="20" text-anchor="middle" font-size="16" font-weight="bold" fill="#B31B1B">Same distances. Very different chemistry.</text>
+
+  <!-- legend: the figure never said which dot was which -->
+  <circle cx="300" cy="278" r="11" fill="#B31B1B" stroke="#7d1212" stroke-width="2.5"/>
+  <text x="318" y="284" font-size="15" fill="#555">central atom</text>
+  <circle cx="470" cy="278" r="11" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="488" y="284" font-size="15" fill="#555">its neighbors</text>
+</svg>

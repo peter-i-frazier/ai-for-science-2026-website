@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="Helvetica, Arial, sans-serif">
+  <!-- The gap MLIPs fill: accuracy vs. reachable scale -->
+  <defs>
+    <marker id="fat" markerWidth="10" markerHeight="10" refX="7" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#B31B1B"/>
+    </marker>
+  </defs>
+
+  <!-- axes -->
+  <line x1="95" y1="266" x2="872" y2="266" stroke="#888" stroke-width="1.5"/>
+  <line x1="95" y1="266" x2="95" y2="28" stroke="#888" stroke-width="1.5"/>
+  <text x="484" y="292" text-anchor="middle" font-size="16" fill="#555">system size &#215; simulated time &#8594;</text>
+  <text x="42" y="152" text-anchor="middle" font-size="16" fill="#555" transform="rotate(-90 42 152)">accuracy &#8594;</text>
+
+  <!-- DFT -->
+  <rect x="125" y="48" width="225" height="94" rx="9" fill="#f5c9c9" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="237" y="80" text-anchor="middle" font-size="21" font-weight="bold" fill="#7d1212">DFT</text>
+  <text x="237" y="105" text-anchor="middle" font-size="15" fill="#555">~100&#8211;1,000 atoms</text>
+  <text x="237" y="126" text-anchor="middle" font-size="15" fill="#555">tens of picoseconds</text>
+
+  <!-- MLIP -->
+  <rect x="580" y="48" width="275" height="94" rx="9" fill="#fff" stroke="#B31B1B" stroke-width="3" stroke-dasharray="7 4"/>
+  <text x="717" y="80" text-anchor="middle" font-size="21" font-weight="bold" fill="#B31B1B">MLIP</text>
+  <text x="717" y="105" text-anchor="middle" font-size="15" fill="#555">DFT accuracy, force-field cost</text>
+  <text x="717" y="126" text-anchor="middle" font-size="15" fill="#555">10&#8309;&#8211;10&#8310; atoms, nanoseconds</text>
+
+  <!-- classical FF -->
+  <rect x="580" y="160" width="275" height="94" rx="9" fill="#eef1f6" stroke="#1b4b8f" stroke-width="2.5"/>
+  <text x="717" y="192" text-anchor="middle" font-size="21" font-weight="bold" fill="#1b4b8f">classical force field</text>
+  <text x="717" y="217" text-anchor="middle" font-size="15" fill="#555">millions of atoms, microseconds</text>
+  <text x="717" y="238" text-anchor="middle" font-size="15" fill="#555">but a fixed functional form</text>
+
+  <!-- the arrow across the gap -->
+  <line x1="358" y1="112" x2="568" y2="112" stroke="#B31B1B" stroke-width="4" marker-end="url(#fat)"/>
+  <text x="464" y="95" text-anchor="middle" font-size="16" font-weight="bold" fill="#B31B1B">3&#8211;6 orders of magnitude</text>
+</svg>

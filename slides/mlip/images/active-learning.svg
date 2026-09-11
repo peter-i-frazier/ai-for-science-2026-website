@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" font-family="Helvetica, Arial, sans-serif">
+  <!-- The active-learning loop that produces MLIP training data -->
+  <defs>
+    <marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto">
+      <path d="M0,0 L7,3.2 L0,6.4 z" fill="#B31B1B"/>
+    </marker>
+  </defs>
+
+  <g stroke="#B31B1B" stroke-width="2.5" fill="#fafafa">
+    <rect x="23" y="52" width="185" height="88" rx="8"/>
+    <rect x="246" y="52" width="185" height="88" rx="8"/>
+    <rect x="469" y="52" width="185" height="88" rx="8"/>
+    <rect x="692" y="52" width="185" height="88" rx="8"/>
+  </g>
+
+  <g text-anchor="middle" font-size="16" fill="#333">
+    <text x="115" y="88" font-weight="bold" fill="#7d1212">Run MD</text>
+    <text x="115" y="112" font-size="15" fill="#555">with the current model</text>
+
+    <text x="338" y="88" font-weight="bold" fill="#7d1212">Flag a frame</text>
+    <text x="338" y="112" font-size="15" fill="#555">the model is unsure about</text>
+
+    <text x="561" y="88" font-weight="bold" fill="#7d1212">Run DFT</text>
+    <text x="561" y="112" font-size="15" fill="#555">on that one frame only</text>
+
+    <text x="784" y="88" font-weight="bold" fill="#7d1212">Add it, retrain</text>
+    <text x="784" y="112" font-size="15" fill="#555">a few hundred frames total</text>
+  </g>
+
+  <g stroke="#B31B1B" stroke-width="2.5" marker-end="url(#a)">
+    <line x1="210" y1="96" x2="242" y2="96"/>
+    <line x1="433" y1="96" x2="465" y2="96"/>
+    <line x1="656" y1="96" x2="688" y2="96"/>
+  </g>
+
+  <!-- return path -->
+  <path d="M 784,142 L 784,192 L 115,192 L 115,146" fill="none" stroke="#B31B1B" stroke-width="2.5"
+        stroke-dasharray="7 4" marker-end="url(#a)"/>
+  <text x="450" y="228" text-anchor="middle" font-size="15" fill="#555">You never label a whole trajectory &#8212; only the configurations the model cannot yet handle.</text>
+</svg>

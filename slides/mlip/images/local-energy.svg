@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="Helvetica, Arial, sans-serif">
+  <!-- The locality assumption: total energy as a sum of local atomic energies -->
+
+  <!-- left: the decomposition -->
+  <text x="30" y="112" font-size="32" fill="#B31B1B" font-weight="bold">E</text>
+  <text x="60" y="112" font-size="28" fill="#555">=</text>
+  <text x="92" y="116" font-size="42" fill="#B31B1B">&#931;</text>
+  <text x="116" y="127" font-size="17" fill="#B31B1B">i</text>
+  <text x="132" y="112" font-size="32" fill="#B31B1B" font-weight="bold">E</text>
+  <text x="158" y="121" font-size="19" fill="#B31B1B">i</text>
+  <text x="30" y="158" font-size="17" fill="#555">one number per atom, from</text>
+  <text x="30" y="181" font-size="17" fill="#555">its own neighborhood only</text>
+  <text x="30" y="221" font-size="17" fill="#555">Add an atom far away and nothing</text>
+  <text x="30" y="244" font-size="17" fill="#555">here changes &#8212; which is what makes</text>
+  <text x="30" y="267" font-size="17" fill="#555">the cost linear in N.</text>
+
+  <!-- cutoff shading -->
+  <circle cx="590" cy="160" r="92" fill="#f5c9c9" opacity="0.32" stroke="#B31B1B" stroke-width="2" stroke-dasharray="6 4"/>
+
+  <!-- distant atoms -->
+  <g fill="#e4e4e4" stroke="#aaa" stroke-width="1.5">
+    <circle cx="409" cy="40" r="11"/><circle cx="471" cy="40" r="11"/><circle cx="529" cy="40" r="11"/>
+    <circle cx="590" cy="40" r="11"/><circle cx="649" cy="40" r="11"/><circle cx="710" cy="40" r="11"/>
+    <circle cx="769" cy="40" r="11"/><circle cx="827" cy="40" r="11"/>
+    <circle cx="382" cy="100" r="11"/><circle cx="442" cy="100" r="11"/><circle cx="501" cy="100" r="11"/>
+    <circle cx="681" cy="100" r="11"/><circle cx="740" cy="100" r="11"/><circle cx="800" cy="100" r="11"/>
+    <circle cx="409" cy="160" r="11"/><circle cx="471" cy="160" r="11"/>
+    <circle cx="710" cy="160" r="11"/><circle cx="769" cy="160" r="11"/><circle cx="827" cy="160" r="11"/>
+    <circle cx="382" cy="220" r="11"/><circle cx="442" cy="220" r="11"/><circle cx="501" cy="220" r="11"/>
+    <circle cx="681" cy="220" r="11"/><circle cx="740" cy="220" r="11"/><circle cx="800" cy="220" r="11"/>
+  </g>
+
+  <!-- neighbors inside the cutoff -->
+  <g fill="#ef9a9a" stroke="#B31B1B" stroke-width="2.5">
+    <circle cx="529" cy="160" r="12"/><circle cx="649" cy="160" r="12"/>
+    <circle cx="561" cy="100" r="12"/><circle cx="621" cy="100" r="12"/>
+    <circle cx="561" cy="220" r="12"/><circle cx="621" cy="220" r="12"/>
+  </g>
+
+  <!-- the central atom -->
+  <circle cx="590" cy="160" r="15" fill="#B31B1B" stroke="#7d1212" stroke-width="2.5"/>
+  <text x="590" y="196" text-anchor="middle" font-size="18" font-weight="bold" fill="#7d1212">i</text>
+
+  <text x="590" y="285" text-anchor="middle" font-size="16" fill="#7d1212">
+    E<tspan font-size="12" dy="4">i</tspan><tspan dy="-4"> depends only on what is inside the cutoff &#8212; typically 4&#8211;6 &#197;</tspan>
+  </text>
+</svg>

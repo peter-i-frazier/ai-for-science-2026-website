@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 265" font-family="Helvetica, Arial, sans-serif">
+  <!-- Hohenberg-Kohn as a change of decision variable: input arity collapses from 3Ne to 3 -->
+  <defs>
+    <marker id="hk" markerWidth="10" markerHeight="10" refX="8" refY="3.5" orient="auto">
+      <path d="M0,0 L8,3.5 L0,7 z" fill="#B31B1B"/>
+    </marker>
+  </defs>
+
+  <!-- ============ left: the wavefunction ============ -->
+  <rect x="18" y="38" width="362" height="196" rx="9" fill="#fafafa" stroke="#ccc"/>
+  <text x="199" y="64" text-anchor="middle" font-size="16" font-weight="bold" fill="#B31B1B">minimize over the wavefunction</text>
+  <text x="199" y="104" text-anchor="middle" font-size="24" fill="#333">&#968;(r&#8321;, r&#8322;, &#8230;, r<tspan font-size="16" dy="6">Ne</tspan><tspan font-size="24" dy="-6">)</tspan></text>
+
+  <g stroke="#B31B1B" stroke-width="2.5">
+    <line x1="63" y1="128" x2="63" y2="148"/><line x1="79" y1="128" x2="79" y2="148"/>
+    <line x1="95" y1="128" x2="95" y2="148"/><line x1="111" y1="128" x2="111" y2="148"/>
+    <line x1="127" y1="128" x2="127" y2="148"/><line x1="143" y1="128" x2="143" y2="148"/>
+    <line x1="159" y1="128" x2="159" y2="148"/><line x1="175" y1="128" x2="175" y2="148"/>
+    <line x1="191" y1="128" x2="191" y2="148"/><line x1="207" y1="128" x2="207" y2="148"/>
+    <line x1="223" y1="128" x2="223" y2="148"/><line x1="239" y1="128" x2="239" y2="148"/>
+    <line x1="255" y1="128" x2="255" y2="148"/><line x1="271" y1="128" x2="271" y2="148"/>
+    <line x1="287" y1="128" x2="287" y2="148"/><line x1="303" y1="128" x2="303" y2="148"/>
+    <line x1="319" y1="128" x2="319" y2="148"/><line x1="335" y1="128" x2="335" y2="148"/>
+  </g>
+  <text x="199" y="174" text-anchor="middle" font-size="16" fill="#555">3N<tspan font-size="12" dy="3">e</tspan><tspan dy="-3"> input coordinates</tspan></text>
+  <text x="199" y="200" text-anchor="middle" font-size="15" fill="#7d1212">Kohn's estimate at N &#8776; 100:</text>
+  <text x="199" y="222" text-anchor="middle" font-size="17" font-weight="bold" fill="#7d1212">3&#179;&#8304;&#8304; &#8776; 10&#185;&#8309;&#8304; parameters</text>
+
+  <!-- ============ the arrow, in a gap wide enough for its label ============ -->
+  <text x="450" y="116" text-anchor="middle" font-size="14" font-weight="bold" fill="#B31B1B">Hohenberg</text>
+  <line x1="408" y1="136" x2="492" y2="136" stroke="#B31B1B" stroke-width="4" marker-end="url(#hk)"/>
+  <text x="450" y="164" text-anchor="middle" font-size="14" font-weight="bold" fill="#B31B1B">&#8211;Kohn, 1964</text>
+
+  <!-- ============ right: the density ============ -->
+  <rect x="520" y="38" width="362" height="196" rx="9" fill="#fafafa" stroke="#ccc"/>
+  <text x="701" y="64" text-anchor="middle" font-size="16" font-weight="bold" fill="#B31B1B">minimize over the density</text>
+  <text x="701" y="104" text-anchor="middle" font-size="24" fill="#333">&#961;(x, y, z)</text>
+
+  <g stroke="#B31B1B" stroke-width="2.5">
+    <line x1="677" y1="128" x2="677" y2="148"/>
+    <line x1="701" y1="128" x2="701" y2="148"/>
+    <line x1="725" y1="128" x2="725" y2="148"/>
+  </g>
+  <text x="701" y="174" text-anchor="middle" font-size="16" fill="#555">3 input coordinates, whatever N<tspan font-size="12" dy="3">e</tspan><tspan dy="-3"> is</tspan></text>
+
+  <!-- a density cloud over two nuclei -->
+  <ellipse cx="701" cy="207" rx="70" ry="23" fill="#f5c9c9" opacity="0.35"/>
+  <ellipse cx="701" cy="207" rx="50" ry="16" fill="#f5c9c9" opacity="0.5"/>
+  <ellipse cx="701" cy="207" rx="29" ry="11" fill="#ef9a9a" opacity="0.7"/>
+  <circle cx="681" cy="207" r="6" fill="#B31B1B" stroke="#7d1212" stroke-width="1.5"/>
+  <circle cx="721" cy="207" r="6" fill="#B31B1B" stroke="#7d1212" stroke-width="1.5"/>
+</svg>
