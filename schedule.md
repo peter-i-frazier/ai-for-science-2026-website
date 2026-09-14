@@ -77,7 +77,8 @@ registration option requires.
 I aim to post slide decks before lecture. Lecture recordings go on Canvas, not here ---
 [why](syllabus.html#recordings).
 
-**The reading for each unit is announced before the session.** The
+**The reading for each unit is announced before the session.** What to submit, and how, is on the
+[reading assignments page](reading.html). The
 [topics page](topics.html) shows the kind of paper each topic covers, but that list is provisional
 and still being built out --- do not work from it.
 

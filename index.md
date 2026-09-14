@@ -7,6 +7,7 @@
 - **Credits:** 2 credits (S/U or graded) or 3 credits (graded)
 - **Syllabus:** [full syllabus](syllabus.html)
 - **Schedule:** [meeting dates, units, homework, and reading](schedule.html)
+- **Reading assignments:** [what to submit, and how](reading.html)
 
 In the course roster this is listed under the generic 7000-level name **"Selected Topics in
 Applied Operations Research."** Register for **ORIE 7190**.
