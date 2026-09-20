@@ -28,11 +28,11 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 | [Deep learning](slides/deep-learning/deep-learning.html) | 2 | Fri, Aug 28 -- Mon, Aug 31 |
 | [Vibe coding](slides/vibe-coding/vibe-coding.html) | 1 | Wed, Sep 2 |
 | [Molecular representations and property prediction](slides/molecular-representations/molecular-representations.html) | 1 | Fri, Sep 4 |
-| [Graph neural networks](slides/gnn/gnn.html) | 1 | Wed, Sep 9 |
-| [Machine-learned interatomic potentials](slides/mlip/mlip.html) | 2 | Fri Sep 11 --- Mon, Sep 14 |
-| [Paper Discussion: Antibiotics and Graph Neural Networks](slides/paper-discussion-1/paper-discussion-1.html) | 1 | Wed Sep 16 |
-| CNNs and ResNets | 1 | Fri, Sep 18 |
-| Materials characterization | 2 | Mon, Sep 21 -- Wed, Sep 23 |
+| [Graph neural networks](slides/gnn/gnn.html) | 2 | Wed, Sep 9 -- Fri, Sep 11 |
+| [Machine-learned interatomic potentials](slides/mlip/mlip.html) | 2 | Mon, Sep 14 and Fri, Sep 18 |
+| [Paper Discussion: Antibiotics and Graph Neural Networks](slides/paper-discussion-1/paper-discussion-1.html) | 1 | Wed, Sep 16 |
+| CNNs and ResNets | 1 | Mon, Sep 21 |
+| Materials characterization | 1 | Wed, Sep 23 |
 | Transformers | 2 | Fri, Sep 25 -- Mon, Sep 28 |
 | Protein language models | 2 | Wed, Sep 30 -- Fri, Oct 2 |
 | Language models | 2 | Mon, Oct 5 -- Wed, Oct 7 |
