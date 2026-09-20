@@ -6,16 +6,17 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 
 ---
 
-## Fixed Dates
+## Assigned Reading and Homework
 
-| Date | What |
-|---|---|
-| **Mon, Aug 24** | First day of instruction |
-| **Mon, Sep 7** | Labor Day --- **no class** |
-| **Mon, Oct 12** | Fall Break --- **no class**; instruction resumes Wed, Oct 14 |
-| **Mon, Nov 2** and **Wed, Nov 4** | **Zoom only, everyone** --- instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. Back in Upson Fri, Nov 6. |
-| **Wed, Nov 25** and **Fri, Nov 27** | Thanksgiving Break --- **no class** |
-| **Mon, Dec 7** | Last day of instruction |
+Everything assigned so far, in due-date order. Reading is submitted on Gradescope by 5pm on the
+due date; the [syllabus](syllabus.html#papers) has the rules, including the no-LLM rule for
+reading.
+
+| | What | Due |
+|---|---|---|
+| **[HW1](homework/hw1.pdf)** | Supervised learning for molecular property prediction | Fri, Sep 11 |
+| **Reading 1** | Stokes et al., [*A Deep Learning Approach to Antibiotic Discovery*](https://doi.org/10.1016/j.cell.2020.01.021). Cell 180(4), 688--702, 2020.<br>Jiang et al., [*Could graph neural networks learn better molecular representation for drug discovery?*](https://doi.org/10.1186/s13321-020-00479-8) J. Cheminformatics 13, 12, 2021.<br>Discussed Wed, Sep 16 --- [your comments, by theme](reading-1-comments.html). | Tue, Sep 15 |
+| **Reading 2** | Batatia, Kovács, Simm, Ortner, Csányi, [*MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields*](https://arxiv.org/abs/2206.07697). NeurIPS 35, 11423--11436, 2022.<br>Batatia et al., [*A foundation model for atomistic materials chemistry*](https://doi.org/10.1063/5.0297006) (MACE-MP-0). J. Chem. Phys. 163, 184110, 2025.<br>Creed et al., [*Six Open Questions in Machine-Learned Interatomic Potential Foundation Models*](https://arxiv.org/abs/2606.07327). arXiv:2606.07327, 2026.<br>What to focus on, what to skip, and two further optional papers are on the last slide of the [MLIP deck](slides/mlip/mlip.html). Discussion Mon, Sep 28. | **Sat, Sep 26** |
 
 ---
 
@@ -31,14 +32,14 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 | [Graph neural networks](slides/gnn/gnn.html) | 2 | Wed, Sep 9 -- Fri, Sep 11 |
 | [Machine-learned interatomic potentials](slides/mlip/mlip.html) | 2 | Mon, Sep 14 and Fri, Sep 18 |
 | [Paper Discussion: Antibiotics and Graph Neural Networks](slides/paper-discussion-1/paper-discussion-1.html) | 1 | Wed, Sep 16 |
-| CNNs and ResNets | 1 | Mon, Sep 21 |
-| Materials characterization | 1 | Wed, Sep 23 |
-| Transformers | 2 | Fri, Sep 25 -- Mon, Sep 28 |
-| Protein language models | 2 | Wed, Sep 30 -- Fri, Oct 2 |
-| Language models | 2 | Mon, Oct 5 -- Wed, Oct 7 |
-| Tools and reasoning | 1 | Fri, Oct 9 |
-| Agents for science | 5 | Wed, Oct 14 -- Fri, Oct 23 |
-| Diffusion | 2 | Mon, Oct 26 -- Wed, Oct 28 |
+| [Sequences, RNNs, Attention, and Transformers](https://docs.google.com/presentation/d/1F5okNsaqsBzZR3bpp8xK_2whb-igJeOx22RRRUTD-6w/edit?usp=sharing) | 2 | Mon, Sep 21 and Wed, Sep 23 |
+| Protein language models | 1 | Fri, Sep 25 |
+| Paper Discussion: MLIP Foundation Models | 1 | Mon, Sep 28 |
+| Language models | 2 | Wed, Sep 30 -- Fri, Oct 2 |
+| Tools and reasoning | 1 | Mon, Oct 5 |
+| Agents for science | 5 | Wed, Oct 7 -- Fri, Oct 9 |
+| Diffusion | 2 | |
+| Vision and Materials Characterization | 2 | |
 | AlphaFold and structure prediction | 2 | Mon, Nov 2 -- Wed, Nov 4 *(Zoom)* |
 | Black-box optimization and self-driving labs | 3 | Fri, Nov 6 -- Wed, Nov 11 |
 | Virtual cell models | 2 | Fri, Nov 13 -- Mon, Nov 16 |
@@ -46,15 +47,15 @@ Fixed dates are fixed. **Planned** will shift by a session or two.
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
 | Wrap-up | 1 | Mon, Dec 7 |
 
-**Three sessions are held in reserve** --- Fri Oct 30, Wed Nov 18, Fri Nov 20 --- so a unit that
-runs long does not push another out.
+**Two sessions are held in reserve** --- Wed Nov 18 and Fri Nov 20 --- so a unit that runs long
+does not push another out.
 
 Science units follow the machinery they need --- molecular property prediction in week two, before
 transformers.
 
 ---
 
-## Homework
+## Planned Homework
 
 Each assignment has a no-AI Part A and an AI-encouraged Part B; the
 [syllabus](syllabus.html#homework) has the rules. **Topics and dates are planned** and move with
@@ -62,9 +63,8 @@ the units; due dates are confirmed at release.
 
 | | Topic | Released | Due |
 |---|---|---|---|
-| **[HW1](homework/hw1.pdf)** | Supervised learning for molecular property prediction | Sun, Aug 30 | Fri, Sep 11 |
-| **HW2** | Build a language model, then use one | Wed, Oct 7 | Wed, Oct 21 |
-| **HW3** | Build your own AI co-scientist | Fri, Oct 23 | Fri, Nov 6 |
+| **HW2** | Build a language model, then use one | Fri, Oct 9 | Wed, Oct 21 |
+| **HW3** | Build your own AI co-scientist | Mon, Oct 26 | Fri, Nov 6 |
 | **HW4** | Black-box optimization for design | Wed, Nov 11 | Mon, Nov 23 |
 
 **2 credits S/U** does not require homework. See [the syllabus](syllabus.html) for what each
@@ -77,10 +77,23 @@ registration option requires.
 I aim to post slide decks before lecture. Lecture recordings go on Canvas, not here ---
 [why](syllabus.html#recordings).
 
-**The reading for each unit is announced before the session.** What to submit, and how, is on the
-[reading assignments page](reading.html). The
+**The reading for each unit is announced before the session**, on the last slide of that unit's
+deck, and appears in the table at the top of this page. The
 [topics page](topics.html) shows the kind of paper each topic covers, but that list is provisional
 and still being built out --- do not work from it.
+
+---
+
+## Fixed Dates
+
+| Date | What |
+|---|---|
+| **Mon, Aug 24** | First day of instruction |
+| **Mon, Sep 7** | Labor Day --- **no class** |
+| **Mon, Oct 12** | Fall Break --- **no class**; instruction resumes Wed, Oct 14 |
+| **Mon, Nov 2** and **Wed, Nov 4** | **Zoom only, everyone** --- instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. Back in Upson Fri, Nov 6. |
+| **Wed, Nov 25** and **Fri, Nov 27** | Thanksgiving Break --- **no class** |
+| **Mon, Dec 7** | Last day of instruction |
 
 ---
 
