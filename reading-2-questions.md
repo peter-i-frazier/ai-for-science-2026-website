@@ -16,8 +16,6 @@ everyone can edit.
 
 ## 3. How can a user figure out whether to trust an MLIP in their application? For what kinds of applications are MLIPs useful vs. not useful?
 
-**Report out:** your checklist, and where you draw the useful / not-useful line.
-
 ## 4. Suppose someone gave you a budget to spend on doing DFT at new atomic configurations to support MLIP training. Which configurations would you run?
 
 ## 5. An MLIP, mid-simulation, meets a configuration unlike anything in its training data. What should it do?
@@ -31,8 +29,6 @@ For example, you can predict crystal structure by placing atoms into a repeating
 moving them to minimize their energy. Suppose you also have experimental data on the observed
 macroscopic phenomenon in nature --- e.g., the actual locations of the atoms in a crystal structure.
 **How could you include this data into your MLIP training, and what value would it have?**
-
-**Report out:** your training scheme, and the observable you would start with.
 
 ## 7. MACE's central design choice is four-body messages. Is four the right number, and does the answer depend on the system?
 
