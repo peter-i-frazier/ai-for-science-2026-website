@@ -4,11 +4,11 @@
 
 Questions for the Mon, Sep 28 discussion of MACE, MACE-MP-0, and Creed et al.  Most of these came out of your Gradescope comments.
 
-Pick **one** per group, discuss for 25 minutes, then one person reports out. Aim for a 2 minute presentation. You will get 3 min max.
+Pick **one** per group, discuss, then one person reports out. Aim for a 2 minute presentation. You will get 3 min max.
 
 Put your group's answer on your group's slide in the
 **[shared slide deck](https://docs.google.com/presentation/d/13krKlPiC_ex9x_mJVcTfGnUcLGzx3mOwjyIGqwILwt8/edit?usp=sharing)** —
-everyone can edit. Write down your question number, get your answer written, and choose a presenter by minute 25.
+everyone can edit.
 
 ## 1. List out and rank the main limitations of MLIPs.
 
