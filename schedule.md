@@ -34,7 +34,7 @@ reading.
 | [Paper Discussion: Antibiotics and Graph Neural Networks](slides/paper-discussion-1/paper-discussion-1.html) | 1 | Wed, Sep 16 |
 | [Sequences, RNNs, Attention, and Transformers](https://docs.google.com/presentation/d/1F5okNsaqsBzZR3bpp8xK_2whb-igJeOx22RRRUTD-6w/edit?usp=sharing) | 3 | Mon, Sep 21 -- Fri, Sep 25 |
 | Paper Discussion: MLIP Foundation Models | 1 | Mon, Sep 28 |
-| Protein language models | 1 | Wed, Sep 30 |
+| [Protein language models](slides/protein-language-models/protein-language-models.html) | 1 | Wed, Sep 30 |
 | Language models | 2 | Fri, Oct 2 -- Mon, Oct 5 |
 | Tools and reasoning | 1 | Wed, Oct 7 |
 | Agents for science | 5 | Fri, Oct 9 -- Wed, Oct 21 |
