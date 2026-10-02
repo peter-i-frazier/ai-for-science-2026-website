@@ -35,14 +35,19 @@ reading.
 | [Sequences, RNNs, Attention, and Transformers](https://docs.google.com/presentation/d/1F5okNsaqsBzZR3bpp8xK_2whb-igJeOx22RRRUTD-6w/edit?usp=sharing) | 3 | Mon, Sep 21 -- Fri, Sep 25 |
 | Paper Discussion: MLIP Foundation Models | 1 | Mon, Sep 28 |
 | [Protein language models](slides/protein-language-models/protein-language-models.html) | 1 | Wed, Sep 30 |
-| Language models | 2 | Fri, Oct 2 -- Mon, Oct 5 |
-| Tools and reasoning | 1 | Wed, Oct 7 |
-| Agents for science | 5 | Fri, Oct 9 -- Wed, Oct 21 |
-| Diffusion | 2 | Fri, Oct 23 -- Mon, Oct 26 |
-| Vision and Materials Characterization | 2 | Wed, Oct 28 -- Fri, Oct 30 |
+| [Language models](slides/language-models/language-models.html) | 1 | Fri, Oct 2 |
+| Tools and reasoning | 1 | Mon, Oct 5 |
+| Agents for science | 1 | Wed, Oct 7 |
+| Discussion | 1 | Fri, Oct 9 |
+| Diffusion | 2 | Wed, Oct 14 -- Fri, Oct 16 |
+| Paper Discussion: Diffusion | 1 | Mon, Oct 19 |
+| Vision and Materials Characterization | 2 | Wed, Oct 21 -- Fri, Oct 23 |
+| Paper Discussion: Vision and Materials Characterization | 1 | Mon, Oct 26 |
+| Virtual cell models | 2 | Wed, Oct 28 -- Fri, Oct 30 |
 | AlphaFold and structure prediction | 2 | Mon, Nov 2 -- Wed, Nov 4 *(Zoom)* |
-| Black-box optimization and self-driving labs | 3 | Fri, Nov 6 -- Wed, Nov 11 |
-| Virtual cell models | 2 | Fri, Nov 13 -- Mon, Nov 16 |
+| Paper Discussion: Structure Prediction and Virtual Cells | 1 | Fri, Nov 6 |
+| Black-box optimization and self-driving labs | 3 | Mon, Nov 9 -- Fri, Nov 13 |
+| Paper Discussion: Black-Box Optimization and Self-Driving Labs | 1 | Mon, Nov 16 |
 | Project work session | 1 | Mon, Nov 23 |
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
 | Wrap-up | 1 | Mon, Dec 7 |
