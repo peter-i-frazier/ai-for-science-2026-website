@@ -1,0 +1,1268 @@
+<!DOCTYPE html><html lang="en-US"><head><title>Prompting, Reasoning, and Tool Use</title><meta property="og:title" content="Prompting, Reasoning, and Tool Use"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta property="og:type" content="website"><meta name="twitter:card" content="summary"><style>@media screen{body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button,body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{appearance:none;background-color:initial;border:0;color:inherit;cursor:pointer;font-size:inherit;opacity:.8;outline:none;padding:0;transition:opacity .2s linear;-webkit-tap-highlight-color:transparent}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:disabled,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:disabled,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:disabled{cursor:not-allowed;opacity:.15!important}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover{opacity:1}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:active,body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:active,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:active{opacity:.6}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button:hover:not(:disabled),body[data-bespoke-view=overview] button.bespoke-marp-overview-close:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button:hover:not(:disabled),body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button:hover:not(:disabled){transition:none}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-prev{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNNjggOTAgMjggNTBsNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=""] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=next] .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button.bespoke-marp-presenter-info-page-next{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJtMzIgOTAgNDAtNDAtNDAtNDAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNNDAgNzBIMjBWNTBtMjAgMEwyMCA3MG00MC00MGgyMHYyMG0tMjAgMCAyMC0yMCIgY2xhc3M9ImEiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button.exit[data-bespoke-marp-osc=fullscreen]{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4fTwvc3R5bGU+PC9kZWZzPjxyZWN0IHdpZHRoPSI4MCIgaGVpZ2h0PSI2MCIgeD0iMTAiIHk9IjIwIiBjbGFzcz0iYSIgcng9IjUuNjciLz48cGF0aCBkPSJNMjAgNTBoMjB2MjBtLTIwIDAgMjAtMjBtNDAgMEg2MFYzMG0yMCAwTDYwIDUwIiBjbGFzcz0iYSIvPjwvc3ZnPg==")}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNODcuOCA0Ny41Qzg5IDUwIDg3LjcgNTIgODUgNTJIMzVhOC43IDguNyAwIDAgMS03LjItNC41bC0xNS42LTMxQzExIDE0IDEyLjIgMTIgMTUgMTJoNTBhOC44IDguOCAwIDAgMSA3LjIgNC41ek02MCA1MnYzNm0tMTAgMGgyME00NSA0MmgyMCIvPjwvc3ZnPg==") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=overview] button.bespoke-marp-overview-close,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-bigger{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODBNNTIgOTBWMTAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button.bespoke-marp-presenter-note-smaller{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSI1IiBkPSJNMTIgNTBoODAiLz48L3N2Zz4=") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview]{background:#0000 url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48ZGVmcz48c3R5bGU+LmF7ZmlsbDpub25lO3N0cm9rZTojZmZmO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2Utd2lkdGg6NXB4O3J4OjVweDtyeTo1cHg7d2lkdGg6MjVweDtoZWlnaHQ6MjVweH08L3N0eWxlPjwvZGVmcz48cmVjdCB4PSIyMCIgeT0iMjAiIGNsYXNzPSJhIi8+PHJlY3QgeD0iNTUiIHk9IjIwIiBjbGFzcz0iYSIvPjxyZWN0IHg9IjIwIiB5PSI1NSIgY2xhc3M9ImEiLz48cmVjdCB4PSI1NSIgeT0iNTUiIGNsYXNzPSJhIi8+PC9zdmc+") no-repeat 50%;background-size:contain;overflow:hidden;text-indent:100%;white-space:nowrap}}@keyframes __bespoke_marp_transition_reduced_outgoing__{0%{opacity:1}to{opacity:0}}@keyframes __bespoke_marp_transition_reduced_incoming__{0%{mix-blend-mode:plus-lighter;opacity:0}to{mix-blend-mode:plus-lighter;opacity:1}}.bespoke-marp-note,.bespoke-marp-osc,.bespoke-progress-parent{display:none;transition:none}@media screen{::view-transition-group(*){animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-timing-function:ease}::view-transition-new(*),::view-transition-old(*){animation-delay:0s;animation-direction:var(--marp-bespoke-transition-animation-direction,normal);animation-duration:var(--marp-bespoke-transition-animation-duration,.5s);animation-fill-mode:both;animation-name:var(--marp-bespoke-transition-animation-name,var(--marp-bespoke-transition-animation-name-fallback,__bespoke_marp_transition_no_animation__));mix-blend-mode:normal}::view-transition-old(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_outgoing__;animation-timing-function:ease}::view-transition-new(*){--marp-bespoke-transition-animation-name-fallback:__bespoke_marp_transition_reduced_incoming__;animation-timing-function:ease}::view-transition-new(root),::view-transition-old(root){animation-timing-function:linear}::view-transition-new(__bespoke_marp_transition_osc__),::view-transition-old(__bespoke_marp_transition_osc__){animation-duration:0s!important;animation-name:__bespoke_marp_transition_osc__!important}::view-transition-new(__bespoke_marp_transition_osc__){opacity:0!important}.bespoke-marp-transition-warming-up::view-transition-group(*),.bespoke-marp-transition-warming-up::view-transition-new(*),.bespoke-marp-transition-warming-up::view-transition-old(*){animation-play-state:paused!important}body,html{height:100%;margin:0}body{background:#000;overflow:hidden}svg.bespoke-marp-slide{content-visibility:hidden;interactivity:inert;opacity:0;pointer-events:none;z-index:-1}svg.bespoke-marp-slide:not(.bespoke-marp-active) *{view-transition-name:none!important}svg.bespoke-marp-slide.bespoke-marp-active{content-visibility:visible;interactivity:auto;opacity:1;pointer-events:auto;z-index:0}svg.bespoke-marp-slide.bespoke-marp-active.bespoke-marp-active-ready *{animation-name:__bespoke_marp__!important}@supports not (content-visibility:hidden){svg.bespoke-marp-slide[data-bespoke-marp-load=hideable]{display:none}svg.bespoke-marp-slide[data-bespoke-marp-load=hideable].bespoke-marp-active{display:block}}}@media screen and (prefers-reduced-motion:reduce){svg.bespoke-marp-slide *{view-transition-name:none!important}}@media screen{[data-bespoke-marp-fragment=inactive]{visibility:hidden}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent{inset:0;position:absolute}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc{background:#000000a6;border-radius:7px;bottom:50px;color:#fff;contain:paint;display:block;font-family:Helvetica,Arial,sans-serif;font-size:16px;left:50%;line-height:0;opacity:1;padding:12px;position:absolute;touch-action:manipulation;transform:translateX(-50%);transition:opacity .2s linear;-webkit-user-select:none;user-select:none;view-transition-name:__bespoke_marp_transition_osc__;white-space:nowrap;will-change:transform;z-index:1}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*){margin-left:6px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>:where(*):where(:first-child){margin-left:0}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span{opacity:.8}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>span[data-bespoke-marp-osc=page]{display:inline-block;min-width:140px;text-align:center}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=fullscreen],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=next],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=overview],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=presenter],:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent>.bespoke-marp-osc>button[data-bespoke-marp-osc=prev]{height:32px;line-height:32px;width:32px}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive{cursor:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) .bespoke-marp-parent.bespoke-marp-inactive>.bespoke-marp-osc{opacity:0;pointer-events:none}:is(body[data-bespoke-view=""],body[data-bespoke-view=next]) svg.bespoke-marp-slide{height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent{background:#222;display:flex;height:5px;width:100%}body[data-bespoke-view=""] .bespoke-progress-parent+:where(.bespoke-marp-parent){top:5px}body[data-bespoke-view=""] .bespoke-progress-parent .bespoke-progress-bar{background:#0288d1;flex:0 0 0;transition:flex-basis .2s cubic-bezier(0,1,1,1)}body[data-bespoke-view=next]{background:#0000}body[data-bespoke-view=presenter]{background:#161616}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container{display:grid;font-family:Helvetica,Arial,sans-serif;grid-template:"current dragbar next" minmax(140px,1fr) "current dragbar note" 2fr "info    dragbar note" 3em;grid-template-columns:minmax(3px,var(--bespoke-marp-presenter-split-ratio,66%)) 0 minmax(3px,1fr);height:100%;left:0;position:absolute;top:0;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent){grid-area:current;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide){height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container :where(.bespoke-marp-parent) :where(svg.bespoke-marp-slide).bespoke-marp-active{filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container{background:#0288d1;cursor:col-resize;grid-area:dragbar;margin-left:-3px;opacity:0;position:relative;transition:opacity .4s linear .1s;width:6px;z-index:10}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container:hover{opacity:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-dragbar-container.active{opacity:1;transition-delay:0s}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container{background:#222;cursor:pointer;display:none;grid-area:next;overflow:hidden;position:relative}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-next-container iframe.bespoke-marp-presenter-next{background:#0000;border:0;display:block;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));height:calc(100% - 40px);left:20px;pointer-events:none;position:absolute;interactivity:inert;top:20px;-webkit-user-select:none;user-select:none;width:calc(100% - 40px)}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container{background:#222;color:#eee;grid-area:note;position:relative;z-index:1}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper{display:block;inset:0;position:absolute}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons{background:#000000a6;border-radius:4px;bottom:0;display:flex;gap:4px;margin:12px;opacity:0;padding:6px;pointer-events:none;position:absolute;right:0;transition:opacity .2s linear}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-buttons:focus-within,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-presenter-note-wrapper:focus-within+.bespoke-marp-presenter-note-buttons,body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container:hover .bespoke-marp-presenter-note-buttons{opacity:1;pointer-events:auto}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note{box-sizing:border-box;font-size:calc(1.1em*var(--bespoke-marp-note-font-scale, 1));height:calc(100% - 40px);margin:20px;overflow:auto;padding-right:3px;white-space:pre-wrap;width:calc(100% - 40px);word-wrap:break-word;scrollbar-color:#eeeeee80 #0000;scrollbar-width:thin}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar{width:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-track{background:#0000}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note::-webkit-scrollbar-thumb{background:#eeeeee80;border-radius:6px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note:empty{pointer-events:none}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note.active{display:block}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:first-child{margin-top:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-note-container .bespoke-marp-note p:last-child{margin-bottom:0}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container{align-items:center;box-sizing:border-box;color:#eee;display:flex;flex-wrap:nowrap;grid-area:info;justify-content:center;overflow:hidden;padding:0 10px}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container :is(.bespoke-marp-presenter-info-page-area,.bespoke-marp-presenter-info-time,.bespoke-marp-presenter-info-timer){box-sizing:border-box;display:block;padding:0 10px;white-space:nowrap;width:100%}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container button{height:1.5em;line-height:1.5em;width:1.5em}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area{order:2;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-page-area .bespoke-marp-presenter-info-page{display:inline-block;min-width:120px;text-align:center}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-time{color:#999;order:1;text-align:left}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer{color:#999;order:3;text-align:right}body[data-bespoke-view=presenter] .bespoke-marp-presenter-container .bespoke-marp-presenter-info-container .bespoke-marp-presenter-info-timer:hover{cursor:pointer}body[data-bespoke-view=overview]{background:#161616;overflow:auto}body[data-bespoke-view=overview] [data-bespoke-marp-fragment=inactive]{visibility:visible}body[data-bespoke-view=overview] .bespoke-marp-overview-header{backdrop-filter:blur(4px);background:#222222d9;box-shadow:0 3px 10px #00000080;box-sizing:border-box;display:flex;height:48px;inset:0 0 auto;justify-content:flex-end;padding:10px;position:fixed;z-index:1}body[data-bespoke-view=overview] button.bespoke-marp-overview-close{height:28px;line-height:28px;transform:rotate(45deg);width:28px}body[data-bespoke-view=overview] .bespoke-marp-parent{display:grid;gap:40px;grid-template-columns:repeat(auto-fit,minmax(0,240px));justify-content:space-around;padding:30px}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide{--bov-selected:#0000;--bov-focus:#161616;--bov-focus-outline:#0000;background-image:conic-gradient(#161616 0 0),conic-gradient(var(--bov-focus) 0 0),conic-gradient(var(--bov-focus-outline) 0 0),conic-gradient(var(--bov-selected) 0 0);background-position:5px 5px,3px 3px,2px 2px,0 0;background-repeat:no-repeat;background-size:calc(100% - 10px) calc(100% - 10px),calc(100% - 6px) calc(100% - 6px),calc(100% - 4px) calc(100% - 4px),100% 100%;content-visibility:visible;cursor:pointer;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5));margin:-6px;padding:6px;interactivity:auto;opacity:1;outline:0;pointer-events:auto;scroll-margin-block:30px;width:100%;z-index:0}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide *,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active *{pointer-events:none;interactivity:inert}body[data-bespoke-view=overview] .bespoke-marp-parent :is(svg.bespoke-marp-slide:active,svg.bespoke-marp-slide:focus-visible,svg.bespoke-marp-slide:hover){--bov-focus-outline:#161616}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:focus-visible,body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:hover{--bov-focus:#999}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide:active{--bov-focus:#eee}body[data-bespoke-view=overview] .bespoke-marp-parent svg.bespoke-marp-slide.bespoke-marp-active{--bov-selected:#0288d1}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent{padding-top:78px}body[data-bespoke-view=overview]:has(.bespoke-marp-overview-header) .bespoke-marp-parent svg.bespoke-marp-slide{scroll-margin-top:78px}.bespoke-marp-overview{background:#000000a6;inset:0;opacity:0;pointer-events:none;position:fixed;transition:opacity .1s ease;z-index:10}.bespoke-marp-overview iframe{background:#222;border:0;display:block;height:100%;left:0;position:absolute;top:0;width:100%}.bespoke-marp-overview[data-open="1"]{opacity:1;pointer-events:auto}}@media print{.bespoke-marp-overview,.bespoke-marp-presenter-info-container,.bespoke-marp-presenter-next-container,.bespoke-marp-presenter-note-container{display:none}}</style><style>@charset "UTF-8";@import "https://fonts.bunny.net/css?family=Lato:400,900|Roboto+Mono:400,700&display=swap";div#\:\$p > svg > foreignObject > section{width:1280px;height:720px;box-sizing:border-box;overflow:hidden;position:relative;scroll-snap-align:center center;-webkit-text-size-adjust:100%;text-size-adjust:100%}div#\:\$p > svg > foreignObject > section::after{bottom:0;content:attr(data-marpit-pagination);padding:inherit;pointer-events:none;position:absolute;right:0}div#\:\$p > svg > foreignObject > section:not([data-marpit-pagination])::after{display:none}div#\:\$p > svg > foreignObject > section :where(:is(h1, marp-h1)){font-size:2em;margin-block:0.67em}div#\:\$p > svg > foreignObject > section section:where(:is(h1, marp-h1)){--marpit-root-font-size: 2em}div#\:\$p > svg > foreignObject > section video::-webkit-media-controls{will-change:transform}@page {size:1280px 720px;margin:0}@media print{html, body{background-color:#fff;margin:0;page-break-inside:avoid;break-inside:avoid-page}div#\:\$p > svg > foreignObject > section{page-break-before:always;break-before:page}div#\:\$p > svg > foreignObject > section, div#\:\$p > svg > foreignObject > section *{-webkit-print-color-adjust:exact!important;animation-delay:0s!important;animation-duration:0s!important;color-adjust:exact!important;print-color-adjust:exact!important;transition:none!important}div#\:\$p > svg[data-marpit-svg]{display:block;height:100vh;width:100vw}}div#\:\$p > svg > foreignObject > :where(section){container-type:size}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"]{direction:ltr}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] > svg{overflow:visible;min-height:1px;min-width:1px}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] > svg a{fill:blue;stroke:blue}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][display="true"]{display:block;text-align:center;margin:1em 0}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][display="true"][width="full"]{display:flex}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][justify="left"]{text-align:left}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"][justify="right"]{text-align:right}div#\:\$p > svg > foreignObject > section g[data-mml-node="merror"] > g{fill:red;stroke:red}div#\:\$p > svg > foreignObject > section g[data-mml-node="merror"] > rect[data-background]{fill:yellow;stroke:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > line[data-line], div#\:\$p > svg > foreignObject > section svg[data-table] > g > line[data-line]{stroke-width:70px;fill:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > rect[data-frame], div#\:\$p > svg > foreignObject > section svg[data-table] > g > rect[data-frame]{stroke-width:70px;fill:none}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > .mjx-dashed, div#\:\$p > svg > foreignObject > section svg[data-table] > g > .mjx-dashed{stroke-dasharray:140}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > .mjx-dotted, div#\:\$p > svg > foreignObject > section svg[data-table] > g > .mjx-dotted{stroke-linecap:round;stroke-dasharray:0,140}div#\:\$p > svg > foreignObject > section g[data-mml-node="mtable"] > g > svg{overflow:visible}div#\:\$p > svg > foreignObject > section [jax="SVG"] mjx-tool{display:inline-block;position:relative;width:0;height:0}div#\:\$p > svg > foreignObject > section [jax="SVG"] mjx-tool > mjx-tip{position:absolute;top:0;left:0}div#\:\$p > svg > foreignObject > section mjx-tool > mjx-tip{display:inline-block;padding:.2em;border:1px solid #888;font-size:70%;background-color:#F8F8F8;color:black;box-shadow:2px 2px 5px #AAAAAA}div#\:\$p > svg > foreignObject > section g[data-mml-node="maction"][data-toggle]{cursor:pointer}div#\:\$p > svg > foreignObject > section mjx-status{display:block;position:fixed;left:1em;bottom:1em;min-width:25%;padding:.2em .4em;border:1px solid #888;font-size:90%;background-color:#F8F8F8;color:black}div#\:\$p > svg > foreignObject > section foreignObject[data-mjx-xml]{font-family:initial;line-height:normal;overflow:visible}div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] path[data-c], div#\:\$p > svg > foreignObject > section mjx-container[jax="SVG"] use[data-c]{stroke-width:3}@media print{div#\:\$p > svg > foreignObject > section mjx-container[jax=SVG] path[data-c],div#\:\$p > svg > foreignObject > section mjx-container[jax=SVG] use[data-c]{stroke-width:0}}div#\:\$p > svg > foreignObject > section img[data-marp-twemoji]{background:transparent;height:1em;margin:0 .05em 0 .1em;vertical-align:-.1em;width:1em}/*!
+ * Marp / Marpit Gaia theme.
+ *
+ * @theme gaia
+ * @author Yuki Hattori
+ *
+ * @auto-scaling true
+ * @size 16:9 1280px 720px
+ * @size 4:3 960px 720px
+ */div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code.hljs{display:block;overflow-x:auto;padding:1em}div#\:\$p > svg > foreignObject > section code.hljs{padding:3px 5px}div#\:\$p > svg > foreignObject > section .hljs{background:#000;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-comment,div#\:\$p > svg > foreignObject > section .hljs-quote{color:#aeaeae;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-keyword,div#\:\$p > svg > foreignObject > section .hljs-selector-tag,div#\:\$p > svg > foreignObject > section .hljs-type{color:#e28964}div#\:\$p > svg > foreignObject > section .hljs-string{color:#65b042}div#\:\$p > svg > foreignObject > section .hljs-subst{color:#daefa3}div#\:\$p > svg > foreignObject > section .hljs-link,div#\:\$p > svg > foreignObject > section .hljs-regexp{color:#e9c062}div#\:\$p > svg > foreignObject > section .hljs-name,div#\:\$p > svg > foreignObject > section .hljs-section,div#\:\$p > svg > foreignObject > section .hljs-tag,div#\:\$p > svg > foreignObject > section .hljs-title{color:#89bdff}div#\:\$p > svg > foreignObject > section .hljs-class .hljs-title,div#\:\$p > svg > foreignObject > section .hljs-doctag,div#\:\$p > svg > foreignObject > section .hljs-title.class_{text-decoration:underline}div#\:\$p > svg > foreignObject > section .hljs-bullet,div#\:\$p > svg > foreignObject > section .hljs-number,div#\:\$p > svg > foreignObject > section .hljs-symbol{color:#3387cc}div#\:\$p > svg > foreignObject > section .hljs-params,div#\:\$p > svg > foreignObject > section .hljs-template-variable,div#\:\$p > svg > foreignObject > section .hljs-variable{color:#3e87e3}div#\:\$p > svg > foreignObject > section .hljs-attribute{color:#cda869}div#\:\$p > svg > foreignObject > section .hljs-meta{color:#8996a8}div#\:\$p > svg > foreignObject > section .hljs-formula{background-color:#0e2231;color:#f8f8f8;font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-addition{background-color:#253b22;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-deletion{background-color:#420e09;color:#f8f8f8}div#\:\$p > svg > foreignObject > section .hljs-selector-class{color:#9b703f}div#\:\$p > svg > foreignObject > section .hljs-selector-id{color:#8b98ab}div#\:\$p > svg > foreignObject > section .hljs-emphasis{font-style:italic}div#\:\$p > svg > foreignObject > section .hljs-strong{font-weight:700}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){margin:.5em 0 0}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{font-weight:inherit}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h2, marp-h2)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h3, marp-h3)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h4, marp-h4)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h5, marp-h5)::part(auto-scaling),div#\:\$p > svg > foreignObject > section :is(h6, marp-h6)::part(auto-scaling){max-height:580px}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){font-size:1.8em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){font-size:1.5em}div#\:\$p > svg > foreignObject > section :is(h3, marp-h3){font-size:1.3em}div#\:\$p > svg > foreignObject > section :is(h4, marp-h4){font-size:1.1em}div#\:\$p > svg > foreignObject > section :is(h5, marp-h5){font-size:1em}div#\:\$p > svg > foreignObject > section :is(h6, marp-h6){font-size:.9em}div#\:\$p > svg > foreignObject > section blockquote,div#\:\$p > svg > foreignObject > section p{margin:1em 0 0}div#\:\$p > svg > foreignObject > section ol>li,div#\:\$p > svg > foreignObject > section ul>li{margin:.3em 0 0}div#\:\$p > svg > foreignObject > section ol>li>p,div#\:\$p > svg > foreignObject > section ul>li>p{margin:.6em 0 0}div#\:\$p > svg > foreignObject > section code{display:inline-block;font-family:Roboto Mono,monospace;font-size:.8em;letter-spacing:0;margin:-.1em .15em;padding:.1em .2em;vertical-align:baseline}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){display:block;margin:1em 0 0;overflow:visible}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre) code{box-sizing:border-box;margin:0;min-width:100%;padding:.5em;font-size:.7em}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)::part(auto-scaling){max-height:calc(580px - 1em)}div#\:\$p > svg > foreignObject > section blockquote{margin:1em 0 0;padding:0 1em;position:relative}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before{content:"“";display:block;font-family:Times New Roman,serif;font-weight:700;position:absolute}div#\:\$p > svg > foreignObject > section blockquote:before{top:0;left:0}div#\:\$p > svg > foreignObject > section blockquote:after{right:0;bottom:0;transform:rotate(180deg)}div#\:\$p > svg > foreignObject > section blockquote>:first-child{margin-top:0}div#\:\$p > svg > foreignObject > section mark{background:transparent}div#\:\$p > svg > foreignObject > section table{border-spacing:0;border-collapse:collapse;margin:1em 0 0}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{padding:.2em .4em;border-width:1px;border-style:solid}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section:after{box-sizing:border-box;font-size:66%;height:70px;line-height:50px;overflow:hidden;padding:10px 25px;position:absolute}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:66%}div#\:\$p > svg > foreignObject > section header{top:0}div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header{left:0;right:0}div#\:\$p > svg > foreignObject > section footer{bottom:0}div#\:\$p > svg > foreignObject > section{--color-background:light-dark(#fff8e1, #455a64);--color-background-stripe:light-dark(
+    rgba(69,90,100,.1),
+    rgba(255,248,225,.1)
+  );--color-foreground:light-dark(#455a64, #fff8e1);--color-dimmed:light-dark(
+    #6a7a7d,
+    #dad8c8
+  );--color-highlight:light-dark(#0288d1, #81d4fa);color-scheme:light;background-color:var(--color-background);background-image:linear-gradient(135deg, var(--color-background), color-mix(in srgb, var(--color-background) 98%, #888 2%) 50%, var(--color-background) 50%, color-mix(in srgb, var(--color-background) 95%, #fff 5%));color:var(--color-foreground);font-size:35px;font-family:Lato,Avenir Next,Avenir,Trebuchet MS,Segoe UI,sans-serif;height:720px;line-height:1.35;letter-spacing:1.25px;padding:70px;width:1280px;overflow-wrap:break-word}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size:35px}div#\:\$p > svg > foreignObject > section:after{right:0;bottom:0;font-size:80%}div#\:\$p > svg > foreignObject > section:after{--marpit-root-font-size:80%}div#\:\$p > svg > foreignObject > section a,div#\:\$p > svg > foreignObject > section mark{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section code{background:var(--color-dimmed);color:var(--color-background)}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1) strong,div#\:\$p > svg > foreignObject > section :is(h2, marp-h2) strong,div#\:\$p > svg > foreignObject > section :is(h3, marp-h3) strong,div#\:\$p > svg > foreignObject > section :is(h4, marp-h4) strong,div#\:\$p > svg > foreignObject > section :is(h5, marp-h5) strong,div#\:\$p > svg > foreignObject > section :is(h6, marp-h6) strong{color:var(--color-highlight)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre){background:var(--color-foreground)}div#\:\$p > svg > foreignObject > section :is(pre, marp-pre)>code{background:transparent}div#\:\$p > svg > foreignObject > section blockquote:after,div#\:\$p > svg > foreignObject > section blockquote:before,div#\:\$p > svg > foreignObject > section footer,div#\:\$p > svg > foreignObject > section header,div#\:\$p > svg > foreignObject > section section:after{color:var(--color-dimmed)}div#\:\$p > svg > foreignObject > section table td,div#\:\$p > svg > foreignObject > section table th{border-color:var(--color-foreground)}div#\:\$p > svg > foreignObject > section table thead th{background:var(--color-foreground);color:var(--color-background)}div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) td,div#\:\$p > svg > foreignObject > section table tbody>tr:nth-child(odd) th{background:var(--color-background-stripe, transparent)}div#\:\$p > svg > foreignObject > section>:first-child,div#\:\$p > svg > foreignObject > section>header:first-child+*{margin-top:0}div#\:\$p > svg > foreignObject > section:where(.invert){color-scheme:dark}div#\:\$p > svg > foreignObject > section:where(.gaia){--color-background:#0288d1;--color-background-stripe:rgba(255,248,225,.1);--color-foreground:#fff8e1;--color-dimmed:#cce2de;--color-highlight:#81d4fa;}div#\:\$p > svg > foreignObject > section:where(.lead){place-content:safe center center;flex-flow:column nowrap;align-items:stretch}div#\:\$p > svg > foreignObject > section:where(.lead) :is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) :is(h6, marp-h6){text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) p{text-align:center}div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h1, marp-h1),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h2, marp-h2),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h3, marp-h3),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h4, marp-h4),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h5, marp-h5),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>:is(h6, marp-h6),div#\:\$p > svg > foreignObject > section:where(.lead) blockquote>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) ol>li>p,div#\:\$p > svg > foreignObject > section:where(.lead) ul>li>p{text-align:left}div#\:\$p > svg > foreignObject > section:where(.lead) table{margin-left:auto;margin-right:auto}div#\:\$p > svg > foreignObject > section{width:1280px;height:720px}div#\:\$p > svg > foreignObject > section{font-size:23px;padding:50px 60px 60px}div#\:\$p > svg > foreignObject > section{--marpit-root-font-size: 23px}div#\:\$p > svg > foreignObject > section p, div#\:\$p > svg > foreignObject > section ul, div#\:\$p > svg > foreignObject > section ol{margin-block:0.45em}div#\:\$p > svg > foreignObject > section li{margin-block:0.15em}div#\:\$p > svg > foreignObject > section :is(h1, marp-h1){color:#B31B1B;margin-bottom:0.35em}div#\:\$p > svg > foreignObject > section :is(h2, marp-h2){color:#B31B1B;font-size:28px}div#\:\$p > svg > foreignObject > section .columns{display:grid;grid-template-columns:1fr 1fr;gap:calc(var(--marpit-root-font-size, 1rem) * 1.5)}div#\:\$p > svg > foreignObject > section .cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:calc(var(--marpit-root-font-size, 1rem) * 1.2)}div#\:\$p > svg > foreignObject > section .wideleft{grid-template-columns:11fr 9fr}div#\:\$p > svg > foreignObject > section .small{font-size:20px;color:#666}div#\:\$p > svg > foreignObject > section section.small{--marpit-root-font-size: 20px}div#\:\$p > svg > foreignObject > section .cite{font-size:18px;color:#777}div#\:\$p > svg > foreignObject > section section.cite{--marpit-root-font-size: 18px}div#\:\$p > svg > foreignObject > section table{font-size:21px}div#\:\$p > svg > foreignObject > section .box{border-left:5px solid #B31B1B;padding-left:calc(var(--marpit-root-font-size, 1rem) * 0.8)}div#\:\$p > svg > foreignObject > section img[alt~="center"]{display:block;margin:0 auto}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]{columns:initial!important;display:block!important;padding:0!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"]::after, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::before, div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"]::after{display:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container]{all:initial;display:flex;flex-direction:row;height:100%;overflow:hidden;width:100%}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container][data-marpit-advanced-background-direction="vertical"]{flex-direction:column}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split] > div[data-marpit-advanced-background-container]{width:var(--marpit-advanced-background-split, 50%)}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"][data-marpit-advanced-background-split="right"] > div[data-marpit-advanced-background-container]{margin-left:calc(100% - var(--marpit-advanced-background-split, 50%))}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure{all:initial;background-position:center;background-repeat:no-repeat;background-size:cover;flex:auto;margin:0}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="background"] > div[data-marpit-advanced-background-container] > figure > figcaption{position:absolute;border:0;clip:rect(0, 0, 0, 0);height:1px;margin:-1px;overflow:hidden;padding:0;white-space:nowrap;width:1px}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="content"], div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"]{background:transparent!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background="pseudo"], div#\:\$p > svg[data-marpit-svg] > foreignObject[data-marpit-advanced-background="pseudo"]{pointer-events:none!important}div#\:\$p > svg > foreignObject > section[data-marpit-advanced-background-split]{width:100%;height:100%}
+</style></head><body><div class="bespoke-marp-osc"><button data-bespoke-marp-osc="prev" tabindex="-1" title="Previous slide">Previous slide</button><span data-bespoke-marp-osc="page"></span><button data-bespoke-marp-osc="next" tabindex="-1" title="Next slide">Next slide</button><button data-bespoke-marp-osc="fullscreen" tabindex="-1" title="Toggle fullscreen (f)">Toggle fullscreen</button><button data-bespoke-marp-osc="overview" tabindex="-1" title="Toggle overview view (o)">Toggle overview view</button><button data-bespoke-marp-osc="presenter" tabindex="-1" title="Open presenter view (p)">Open presenter view</button></div><div id=":$p"><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="1" data-class="lead" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" class="lead" style="--class:lead;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-size="16:9">
+<h1 id="prompting-reasoning-and-tool-use">Prompting, Reasoning, and Tool Use</h1>
+<h4 id="orie-7190--ai-for-science">ORIE 7190 · AI for Science</h4>
+<h4 id="peter-frazier--cornell-orie">Peter Frazier · Cornell ORIE</h4>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="2" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="2" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="reading-due-sat-oct-10-no-class-fri-oct-9">Reading due Sat Oct 10; no class Fri Oct 9</h1>
+<p><strong>Reading: what protein language models learn</strong></p>
+<p><strong>Zhang, Wayment-Steele, Brixi, Wang, Kern, Ovchinnikov.</strong> <em>Protein language models learn evolutionary statistics of interacting sequence motifs.</em> PNAS, 2024. doi:10.1073/pnas.2406285121</p>
+<p>Explains why contacts fall out of ESM-2's attention maps: the model stores coevolution statistics of interacting motif pairs.</p>
+<p><strong>Li, Amini, Yue, Yang, Lu.</strong> <em>Feature reuse and scaling: understanding transfer learning with protein language models.</em> ICML 2024 (PMLR 235).</p>
+<p>Explains why ridge regression on one-hot encodings holds its own: most of the transfer gain comes from low-level features learned early in pretraining, and for most tasks does not grow with scale.</p>
+<div class="box">
+<p><strong>No class Friday Oct 9.</strong> ORIE hosts the Young Researchers Workshop, with talks Thu Oct 8 and Fri Oct 9 in 230 Anabel Taylor Hall.</p>
+<ul>
+<li>Schedule: <a href="https://www.duffield.cornell.edu/orie/young-researchers-workshop/">duffield.cornell.edu/orie/young-researchers-workshop</a></li>
+<li>Register by Mon Oct 5, 5pm: <a href="https://cornell.ca1.qualtrics.com/jfe/form/SV_3rdsRcQuehGX0ai">cornell.ca1.qualtrics.com/jfe/form/SV_3rdsRcQuehGX0ai</a></li>
+</ul>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="3" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="four-ways-to-get-more-from-a-next-token-predictor">Four ways to get more from a next-token predictor</h1>
+<p>Pretraining on text, then post-training — fine-tuning on demonstrations (SFT), RL from preferences (RLHF), RL on answers a computer can check (RLVR) — builds a next-token predictor:</p>
+<p><mjx-container class="MathJax" jax="SVG" display="true" style="margin: 0;"><svg style="vertical-align: -0.566ex; display: block; width: 100%; height: auto; max-height: 2.262ex;" xmlns="http://www.w3.org/2000/svg" width="19.208ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 8490 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45D" d="M23 287Q24 290 25 295T30 317T40 348T55 381T75 411T101 433T134 442Q209 442 230 378L240 387Q302 442 358 442Q423 442 460 395T497 281Q497 173 421 82T249 -10Q227 -10 210 -4Q199 1 187 11T168 28L161 36Q160 35 139 -51T118 -138Q118 -144 126 -145T163 -148H188Q194 -155 194 -157T191 -175Q188 -187 185 -190T172 -194Q170 -194 161 -194T127 -193T65 -192Q-5 -192 -24 -194H-32Q-39 -187 -39 -183Q-37 -156 -26 -148H-6Q28 -147 33 -136Q36 -130 94 103T155 350Q156 355 156 364Q156 405 131 405Q109 405 94 377T71 316T59 280Q57 278 43 278H29Q23 284 23 287ZM178 102Q200 26 252 26Q282 26 310 49T356 107Q374 141 392 215T411 325V331Q411 405 350 405Q339 405 328 402T306 393T286 380T269 365T254 350T243 336T235 326L232 322Q232 321 229 308T218 264T204 212Q178 106 178 102Z"></path></g><g data-mml-node="mi" transform="translate(536,-150) scale(0.707)"><path data-c="1D703" d="M35 200Q35 302 74 415T180 610T319 704Q320 704 327 704T339 705Q393 701 423 656Q462 596 462 495Q462 380 417 261T302 66T168 -10H161Q125 -10 99 10T60 63T41 130T35 200ZM383 566Q383 668 330 668Q294 668 260 623T204 521T170 421T157 371Q206 370 254 370L351 371Q352 372 359 404T375 484T383 566ZM113 132Q113 26 166 26Q181 26 198 36T239 74T287 161T335 307L340 324H145Q145 321 136 286T120 208T113 132Z"></path></g></g><g data-mml-node="mo" transform="translate(917.6,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="msub" transform="translate(1306.6,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(605,-150) scale(0.707)"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g></g><g data-mml-node="mo" transform="translate(2494.7,0)"><path data-c="2223" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path></g><g data-mml-node="msub" transform="translate(3050.5,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mn" transform="translate(605,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g><g data-mml-node="mo" transform="translate(4059,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="mo" transform="translate(4503.7,0)"><path data-c="2026" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60ZM525 60Q525 84 542 102T585 120Q609 120 627 104T646 61Q646 36 629 18T586 0T543 17T525 60ZM972 60Q972 84 989 102T1032 120Q1056 120 1074 104T1093 61Q1093 36 1076 18T1033 0T990 17T972 60Z"></path></g><g data-mml-node="mo" transform="translate(5842.3,0)"><path data-c="2C" d="M78 35T78 60T94 103T137 121Q165 121 187 96T210 8Q210 -27 201 -60T180 -117T154 -158T130 -185T117 -194Q113 -194 104 -185T95 -172Q95 -168 106 -156T131 -126T157 -76T173 -3V9L172 8Q170 7 167 6T161 3T152 1T140 0Q113 0 96 17Z"></path></g><g data-mml-node="msub" transform="translate(6287,0)"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="TeXAtom" transform="translate(605,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D461" d="M26 385Q19 392 19 395Q19 399 22 411T27 425Q29 430 36 430T87 431H140L159 511Q162 522 166 540T173 566T179 586T187 603T197 615T211 624T229 626Q247 625 254 615T261 596Q261 589 252 549T232 470L222 433Q222 431 272 431H323Q330 424 330 420Q330 398 317 385H210L174 240Q135 80 135 68Q135 26 162 26Q197 26 230 60T283 144Q285 150 288 151T303 153H307Q322 153 322 145Q322 142 319 133Q314 117 301 95T267 48T216 6T155 -11Q125 -11 98 4T59 56Q57 64 57 83V101L92 241Q127 382 128 383Q128 385 77 385H26Z"></path></g><g data-mml-node="mo" transform="translate(361,0)"><path data-c="2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path></g><g data-mml-node="mn" transform="translate(1139,0)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g><g data-mml-node="mo" transform="translate(8101,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container></p><p>Sample a token, append it, repeat. This session covers four ways to make that model more effective:</p>
+<ol>
+<li><strong>Prompt engineering</strong> — choose the text it continues from</li>
+<li><strong>Reasoning</strong> — the model writes scratch work to itself before it answers</li>
+<li><strong>Tools</strong> — part of its output is wired to code you control</li>
+<li><strong>Agents</strong> — tool calls repeated in a loop, toward a goal</li>
+</ol>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="4" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-class="lead" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" class="lead" data-marpit-pagination="4" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--class:lead;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="prompt-engineering">Prompt engineering</h1>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="5" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="5" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="prompt-engineering-can-improve-output-quality">Prompt engineering can improve output quality</h1>
+<p>The model continues whatever text it is given, so the prompt shapes the answer.</p>
+<p>Ways to get a better answer:</p>
+<ul>
+<li><strong>State the task and the output format</strong> — units, fields, and what to return when the answer is unknown.</li>
+<li><strong>Paste in relevant context</strong> — the protocol, the data table, the paper. The model uses what is in its window and what it absorbed in training.</li>
+<li><strong>Show worked examples (&quot;few-shot&quot;)</strong> — GPT-3 performed new tasks from a few examples in the prompt, with no retraining. In later prompt searches, choosing the examples mattered more than wording the instruction.</li>
+<li><strong>Ask for the steps</strong> — appending <em>&quot;Let's think step by step&quot;</em> raised InstructGPT on grade-school math (GSM8K) from 10.4% to 40.7% correct.</li>
+</ul>
+<p><span class="cite">Brown et al. <em>Language Models are Few-Shot Learners</em>. NeurIPS 2020. arXiv:2005.14165 · Kojima, Gu, Reid, Matsuo, Iwasawa. <em>Large Language Models are Zero-Shot Reasoners</em>. NeurIPS 2022. arXiv:2205.11916 · Opsahl-Ong et al. EMNLP 2024. arXiv:2406.11695</span></p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="6" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="6" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="worked-examples-make-the-model-show-its-steps">Worked examples make the model show its steps</h1>
+<p><span class="cite">Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le, Zhou. <em>Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</em>. NeurIPS 2022. arXiv:2201.11903</span></p>
+<p><img src="images/cot-wei2022-fig1.png" alt="center" style="width:760px;" /></p>
+<p>The paper's prompts held eight such examples. On GSM8K math word problems, PaLM 540B went from 17.9% to 56.9% correct. Most models under 10B parameters got worse.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="7" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="7" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="examples-and-written-out-steps-raised-accuracy">Examples and written-out steps raised accuracy</h1>
+<div class="columns">
+<div>
+<p><img src="images/gpt3-fewshot-fig.png" alt="" style="width:540px;" /></p>
+<p>GPT-3 175B removing inserted symbols from a word (<code>s.u!c/c!e.s s i/o/n</code> → succession): 8% correct with an instruction alone, 45% with one example, 67% with 100.</p>
+<p><span class="cite">Brown et al. 2020, Fig. 1.2, Table 3.10</span></p>
+</div>
+<div>
+<p>Prompt search, Llama-3-8B, test score (%):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Q&amp;A</th>
+<th>Claims</th>
+<th>Flowers</th>
+<th>Heart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Starting prompt</td>
+<td>36.1</td>
+<td>25.3</td>
+<td>40.9</td>
+<td>26.8</td>
+</tr>
+<tr>
+<td>Best instruction</td>
+<td>39.3</td>
+<td>33.1</td>
+<td>36.4</td>
+<td>25.8</td>
+</tr>
+<tr>
+<td>Best examples</td>
+<td>46.2</td>
+<td>37.6</td>
+<td>94.1</td>
+<td>79.2</td>
+</tr>
+</tbody>
+</table>
+<p><span class="cite">Opsahl-Ong et al. 2024, Table 2 (HotPotQA, HoVer, Iris, Heart)</span></p>
+<table>
+<thead>
+<tr>
+<th>InstructGPT on GSM8K math</th>
+<th>% correct</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Question alone</td>
+<td>10.4</td>
+</tr>
+<tr>
+<td>8 examples, answers only</td>
+<td>15.6</td>
+</tr>
+<tr>
+<td>&quot;Let's think step by step&quot;</td>
+<td>40.7</td>
+</tr>
+<tr>
+<td>8 examples with worked steps</td>
+<td>48.7</td>
+</tr>
+</tbody>
+</table>
+<p><span class="cite">Kojima et al. 2022, Table 2</span></p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="8" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="8" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="prompt-engineering-can-be-automated">Prompt engineering can be automated</h1>
+<p><strong>Prompt engineering is black-box optimization.</strong> Propose an input <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg></mjx-container> — the prompt: its instruction and which worked examples it shows. Observe a score <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.566ex;" xmlns="http://www.w3.org/2000/svg" width="4.299ex" height="2.262ex" role="img" focusable="false" viewBox="0 -750 1900 1000"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g><g data-mml-node="mo" transform="translate(550,0)"><path data-c="28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path></g><g data-mml-node="mi" transform="translate(939,0)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mo" transform="translate(1511,0)"><path data-c="29" d="M60 749L64 750Q69 750 74 750H86L114 726Q208 641 251 514T294 250Q294 182 284 119T261 12T224 -76T186 -143T145 -194T113 -227T90 -246Q87 -249 86 -250H74Q66 -250 63 -250T58 -247T55 -238Q56 -237 66 -225Q221 -64 221 250T66 725Q56 737 55 738Q55 746 60 749Z"></path></g></g></g></svg></mjx-container> — accuracy on a few hundred labeled questions (&quot;dev set&quot;). Use the scores so far to choose the next <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg></mjx-container>, and repeat. No formula for <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.464ex;" xmlns="http://www.w3.org/2000/svg" width="1.244ex" height="2.059ex" role="img" focusable="false" viewBox="0 -705 550 910"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D453" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path></g></g></g></svg></mjx-container> is available, only evaluations.</p>
+<p><strong>DSPy packages this.</strong> You write a &quot;program&quot;: Python code that chains several LLM calls (&quot;modules&quot;), each declared by its inputs and outputs — e.g. question → search query, then passages → answer. Each call gets its own prompt. You also supply training examples and a scoring function.</p>
+<p><strong>The search space is categorical.</strong> Candidate pool for each call: <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg></mjx-container> instructions written by an LLM, and <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg></mjx-container> sets of worked examples taken from the model's own correct runs on training questions. A prompt <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.294ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 572 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g></g></g></svg></mjx-container> is then one instruction and one example set per call — a list of indices. <strong>Bayesian optimization</strong> (a black-box optimization method we'll learn soon) searches over those choices.</p>
+<p><strong>Limitations.</strong> Tuned prompts overfit the dev set: they often scored 5–20% higher on the questions they were tuned on than on held-out questions.</p>
+<p><span class="cite">Yang, Wang, Lu, Liu, Le, Zhou, Chen. <em>Large Language Models as Optimizers</em>. ICLR 2024. arXiv:2309.03409 · Khattab et al. <em>DSPy</em>. ICLR 2024. arXiv:2310.03714 · Opsahl-Ong et al. <em>Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs</em>. EMNLP 2024. arXiv:2406.11695</span></p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="9" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="9" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="miprov2-dspy-optimizer-proposes-candidates-searches">MIPROv2 (DSPy optimizer) proposes candidates, searches</h1>
+<div class="columns">
+<div>
+<p><strong>Notation</strong></p>
+<ul>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.633ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 722 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="3A6" d="M312 622Q310 623 307 625T303 629T297 631T286 634T270 635T246 636T211 637H184V683H196Q220 680 361 680T526 683H538V637H511Q468 637 447 635T422 631T411 622V533L425 531Q525 519 595 466T665 342Q665 301 642 267T583 209T506 172T425 152L411 150V61Q417 55 421 53T447 48T511 46H538V0H526Q502 3 361 3T196 0H184V46H211Q231 46 245 46T270 47T286 48T297 51T303 54T307 57T312 61V150H310Q309 151 289 153T232 166T160 195Q149 201 136 210T103 238T69 284T56 342Q56 414 128 467T294 530Q309 532 310 533H312V622ZM170 342Q170 207 307 188H312V495H309Q301 495 282 491T231 469T186 423Q170 389 170 342ZM415 188Q487 199 519 236T551 342Q551 384 539 414T507 459T470 481T434 491T415 495H410V188H415Z"></path></g></g></g></svg></mjx-container> — the program</li>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.986ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 878 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45A" d="M21 287Q22 293 24 303T36 341T56 388T88 425T132 442T175 435T205 417T221 395T229 376L231 369Q231 367 232 367L243 378Q303 442 384 442Q401 442 415 440T441 433T460 423T475 411T485 398T493 385T497 373T500 364T502 357L510 367Q573 442 659 442Q713 442 746 415T780 336Q780 285 742 178T704 50Q705 36 709 31T724 26Q752 26 776 56T815 138Q818 149 821 151T837 153Q857 153 857 145Q857 144 853 130Q845 101 831 73T785 17T716 -10Q669 -10 648 17T627 73Q627 92 663 193T700 345Q700 404 656 404H651Q565 404 506 303L499 291L466 157Q433 26 428 16Q415 -11 385 -11Q372 -11 364 -4T353 8T350 18Q350 29 384 161L420 307Q423 322 423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 181Q151 335 151 342Q154 357 154 369Q154 405 129 405Q107 405 92 377T69 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container> — one of its LLM calls (&quot;modules&quot;)</li>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.744ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 771 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="44" d="M37 475Q19 475 19 487Q19 536 103 604T327 682H356Q386 683 408 683H419Q475 683 506 681T582 668T667 633Q766 571 766 450Q766 365 723 287T611 152T455 57T279 6Q248 1 160 0Q148 0 131 0T108 -1Q72 -1 72 11Q72 24 90 40T133 64L144 68L152 88Q247 328 272 587Q275 613 272 613Q272 613 269 613Q225 610 195 602T149 579T129 556T119 532Q118 530 116 525T113 518Q102 502 80 490T37 475ZM665 407Q665 596 412 613Q403 614 383 614Q370 614 370 612Q370 598 363 542T323 357T242 103L228 69H265Q391 73 481 119Q536 148 575 188T633 268T658 338T665 392V407Z"></path></g></g></g></g></svg></mjx-container> — the training questions</li>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.489ex;" xmlns="http://www.w3.org/2000/svg" width="1.364ex" height="1.489ex" role="img" focusable="false" viewBox="0 -442 603 658"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D707" d="M58 -216Q44 -216 34 -208T23 -186Q23 -176 96 116T173 414Q186 442 219 442Q231 441 239 435T249 423T251 413Q251 401 220 279T187 142Q185 131 185 107V99Q185 26 252 26Q261 26 270 27T287 31T302 38T315 45T327 55T338 65T348 77T356 88T365 100L372 110L408 253Q444 395 448 404Q461 431 491 431Q504 431 512 424T523 412T525 402L449 84Q448 79 448 68Q448 43 455 35T476 26Q485 27 496 35Q517 55 537 131Q543 151 547 152Q549 153 557 153H561Q580 153 580 144Q580 138 575 117T555 63T523 13Q510 0 491 -8Q483 -10 467 -10Q446 -10 429 -4T402 11T385 29T376 44T374 51L368 45Q362 39 350 30T324 12T288 -4T246 -11Q199 -11 153 12L129 -85Q108 -167 104 -180T92 -202Q76 -216 58 -216Z"></path></g></g></g></svg></mjx-container> — the scoring function</li>
+<li><mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.009ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 888 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D441" d="M234 637Q231 637 226 637Q201 637 196 638T191 649Q191 676 202 682Q204 683 299 683Q376 683 387 683T401 677Q612 181 616 168L670 381Q723 592 723 606Q723 633 659 637Q635 637 635 648Q635 650 637 660Q641 676 643 679T653 683Q656 683 684 682T767 680Q817 680 843 681T873 682Q888 682 888 672Q888 650 880 642Q878 637 858 637Q787 633 769 597L620 7Q618 0 599 0Q585 0 582 2Q579 5 453 305L326 604L261 344Q196 88 196 79Q201 46 268 46H278Q284 41 284 38T282 19Q278 6 272 0H259Q228 2 151 2Q123 2 100 2T63 2T46 1Q31 1 31 10Q31 14 34 26T39 40Q41 46 62 46Q130 49 150 85Q154 91 221 362L289 634Q287 635 234 637Z"></path></g></g></g></svg></mjx-container> — candidates per module; <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="2.011ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 889 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43E" d="M285 628Q285 635 228 637Q205 637 198 638T191 647Q191 649 193 661Q199 681 203 682Q205 683 214 683H219Q260 681 355 681Q389 681 418 681T463 682T483 682Q500 682 500 674Q500 669 497 660Q496 658 496 654T495 648T493 644T490 641T486 639T479 638T470 637T456 637Q416 636 405 634T387 623L306 305Q307 305 490 449T678 597Q692 611 692 620Q692 635 667 637Q651 637 651 648Q651 650 654 662T659 677Q662 682 676 682Q680 682 711 681T791 680Q814 680 839 681T869 682Q889 682 889 672Q889 650 881 642Q878 637 862 637Q787 632 726 586Q710 576 656 534T556 455L509 418L518 396Q527 374 546 329T581 244Q656 67 661 61Q663 59 666 57Q680 47 717 46H738Q744 38 744 37T741 19Q737 6 731 0H720Q680 3 625 3Q503 3 488 0H478Q472 6 472 9T474 27Q478 40 480 43T491 46H494Q544 46 544 71Q544 75 517 141T485 216L427 354L359 301L291 248L268 155Q245 63 245 58Q245 51 253 49T303 46H334Q340 37 340 35Q340 19 333 5Q328 0 317 0Q314 0 280 1T180 2Q118 2 85 2T49 1Q31 1 31 11Q31 13 34 25Q38 41 42 43T65 46Q92 46 125 49Q139 52 144 61Q147 65 216 339T285 628Z"></path></g></g></g></svg></mjx-container> — worked examples per set; <mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.14ex" height="1.545ex" role="img" focusable="false" viewBox="0 -683 504 683"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D43C" d="M43 1Q26 1 26 10Q26 12 29 24Q34 43 39 45Q42 46 54 46H60Q120 46 136 53Q137 53 138 54Q143 56 149 77T198 273Q210 318 216 344Q286 624 286 626Q284 630 284 631Q274 637 213 637H193Q184 643 189 662Q193 677 195 680T209 683H213Q285 681 359 681Q481 681 487 683H497Q504 676 504 672T501 655T494 639Q491 637 471 637Q440 637 407 634Q393 631 388 623Q381 609 337 432Q326 385 315 341Q245 65 245 59Q245 52 255 50T307 46H339Q345 38 345 37T342 19Q338 6 332 0H316Q279 2 179 2Q143 2 113 2T65 2T43 1Z"></path></g></g></g></svg></mjx-container> — search iterations</li>
+</ul>
+<p><span class="cite">Opsahl-Ong et al. <em>Optimizing Instructions and Demonstrations for Multi-Stage Language Model Programs</em>. EMNLP 2024. arXiv:2406.11695, Fig. 4</span></p>
+</div>
+<div>
+<p><img src="images/mipro-fig4.png" alt="center" style="height:545px;" /></p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="10" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-class="lead" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" class="lead" data-marpit-pagination="10" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--class:lead;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="reasoning">Reasoning</h1>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="29" data-size="16:9" data-marpit-advanced-background="background" data-marpit-advanced-background-split="right"><div data-marpit-advanced-background-container="true" data-marpit-advanced-background-direction="horizontal"><figure style="background-image:url(&quot;images/blackboard-thermo.jpg&quot;);"></figure></div></section></foreignObject><foreignObject width="67%" height="720"><section id="11" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="11" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;--marpit-advanced-background-split:33%;" data-marpit-pagination-total="29" data-size="16:9" data-marpit-advanced-background="content" data-marpit-advanced-background-split="right">
+<h1 id="reasoning--doing-scratch-work">Reasoning = doing scratch work</h1>
+
+<p>One forward pass through the LLM produces one token and uses a fixed amount of computation.</p>
+<p>Idea: more computation usually generates better answers. Let's <strong>run more forward passes</strong> to generate more tokens (scratch work) before we generate our final answer (&quot;test-time compute&quot;).</p>
+<p>Each &quot;scratch work&quot; token gets appended to the input, so influences later tokens. (It is <strong>memory of the work</strong>.)</p>
+<div class="box">
+<p><strong>Intuition</strong>: Ask a mathematician for a multi-step proof.</p>
+<ul>
+<li>if you ask them to state the proof instantly, out loud, it won't be very good</li>
+<li>if you let them use a blackboard to write out some scratch work, it will be better.</li>
+</ul>
+</div>
+<p><span class="cite">Photo: alegri / 4freephotos.com, via Wikimedia Commons, CC BY 3.0</span></p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject><foreignObject width="1280" height="720" data-marpit-advanced-background="pseudo"><section data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="11" style="" data-marpit-pagination-total="29" data-size="16:9" data-marpit-advanced-background="pseudo" data-marpit-advanced-background-split="right"></section></foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="12" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="12" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="reasoning-models-put-scratch-work-between-think-tags">Reasoning models put scratch work between <code>&lt;think&gt;</code> tags</h1>
+<p>A reasoning model's output follows a template:</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>&lt;think&gt; scratch work … &lt;/think&gt; final answer &lt;end-of-sequence&gt;
+</code></pre>
+<p><code>&lt;think&gt;</code> and <code>&lt;/think&gt;</code> are output the model learns to emit, generated by the same loop as every other token: predict a token, append it, repeat.</p>
+<ol>
+<li>The model emits <code>&lt;think&gt;</code>, then its scratch work.</li>
+<li>It emits <code>&lt;/think&gt;</code> when it judges the scratch work done.</li>
+<li>It writes the final answer, then emits the <strong>end-of-sequence token</strong>, and generation stops.</li>
+</ol>
+<p>Chat interfaces usually collapse the text between the tags and show the final answer.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="13" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="13" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="the-tags-can-come-from-the-prompt-or-from-sft">The tags can come from the prompt or from SFT</h1>
+<p><span class="cite">Nye, Andreassen, Gur-Ari, Michalewski, Austin, Bieber, Dohan, Lewkowycz, Bosma, Luan, Sutton, Odena. <em>Show Your Work: Scratchpads for Intermediate Computation with Language Models</em>. arXiv:2112.00114 · DeepSeek-AI. <em>DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning</em>. Nature 645, 633–638 (2025), Table 1</span></p>
+<p><strong>From the prompt.</strong> Describe the template in the prompt. A pretrained model follows an explicit format instruction some of the time. <em>&quot;Let's think step by step&quot;</em> and worked examples (&quot;chain-of-thought prompting&quot;) are this idea without the tags.</p>
+<p><strong>From SFT.</strong> Fine-tune on examples whose answers contain the tags and the worked steps. Those tokens are then what the model is trained to predict next.</p>
+<ul>
+<li>Fine-tuning a model to write its steps into a delimited &quot;scratchpad&quot; dates to 2021 (Nye et al.).</li>
+<li>DeepSeek-R1's training starts with SFT on thousands of long worked solutions (&quot;cold start&quot;).</li>
+</ul>
+<p><strong>The cost of SFT</strong> is that someone, or some other model, has to write the worked solutions.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="14" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="14" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="rl-rewards-scratch-work-that-leads-to-right-answers">RL rewards scratch work that leads to right answers</h1>
+<p><span class="cite">DeepSeek-AI. <em>DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning</em>. Nature 645, 633–638 (2025), Table 1, Fig. 1, Fig. 2</span></p>
+<p><strong>RL needs checkable answers, not worked solutions.</strong> DeepSeek-R1-Zero had no SFT:</p>
+<ol>
+<li>Every training prompt spells out the <code>&lt;think&gt;</code> template.</li>
+<li>For each math or code problem, sample a group of responses.</li>
+<li>Raise the probability of those that got the answer right (&quot;accuracy reward&quot;) and used the tags (&quot;format reward&quot;).</li>
+</ol>
+<p>RL training also sets how long a model tends to think.</p>
+<p><strong>The released DeepSeek-R1 uses both</strong> — cold-start SFT, then RL, a second round of SFT, and more RL.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="15" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="15" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="rl-raised-r1-zeros-accuracy-and-thinking-length">RL raised R1-Zero's accuracy and thinking length</h1>
+<p><span class="cite">DeepSeek-AI. <em>DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning</em>. Nature 645, 633–638 (2025), Fig. 1. Panels from arXiv:2501.12948v2</span></p>
+<div class="columns">
+<div>
+<p><img src="images/r1zero-aime-fig1a.svg" alt="center" style="width:455px;" /></p>
+<p>Competition math (AIME 2024). Blue: 15.6% → 77.9% correct on a single attempt. Red: majority vote over 16 attempts.</p>
+</div>
+<div>
+<p><img src="images/r1zero-length-fig1b.svg" alt="center" style="width:455px;" /></p>
+<p>Average response length. R1-Zero also began re-checking its work and trying alternative approaches.</p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="16" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="16" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="serving-code-can-cap-or-extend-thinking">Serving code can cap or extend thinking</h1>
+<p><span class="cite">Muennighoff, Yang, Shi, Li, Fei-Fei, Hajishirzi, Zettlemoyer, Liang, Candès, Hashimoto. <em>s1: Simple test-time scaling</em>. arXiv:2501.19393</span></p>
+<p><strong>To cap thinking</strong>, the serving code inserts <code>&lt;/think&gt;</code> itself, and the model goes on to the answer.</p>
+<p><strong>To extend it</strong>, the code deletes the model's <code>&lt;/think&gt;</code> and appends &quot;Wait&quot; (&quot;budget forcing&quot;).</p>
+<p>Vendors expose this as a &quot;thinking budget&quot; or an effort level. Generation also stops when the output hits a length cap (&quot;max tokens&quot;).</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="17" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="17" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="more-test-time-compute-can-help-or-hurt">More test-time compute can help or hurt</h1>
+<p><span class="cite">Snell, Lee, Xu, Kumar. <em>Scaling LLM Test-Time Compute Optimally Can be More Effective than Scaling Parameters for Reasoning</em>. ICLR 2025. arXiv:2408.03314, Fig. 1 · Gema, Hägele, Chen, et al. <em>Inverse Scaling in Test-Time Compute</em>. TMLR 2025. arXiv:2507.14417, Fig. 1</span></p>
+<div class="columns wideleft">
+<div>
+<p><img src="images/ttc-snell2024-fig1.png" alt="center" style="width:470px;" /></p>
+<p>A small model (PaLM 2-S*) revising its MATH answers vs. a ~14x larger model answering once, at equal total compute. Above zero, the small model wins. Left to right, the model answers more questions, so the budget buys fewer revisions each.</p>
+</div>
+<div>
+<p><img src="images/ttc-gema2025-fig1.png" alt="center" style="height:283px;" /></p>
+<p>Nine reasoning models count two objects (the answer is always 2) after irrelevant math puzzles are inserted into the prompt.</p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="18" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="18" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="longer-thinking-pays-on-multi-step-checkable-tasks">Longer thinking pays on multi-step, checkable tasks</h1>
+<table>
+<thead>
+<tr>
+<th>Let it think</th>
+<th>Do not bother</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Many dependent steps — derivations, stoichiometry, planning an assay</td>
+<td>One-shot recall: a melting point, a CAS number</td>
+</tr>
+<tr>
+<td>A candidate space to search and prune</td>
+<td>Reformatting, extraction, translation</td>
+</tr>
+<tr>
+<td>A checkable answer, so you can tell if it worked</td>
+<td>Anything where you cannot tell a good answer from a bad one</td>
+</tr>
+<tr>
+<td>A wrong answer is expensive to discover later</td>
+<td>Latency matters and errors are cheap</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Thinking does not add knowledge.</strong> If a fact was never in the training data, more tokens give the model more room to argue for a wrong answer. Retrieving the fact takes a tool.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="19" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-class="lead" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" class="lead" data-marpit-pagination="19" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--class:lead;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="tools">Tools</h1>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="20" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="20" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="a-tool-call-is-text-your-code-agrees-to-execute">A tool call is text your code agrees to execute</h1>
+<p>The model only emits text. Your code treats text in one agreed format as a request to run a function (&quot;tool call&quot;).</p>
+<div class="columns">
+<div>
+<p><strong>1. You describe the tool</strong> — a name, a description, and the allowed inputs (&quot;JSON schema&quot;). This text goes into the prompt.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-json"><span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;run_rdkit&quot;</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;Compute a molecular
+   property from a SMILES string.&quot;</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-attr">&quot;input_schema&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+   <span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;object&quot;</span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">&quot;properties&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span>
+     <span class="hljs-attr">&quot;smiles&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;string&quot;</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+     <span class="hljs-attr">&quot;property&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;string&quot;</span><span class="hljs-punctuation">,</span>
+        <span class="hljs-attr">&quot;enum&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;logP&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;MW&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;TPSA&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
+   <span class="hljs-attr">&quot;required&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><span class="hljs-string">&quot;smiles&quot;</span><span class="hljs-punctuation">,</span><span class="hljs-string">&quot;property&quot;</span><span class="hljs-punctuation">]</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">}</span>
+</code></pre>
+<p>The model decides whether to call the tool from that text alone.</p>
+</div>
+<div>
+<p><strong>2. The model emits a call</strong>, and generation stops.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-json"><span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tool_use&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;toolu_01&quot;</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;run_rdkit&quot;</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-attr">&quot;input&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;smiles&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;CC(=O)Oc1ccccc1C(=O)O&quot;</span><span class="hljs-punctuation">,</span>
+           <span class="hljs-attr">&quot;property&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;logP&quot;</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">}</span>
+</code></pre>
+<p><strong>3. Your code runs the function</strong> and appends the result to the conversation.</p>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-json"><span class="hljs-punctuation">{</span><span class="hljs-attr">&quot;type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;tool_result&quot;</span><span class="hljs-punctuation">,</span>
+ <span class="hljs-attr">&quot;tool_use_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;toolu_01&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-attr">&quot;content&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;1.31&quot;</span><span class="hljs-punctuation">}</span>
+</code></pre>
+<p><strong>4. The model is called again</strong>, with the result now in its prompt. It writes the answer (<em>&quot;Aspirin's logP is about 1.31&quot;</em>) or another tool call.</p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="21" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="21" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="tool-calling-is-a-skill-trained-in-post-training">Tool calling is a skill trained in post-training</h1>
+<p><strong>At run time, the tool definitions are text in the prompt.</strong> The API writes your definitions into a system prompt (&quot;Here are the functions available in JSONSchema format: …&quot;). The model writes the call in a format it was trained on, generation stops, and the server parses that text into the JSON on the previous slide. An option (&quot;strict&quot;) guarantees the inputs match the schema.</p>
+<p><strong>The skill comes from fine-tuning.</strong> Llama 3 was trained on transcripts of the form <em>system prompt → user prompt → tool call → tool output → final answer</em>, generated by earlier Llama 3 checkpoints, with failed calls filtered out. Annotators then picked the better of two assistant messages at each step. For tools it has never seen, it trained on (function definition, query, correct call) triples mined from public code.</p>
+<p><span class="cite">Anthropic. <em>Define tools</em>, platform.claude.com/docs · Llama Team, AI @ Meta. <em>The Llama 3 Herd of Models</em>. arXiv:2407.21783, §4.3.5</span></p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="22" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="22" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="retrieval-puts-missing-facts-into-the-prompt">Retrieval puts missing facts into the prompt</h1>
+<p><span class="cite">Lewis et al. <em>Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</em>. NeurIPS 2020. arXiv:2005.11401 · Skarlinski, Cox, Laurent, Braza, Hinks, Hammerling, Ponnapati, Rodriques, White. <em>Language agents achieve superhuman synthesis of scientific knowledge</em>. arXiv:2409.13740</span></p>
+<p><strong>Retrieval-augmented generation (&quot;RAG&quot;).</strong> Search a document collection — papers, lab notebooks, a database — and paste the top passages into the prompt before the model answers. The model answers from text it was given, and can cite the passage.</p>
+<p><strong>As a fixed pipeline</strong> — your code always searches once, then calls the model: question → retrieve passages → answer. This is the original 2020 design.</p>
+<p><strong>As a tool</strong> — the model decides when to search, reads the results, and can search again with a better query. PaperQA2 works this way, with paper search, evidence gathering, and citation following as tools. Its authors report it matched or exceeded subject-matter experts on three literature-research tasks.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="23" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="23" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="most-callable-code-can-be-a-tool-with-four-exceptions">Most callable code can be a tool, with four exceptions</h1>
+<div class="columns">
+<div>
+<p><strong>Yes</strong></p>
+<ul>
+<li>RDKit, a solver, a simulation, a unit converter</li>
+<li>Literature and patent search; a lab database</li>
+<li>Instruments with an API — a plate reader, a liquid handler</li>
+<li>Another model, including this one</li>
+</ul>
+</div>
+<div>
+<p><strong>No</strong></p>
+<ul>
+<li>Anything returning nothing observable</li>
+<li>A three-day fermentation — too slow for the loop; make it a job you submit and poll</li>
+<li>Judgment nobody can specify: <em>&quot;is this hypothesis interesting?&quot;</em></li>
+<li><strong>Irreversible acts</strong> — deleting data, ordering reagents, dispensing. Callable, but excluded for safety.</li>
+</ul>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="24" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="24" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="mcp-servers-package-tools-for-any-ai-application">MCP servers package tools for any AI application</h1>
+<p><span class="cite">Model Context Protocol. <em>Architecture overview</em>. modelcontextprotocol.io/docs/learn/architecture, accessed 2026-10-04 · Anthropic. <em>Donating the Model Context Protocol and establishing the Agentic AI Foundation</em>. 9 Dec 2025</span></p>
+<p><strong>Without MCP</strong>, a tool is written into one application's code: its definition and the function that runs it.</p>
+<p><strong>An MCP server is a program that offers tools over a standard protocol</strong> (&quot;Model Context Protocol&quot;). An AI application — Claude Code, ChatGPT, Cursor, VS Code — connects to it and:</p>
+<ol>
+<li>asks for its tools (<code>tools/list</code>) and gets each one's name, description, and input schema</li>
+<li>puts those definitions in the prompt, like any other tool</li>
+<li>forwards the model's call to the server (<code>tools/call</code>) and appends the result to the context</li>
+</ol>
+<p><strong>Local or remote.</strong> A local server runs on your machine, e.g. one that reads your files. A remote server runs on the provider's platform, behind a login.</p>
+<p><strong>In practice.</strong> More than 10,000 public servers existed by December 2025. A server's tool descriptions and results enter the model's context, so connect only servers you trust.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="25" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-class="lead" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" class="lead" data-marpit-pagination="25" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--class:lead;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="agents">Agents</h1>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="26" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="26" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="an-agent-calls-tools-in-a-loop-until-its-goal-is-met">An agent calls tools in a loop until its goal is met</h1>
+<p><img src="images/agent-loop.svg" alt="center" style="width:820px;" /></p>
+<div class="box">
+<p><strong>An agent is a language model in a loop, given a goal instead of a question, with tools that reach outside itself, deciding its own next action until it stops.</strong></p>
+</div>
+<p>Unlike a chatbot, an agent:</p>
+<ol>
+<li>chooses its own next action instead of answering one question</li>
+<li>runs many steps before a human sees the result</li>
+<li>acts on files, databases, and instruments outside the conversation</li>
+</ol>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="27" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="27" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="the-loop-is-a-program-that-calls-the-model-repeatedly">The loop is a program that calls the model repeatedly</h1>
+<div class="columns">
+<div>
+<p><strong>The program around the model (&quot;harness&quot;)</strong> is ordinary code. On every pass it:</p>
+<ol>
+<li><strong>Sends the whole transcript as the prompt</strong> — the goal, the tool definitions, and every tool call and result so far. The model keeps no memory between calls.</li>
+<li><strong>Runs the tool call</strong> the model emits and appends the result to the transcript.</li>
+<li><strong>Stops</strong> when the model answers without a tool call, or at a cap on steps or cost that you set.</li>
+</ol>
+<p>The transcript grows on every pass, so a long run fills the context window. The harness decides what to keep.</p>
+</div>
+<div>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code>call 1  prompt: goal + tool definitions
+        model:  search_papers(&quot;aspirin logP&quot;)
+
+call 2  prompt: all of the above
+                + search results
+        model:  run_rdkit(aspirin, logP)
+
+call 3  prompt: all of the above + &quot;1.31&quot;
+        model:  final answer, no tool call
+                → stop
+</code></pre>
+<p><strong>Three ways to get a harness:</strong> use an existing one (Claude Code, Codex CLI), write the loop yourself, or build on a framework (LangGraph).</p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="28" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="28" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="workflow-code-picks-each-step-agent-the-model-does">Workflow: code picks each step. Agent: the model does.</h1>
+<p><span class="cite">Schluntz, Zhang. <em>Building Effective Agents</em>. Anthropic, Dec 2024. anthropic.com/engineering/building-effective-agents</span></p>
+<div class="columns">
+<div>
+<p><img src="images/workflow-fixed.svg" alt="center" style="width:540px;" /></p>
+<p><strong>A workflow</strong> — LLM calls and tools &quot;orchestrated through predefined code paths.&quot; Your code decides which step runs next. The LLM does one step and cannot choose another.</p>
+<p><strong>Use it when you can list the steps ahead of time.</strong> Workflows &quot;offer predictability and consistency for well-defined tasks.&quot;</p>
+</div>
+<div>
+<p><img src="images/agent-choice.svg" alt="center" style="width:540px;" /></p>
+<p><strong>An agent</strong> — the LLM &quot;dynamically direct[s] [its] own processes and tool usage.&quot; The harness has one generic step: run whichever tool the model asks for.</p>
+<p><strong>Use it when you cannot list the steps.</strong> Agents &quot;trade latency and cost for better task performance.&quot;</p>
+</div>
+</div>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+</foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="29" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Prompting, reasoning, and tools" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+" lang="en-US" data-marpit-pagination="29" style="--paginate:true;--footer:ORIE 7190 · AI for Science · Prompting, reasoning, and tools;--theme:gaia;--style:section { font-size: 23px; padding: 50px 60px 60px; }
+section p, section ul, section ol { margin-block: 0.45em; }
+section li { margin-block: 0.15em; }
+h1 { color: #B31B1B; margin-bottom: 0.35em; }
+h2 { color: #B31B1B; font-size: 28px; }
+.columns { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.cols3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.2rem; }
+.wideleft { grid-template-columns: 11fr 9fr; }
+.small { font-size: 20px; color: #666; }
+.cite { font-size: 18px; color: #777; }
+table { font-size: 21px; }
+.box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
+img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
+;" data-marpit-pagination-total="29" data-size="16:9">
+<h1 id="the-same-model-scores-differently-across-harnesses">The same model scores differently across harnesses</h1>
+<p><span class="cite">Yang, Jimenez, Wettig, Lieret, Yao, Narasimhan, Press. <em>SWE-agent: Agent-Computer Interfaces Enable Automated Software Engineering</em>. NeurIPS 2024. arXiv:2405.15793, Tables 1, 3 · HAL leaderboard, CORE-Bench Hard, hal.cs.princeton.edu/corebench_hard, accessed 2026-10-04</span></p>
+<p><strong>A harness is the software around the model</strong> — the loop, the tool definitions, what goes into the context window, which actions need permission, when to stop. Claude Code, Codex CLI, and SWE-agent are harnesses.</p>
+<p><strong>Better tools, same model.</strong> On 300 GitHub bug-fix tasks (SWE-bench Lite), GPT-4 Turbo fixed 11% using a plain Linux shell and 18% using SWE-agent's file viewer, search, and editor. Showing only the last five tool outputs in full beat showing the whole history, 18% to 15%.</p>
+<p><strong>Same model, three harnesses.</strong> Reproducing results from published papers' code and data (CORE-Bench Hard), Claude Opus 4.5 scored 33% in a general-purpose harness, 42% in one tuned for the benchmark, and 78% in Claude Code. These were separate leaderboard submissions, not a controlled comparison.</p>
+<footer>ORIE 7190 · AI for Science · Prompting, reasoning, and tools</footer>
+</section>
+<script>!function(){"use strict";const t={h1:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"1"},style:"display: block; font-size: 2em; margin-block-start: 0.67em; margin-block-end: 0.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h2:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"2"},style:"display: block; font-size: 1.5em; margin-block-start: 0.83em; margin-block-end: 0.83em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h3:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"3"},style:"display: block; font-size: 1.17em; margin-block-start: 1em; margin-block-end: 1em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h4:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"4"},style:"display: block; margin-block-start: 1.33em; margin-block-end: 1.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h5:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"5"},style:"display: block; font-size: 0.83em; margin-block-start: 1.67em; margin-block-end: 1.67em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},h6:{proto:()=>HTMLHeadingElement,attrs:{role:"heading","aria-level":"6"},style:"display: block; font-size: 0.67em; margin-block-start: 2.33em; margin-block-end: 2.33em; margin-inline-start: 0px; margin-inline-end: 0px; font-weight: bold;"},span:{proto:()=>HTMLSpanElement},pre:{proto:()=>HTMLElement,style:"display: block; font-family: monospace; white-space: pre; margin: 1em 0; --marp-auto-scaling-white-space: pre;"}},e="data-marp-auto-scaling-wrapper",i="data-marp-auto-scaling-svg",n="data-marp-auto-scaling-container";class s extends HTMLElement{container;containerSize;containerObserver;svg;svgComputedStyle;svgPreserveAspectRatio="xMinYMid meet";wrapper;wrapperSize;wrapperObserver;constructor(){super();const t=t=>([e])=>{const{width:i,height:n}=e.contentRect;this[t]={width:i,height:n},this.updateSVGRect()};this.attachShadow({mode:"open"}),this.containerObserver=new ResizeObserver(t("containerSize")),this.wrapperObserver=new ResizeObserver((...e)=>{t("wrapperSize")(...e),this.flushSvgDisplay()})}static get observedAttributes(){return["data-downscale-only"]}connectedCallback(){this.shadowRoot.innerHTML=`\n<style>\n  svg[${i}] { display: block; width: 100%; height: auto; vertical-align: top; }\n  span[${n}] { display: table; white-space: var(--marp-auto-scaling-white-space, nowrap); width: max-content; }\n</style>\n<div ${e}>\n  <svg part="svg" ${i}>\n    <foreignObject><span ${n}><slot></slot></span></foreignObject>\n  </svg>\n</div>\n    `.split(/\n\s*/).join(""),this.wrapper=this.shadowRoot.querySelector(`div[${e}]`)??void 0;const t=this.svg;this.svg=this.wrapper?.querySelector(`svg[${i}]`)??void 0,this.svg!==t&&(this.svgComputedStyle=this.svg?window.getComputedStyle(this.svg):void 0),this.container=this.svg?.querySelector(`span[${n}]`)??void 0,this.observe()}disconnectedCallback(){this.svg=void 0,this.svgComputedStyle=void 0,this.wrapper=void 0,this.container=void 0,this.observe()}attributeChangedCallback(){this.observe()}flushSvgDisplay(){const{svg:t}=this;t&&(t.style.display="inline",requestAnimationFrame(()=>{t.style.display=""}))}observe(){this.containerObserver.disconnect(),this.wrapperObserver.disconnect(),this.wrapper&&this.wrapperObserver.observe(this.wrapper),this.container&&this.containerObserver.observe(this.container),this.svgComputedStyle&&this.observeSVGStyle(this.svgComputedStyle)}observeSVGStyle(t){const e=()=>{const i=(()=>{const e=t.getPropertyValue("--preserve-aspect-ratio");if(e)return e.trim();return`x${(({textAlign:t,direction:e})=>{if(t.endsWith("left"))return"Min";if(t.endsWith("right"))return"Max";if("start"===t||"end"===t){let i="rtl"===e;return"end"===t&&(i=!i),i?"Max":"Min"}return"Mid"})(t)}YMid meet`})();i!==this.svgPreserveAspectRatio&&(this.svgPreserveAspectRatio=i,this.updateSVGRect()),t===this.svgComputedStyle&&requestAnimationFrame(e)};e()}updateSVGRect(){let t=Math.ceil(this.containerSize?.width??0);const e=Math.ceil(this.containerSize?.height??0);void 0!==this.dataset.downscaleOnly&&(t=Math.max(t,this.wrapperSize?.width??0));const i=this.svg?.querySelector(":scope > foreignObject");if(i?.setAttribute("width",`${t}`),i?.setAttribute("height",`${e}`),this.svg&&(this.svg.setAttribute("viewBox",`0 0 ${t} ${e}`),this.svg.setAttribute("preserveAspectRatio",this.svgPreserveAspectRatio),this.svg.style.height=t<=0||e<=0?"0":""),this.container){const t=this.svgPreserveAspectRatio.toLowerCase();this.container.style.marginLeft=t.startsWith("xmid")||t.startsWith("xmax")?"auto":"0",this.container.style.marginRight=t.startsWith("xmi")?"auto":"0"}}}const r=(t,{attrs:e={},style:i})=>class extends t{constructor(...t){super(...t);for(const[t,i]of Object.entries(e))this.hasAttribute(t)||this.setAttribute(t,i);this._shadow()}static get observedAttributes(){return["data-auto-scaling"]}connectedCallback(){this._update()}attributeChangedCallback(){this._update()}_shadow(){if(!this.shadowRoot)try{this.attachShadow({mode:"open"})}catch(t){if(!(t instanceof Error&&"NotSupportedError"===t.name))throw t}return this.shadowRoot}_update(){const t=this._shadow();if(t){const e=i?`<style>:host { ${i} }</style>`:"";let n="<slot></slot>";const{autoScaling:s}=this.dataset;if(void 0!==s){n=`<marp-auto-scaling exportparts="svg:auto-scaling" ${"downscale-only"===s?"data-downscale-only":""}>${n}</marp-auto-scaling>`}t.innerHTML=e+n}}};let o;const a=()=>o??(o=!!document.createElement("div",{is:"marp-auto-scaling"}).outerHTML.startsWith("<div is"),o),l=Symbol();let c;const d="marpitSVGPolyfill:setZoomFactor,",h=Symbol(),g=Symbol();const p=()=>{const t="Apple Computer, Inc."===navigator.vendor,e=t?[v]:[],i={then:e=>(t?(async()=>{if(void 0===c){const t=document.createElement("canvas");t.width=10,t.height=10;const e=t.getContext("2d"),i=new Image(10,10),n=new Promise(t=>{i.addEventListener("load",()=>t())});i.crossOrigin="anonymous",i.src="data:image/svg+xml;charset=utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2210%22%20height%3D%2210%22%20viewBox%3D%220%200%201%201%22%3E%3CforeignObject%20width%3D%221%22%20height%3D%221%22%20requiredExtensions%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%3E%3Cdiv%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxhtml%22%20style%3D%22width%3A%201px%3B%20height%3A%201px%3B%20background%3A%20red%3B%20position%3A%20relative%22%3E%3C%2Fdiv%3E%3C%2FforeignObject%3E%3C%2Fsvg%3E",await n,e.drawImage(i,0,0),c=e.getImageData(5,5,1,1).data[3]<128}return c})().then(t=>{null==e||e(t?[v]:[])}):null==e||e([]),i)};return Object.assign(e,i)};let m,u;function v(t){const e="object"==typeof t&&t.target||document,i="object"==typeof t?t.zoom:t;window[g]||(Object.defineProperty(window,g,{configurable:!0,value:!0}),document.body.style.zoom=1.0001,document.body.offsetHeight,document.body.style.zoom=1,window.addEventListener("message",({data:t,origin:e})=>{if(e===window.origin)try{if(t&&"string"==typeof t&&t.startsWith(d)){const[,e]=t.split(","),i=Number.parseFloat(e);Number.isNaN(i)||(u=i)}}catch(t){console.error(t)}}));let n=!1;Array.from(e.querySelectorAll("svg[data-marpit-svg]"),t=>{var e,s,r,o;t.style.transform||(t.style.transform="translateZ(0)");const a=i||u||t.currentScale||1;m!==a&&(m=a,n=a);const l=t.getBoundingClientRect(),{length:c}=t.children;for(let i=0;i<c;i+=1){const n=t.children[i];if(n.getScreenCTM){const t=n.getScreenCTM();if(t){const i=null!==(s=null===(e=n.x)||void 0===e?void 0:e.baseVal.value)&&void 0!==s?s:0,c=null!==(o=null===(r=n.y)||void 0===r?void 0:r.baseVal.value)&&void 0!==o?o:0,d=n.children.length;for(let e=0;e<d;e+=1){const s=n.children[e];if("SECTION"===s.tagName){const{style:e}=s;e.transformOrigin||(e.transformOrigin=`${-i}px ${-c}px`),e.transform=`scale(${a}) matrix(${t.a}, ${t.b}, ${t.c}, ${t.d}, ${t.e-l.left}, ${t.f-l.top}) translateZ(0.0001px)`;break}}}}}}),!1!==n&&Array.from(e.querySelectorAll("iframe"),({contentWindow:t})=>{null==t||t.postMessage(`${d}${n}`,"null"===window.origin?"*":window.origin)})}function w({once:t=!1,target:e=document}={}){const i=function(t=document){if(t[h])return t[h];let e=!0;const i=()=>{e=!1,delete t[h]};Object.defineProperty(t,h,{configurable:!0,value:i});let n=[],s=!1;(async()=>{try{n=await p()}finally{s=!0}})();const r=()=>{for(const e of n)e({target:t});s&&0===n.length||e&&window.requestAnimationFrame(r)};return r(),i}(e);return t?(i(),()=>{}):i}m=1,u=void 0;const b=Symbol(),y=(e=document)=>{if("undefined"==typeof window)throw new Error("Marp Core's browser script is valid only in browser context.");if(((e=document)=>{const i=window[l];i||customElements.define("marp-auto-scaling",s);for(const n of Object.keys(t)){const s=`marp-${n}`,o=t[n].proto();a()&&o!==HTMLElement?i||customElements.define(s,r(o,{style:t[n].style}),{extends:n}):(i||customElements.define(s,r(HTMLElement,t[n])),e.querySelectorAll(`${n}[is="${s}"]`).forEach(t=>{t.outerHTML=t.outerHTML.replace(new RegExp(`^<${n}`,"i"),`<${s}`).replace(new RegExp(`</${n}>$`,"i"),`</${s}>`)}))}window[l]=!0})(e),e[b])return e[b];const i=w({target:e}),n=()=>{i(),delete e[b]},o=Object.assign(n,{cleanup:n,update:()=>y(e)});return Object.defineProperty(e,b,{configurable:!0,value:o}),o},f=document.currentScript;y(f?f.getRootNode():document)}();
+</script></foreignObject></svg></div><div class="bespoke-marp-note" data-index="0" tabindex="0"><p>Speaker notes. Assumes the language models unit: pretraining,
+     post-training, RL on checkable answers. This session turns that into the two
+     mechanisms every agent is built from, and lands on a definition of an agent.</p></div><script>/*!! License: https://unpkg.com/@marp-team/marp-cli@4.5.1/lib/bespoke.js.LICENSE.txt */
+!function(){"use strict";function e(e){return e&&e.__esModule&&Object.prototype.hasOwnProperty.call(e,"default")?e.default:e}var t,n,r=(n||(n=1,t={from:function(e,t){var n,r=1===(e.parent||e).nodeType?e.parent||e:document.querySelector(e.parent||e),o=[].filter.call("string"==typeof e.slides?r.querySelectorAll(e.slides):e.slides||r.children,function(e){return"SCRIPT"!==e.nodeName}),i={},a=function(e,t){return(t=t||{}).index=o.indexOf(e),t.slide=e,t},s=function(e,t){i[e]=(i[e]||[]).filter(function(e){return e!==t})},l=function(e,t){return(i[e]||[]).reduce(function(e,n){return e&&!1!==n(t)},!0)},c=function(e,t){o[e]&&(n&&l("deactivate",a(n,t)),n=o[e],l("activate",a(n,t)))},d=function(e,t){var r=o.indexOf(n)+e;l(e>0?"next":"prev",a(n,t))&&c(r,t)},u={off:s,on:function(e,t){return(i[e]||(i[e]=[])).push(t),s.bind(null,e,t)},fire:l,slide:function(e,t){if(!arguments.length)return o.indexOf(n);l("slide",a(o[e],t))&&c(e,t)},next:d.bind(null,1),prev:d.bind(null,-1),parent:r,slides:o,destroy:function(e){l("destroy",a(n,e)),i={}}};return(t||[]).forEach(function(e){e(u)}),n||c(0),u}}),t),o=e(r);const i=document.body,a=(...e)=>history.replaceState(...e),s="",l="presenter",c="next",d="overview",u=["",l,d,c],f="bespoke-marp-",m=`data-${f}`,g=(e,{protocol:t,host:n,pathname:r,hash:o}=location)=>{const i=e.toString();return`${t}//${n}${r}${i?"?":""}${i}${o}`},p=()=>i.dataset.bespokeView,v=e=>new URLSearchParams(location.search).get(e),h=(e,t={})=>{const n={location,setter:a,...t},r=new URLSearchParams(n.location.search);for(const t of Object.keys(e)){const n=e[t];"string"==typeof n?r.set(t,n):r.delete(t)}try{n.setter({...window.history.state??{}},"",g(r,n.location))}catch(e){console.error(e)}},w=(()=>{const e="bespoke-marp";try{return localStorage.setItem(e,e),localStorage.removeItem(e),!0}catch{return!1}})(),y=e=>{try{return localStorage.getItem(e)}catch{return null}},b=(e,t)=>{try{return localStorage.setItem(e,t),!0}catch{return!1}},k=e=>{try{return localStorage.removeItem(e),!0}catch{return!1}},x=(e,t)=>{const n="aria-hidden";t?e.setAttribute(n,"true"):e.removeAttribute(n)},E=e=>{e.parent.classList.add(`${f}parent`),e.slides.forEach(e=>e.classList.add(`${f}slide`)),e.on("activate",t=>{const n=`${f}active`,r=t.slide,o=r.classList,i=!o.contains(n);if(e.slides.forEach(e=>{e.classList.remove(n),x(e,!0)}),o.add(n),x(r,!1),i){const e=`${n}-ready`;o.add(e),document.body.clientHeight,o.remove(e)}})},$=e=>{let t=0,n=0;Object.defineProperty(e,"fragments",{enumerable:!0,value:e.slides.map(e=>[null,...e.querySelectorAll("[data-marpit-fragment]")])});const r=r=>void 0!==e.fragments[t][n+r],o=(r,o)=>{t=r,n=o,e.fragments.forEach((e,t)=>{e.forEach((e,n)=>{if(null==e)return;const i=t<r||t===r&&n<=o;e.setAttribute(`${m}fragment`,(i?"":"in")+"active");const a=`${m}current-fragment`;t===r&&n===o?e.setAttribute(a,"current"):e.removeAttribute(a)})}),e.fragmentIndex=o;const i={slide:e.slides[r],index:r,fragments:e.fragments[r],fragmentIndex:o};e.fire("fragment",i)};e.on("next",({fragment:i=!0})=>{if(i){if(r(1))return o(t,n+1),!1;const i=t+1;e.fragments[i]&&o(i,0)}else{const r=e.fragments[t].length;if(n+1<r)return o(t,r-1),!1;const i=e.fragments[t+1];i&&o(t+1,i.length-1)}}),e.on("prev",({fragment:i=!0})=>{if(r(-1)&&i)return o(t,n-1),!1;const a=t-1;e.fragments[a]&&o(a,e.fragments[a].length-1)}),e.on("slide",({index:t,fragment:n})=>{let r=0;if(void 0!==n){const o=e.fragments[t];if(o){const{length:e}=o;r=-1===n?e-1:Math.min(Math.max(n,0),e-1)}}o(t,r)}),o(0,0)},L=document,S=()=>!(!L.fullscreenEnabled&&!L.webkitFullscreenEnabled),P=()=>!(!L.fullscreenElement&&!L.webkitFullscreenElement),_=e=>{e.fullscreen=()=>{S()&&(async()=>{P()?(L.exitFullscreen||L.webkitExitFullscreen)?.call(L):((e=L.body)=>{(e.requestFullscreen||e.webkitRequestFullscreen)?.call(e)})()})()},document.addEventListener("keydown",t=>{"f"!==t.key&&"F11"!==t.key||t.altKey||t.ctrlKey||t.metaKey||!S()||(e.fullscreen(),t.preventDefault())})},O=`${f}inactive`,T=(e=2e3)=>({parent:t,fire:n})=>{const r=t.classList,o=e=>n(`marp-${e?"":"in"}active`);let i;const a=()=>{i&&clearTimeout(i),i=setTimeout(()=>{r.add(O),o()},e),r.contains(O)&&(r.remove(O),o(!0))};for(const e of["mousedown","mousemove","touchend"])document.addEventListener(e,a);setTimeout(a,0)},I=["AUDIO","BUTTON","INPUT","SELECT","TEXTAREA","VIDEO"],M=e=>{e.parent.addEventListener("keydown",e=>{if(!e.target)return;const t=e.target;(I.includes(t.nodeName)||"true"===t.contentEditable)&&e.stopPropagation()})},A=e=>{window.addEventListener("load",()=>{for(const t of e.slides){const e=t.querySelector("marp-auto-scaling, [data-auto-scaling], [data-marp-fitting]");t.setAttribute(`${m}load`,e?"":"hideable")}})},C=({interval:e=250}={})=>t=>{document.addEventListener("keydown",e=>{if(" "===e.key&&e.shiftKey)t.prev();else if("ArrowLeft"===e.key||"ArrowUp"===e.key||"PageUp"===e.key)t.prev({fragment:!e.shiftKey});else if(" "!==e.key||e.shiftKey)if("ArrowRight"===e.key||"ArrowDown"===e.key||"PageDown"===e.key)t.next({fragment:!e.shiftKey});else if("End"===e.key)t.slide(t.slides.length-1,{fragment:-1});else{if("Home"!==e.key)return;t.slide(0)}else t.next();e.preventDefault()});let n,r,o=0;t.parent.addEventListener("wheel",i=>{let a=!1;const s=(e,t)=>{e&&(a=a||((e,t)=>((e,t)=>{const n="X"===t?"Width":"Height";return e[`client${n}`]<e[`scroll${n}`]})(e,t)&&((e,t)=>{const{overflow:n}=e,r=e[`overflow${t}`];return"auto"===n||"scroll"===n||"auto"===r||"scroll"===r})(getComputedStyle(e),t))(e,t)),e?.parentElement&&s(e.parentElement,t)};if(0!==i.deltaX&&s(i.target,"X"),0!==i.deltaY&&s(i.target,"Y"),a)return;i.preventDefault();const l=Math.sqrt(i.deltaX**2+i.deltaY**2);if(void 0!==i.wheelDelta){if(void 0===i.webkitForce&&Math.abs(i.wheelDelta)<40)return;if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<4)return}else if(i.deltaMode===i.DOM_DELTA_PIXEL&&l<12)return;r&&clearTimeout(r),r=setTimeout(()=>{n=0},e);const c=Date.now()-o<e,d=l<=n;if(n=l,c||d)return;let u;(i.deltaX>0||i.deltaY>0)&&(u="next"),(i.deltaX<0||i.deltaY<0)&&(u="prev"),u&&(t[u](),o=Date.now())})},D=(e=`.${f}osc`)=>{const t=document.querySelector(e);if(!t)return()=>{};const n=(e,n)=>{t.querySelectorAll(`[${m}osc=${JSON.stringify(e)}]`).forEach(n)};if(S()||n("fullscreen",e=>e.style.display="none"),!w){const e=(e,t)=>{e.disabled=!0,e.title=`${t} is disabled due to restricted localStorage.`};n("presenter",t=>e(t,"Presenter view")),n("overview",t=>e(t,"Overview view"))}return e=>{t.addEventListener("click",t=>{if(t.target instanceof HTMLElement){const{bespokeMarpOsc:n}=t.target.dataset;n&&t.target.blur();const r={fragment:!t.shiftKey};"next"===n?e.next(r):"prev"===n?e.prev(r):"fullscreen"===n?e?.fullscreen():"presenter"===n?e.openPresenterView():"overview"===n&&e.toggleOverviewView()}}),e.parent.appendChild(t),e.on("activate",({index:t})=>{n("page",n=>n.textContent=`Page ${t+1} of ${e.slides.length}`)}),e.on("fragment",({index:t,fragments:r,fragmentIndex:o})=>{n("prev",e=>e.disabled=0===t&&0===o),n("next",n=>n.disabled=t===e.slides.length-1&&o===r.length-1)}),e.on("marp-active",()=>x(t,!1)),e.on("marp-inactive",()=>x(t,!0)),S()&&(e=>{for(const t of["","webkit"])L.addEventListener(t+"fullscreenchange",e)})(()=>n("fullscreen",e=>e.classList.toggle("exit",S()&&P())))}},N=e=>{if(e.syncKey&&"string"==typeof e.syncKey)return!0;throw new Error("The current instance of Bespoke.js is incompatible with Marp bespoke sync plugin.")},B=(e={})=>{const t=e.key||window.history.state?.marpBespokeSyncKey||Math.random().toString(36).slice(2),n=`bespoke-marp-sync-${t}`;var r;r={marpBespokeSyncKey:t},h({},{setter:(e,...t)=>a({...e,...r},...t)});const o=()=>{const e=y(n);return e?JSON.parse(e):Object.create(null)},i=e=>{const t=o(),r={...t,...e(t)};return b(n,JSON.stringify(r)),r},s=()=>{window.removeEventListener("pageshow",s),i(e=>({reference:(e.reference||0)+1}))};return e=>{s(),Object.defineProperty(e,"syncKey",{value:t,enumerable:!0});let r=!0;setTimeout(()=>{e.on("fragment",e=>{r&&i(()=>({index:e.index,fragmentIndex:e.fragmentIndex}))})},0),window.addEventListener("storage",t=>{if(t.key===n&&t.oldValue&&t.newValue){const n=JSON.parse(t.oldValue),o=JSON.parse(t.newValue);if(n.index!==o.index||n.fragmentIndex!==o.fragmentIndex)try{r=!1,e.slide(o.index,{fragment:o.fragmentIndex,forSync:!0})}finally{r=!0}}});const a=()=>{const{reference:e}=o();void 0===e||e<=1?k(n):i(()=>({reference:e-1}))};window.addEventListener("pagehide",e=>{e.persisted&&window.addEventListener("pageshow",s),a()}),e.on("destroy",a)}},K=e=>{w&&document.addEventListener("keydown",t=>{("o"!==t.key||t.altKey||t.ctrlKey||t.metaKey)&&"Escape"!==t.key||(t.preventDefault(),e())})};let q=null;const V=({closeOnSelect:e=!0}={})=>t=>{N(t);const n=n=>{const r=(()=>{if(!q||!q.isConnected){q=document.createElement("div"),q.className=`${f}overview`,q.inert=!0;const n=document.createElement("iframe");n.src=(()=>{const n=new URLSearchParams(location.search);return n.set("view","overview"),n.set("sync",t.syncKey),e&&n.set("closeOnSelect","1"),g(n)})(),q.append(n),document.body.append(q)}return q})(),o=n??!r.dataset.open;setTimeout(()=>{if(r.dataset.open=o?"1":"",r.inert=!o,t.skipTransition=o,o){const e=r.querySelector("iframe");try{e?.contentWindow?.focus()}catch{e?.focus()}}else window.focus()},0)};Object.defineProperties(t,{toggleOverviewView:{enumerable:!0,value:n}}),window.addEventListener("message",e=>{e.origin===window.origin&&"closeOverview"===e.data&&n(!1)}),K(n)},j=e=>{const{title:t}=document;document.title="[Overview]"+(t?` - ${t}`:"");const n=!!v("closeOnSelect"),r=()=>{window.parent.postMessage("closeOverview","null"===window.origin?"*":window.origin)};if(e.slides.forEach((t,o)=>{t.tabIndex=0;const i=()=>{e.slide(o,{fragment:-1}),n&&r()};t.addEventListener("click",i),t.addEventListener("keydown",e=>{"Enter"!==e.key&&" "!==e.key||(e.preventDefault(),i())})}),window.addEventListener("keydown",t=>{const n=e.slide(),r=t=>{const r=t=>{const n=e.slides[t].getBoundingClientRect();return[Math.round((n.left+n.right)/2),Math.round((n.top+n.bottom)/2)]};let o=null,i=n;do{const e=r(i);if(o){if(Math.abs(e[0]-o[0])<2)return i}else o=e;i+=t}while(i>=0&&i<e.slides.length);return n};if("ArrowLeft"===t.key)e.slide(Math.max(n-1,0),{fragment:-1});else if("ArrowRight"===t.key)e.slide(Math.min(n+1,e.slides.length-1),{fragment:-1});else if("ArrowUp"===t.key)e.slide(r(-1),{fragment:-1});else if("ArrowDown"===t.key)e.slide(r(1),{fragment:-1});else if("End"===t.key)e.slide(e.slides.length-1,{fragment:-1});else{if("Home"!==t.key)return;e.slide(0,{fragment:-1})}t.preventDefault();const o=e.slide();e.slides[o]?.focus?.(),e.slides[o]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),e.on("slide",({index:t})=>{e.slides[t]?.scrollIntoView?.({behavior:"smooth",block:"nearest"})}),window.parent!==window){K(r);const e=document.createElement("header");e.className=`${f}overview-header`;const t=document.createElement("button");t.className=`${f}overview-close`,t.type="button",t.title="Close overview",t.textContent=t.title,t.addEventListener("click",r),e.append(t),document.body.prepend(e)}},F=()=>{const e=p();return{[s]:V(),[l]:V({closeOnSelect:!1}),[d]:j}[e]},U=e=>{window.addEventListener("message",t=>{if(t.origin!==window.origin)return;const[n,r]=t.data.split(":");if("navigate"===n){const[t,n]=r.split(",");let o=Number.parseInt(t,10),i=Number.parseInt(n,10)+1;i>=e.fragments[o].length&&(o+=1,i=0),e.slide(o,{fragment:i})}})};var R,X,H,W,J,Y,z,G={exports:{}},Q=(R||(R=1,G.exports=(X=["area","base","br","col","command","embed","hr","img","input","keygen","link","meta","param","source","track","wbr"],H=function(e){return String(e).replace(/[&<>"']/g,function(e){return"&"+W[e]+";"})},W={"&":"amp","<":"lt",">":"gt",'"':"quot","'":"apos"},J="dangerouslySetInnerHTML",Y={className:"class",htmlFor:"for"},z={},function(e,t){var n=[],r="";t=t||{};for(var o=arguments.length;o-- >2;)n.push(arguments[o]);if("function"==typeof e)return t.children=n.reverse(),e(t);if(e){if(r+="<"+e,t)for(var i in t)!1!==t[i]&&null!=t[i]&&i!==J&&(r+=" "+(Y[i]?Y[i]:H(i))+'="'+H(t[i])+'"');r+=">"}if(-1===X.indexOf(e)){if(t[J])r+=t[J].__html;else for(;n.length;){var a=n.pop();if(a)if(a.pop)for(var s=a.length;s--;)n.push(a[s]);else r+=!0===z[a]?a:H(a)}r+=e?"</"+e+">":""}return z[r]=!0,r})),G.exports),Z=e(Q);const ee=({children:e})=>Z(null,null,...e),te=`${f}presenter-`,ne={container:`${te}container`,dragbar:`${te}dragbar-container`,next:`${te}next`,nextContainer:`${te}next-container`,noteContainer:`${te}note-container`,noteWrapper:`${te}note-wrapper`,noteButtons:`${te}note-buttons`,infoContainer:`${te}info-container`,infoPageArea:`${te}info-page-area`,infoPage:`${te}info-page`,infoPagePrev:`${te}info-page-prev`,infoPageNext:`${te}info-page-next`,noteButtonsBigger:`${te}note-bigger`,noteButtonsSmaller:`${te}note-smaller`,infoTime:`${te}info-time`,infoTimer:`${te}info-timer`},re=e=>{const{title:t}=document;document.title="[Presenter view]"+(t?` - ${t}`:"");const n={},r=e=>(n[e]=n[e]||document.querySelector(`.${e}`),n[e]);document.body.appendChild((e=>{const t=document.createElement("div");return t.className=ne.container,t.appendChild(e),t.insertAdjacentHTML("beforeend",Z(ee,null,Z("div",{class:ne.nextContainer},Z("iframe",{class:ne.next,src:"?view=next"})),Z("div",{class:ne.dragbar}),Z("div",{class:ne.noteContainer},Z("div",{class:ne.noteWrapper}),Z("div",{class:ne.noteButtons},Z("button",{class:ne.noteButtonsSmaller,tabindex:"-1",title:"Smaller notes font size"},"Smaller notes font size"),Z("button",{class:ne.noteButtonsBigger,tabindex:"-1",title:"Bigger notes font size"},"Bigger notes font size"))),Z("div",{class:ne.infoContainer},Z("div",{class:ne.infoPageArea},Z("button",{class:ne.infoPagePrev,tabindex:"-1",title:"Previous"},"Previous"),Z("button",{class:ne.infoPage}),Z("button",{class:ne.infoPageNext,tabindex:"-1",title:"Next"},"Next")),Z("time",{class:ne.infoTime,title:"Current time"}),Z("time",{class:ne.infoTimer,title:"Timer"})))),t})(e.parent)),(e=>{let t=!1;r(ne.dragbar).addEventListener("mousedown",()=>{t=!0,r(ne.dragbar).classList.add("active")}),window.addEventListener("mouseup",()=>{t=!1,r(ne.dragbar).classList.remove("active")}),window.addEventListener("mousemove",e=>{if(!t)return;const n=e.clientX/document.documentElement.clientWidth*100;r(ne.container).style.setProperty("--bespoke-marp-presenter-split-ratio",`${Math.max(0,Math.min(100,n))}%`)}),r(ne.nextContainer).addEventListener("click",()=>e.next());const n=r(ne.next),o=(i=n,(e,t)=>i.contentWindow?.postMessage(`navigate:${e},${t}`,"null"===window.origin?"*":window.origin));var i;n.addEventListener("load",()=>{r(ne.nextContainer).classList.add("active"),o(e.slide(),e.fragmentIndex),e.on("fragment",({index:e,fragmentIndex:t})=>o(e,t))});const a=document.querySelectorAll(".bespoke-marp-note");a.forEach(e=>{e.addEventListener("keydown",e=>e.stopPropagation()),r(ne.noteWrapper).appendChild(e)}),e.on("activate",()=>a.forEach(t=>t.classList.toggle("active",t.dataset.index==e.slide())));let s=0;const l=e=>{s=Math.max(-5,s+e),r(ne.noteContainer).style.setProperty("--bespoke-marp-note-font-scale",(1.2**s).toFixed(4))},c=()=>l(1),d=()=>l(-1),u=r(ne.noteButtonsBigger),f=r(ne.noteButtonsSmaller);u.addEventListener("click",()=>{u.blur(),c()}),f.addEventListener("click",()=>{f.blur(),d()}),document.addEventListener("keydown",e=>{"+"===e.key&&c(),"-"===e.key&&d()},!0);const m=r(ne.infoPage);e.on("activate",({index:t})=>{m.textContent=`${t+1} / ${e.slides.length}`}),m.addEventListener("click",()=>{m.blur(),e.toggleOverviewView()});const g=r(ne.infoPagePrev),p=r(ne.infoPageNext);g.addEventListener("click",t=>{g.blur(),e.prev({fragment:!t.shiftKey})}),p.addEventListener("click",t=>{p.blur(),e.next({fragment:!t.shiftKey})}),e.on("fragment",({index:t,fragments:n,fragmentIndex:r})=>{g.disabled=0===t&&0===r,p.disabled=t===e.slides.length-1&&r===n.length-1});let v=new Date;const h=()=>{const e=new Date,t=e=>`${Math.floor(e)}`.padStart(2,"0"),n=e.getTime()-v.getTime(),o=t(n/1e3%60),i=t(n/1e3/60%60),a=t(n/36e5%24);r(ne.infoTime).textContent=e.toLocaleTimeString(),r(ne.infoTimer).textContent=`${a}:${i}:${o}`};h(),setInterval(h,250),r(ne.infoTimer).addEventListener("click",()=>{v=new Date})})(e)},oe=e=>{N(e),Object.defineProperties(e,{openPresenterView:{enumerable:!0,value:ie},presenterUrl:{enumerable:!0,get:ae}}),w&&document.addEventListener("keydown",t=>{"p"!==t.key||t.altKey||t.ctrlKey||t.metaKey||(t.preventDefault(),e.openPresenterView())})};function ie(){const{max:e,floor:t}=Math,n=e(t(.85*window.innerWidth),640),r=e(t(.85*window.innerHeight),360);return window.open(this.presenterUrl,te+this.syncKey,`width=${n},height=${r},menubar=no,toolbar=no`)}function ae(){const e=new URLSearchParams(location.search);return e.set("view","presenter"),e.set("sync",this.syncKey),g(e)}const se=e=>{const t=p();return t===c&&e.appendChild(document.createElement("span")),{[s]:oe,[l]:re,[c]:U}[t]},le=e=>{e.on("activate",t=>{document.querySelectorAll(".bespoke-progress-parent > .bespoke-progress-bar").forEach(n=>{n.style.flexBasis=100*t.index/(e.slides.length-1)+"%"})})},ce=e=>{const t=Number.parseInt(e,10);return Number.isNaN(t)?null:t},de=(e={})=>{const t={history:!0,...e};return e=>{let n=!0;const r=e=>{const t=n;try{return n=!0,e()}finally{n=t}},o=(t={fragment:!0})=>{let n=t.fragment?ce(v("f")||""):null;((t,n)=>{const{min:r,max:o}=Math,{fragments:i,slides:a}=e,s=o(0,r(t,a.length-1)),l=o(0,r(n||0,i[s].length-1));s===e.slide()&&l===e.fragmentIndex||e.slide(s,{fragment:l})})((()=>{if(location.hash){const[t]=location.hash.slice(1).split(":~:");if(/^\d+$/.test(t))return(ce(t)??1)-1;const r=document.getElementById(t)||document.querySelector(`a[name="${CSS.escape(t)}"]`);if(r){const{length:t}=e.slides;for(let o=0;o<t;o+=1)if(e.slides[o].contains(r)){const t=e.fragments?.[o],i=r.closest("[data-marpit-fragment]");if(t&&i){const e=t.indexOf(i);e>=0&&(n=e)}return o}}}return 0})(),n)};e.on("fragment",({index:e,fragmentIndex:r})=>{n||h({f:0===r||r.toString()},{location:{...location,hash:`#${e+1}`},setter:(...e)=>t.history?history.pushState(...e):history.replaceState(...e)})}),setTimeout(()=>{o(),window.addEventListener("hashchange",()=>r(()=>{o({fragment:!1}),h({f:void 0})})),window.addEventListener("popstate",()=>{n||r(()=>o())}),n=!1},0)}},{PI:ue,abs:fe,sqrt:me,atan2:ge}=Math,pe={passive:!0},ve=({slope:e=-.7,swipeThreshold:t=30}={})=>n=>{let r;const o=n.parent,i=e=>{const t=o.getBoundingClientRect();return{x:e.pageX-(t.left+t.right)/2,y:e.pageY-(t.top+t.bottom)/2}};o.addEventListener("touchstart",({touches:e})=>{r=1===e.length?i(e[0]):void 0},pe),o.addEventListener("touchmove",e=>{if(r)if(1===e.touches.length){e.preventDefault();const t=i(e.touches[0]),n=t.x-r.x,o=t.y-r.y;r.delta=me(fe(n)**2+fe(o)**2),r.radian=ge(n,o)}else r=void 0}),o.addEventListener("touchend",o=>{if(r){if(r.delta&&r.delta>=t&&r.radian){const t=(r.radian-e+ue)%(2*ue)-ue;n[t<0?"next":"prev"](),o.stopPropagation()}r=void 0}},pe)},he=new Map;he.clear(),he.set("none",{backward:{both:void 0,incoming:void 0,outgoing:void 0},forward:{both:void 0,incoming:void 0,outgoing:void 0}});const we={both:"",outgoing:"outgoing-",incoming:"incoming-"},ye={forward:"",backward:"-backward"},be=e=>`--marp-bespoke-transition-animation-${e}`,ke=e=>`--marp-transition-${e}`,xe=be("name"),Ee=be("duration"),$e=e=>new Promise(t=>{const n={},r=document.createElement("div"),o=e=>{r.remove(),t(e)};r.addEventListener("animationstart",()=>o(n)),Object.assign(r.style,{animationName:e,animationDuration:"1s",animationFillMode:"both",animationPlayState:"paused",position:"absolute",pointerEvents:"none"}),document.body.appendChild(r);const i=getComputedStyle(r).getPropertyValue(ke("duration"));i&&Number.parseFloat(i)>=0&&(n.defaultDuration=i),((e,t)=>{requestAnimationFrame(()=>{e.style.animationPlayState="running",requestAnimationFrame(()=>t(void 0))})})(r,o)}),Le=async e=>he.has(e)?he.get(e):(e=>{const t={},n=[];for(const[r,o]of Object.entries(we))for(const[i,a]of Object.entries(ye)){const s=`marp-${o}transition${a}-${e}`;n.push($e(s).then(e=>{t[i]=t[i]||{},t[i][r]=e?{...e,name:s}:void 0}))}return Promise.all(n).then(()=>t)})(e).then(t=>(he.set(e,t),t)),Se=e=>Object.values(e).flatMap(Object.values).every(e=>!e),Pe=(e,{type:t,backward:n})=>{const r=e[n?"backward":"forward"],o=(()=>{const e=r[t],n=e=>({[xe]:e.name});if(e)return n(e);if(r.both){const e=n(r.both);return"incoming"===t&&(e[be("direction")]="reverse"),e}})();return!o&&n?Pe(e,{type:t,backward:!1}):o||{[xe]:"__bespoke_marp_transition_no_animation__"}},_e=e=>{if(e)try{const t=JSON.parse(e);if((e=>{if("object"!=typeof e)return!1;const t=e;return"string"==typeof t.name&&(void 0===t.duration||"string"==typeof t.duration)})(t))return t}catch{}},Oe="_tSId",Te="_tA",Ie="bespoke-marp-transition-warming-up",Me=window.matchMedia("(prefers-reduced-motion: reduce)"),Ae="__bespoke_marp_transition_reduced_outgoing__",Ce="__bespoke_marp_transition_reduced_incoming__",De={forward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}},backward:{both:void 0,incoming:{name:Ce},outgoing:{name:Ae}}},Ne=e=>{if(!document.startViewTransition)return;const t=t=>(void 0!==t&&(e._tD=t),e._tD);let n;t(!1),((...e)=>{CSS.registerProperty({name:ke("duration"),syntax:"<time>",inherits:!0,initialValue:"-1s"});const t=[...new Set(e).values()];return Promise.all(t.map(e=>Le(e))).then()})(...Array.from(document.querySelectorAll("section[data-transition], section[data-transition-back]")).flatMap(e=>[e.dataset.transition,e.dataset.transitionBack].flatMap(e=>{const t=_e(e);return[t?.name,t?.builtinFallback?`__builtin__${t.name}`:void 0]}).filter(e=>!!e))).then(()=>{document.querySelectorAll("style").forEach(e=>{e.innerHTML=e.innerHTML.replace(/--marp-transition-duration:[^;}]*[;}]/g,e=>e.slice(0,-1)+"!important"+e.slice(-1))})});const r=(n,{back:r,cond:o})=>i=>{const a=t();if(a)return!!i[Te]||!("object"!=typeof a||(a.skipTransition(),!i.forSync));if(e.skipTransition)return!0;if(!o(i))return!0;const s=e.slides[e.slide()],l=()=>i.back??r,c="data-transition"+(l()?"-back":""),d=s.querySelector(`section[${c}]`);if(!d)return!0;const u=_e(d.getAttribute(c)??void 0);return!u||((async(e,{builtinFallback:t=!0}={})=>{let n=await Le(e);if(Se(n)){if(!t)return;return n=await Le(`__builtin__${e}`),Se(n)?void 0:n}return n})(u.name,{builtinFallback:u.builtinFallback}).then(e=>{if(!e){t(!0);try{n(i)}finally{t(!1)}return}let r=e;Me.matches&&(console.warn("Use a constant animation to transition because preferring reduced motion by viewer has detected."),r=De);const o=document.getElementById(Oe);o&&o.remove();const a=document.createElement("style");a.id=Oe,document.head.appendChild(a),((e,t)=>{const n=[`:root{${ke("direction")}:${t.backward?-1:1};}`,":root:has(.bespoke-marp-inactive){cursor:none;}"],r=t=>{const n=e[t].both?.defaultDuration||e[t].outgoing?.defaultDuration||e[t].incoming?.defaultDuration;return"forward"===t?n:n||r("forward")},o=t.duration||r(t.backward?"backward":"forward");void 0!==o&&n.push(`::view-transition-group(*){${Ee}:${o};}`);const i=e=>Object.entries(e).map(([e,t])=>`${e}:${t};`).join("");return n.push(`::view-transition-old(root){${i(Pe(e,{...t,type:"outgoing"}))}}`,`::view-transition-new(root){${i(Pe(e,{...t,type:"incoming"}))}}`),n})(r,{backward:l(),duration:u.duration}).forEach(e=>a.sheet?.insertRule(e));const s=document.documentElement.classList;s.add(Ie);let c=!1;const d=()=>{c||(n(i),c=!0,s.remove(Ie))},f=()=>{t(!1),a.remove(),s.remove(Ie)};try{t(!0);const e=document.startViewTransition(d);t(e),e.finished.finally(f)}catch(e){console.error(e),d(),f()}}),!1)};e.on("prev",r(t=>e.prev({...t,[Te]:!0}),{back:!0,cond:e=>e.index>0&&!((e.fragment??1)&&n.fragmentIndex>0)})),e.on("next",r(t=>e.next({...t,[Te]:!0}),{cond:t=>t.index+1<e.slides.length&&!(n.fragmentIndex+1<n.fragments.length)})),setTimeout(()=>{e.on("slide",r(t=>e.slide(t.index,{...t,[Te]:!0}),{cond:t=>{const n=e.slide();return t.index!==n&&(t.back=t.index<n,!0)}}))},0),e.on("fragment",e=>{n=e})};let Be;const Ke=()=>(void 0===Be&&(Be="wakeLock"in navigator&&navigator.wakeLock),Be),qe=async()=>{const e=Ke();if(e)try{return await e.request("screen")}catch(e){console.warn(e)}return null},Ve=async()=>{if(!Ke())return;let e;const t=()=>{e&&"visible"===document.visibilityState&&qe()};for(const e of["visibilitychange","fullscreenchange"])document.addEventListener(e,t);return e=await qe(),e};((e=document.getElementById(":$p"))=>{(()=>{const e=v("view");i.dataset.bespokeView=u.some(t=>t&&t===e)?e:""})();const t=(e=>{const t=v(e);return h({[e]:void 0}),t})("sync")||void 0;o.from(e,((...e)=>{const t=u.findIndex(e=>p()===e);return e.map(([e,n])=>e[t]&&n).filter(e=>e)})([[1,1,1,0],B({key:t})],[[1,1,0,1],se(e)],[[1,1,0,0],M],[[1,1,1,1],E],[[1,0,0,0],T()],[[1,1,1,1],A],[[1,1,1,1],de({history:!1})],[[1,1,0,0],C()],[[1,1,1,0],_],[[1,0,0,0],le],[[1,1,0,0],ve()],[[1,0,0,0],D()],[[1,1,1,0],F()],[[1,0,0,0],Ne],[[1,1,1,1],$],[[1,1,1,0],Ve]))})()}();</script></body></html>

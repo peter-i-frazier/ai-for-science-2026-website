@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" viewBox="0 0 560 220" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowRed" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#B31B1B"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3d8b5f"/>
+    </marker>
+    <marker id="arrowGrey" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8a8578"/>
+    </marker>
+  </defs>
+
+  <rect x="20" y="4" width="170" height="40" rx="8" fill="#e4efe6" stroke="#3d8b5f" stroke-width="1.5"/>
+  <text x="105" y="30" font-size="16" text-anchor="middle" fill="#33404a">Done: write the table</text>
+
+  <rect x="20" y="82" width="170" height="62" rx="8" fill="#fbe3e3" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="105" y="108" font-size="16" text-anchor="middle" fill="#33404a">LLM picks</text>
+  <text x="105" y="129" font-size="16" text-anchor="middle" fill="#33404a">the next tool</text>
+
+  <line x1="105" y1="80" x2="105" y2="50" stroke="#3d8b5f" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="122" y="70" font-size="15" text-anchor="start" fill="#3d8b5f">or stops</text>
+
+  <rect x="370" y="4" width="170" height="40" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="455" y="30" font-size="16" text-anchor="middle" fill="#33404a">Search papers</text>
+
+  <rect x="370" y="60" width="170" height="40" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="455" y="86" font-size="16" text-anchor="middle" fill="#33404a">Extract values</text>
+
+  <rect x="370" y="116" width="170" height="40" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="455" y="142" font-size="16" text-anchor="middle" fill="#33404a">Check units</text>
+
+  <line x1="192" y1="100" x2="364" y2="28" stroke="#B31B1B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowRed)"/>
+  <line x1="192" y1="110" x2="364" y2="82" stroke="#B31B1B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowRed)"/>
+  <line x1="192" y1="122" x2="364" y2="136" stroke="#B31B1B" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrowRed)"/>
+  <text x="282" y="166" font-size="15" text-anchor="middle" fill="#B31B1B">model chooses one</text>
+
+  <path d="M455,160 L455,186 L105,186 L105,150" fill="none" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <text x="280" y="208" font-size="16" text-anchor="middle" fill="#8a8578">the result goes back into the prompt</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="220" viewBox="0 0 560 220" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowRed" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#B31B1B"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3d8b5f"/>
+    </marker>
+    <marker id="arrowGrey" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8a8578"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="24" font-size="17" text-anchor="middle" fill="#8a8578">your code fixes the order of the steps</text>
+
+  <rect x="2" y="56" width="118" height="62" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="61" y="82" font-size="16" text-anchor="middle" fill="#33404a">Search</text>
+  <text x="61" y="103" font-size="16" text-anchor="middle" fill="#33404a">papers</text>
+
+  <rect x="148" y="56" width="118" height="62" rx="8" fill="#fbe3e3" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="207" y="82" font-size="16" text-anchor="middle" fill="#33404a">LLM extracts</text>
+  <text x="207" y="103" font-size="16" text-anchor="middle" fill="#33404a">values</text>
+
+  <rect x="294" y="56" width="118" height="62" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="353" y="82" font-size="16" text-anchor="middle" fill="#33404a">Code checks</text>
+  <text x="353" y="103" font-size="16" text-anchor="middle" fill="#33404a">units</text>
+
+  <rect x="440" y="56" width="118" height="62" rx="8" fill="#e4efe6" stroke="#3d8b5f" stroke-width="1.5"/>
+  <text x="499" y="93" font-size="16" text-anchor="middle" fill="#33404a">Tabulate</text>
+
+  <line x1="122" y1="87" x2="143" y2="87" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <line x1="268" y1="87" x2="289" y2="87" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <line x1="414" y1="87" x2="435" y2="87" stroke="#3d8b5f" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+  <text x="425" y="48" font-size="16" text-anchor="middle" fill="#3d8b5f">pass</text>
+
+  <path d="M353,122 L353,160 L207,160 L207,124" fill="none" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <text x="280" y="186" font-size="16" text-anchor="middle" fill="#B31B1B">fail: extract again</text>
+</svg>
