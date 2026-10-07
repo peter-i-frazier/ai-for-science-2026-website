@@ -37,24 +37,22 @@ reading.
 | Paper Discussion: MLIP Foundation Models | 1 | Mon, Sep 28 |
 | [Protein language models](slides/protein-language-models/protein-language-models.html) | 1 | Wed, Sep 30 |
 | [Language models](slides/language-models/language-models.html) | 1 | Fri, Oct 2 |
-| [Prompting, reasoning, and tool use](slides/reasoning-and-tools/reasoning-and-tools.html) | 1 | Mon, Oct 5 |
-| Agents for science | 1 | Wed, Oct 7 |
+| [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html) | 2 | Mon, Oct 5 -- Wed, Oct 7 |
 | **No class** --- [Young Researchers Workshop](https://www.duffield.cornell.edu/orie/young-researchers-workshop/) | | Fri, Oct 9 |
-| Diffusion | 2 | Wed, Oct 14 -- Fri, Oct 16 |
-| Paper Discussion: Diffusion | 1 | Mon, Oct 19 |
-| Vision and Materials Characterization | 2 | Wed, Oct 21 -- Fri, Oct 23 |
-| Paper Discussion: Vision and Materials Characterization | 1 | Mon, Oct 26 |
-| Virtual cell models | 2 | Wed, Oct 28 -- Fri, Oct 30 |
+| Paper Discussion: [Protein Language Models](slides/reading-3-background/reading-3-background.html) | 1 | Wed, Oct 14 |
+| Agents for science | 1 | Fri, Oct 16 |
+| Diffusion | 2 | Mon, Oct 19 -- Wed, Oct 21 |
+| Paper Discussion: Diffusion | 1 | Fri, Oct 23 |
+| Vision and Materials Characterization | 2 | Mon, Oct 26 -- Wed, Oct 28 |
+| Paper Discussion: Vision and Materials Characterization | 1 | Fri, Oct 30 |
 | AlphaFold and structure prediction | 2 | Mon, Nov 2 -- Wed, Nov 4 *(Zoom)* |
-| Paper Discussion: Structure Prediction and Virtual Cells | 1 | Fri, Nov 6 |
-| Black-box optimization and self-driving labs | 3 | Mon, Nov 9 -- Fri, Nov 13 |
-| Paper Discussion: Black-Box Optimization and Self-Driving Labs | 1 | Mon, Nov 16 |
+| Virtual cell models | 2 | Fri, Nov 6 -- Mon, Nov 9 |
+| Paper Discussion: Structure Prediction and Virtual Cells | 1 | Wed, Nov 11 |
+| Black-box optimization and self-driving labs | 3 | Fri, Nov 13 -- Wed, Nov 18 |
+| Paper Discussion: Black-Box Optimization and Self-Driving Labs | 1 | Fri, Nov 20 |
 | Project work session | 1 | Mon, Nov 23 |
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
 | Wrap-up | 1 | Mon, Dec 7 |
-
-**Two sessions are held in reserve** --- Wed Nov 18 and Fri Nov 20 --- so a unit that runs long
-does not push another out.
 
 Science units follow the machinery they need --- molecular property prediction in week two, before
 transformers.
