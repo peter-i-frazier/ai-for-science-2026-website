@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="296" viewBox="0 0 900 296" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrowRed" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#B31B1B"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#3d8b5f"/>
+    </marker>
+    <marker id="arrowGrey" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#8a8578"/>
+    </marker>
+  </defs>
+
+  <!-- ===== Row 1: fixed pipeline ===== -->
+  <text x="8" y="26" font-size="17" fill="#8a8578">Fixed pipeline (2020) — your code always searches, exactly once</text>
+
+  <rect x="8" y="42" width="104" height="54" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="60" y="75" font-size="17" text-anchor="middle" fill="#33404a">Question</text>
+
+  <rect x="181" y="42" width="130" height="54" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="246" y="75" font-size="17" text-anchor="middle" fill="#33404a">Search</text>
+
+  <rect x="380" y="42" width="120" height="54" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="440" y="75" font-size="17" text-anchor="middle" fill="#33404a">Passages</text>
+
+  <rect x="569" y="42" width="150" height="54" rx="8" fill="#fbe3e3" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="644" y="75" font-size="17" text-anchor="middle" fill="#33404a">LLM answers</text>
+
+  <rect x="788" y="42" width="104" height="54" rx="8" fill="#e4efe6" stroke="#3d8b5f" stroke-width="1.5"/>
+  <text x="840" y="75" font-size="17" text-anchor="middle" fill="#33404a">Answer</text>
+
+  <line x1="114" y1="69" x2="175" y2="69" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <line x1="313" y1="69" x2="374" y2="69" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <line x1="502" y1="69" x2="563" y2="69" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <line x1="721" y1="69" x2="782" y2="69" stroke="#3d8b5f" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <!-- ===== Row 2: search as a tool ===== -->
+  <text x="8" y="148" font-size="17" fill="#B31B1B">As a tool — the model decides whether to search, and can search again</text>
+
+  <rect x="8" y="164" width="104" height="54" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="60" y="197" font-size="17" text-anchor="middle" fill="#33404a">Question</text>
+
+  <rect x="181" y="164" width="150" height="54" rx="8" fill="#fbe3e3" stroke="#B31B1B" stroke-width="2.5"/>
+  <text x="256" y="186" font-size="17" text-anchor="middle" fill="#33404a">LLM picks</text>
+  <text x="256" y="207" font-size="17" text-anchor="middle" fill="#33404a">the query</text>
+
+  <rect x="400" y="164" width="130" height="54" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="465" y="197" font-size="17" text-anchor="middle" fill="#33404a">Search</text>
+
+  <rect x="599" y="164" width="120" height="54" rx="8" fill="#f0ece0" stroke="#8a8578" stroke-width="1.5"/>
+  <text x="659" y="197" font-size="17" text-anchor="middle" fill="#33404a">Passages</text>
+
+  <rect x="788" y="164" width="104" height="54" rx="8" fill="#e4efe6" stroke="#3d8b5f" stroke-width="1.5"/>
+  <text x="840" y="197" font-size="17" text-anchor="middle" fill="#33404a">Answer</text>
+
+  <line x1="114" y1="191" x2="175" y2="191" stroke="#8a8578" stroke-width="2.5" marker-end="url(#arrowGrey)"/>
+  <line x1="333" y1="191" x2="394" y2="191" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <line x1="532" y1="191" x2="593" y2="191" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <line x1="721" y1="191" x2="782" y2="191" stroke="#3d8b5f" stroke-width="2.5" marker-end="url(#arrowGreen)"/>
+
+  <path d="M659,222 L659,256 L256,256 L256,224" fill="none" stroke="#B31B1B" stroke-width="2.5" marker-end="url(#arrowRed)"/>
+  <text x="458" y="280" font-size="17" text-anchor="middle" fill="#B31B1B">read the results, then search again with a better query</text>
+</svg>
