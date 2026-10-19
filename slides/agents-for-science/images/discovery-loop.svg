@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" width="1200" height="350"
+     font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+
+  <!-- the first stage sits outside everything that has been built -->
+  <line x1="178" y1="44" x2="178" y2="340" stroke="#c9c9c9" stroke-width="1.5" stroke-dasharray="4 5"/>
+
+  <!-- iterate arrow -->
+  <path d="M 926 58 V 26 H 428 V 48" fill="none" stroke="#8a8a8a" stroke-width="2"/>
+  <polygon points="422,47 434,47 428,58" fill="#8a8a8a"/>
+  <text x="677" y="20" text-anchor="middle" font-size="15" fill="#777" font-style="italic">iterate</text>
+
+  <!-- stages of the research loop -->
+  <g stroke="#B31B1B" stroke-width="2" fill="#F7EFEF">
+    <rect x="20" y="58" width="152" height="76" rx="7"/>
+    <rect x="186" y="58" width="152" height="76" rx="7"/>
+    <rect x="352" y="58" width="152" height="76" rx="7"/>
+    <rect x="518" y="58" width="152" height="76" rx="7"/>
+    <rect x="684" y="58" width="152" height="76" rx="7"/>
+    <rect x="850" y="58" width="152" height="76" rx="7"/>
+    <rect x="1016" y="58" width="152" height="76" rx="7"/>
+  </g>
+  <g font-size="16" fill="#2b2b2b" text-anchor="middle">
+    <text x="96" y="89">Choose the</text><text x="96" y="110">problem</text>
+    <text x="262" y="89">Read the</text><text x="262" y="110">literature</text>
+    <text x="428" y="89">Form a</text><text x="428" y="110">hypothesis</text>
+    <text x="594" y="89">Design the</text><text x="594" y="110">experiment</text>
+    <text x="760" y="89">Run it</text><text x="760" y="110">in the lab</text>
+    <text x="926" y="89">Analyze</text><text x="926" y="110">the data</text>
+    <text x="1092" y="89">Write</text><text x="1092" y="110">it up</text>
+  </g>
+  <g fill="#B31B1B">
+    <polygon points="174,90 182,96 174,102"/>
+    <polygon points="340,90 348,96 340,102"/>
+    <polygon points="506,90 514,96 506,102"/>
+    <polygon points="672,90 680,96 672,102"/>
+    <polygon points="838,90 846,96 838,102"/>
+    <polygon points="1004,90 1012,96 1004,102"/>
+  </g>
+
+  <!-- how much of the loop each kind of system covers -->
+  <rect x="186" y="172" width="152" height="32" rx="5" fill="#EBB4B4"/>
+  <text x="196" y="193" font-size="12" fill="#5E1111">PaperQA2 (FutureHouse)</text>
+
+  <rect x="186" y="216" width="484" height="32" rx="5" fill="#CE5C5C"/>
+  <rect x="850" y="216" width="318" height="32" rx="5" fill="#CE5C5C"/>
+  <text x="196" y="237" font-size="14" fill="#ffffff">Kosmos (Edison) · Co-Scientist (Google) · Robin (FutureHouse)</text>
+  <text x="760" y="237" font-size="13" fill="#777" text-anchor="middle">a human runs it</text>
+
+  <rect x="186" y="260" width="982" height="32" rx="5" fill="#B31B1B"/>
+  <text x="196" y="281" font-size="14" fill="#ffffff">ChemCrow · Coscientist (CMU) · self-driving labs — Lila Sciences, Periodic Labs, Radical AI</text>
+
+  <rect x="20" y="304" width="1148" height="32" rx="5" fill="none" stroke="#999" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="32" y="325" font-size="14" fill="#777">Picks its own problem — no published system does this</text>
+</svg>

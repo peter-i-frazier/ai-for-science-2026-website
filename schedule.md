@@ -67,8 +67,8 @@ the units; due dates are confirmed at release.
 
 | | Topic | Released | Due |
 |---|---|---|---|
-| **HW2** | Build a language model, then use one | Fri, Oct 9 | Wed, Oct 21 |
-| **HW3** | Build your own AI co-scientist | Mon, Oct 26 | Fri, Nov 6 |
+| **HW2** | Build a character-level transformer on SMILES, then probe what it learned | Mon, Oct 19 | Fri, Oct 30 |
+| **HW3** | Build your own AI co-scientist | Mon, Nov 2 | Fri, Nov 13 |
 | **HW4** | Black-box optimization for design | Wed, Nov 11 | Mon, Nov 23 |
 
 **2 credits S/U** does not require homework. See [the syllabus](syllabus.html) for what each
