@@ -41,9 +41,9 @@ reading.
 | [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html) | 2 | Mon, Oct 5 -- Wed, Oct 7 |
 | **No class** --- [Young Researchers Workshop](https://www.duffield.cornell.edu/orie/young-researchers-workshop/) | | Fri, Oct 9 |
 | Paper Discussion: [Protein Language Models](slides/reading-3-background/reading-3-background.html) | 1 | Wed, Oct 14 |
-| [Agents for science](slides/agents-for-science/agents-for-science.html) | 1 | Fri, Oct 16 |
-| Diffusion | 2 | Mon, Oct 19 -- Wed, Oct 21 |
-| Paper Discussion: Diffusion | 1 | Fri, Oct 23 |
+| [Agents for science](slides/agents-for-science/agents-for-science.html) | 1 | Wed, Oct 21 |
+| [Diffusion](slides/diffusion/diffusion.html) | 2 | Fri, Oct 23 |
+| Paper Discussion: Diffusion | 1 | TBD |
 | Vision and Materials Characterization | 2 | Mon, Oct 26 -- Wed, Oct 28 |
 | Paper Discussion: Vision and Materials Characterization | 1 | Fri, Oct 30 |
 | AlphaFold and structure prediction | 2 | Mon, Nov 2 -- Wed, Nov 4 *(Zoom)* |
