@@ -1481,23 +1481,11 @@ table { font-size: 21px; }
 .box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
 img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
 ;" data-marpit-pagination-total="48" data-size="16:9">
-<h1 id="a-run-costs-200-to-a-few-thousand-dollars">A run costs $200 to a few thousand dollars</h1>
-<div class="columns">
-<div>
-<p><strong>Kosmos</strong> — Edison Scientific<br />
-<span class="cite">arXiv:2511.02824, Nov 2025; price from the company's launch announcement.</span></p>
-<p><strong>$200 per run</strong> at the Nov 2025 launch price, since discontinued.</p>
-<p>Per run: ~42,000 lines of analysis code executed, ~1,500 papers read, 200 agent rollouts.</p>
-<p>Collaborators reported a single 20-cycle run did about six months of their own research time.</p>
-</div>
-<div>
-<p><strong>Two AI research agents</strong> — Kirgis et al.<br />
-<span class="cite">arXiv:2607.27191, Fig. 1 (the TabPFN run). Circled markers are run events, keyed in the paper.</span></p>
-<p><img src="images/kirgis-budget.png" alt="center" style="width:520px;" /></p>
-<p>Budgeted <strong>$3,000</strong> of API credits, <strong>$100</strong> of GPU and <strong>120 hours</strong>. It spent <strong>$1,235</strong> and <strong>$69</strong> — and ran out of clock, not money.</p>
-</div>
-</div>
-<p>Neither paper reports a cost per validated finding.</p>
+<h1 id="accepted-papers-had-more-human-help">Accepted papers had more human help</h1>
+<p><img src="images/a4s-autonomy.png" alt="center" style="width:570px;" /></p>
+<p><span class="cite">Bianchi, Queen, Thakkar, Sun, Zou. <em>…AI authors and reviewers at Agents4Science</em>. arXiv:2511.15534, Fig. 1c. 315 submissions, 253 reviewed, 48 accepted. Level A is &gt;95% human, Level D &gt;95% AI.</span></p>
+<p><strong>Hypothesis development is the most human stage in both panels</strong>, and every stage gains human help among accepted papers — fully AI-driven at all four stages fell from <strong>23.3%</strong> to <strong>14.9%</strong>. Hypothesis generation is the stage Co-Scientist and Robin are selling.</p>
+<p>Only <strong>44%</strong> of submissions had every reference verified, and the AI reviewers disagreed wildly: Gemini 2.5 Pro averaged <strong>4.23 of 6</strong>, GPT-5 <strong>2.30</strong>.</p>
 <footer>ORIE 7190 · AI for Science · Agents for science</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="37" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Agents for science" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
@@ -1529,19 +1517,23 @@ table { font-size: 21px; }
 .box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
 img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
 ;" data-marpit-pagination-total="48" data-size="16:9">
-<h1 id="accuracy-is-reported-without-cost">Accuracy is reported without cost</h1>
-<p><span class="cite">Kapoor, Stroebl, Narayanan, et al. <em>AI Agents That Matter</em>. arXiv:2407.01502, Fig. 1. 164 HumanEval problems, five runs each, April 2024 prices. Both axes are broken.</span></p>
+<h1 id="a-run-costs-200-to-a-few-thousand-dollars">A run costs $200 to a few thousand dollars</h1>
 <div class="columns">
 <div>
-<p><img src="images/kapoor-cost-accuracy.png" alt="center" style="width:560px;" /></p>
+<p><strong>Kosmos</strong> — Edison Scientific<br />
+<span class="cite">arXiv:2511.02824, Nov 2025; price from the company's launch announcement.</span></p>
+<p><strong>$200 per run</strong> at the Nov 2025 launch price, since discontinued.</p>
+<p>Per run: ~42,000 lines of analysis code executed, ~1,500 papers read, 200 agent rollouts.</p>
+<p>Collaborators reported a single 20-cycle run did about six months of their own research time.</p>
 </div>
 <div>
-<p><strong>1. Cost is omitted.</strong> LATS scores 88.0% for <strong>$134.50</strong>; a retry-until-the-tests-pass baseline scores <strong>93.2% for $2.45</strong> — more accurate and 55x cheaper.</p>
-<p><strong>2. Holdout sets are inadequate.</strong> Agents overfit to benchmarks and take shortcuts that do not survive a real task.</p>
-<p><strong>3. Nothing is standardized.</strong> Model developers and downstream developers need different benchmarks, and results do not reproduce across papers.</p>
+<p><strong>Two AI research agents</strong> — Kirgis et al.<br />
+<span class="cite">arXiv:2607.27191, Fig. 1 (the TabPFN run). Circled markers are run events, keyed in the paper.</span></p>
+<p><img src="images/kirgis-budget.png" alt="center" style="width:520px;" /></p>
+<p>Budgeted <strong>$3,000</strong> of API credits, <strong>$100</strong> of GPU and <strong>120 hours</strong>. It spent <strong>$1,235</strong> and <strong>$69</strong> — and ran out of clock, not money.</p>
 </div>
 </div>
-<p>Still true in 2026: the same group's 21,730 rollouts across 9 models and 9 benchmarks again argue for plotting accuracy against cost (arXiv:2510.11977, ICLR 2026).</p>
+<p>Neither paper reports a cost per validated finding.</p>
 <footer>ORIE 7190 · AI for Science · Agents for science</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="38" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Agents for science" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
@@ -1573,11 +1565,19 @@ table { font-size: 21px; }
 .box { border-left: 5px solid #B31B1B; padding-left: 0.8rem; }
 img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
 ;" data-marpit-pagination-total="48" data-size="16:9">
-<h1 id="accepted-papers-had-more-human-help">Accepted papers had more human help</h1>
-<p><img src="images/a4s-autonomy.png" alt="center" style="width:570px;" /></p>
-<p><span class="cite">Bianchi, Queen, Thakkar, Sun, Zou. <em>…AI authors and reviewers at Agents4Science</em>. arXiv:2511.15534, Fig. 1c. 315 submissions, 253 reviewed, 48 accepted. Level A is &gt;95% human, Level D &gt;95% AI.</span></p>
-<p><strong>Hypothesis development is the most human stage in both panels</strong>, and every stage gains human help among accepted papers — fully AI-driven at all four stages fell from <strong>23.3%</strong> to <strong>14.9%</strong>. Hypothesis generation is the stage Co-Scientist and Robin are selling.</p>
-<p>Only <strong>44%</strong> of submissions had every reference verified, and the AI reviewers disagreed wildly: Gemini 2.5 Pro averaged <strong>4.23 of 6</strong>, GPT-5 <strong>2.30</strong>.</p>
+<h1 id="accuracy-is-reported-without-cost">Accuracy is reported without cost</h1>
+<p><span class="cite">Kapoor, Stroebl, Narayanan, et al. <em>AI Agents That Matter</em>. arXiv:2407.01502, Fig. 1. 164 HumanEval problems, five runs each, April 2024 prices. Both axes are broken.</span></p>
+<div class="columns">
+<div>
+<p><img src="images/kapoor-cost-accuracy.png" alt="center" style="width:560px;" /></p>
+</div>
+<div>
+<p><strong>1. Cost is omitted.</strong> LATS scores 88.0% for <strong>$134.50</strong>; a retry-until-the-tests-pass baseline scores <strong>93.2% for $2.45</strong> — more accurate and 55x cheaper.</p>
+<p><strong>2. Holdout sets are inadequate.</strong> Agents overfit to benchmarks and take shortcuts that do not survive a real task.</p>
+<p><strong>3. Nothing is standardized.</strong> Model developers and downstream developers need different benchmarks, and results do not reproduce across papers.</p>
+</div>
+</div>
+<p>Still true in 2026: the same group's 21,730 rollouts across 9 models and 9 benchmarks again argue for plotting accuracy against cost (arXiv:2510.11977, ICLR 2026).</p>
 <footer>ORIE 7190 · AI for Science · Agents for science</footer>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="39" data-paginate="true" data-footer="ORIE 7190 · AI for Science · Agents for science" data-theme="gaia" data-style="section { font-size: 23px; padding: 50px 60px 60px; }
@@ -1610,7 +1610,6 @@ table { font-size: 21px; }
 img[alt~=&quot;center&quot;] { display: block; margin: 0 auto; }
 ;" data-marpit-pagination-total="48" data-size="16:9">
 <h1 id="suggestions-for-a-convincing-agent-evaluation">Suggestions for a convincing agent evaluation</h1>
-<p>Pick one of the six systems and write down the experiment that would change your mind about it. A real answer includes:</p>
 <ol>
 <li><strong>A baseline that is a competent human</strong> with the same tools and the same time budget. Not &quot;no agent,&quot; and not a weaker model.</li>
 <li><strong>A cost number on both sides.</strong> Dollars and hours.</li>
