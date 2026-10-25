@@ -48,9 +48,9 @@ reading.
 | [Agents for science](slides/agents-for-science/agents-for-science.html) | 3 | Mon, Oct 19 -- Fri, Oct 23 |
 | [Diffusion](slides/diffusion/diffusion.html) | 2 | Fri, Oct 23 -- Mon, Oct 26 |
 | Paper Discussion: Diffusion | 1 | TBD |
-| Vision and Materials Characterization | 2 | Wed, Oct 28 -- Fri, Oct 30 |
+| AlphaFold and structure prediction | 2 | Wed, Oct 28 -- Fri, Oct 30 |
+| Vision and Materials Characterization --- **Zoom only, everyone**: instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. | 2 | Mon, Nov 2 -- Wed, Nov 4 |
 | Paper Discussion: Vision and Materials Characterization | 1 | TBD |
-| AlphaFold and structure prediction --- **Zoom only, everyone**: instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. | 2 | Mon, Nov 2 -- Wed, Nov 4 |
 | Virtual cell models (back in Upson) | 2 | Fri, Nov 6 -- Mon, Nov 9 |
 | Paper Discussion: Structure Prediction and Virtual Cells | 1 | Wed, Nov 11 |
 | Black-box optimization and self-driving labs | 3 | Fri, Nov 13 -- Wed, Nov 18 |
