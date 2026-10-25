@@ -2,7 +2,7 @@
 ---
 # Schedule
 
-Fixed dates are fixed. **Planned** will shift by a session or two.
+Past dates are what we covered. Future dates are planned and may shift by a session or two.
 
 ---
 
@@ -22,38 +22,43 @@ reading.
 
 ---
 
-## Planned Lectures and Links to Slides
+## Lectures and Links to Slides
 
-| Lecture w/ Link to Slides | Num. Sessions | Planned dates |
+| Lecture w/ Link to Slides | Num. Sessions | Dates |
 |---|---|---|
-| [Course introduction](slides/day-1/day-1.html) and [Terminal-Bench Science](slides/day-1/2026-08-24-TBScience.pdf) (guest slides, Anmol Kabra) | 1 | Mon, Aug 24 |
+| [Course introduction](slides/day-1/day-1.html) and [Terminal-Bench Science](slides/day-1/2026-08-24-TBScience.pdf) (guest slides, Anmol Kabra) | 1 | Mon, Aug 24 (first day of instruction) |
 | [Supervised learning](slides/supervised-learning/supervised-learning.html) | 1 | Wed, Aug 26 |
 | [Deep learning](slides/deep-learning/deep-learning.html) | 2 | Fri, Aug 28 -- Mon, Aug 31 |
 | [Vibe coding](slides/vibe-coding/vibe-coding.html) | 1 | Wed, Sep 2 |
 | [Molecular representations and property prediction](slides/molecular-representations/molecular-representations.html) | 1 | Fri, Sep 4 |
+| **No class** --- Labor Day | | Mon, Sep 7 |
 | [Graph neural networks](slides/gnn/gnn.html) | 2 | Wed, Sep 9 -- Fri, Sep 11 |
-| [Machine-learned interatomic potentials](slides/mlip/mlip.html) | 2 | Mon, Sep 14 and Fri, Sep 18 |
+| [Machine-learned interatomic potentials](slides/mlip/mlip.html) | 1 | Mon, Sep 14 |
 | [Paper Discussion: Antibiotics and Graph Neural Networks](slides/paper-discussion-1/paper-discussion-1.html) | 1 | Wed, Sep 16 |
+| [Machine-learned interatomic potentials](slides/mlip/mlip.html), continued | 1 | Fri, Sep 18 |
 | [Sequences, RNNs, Attention, and Transformers](https://docs.google.com/presentation/d/1F5okNsaqsBzZR3bpp8xK_2whb-igJeOx22RRRUTD-6w/edit?usp=sharing) | 3 | Mon, Sep 21 -- Fri, Sep 25 |
 | Paper Discussion: MLIP Foundation Models | 1 | Mon, Sep 28 |
 | [Protein language models](slides/protein-language-models/protein-language-models.html) | 1 | Wed, Sep 30 |
 | [Language models](slides/language-models/language-models.html) | 1 | Fri, Oct 2 |
 | [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html) | 2 | Mon, Oct 5 -- Wed, Oct 7 |
 | **No class** --- [Young Researchers Workshop](https://www.duffield.cornell.edu/orie/young-researchers-workshop/) | | Fri, Oct 9 |
+| **No class** --- Fall Break | | Mon, Oct 12 |
 | Paper Discussion: [Protein Language Models](slides/reading-3-background/reading-3-background.html) | 1 | Wed, Oct 14 |
-| [Agents for science](slides/agents-for-science/agents-for-science.html) | 1 | Wed, Oct 21 |
-| [Diffusion](slides/diffusion/diffusion.html) | 2 | Fri, Oct 23 |
+| [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html), finished | 1 | Fri, Oct 16 |
+| [Agents for science](slides/agents-for-science/agents-for-science.html) | 3 | Mon, Oct 19 -- Fri, Oct 23 |
+| [Diffusion](slides/diffusion/diffusion.html) | 2 | Fri, Oct 23 -- Mon, Oct 26 |
 | Paper Discussion: Diffusion | 1 | TBD |
-| Vision and Materials Characterization | 2 | Mon, Oct 26 -- Wed, Oct 28 |
-| Paper Discussion: Vision and Materials Characterization | 1 | Fri, Oct 30 |
-| AlphaFold and structure prediction | 2 | Mon, Nov 2 -- Wed, Nov 4 *(Zoom)* |
-| Virtual cell models | 2 | Fri, Nov 6 -- Mon, Nov 9 |
+| Vision and Materials Characterization | 2 | Wed, Oct 28 -- Fri, Oct 30 |
+| Paper Discussion: Vision and Materials Characterization | 1 | TBD |
+| AlphaFold and structure prediction --- **Zoom only, everyone**: instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. | 2 | Mon, Nov 2 -- Wed, Nov 4 |
+| Virtual cell models (back in Upson) | 2 | Fri, Nov 6 -- Mon, Nov 9 |
 | Paper Discussion: Structure Prediction and Virtual Cells | 1 | Wed, Nov 11 |
 | Black-box optimization and self-driving labs | 3 | Fri, Nov 13 -- Wed, Nov 18 |
 | Paper Discussion: Black-Box Optimization and Self-Driving Labs | 1 | Fri, Nov 20 |
 | Project work session | 1 | Mon, Nov 23 |
+| **No class** --- Thanksgiving Break | | Wed, Nov 25 and Fri, Nov 27 |
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
-| Wrap-up | 1 | Mon, Dec 7 |
+| Wrap-up | 1 | Mon, Dec 7 (last day of instruction) |
 
 Science units follow the machinery they need --- molecular property prediction in week two, before
 transformers.
@@ -85,20 +90,6 @@ I aim to post slide decks before lecture. Lecture recordings go on Canvas, not h
 deck, and appears in the table at the top of this page. The
 [topics page](topics.html) shows the kind of paper each topic covers, but that list is provisional
 and still being built out --- do not work from it.
-
----
-
-## Fixed Dates
-
-| Date | What |
-|---|---|
-| **Mon, Aug 24** | First day of instruction |
-| **Mon, Sep 7** | Labor Day --- **no class** |
-| **Fri, Oct 9** | **No class** --- ORIE [Young Researchers Workshop](https://www.duffield.cornell.edu/orie/young-researchers-workshop/), talks Thu, Oct 8 and Fri, Oct 9 in 230 Anabel Taylor Hall |
-| **Mon, Oct 12** | Fall Break --- **no class**; instruction resumes Wed, Oct 14 |
-| **Mon, Nov 2** and **Wed, Nov 4** | **Zoom only, everyone** --- instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. Back in Upson Fri, Nov 6. |
-| **Wed, Nov 25** and **Fri, Nov 27** | Thanksgiving Break --- **no class** |
-| **Mon, Dec 7** | Last day of instruction |
 
 ---
 
