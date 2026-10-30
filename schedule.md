@@ -20,7 +20,7 @@ reading.
 | **Reading 3** | Zhang, Wayment-Steele, Brixi, Wang, Kern, Ovchinnikov, [*Protein language models learn evolutionary statistics of interacting sequence motifs*](https://doi.org/10.1073/pnas.2406285121). PNAS, 2024.<br>Li, Amini, Yue, Yang, Lu, [*Feature reuse and scaling: understanding transfer learning with protein language models*](https://proceedings.mlr.press/v235/li24a.html). ICML 2024 (PMLR 235).<br>[Background slides, instructions, and discussion questions](slides/reading-3-background/reading-3-background.html). Submitted on a [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdpu2SzyhuWZepSK9rTydbITt6ssEzq6cNAKureNFaYAyHoCQ/viewform), not Gradescope. Discussed Wed, Oct 14 --- [your answers, by question](reading-3-answers.html). | **Fri, Oct 9**; free extension for everyone until Mon, Oct 12 |
 | **[HW2](homework/hw2.pdf)** | Train an atom-level transformer on SMILES and probe what it learned; fit a machine-learned potential to a Lennard-Jones cluster | Fri, Oct 30 |
 | **Project proposal** | Half a page: the problem, the data or simulator, what you will have to show, and who you are working with. Required for 3 credits, graded; optional otherwise. Submitted on Gradescope. [Details](syllabus.html#project). | Fri, Nov 6 |
-| **Reading 4** | Zeni et al., [*A generative model for inorganic materials design*](https://doi.org/10.1038/s41586-025-08628-5) (MatterGen). Nature 639, 624--632, 2025.<br>Watson et al., [*De novo design of protein structure and function with RFdiffusion*](https://doi.org/10.1038/s41586-023-06415-8). Nature 620, 1089--1100, 2023.<br>Both apply continuous diffusion --- MatterGen to crystals (atom types, positions, and the unit cell), RFdiffusion to protein backbones. Read them against the [diffusion deck](slides/diffusion/diffusion.html). Discussed Fri, Nov 13. | Thu, Nov 12 |
+| **Reading 4** | Zeni et al., [*A generative model for inorganic materials design*](https://doi.org/10.1038/s41586-025-08628-5) (MatterGen). Nature 639, 624--632, 2025.<br>Watson et al., [*De novo design of protein structure and function with RFdiffusion*](https://doi.org/10.1038/s41586-023-06415-8). Nature 620, 1089--1100, 2023.<br>Both apply continuous diffusion --- MatterGen to crystals (atom types, positions, and the unit cell), RFdiffusion to protein backbones. Read them against the [diffusion deck](slides/diffusion/diffusion.html). Discussed Mon, Nov 9. | **Sat, Nov 7** |
 
 ---
 
@@ -51,8 +51,8 @@ reading.
 | [Diffusion](slides/diffusion/diffusion.html) | 3 | Fri, Oct 23 -- Wed, Oct 28 |
 | AlphaFold and structure prediction *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
 | Vision and Materials Characterization *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
-| Virtual cell models | 2 | Mon, Nov 9 -- Wed, Nov 11 |
-| Paper Discussion: Generative Design (Reading 4) | 1 | Fri, Nov 13 |
+| Virtual cell models | 2 | Wed, Nov 11 -- Fri, Nov 13 |
+| Paper Discussion: Generative Design (Reading 4) | 1 | Mon, Nov 9 |
 | Black-box optimization and self-driving labs | 2 | Mon, Nov 16 -- Wed, Nov 18 |
 | Paper Discussion: Black-Box Optimization and Self-Driving Labs | 1 | Fri, Nov 20 |
 | Project work session | 1 | Mon, Nov 23 |
