@@ -88,10 +88,17 @@ expect it to be more substantial.
 
 | Deliverable | What it is | When |
 |---|---|---|
-| **Proposal** | Half a page: the problem, the data or simulator, what you will have to show, who you are working with | Fri, Oct 30 |
+| **Proposal** | Half a page: the problem, the data or simulator, what you will have to show, who you are working with | Mon, Nov 9 |
 | **Work session** | One class meeting to work on projects and get feedback | Mon, Nov 23 |
 | **Presentation** | In class, to the whole group. Length is set once we know how many projects there are | Mon, Nov 30 -- Fri, Dec 4 |
 | **Report** | Written, workshop-paper length --- roughly 6--8 pages plus references | Last week of classes |
+
+**The proposal.** One page at most, as a PDF on Gradescope. Say four things: the problem and why it
+matters; the data or simulator you will use, and whether you already have access to it; what you
+will have to show at the end (a result, a comparison, a reproduced figure, a review); and who you
+are working with. Pairs submit one proposal. It is not graded for being right --- I read every one
+and reply with feedback, and you can change course afterward. If you are unsure whether an idea
+is too big, send it anyway.
 
 Work alone or in pairs. Pairs are expected to produce correspondingly more, and to say who did
 what.
@@ -105,8 +112,7 @@ project grade.
 Same rule as Part B of the homework: use whatever tools you like, and be able to explain what
 your code and your tools are doing. Note at the top of the report which tools you used and where.
 
-**Dates and lengths in this section are provisional** and will be confirmed in class before the
-proposal is due.
+**Dates and lengths in this section are provisional** and will be confirmed in class.
 ## Course title and discoverability
 
 In the course roster, this course is listed under a different name: **"Selected Topics in Applied

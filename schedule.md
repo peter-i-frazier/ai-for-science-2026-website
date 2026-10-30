@@ -19,6 +19,8 @@ reading.
 | **Reading 2** | Batatia, Kovács, Simm, Ortner, Csányi, [*MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields*](https://arxiv.org/abs/2206.07697). NeurIPS 35, 11423--11436, 2022.<br>Batatia et al., [*A foundation model for atomistic materials chemistry*](https://doi.org/10.1063/5.0297006) (MACE-MP-0). J. Chem. Phys. 163, 184110, 2025.<br>Creed et al., [*Six Open Questions in Machine-Learned Interatomic Potential Foundation Models*](https://arxiv.org/abs/2606.07327). arXiv:2606.07327, 2026.<br>What to focus on, what to skip, and two further optional papers are on the last slide of the [MLIP deck](slides/mlip/mlip.html). Discussed Mon, Sep 28 --- [discussion questions](reading-2-questions.html). | **Sat, Sep 26** |
 | **Reading 3** | Zhang, Wayment-Steele, Brixi, Wang, Kern, Ovchinnikov, [*Protein language models learn evolutionary statistics of interacting sequence motifs*](https://doi.org/10.1073/pnas.2406285121). PNAS, 2024.<br>Li, Amini, Yue, Yang, Lu, [*Feature reuse and scaling: understanding transfer learning with protein language models*](https://proceedings.mlr.press/v235/li24a.html). ICML 2024 (PMLR 235).<br>[Background slides, instructions, and discussion questions](slides/reading-3-background/reading-3-background.html). Submitted on a [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdpu2SzyhuWZepSK9rTydbITt6ssEzq6cNAKureNFaYAyHoCQ/viewform), not Gradescope. Discussed Wed, Oct 14 --- [your answers, by question](reading-3-answers.html). | **Fri, Oct 9**; free extension for everyone until Mon, Oct 12 |
 | **[HW2](homework/hw2.pdf)** | Train an atom-level transformer on SMILES and probe what it learned; fit a machine-learned potential to a Lennard-Jones cluster | Fri, Oct 30 |
+| **Project proposal** | Half a page: the problem, the data or simulator, what you will have to show, and who you are working with. Required for 3 credits, graded; optional otherwise. Submitted on Gradescope. [Details](syllabus.html#project). | Mon, Nov 9 |
+| **Reading 4** | Zeni et al., [*A generative model for inorganic materials design*](https://doi.org/10.1038/s41586-025-08628-5) (MatterGen). Nature 639, 624--632, 2025.<br>Watson et al., [*De novo design of protein structure and function with RFdiffusion*](https://doi.org/10.1038/s41586-023-06415-8). Nature 620, 1089--1100, 2023.<br>Both apply continuous diffusion --- MatterGen to crystals (atom types, positions, and the unit cell), RFdiffusion to protein backbones. Read them against the [diffusion deck](slides/diffusion/diffusion.html). Discussed Fri, Nov 13. | Thu, Nov 12 |
 
 ---
 
@@ -46,19 +48,21 @@ reading.
 | Paper Discussion: [Protein Language Models](slides/reading-3-background/reading-3-background.html) | 1 | Wed, Oct 14 |
 | [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html), finished | 1 | Fri, Oct 16 |
 | [Agents for science](slides/agents-for-science/agents-for-science.html) | 3 | Mon, Oct 19 -- Fri, Oct 23 |
-| [Diffusion](slides/diffusion/diffusion.html) | 2 | Fri, Oct 23 -- Mon, Oct 26 |
-| Paper Discussion: Diffusion | 1 | TBD |
-| AlphaFold and structure prediction | 2 | Wed, Oct 28 -- Fri, Oct 30 |
-| Vision and Materials Characterization --- **Zoom only, everyone**: instructor at the INFORMS Annual Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting. | 2 | Mon, Nov 2 -- Wed, Nov 4 |
-| Paper Discussion: Vision and Materials Characterization | 1 | TBD |
-| Virtual cell models (back in Upson) | 2 | Fri, Nov 6 -- Mon, Nov 9 |
-| Paper Discussion: Structure Prediction and Virtual Cells | 1 | Wed, Nov 11 |
-| Black-box optimization and self-driving labs | 3 | Fri, Nov 13 -- Wed, Nov 18 |
+| [Diffusion](slides/diffusion/diffusion.html) | 3 | Fri, Oct 23 -- Wed, Oct 28 |
+| AlphaFold and structure prediction *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
+| Vision and Materials Characterization *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
+| Virtual cell models | 2 | Mon, Nov 9 -- Wed, Nov 11 |
+| Paper Discussion: Generative Design (Reading 4) | 1 | Fri, Nov 13 |
+| Black-box optimization and self-driving labs | 2 | Mon, Nov 16 -- Wed, Nov 18 |
 | Paper Discussion: Black-Box Optimization and Self-Driving Labs | 1 | Fri, Nov 20 |
 | Project work session | 1 | Mon, Nov 23 |
 | **No class** --- Thanksgiving Break | | Wed, Nov 25 and Fri, Nov 27 |
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
 | Wrap-up | 1 | Mon, Dec 7 (last day of instruction) |
+
+**Mon, Nov 2 and Wed, Nov 4 are Zoom only, for everyone.** The instructor is at the INFORMS Annual
+Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting.
+Back in Upson Fri, Nov 6.
 
 Science units follow the machinery they need --- molecular property prediction in week two, before
 transformers.
@@ -74,7 +78,7 @@ the units; due dates are confirmed at release.
 | | Topic | Released | Due |
 |---|---|---|---|
 | **HW3** | Build your own AI co-scientist | Mon, Nov 2 | Fri, Nov 13 |
-| **HW4** | Black-box optimization for design | Wed, Nov 11 | Mon, Nov 23 |
+| **HW4** | Black-box optimization for design | Mon, Nov 16 | Mon, Nov 30 |
 
 **2 credits S/U** does not require homework. See [the syllabus](syllabus.html) for what each
 registration option requires.
