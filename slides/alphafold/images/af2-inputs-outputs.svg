@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 415" font-family="Helvetica, Arial, sans-serif" font-size="18">
+  <!-- AlphaFold 2 inputs and outputs, drawn for ORIE 7190.
+       Sources: Jumper et al., Nature 596:583 (2021), Methods; Supplementary Methods 1.2.2-1.2.3,
+       1.2.7, 1.2.9, 1.4 (Algorithm 2), 1.5 (Algorithms 3-4), 1.6 (Algorithm 6), 1.7 (Algorithms
+       16-18), 1.8 (Algorithm 20), 1.9 (eq. 7), 1.9.6, 1.9.8, 1.10 (Algorithm 32), Table 4.
+       Purple = everything that comes from the templates. Teal = recycling. -->
+  <defs>
+    <marker id="ag" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="13" refY="6" orient="auto">
+      <path d="M0,0 L14,6 L0,12 z" fill="#555"/>
+    </marker>
+    <marker id="ap" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="13" refX="14" refY="6.5" orient="auto">
+      <path d="M0,0 L15,6.5 L0,13 z" fill="#7B2D9B"/>
+    </marker>
+    <marker id="at" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="12" refX="13" refY="6" orient="auto">
+      <path d="M0,0 L14,6 L0,12 z" fill="#3F8793"/>
+    </marker>
+  </defs>
+  <rect width="1100" height="415" fill="#ffffff"/>
+
+  <!-- ===================== COLUMN HEADINGS, RECYCLING LEGEND ===================== -->
+  <text x="92" y="24" text-anchor="middle" font-weight="bold" fill="#777">Inputs</text>
+  <text x="1021" y="24" text-anchor="middle" font-weight="bold" fill="#777">Outputs</text>
+  <text x="315" y="30" text-anchor="middle" fill="#3F8793"><tspan font-weight="bold">Recycling:</tspan> the network reruns</text>
+  <text x="315" y="50" text-anchor="middle" fill="#3F8793">3 times, fed its previous outputs</text>
+
+  <!-- ===================== INPUTS ===================== -->
+  <!-- Alignment -->
+  <rect x="4" y="36" width="176" height="108" rx="8" fill="#EAF5E3" stroke="#4E9A2E" stroke-width="2"/>
+  <text x="92" y="58" text-anchor="middle" font-weight="bold" fill="#222">Alignment</text>
+  <g stroke="#ffffff" stroke-width="1">
+    <g fill="#8CC66D"><rect x="30" y="66" width="12" height="8"/><rect x="58" y="66" width="12" height="8"/><rect x="100" y="66" width="12" height="8"/><rect x="142" y="66" width="12" height="8"/></g>
+    <g fill="#C6E3B5"><rect x="44" y="66" width="12" height="8"/><rect x="72" y="66" width="12" height="8"/><rect x="86" y="66" width="12" height="8"/><rect x="114" y="66" width="12" height="8"/><rect x="128" y="66" width="12" height="8"/></g>
+    <g fill="#C6E3B5"><rect x="30" y="76" width="12" height="8"/><rect x="58" y="76" width="12" height="8"/><rect x="86" y="76" width="12" height="8"/><rect x="128" y="76" width="12" height="8"/><rect x="142" y="76" width="12" height="8"/></g>
+    <g fill="#8CC66D"><rect x="44" y="76" width="12" height="8"/><rect x="72" y="76" width="12" height="8"/><rect x="100" y="76" width="12" height="8"/><rect x="114" y="76" width="12" height="8"/></g>
+    <g fill="#8CC66D"><rect x="30" y="86" width="12" height="8"/><rect x="72" y="86" width="12" height="8"/><rect x="86" y="86" width="12" height="8"/><rect x="128" y="86" width="12" height="8"/></g>
+    <g fill="#C6E3B5"><rect x="44" y="86" width="12" height="8"/><rect x="58" y="86" width="12" height="8"/><rect x="100" y="86" width="12" height="8"/><rect x="114" y="86" width="12" height="8"/><rect x="142" y="86" width="12" height="8"/></g>
+  </g>
+  <text x="92" y="116" text-anchor="middle" fill="#444">UniRef90, MGnify,</text>
+  <text x="92" y="136" text-anchor="middle" fill="#444">BFD, Uniclust30</text>
+
+  <!-- Templates (accent) -->
+  <rect x="4" y="156" width="176" height="114" rx="8" fill="#F4EAF8" stroke="#7B2D9B" stroke-width="2.5"/>
+  <text x="92" y="178" text-anchor="middle" font-weight="bold" fill="#7B2D9B">Templates</text>
+  <path d="M29,198 q9,-12 18,0 t18,0 t18,0 t18,0 t18,0 t18,0 t18,0" fill="none" stroke="#7B2D9B" stroke-width="3" stroke-linecap="round"/>
+  <text x="92" y="232" text-anchor="middle" fill="#444">≤ 4 structures of</text>
+  <text x="92" y="252" text-anchor="middle" fill="#444">relatives in the PDB</text>
+
+  <!-- Target sequence -->
+  <rect x="4" y="292" width="176" height="54" rx="8" fill="#EAF5E3" stroke="#4E9A2E" stroke-width="2"/>
+  <text x="92" y="314" text-anchor="middle" font-weight="bold" fill="#222">Target sequence</text>
+  <text x="92" y="337" text-anchor="middle" font-family="Menlo, Courier New, monospace" font-size="18" fill="#444">MKVLATGLKAE…</text>
+
+  <!-- ===================== ALIGNMENT -> m ===================== -->
+  <line x1="180" y1="90" x2="450" y2="90" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="315" y="81" text-anchor="middle" fill="#333">≤ 512 sampled rows</text>
+  <text x="315" y="111" text-anchor="middle" fill="#555">(row 1 = target)</text>
+
+  <!-- ===================== TEMPLATE PATHS (purple) ===================== -->
+  <!-- angles -> MLP -> extra rows of m -->
+  <line x1="180" y1="180" x2="298" y2="180" stroke="#7B2D9B" stroke-width="3" marker-end="url(#ap)"/>
+  <text x="239" y="172" text-anchor="middle" fill="#7B2D9B">torsion angles</text>
+  <rect x="300" y="166" width="58" height="28" rx="5" fill="#F4EAF8" stroke="#7B2D9B" stroke-width="2"/>
+  <text x="329" y="186" text-anchor="middle" font-weight="bold" fill="#7B2D9B">MLP</text>
+  <path d="M358,180 H466 V146" fill="none" stroke="#7B2D9B" stroke-width="3" marker-end="url(#ap)"/>
+  <text x="476" y="171" fill="#7B2D9B">+1 row per template</text>
+
+  <!-- pair features -> template pair stack -> pointwise attention -> z -->
+  <line x1="180" y1="240" x2="198" y2="240" stroke="#7B2D9B" stroke-width="3" marker-end="url(#ap)"/>
+  <rect x="200" y="204" width="236" height="74" rx="6" fill="#F4EAF8" stroke="#7B2D9B" stroke-width="2"/>
+  <text x="318" y="226" text-anchor="middle" font-weight="bold" fill="#7B2D9B">Template pair stack</text>
+  <text x="318" y="247" text-anchor="middle" fill="#333">pair distances per template,</text>
+  <text x="318" y="268" text-anchor="middle" fill="#333">2 blocks of triangle updates</text>
+  <line x1="436" y1="240" x2="450" y2="240" stroke="#7B2D9B" stroke-width="3" marker-end="url(#ap)"/>
+  <rect x="452" y="204" width="192" height="74" rx="6" fill="#F4EAF8" stroke="#7B2D9B" stroke-width="2"/>
+  <text x="548" y="226" text-anchor="middle" font-weight="bold" fill="#7B2D9B">Pointwise attention</text>
+  <text x="548" y="247" text-anchor="middle" fill="#333">each cell of z attends</text>
+  <text x="548" y="268" text-anchor="middle" fill="#333">over the templates</text>
+  <line x1="548" y1="278" x2="548" y2="298" stroke="#7B2D9B" stroke-width="3" marker-end="url(#ap)"/>
+  <text x="540" y="294" text-anchor="end" fill="#7B2D9B">adds to z</text>
+
+  <!-- ===================== TARGET -> z, EXTRA MSA -> z ===================== -->
+  <line x1="180" y1="318" x2="450" y2="318" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="315" y="309" text-anchor="middle" fill="#333">amino acids + gap along chain</text>
+  <rect x="186" y="334" width="250" height="48" rx="6" fill="#EFEFEF" stroke="#777" stroke-width="2"/>
+  <text x="311" y="354" text-anchor="middle" font-weight="bold" fill="#222">Extra MSA stack, 4 blocks</text>
+  <text x="311" y="374" text-anchor="middle" fill="#444">≤ 5,120 more alignment rows</text>
+  <line x1="436" y1="358" x2="450" y2="358" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+
+  <!-- ===================== ARRAYS m and z ===================== -->
+  <!-- m: MSA representation -->
+  <rect x="452" y="36" width="192" height="108" fill="#FBE0DA"/>
+  <g stroke="#EDB9AE" stroke-width="1">
+    <line x1="452" y1="47" x2="644" y2="47"/><line x1="452" y1="58" x2="644" y2="58"/>
+    <line x1="452" y1="69" x2="644" y2="69"/><line x1="452" y1="80" x2="644" y2="80"/>
+    <line x1="452" y1="91" x2="644" y2="91"/><line x1="452" y1="102" x2="644" y2="102"/>
+    <line x1="452" y1="113" x2="644" y2="113"/>
+    <line x1="476" y1="36" x2="476" y2="124"/><line x1="500" y1="36" x2="500" y2="124"/>
+    <line x1="524" y1="36" x2="524" y2="124"/><line x1="548" y1="36" x2="548" y2="124"/>
+    <line x1="572" y1="36" x2="572" y2="124"/><line x1="596" y1="36" x2="596" y2="124"/>
+    <line x1="620" y1="36" x2="620" y2="124"/>
+  </g>
+  <rect x="452" y="124" width="192" height="20" fill="#D9BCE7"/>
+  <g stroke="#7B2D9B" stroke-width="1">
+    <line x1="452" y1="134" x2="644" y2="134"/>
+    <line x1="476" y1="124" x2="476" y2="144"/><line x1="500" y1="124" x2="500" y2="144"/>
+    <line x1="524" y1="124" x2="524" y2="144"/><line x1="548" y1="124" x2="548" y2="144"/>
+    <line x1="572" y1="124" x2="572" y2="144"/><line x1="596" y1="124" x2="596" y2="144"/>
+    <line x1="620" y1="124" x2="620" y2="144"/>
+  </g>
+  <line x1="452" y1="124" x2="644" y2="124" stroke="#7B2D9B" stroke-width="2"/>
+  <rect x="452" y="36" width="192" height="108" fill="none" stroke="#C8553D" stroke-width="2"/>
+  <text x="548" y="55" text-anchor="middle" font-weight="bold" fill="#222">MSA representation</text>
+  <text x="548" y="74" text-anchor="middle" fill="#333">sequences × residues</text>
+  <text x="548" y="94" text-anchor="middle" fill="#333">each cell: a vector of</text>
+  <text x="548" y="113" text-anchor="middle" fill="#333">256 learned numbers</text>
+  <text x="638" y="31" text-anchor="end" font-style="italic" font-weight="bold" fill="#C8553D">m</text>
+
+  <!-- z: pair representation -->
+  <rect x="452" y="300" width="192" height="84" fill="#DCEAF7"/>
+  <g stroke="#B5CFE8" stroke-width="1">
+    <line x1="452" y1="317" x2="644" y2="317"/><line x1="452" y1="334" x2="644" y2="334"/>
+    <line x1="452" y1="351" x2="644" y2="351"/><line x1="452" y1="368" x2="644" y2="368"/>
+    <line x1="476" y1="300" x2="476" y2="384"/><line x1="500" y1="300" x2="500" y2="384"/>
+    <line x1="524" y1="300" x2="524" y2="384"/><line x1="548" y1="300" x2="548" y2="384"/>
+    <line x1="572" y1="300" x2="572" y2="384"/><line x1="596" y1="300" x2="596" y2="384"/>
+    <line x1="620" y1="300" x2="620" y2="384"/>
+  </g>
+  <rect x="452" y="300" width="192" height="84" fill="none" stroke="#2E6DA4" stroke-width="2"/>
+  <text x="548" y="319" text-anchor="middle" font-weight="bold" fill="#222">Pair representation</text>
+  <text x="548" y="338" text-anchor="middle" fill="#333">residues × residues</text>
+  <text x="548" y="358" text-anchor="middle" fill="#333">each cell: a vector of</text>
+  <text x="548" y="377" text-anchor="middle" fill="#333">128 learned numbers</text>
+  <text x="638" y="296" text-anchor="end" font-style="italic" font-weight="bold" fill="#2E6DA4">z</text>
+
+  <!-- ===================== EVOFORMER ===================== -->
+  <line x1="644" y1="90" x2="660" y2="90" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <line x1="644" y1="342" x2="660" y2="342" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <rect x="662" y="36" width="98" height="348" rx="10" fill="#EFEFEF" stroke="#777" stroke-width="2"/>
+  <text x="711" y="186" text-anchor="middle" font-weight="bold" fill="#222">Evoformer</text>
+  <text x="711" y="208" text-anchor="middle" fill="#444">48 blocks</text>
+  <text x="711" y="240" text-anchor="middle" fill="#444">that refine</text>
+  <text x="711" y="260" text-anchor="middle" fill="#444">m and z</text>
+
+  <!-- ===================== STRUCTURE MODULE + OUTPUTS ===================== -->
+  <line x1="760" y1="90" x2="850" y2="90" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="805" y="81" text-anchor="middle" fill="#333">row 1 of m</text>
+  <line x1="760" y1="342" x2="810" y2="342" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <path d="M792,342 V250 H850" fill="none" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <text x="816" y="243" font-style="italic" fill="#333">z</text>
+  <rect x="852" y="36" width="88" height="240" rx="10" fill="#EFEFEF" stroke="#777" stroke-width="2"/>
+  <text x="896" y="140" text-anchor="middle" font-weight="bold" fill="#222">Structure</text>
+  <text x="896" y="162" text-anchor="middle" font-weight="bold" fill="#222">module</text>
+  <text x="896" y="184" text-anchor="middle" fill="#444">8 blocks</text>
+
+  <line x1="940" y1="78" x2="954" y2="78" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <rect x="956" y="38" width="130" height="80" rx="8" fill="#FFF4CF" stroke="#B8962E" stroke-width="2"/>
+  <text x="1021" y="60" text-anchor="middle" font-weight="bold" fill="#222">Coordinates</text>
+  <text x="1021" y="82" text-anchor="middle" fill="#333">of every</text>
+  <text x="1021" y="104" text-anchor="middle" fill="#333">heavy atom</text>
+
+  <line x1="940" y1="183" x2="954" y2="183" stroke="#555" stroke-width="2.5" marker-end="url(#ag)"/>
+  <rect x="956" y="138" width="130" height="90" rx="8" fill="#FFF4CF" stroke="#B8962E" stroke-width="2"/>
+  <text x="1021" y="161" text-anchor="middle" font-weight="bold" fill="#222">pLDDT</text>
+  <text x="1021" y="184" text-anchor="middle" fill="#333">confidence per</text>
+  <text x="1021" y="206" text-anchor="middle" fill="#333">residue, 0–100</text>
+
+  <rect x="812" y="300" width="274" height="84" rx="8" fill="#FFF4CF" stroke="#B8962E" stroke-width="2"/>
+  <text x="949" y="319" text-anchor="middle" fill="#333"><tspan font-weight="bold" fill="#222">Distogram:</tspan> a side output</text>
+  <text x="949" y="338" text-anchor="middle" fill="#333">histogram of each pair's distance</text>
+  <text x="949" y="357" text-anchor="middle" fill="#333">trained by its own loss, not read</text>
+  <text x="949" y="376" text-anchor="middle" fill="#333">by the structure module</text>
+
+  <!-- ===================== RECYCLING (teal) ===================== -->
+  <path d="M711,36 V14 H548 V34" fill="none" stroke="#3F8793" stroke-width="2.5" marker-end="url(#at)"/>
+  <text x="720" y="22" fill="#3F8793">recycled: row 1 of m</text>
+  <path d="M1086,78 H1095 V403 H548 V386" fill="none" stroke="#3F8793" stroke-width="2.5" marker-end="url(#at)"/>
+  <line x1="772" y1="342" x2="772" y2="403" stroke="#3F8793" stroke-width="2.5"/>
+  <rect x="800" y="393" width="276" height="21" fill="#ffffff"/>
+  <text x="938" y="409" text-anchor="middle" fill="#3F8793">recycled: z, predicted distances</text>
+</svg>
