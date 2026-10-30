@@ -88,7 +88,7 @@ expect it to be more substantial.
 
 | Deliverable | What it is | When |
 |---|---|---|
-| **Proposal** | Half a page: the problem, the data or simulator, what you will have to show, who you are working with | Mon, Nov 9 |
+| **Proposal** | Half a page: the problem, the data or simulator, what you will have to show, who you are working with | Fri, Nov 6 |
 | **Work session** | One class meeting to work on projects and get feedback | Mon, Nov 23 |
 | **Presentation** | In class, to the whole group. Length is set once we know how many projects there are | Mon, Nov 30 -- Fri, Dec 4 |
 | **Report** | Written, workshop-paper length --- roughly 6--8 pages plus references | Last week of classes |
