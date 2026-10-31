@@ -31,11 +31,9 @@
      Renumbering here silently breaks both.
      =================================================================== -->
 
-# Topics
+# Planned Topics (From Start of Semester)
 
-Papers here show what each topic covers. **The list is provisional and still being built out ---
-the reading for each session is announced beforehand.** Topics are reasonably firm; we may still
-reorder or drop some.
+This list of topics was proposed at the start of the semester and evolved a bit through the course of the semester. Most but not all topics were covered. The list of papers were provisional just to give a sense for what we planned to cover.  
 
 ---
 
