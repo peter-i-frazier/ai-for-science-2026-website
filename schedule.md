@@ -19,9 +19,10 @@ reading.
 | **Reading 2** | Batatia, Kovács, Simm, Ortner, Csányi, [*MACE: Higher Order Equivariant Message Passing Neural Networks for Fast and Accurate Force Fields*](https://arxiv.org/abs/2206.07697). NeurIPS 35, 11423--11436, 2022.<br>Batatia et al., [*A foundation model for atomistic materials chemistry*](https://doi.org/10.1063/5.0297006) (MACE-MP-0). J. Chem. Phys. 163, 184110, 2025.<br>Creed et al., [*Six Open Questions in Machine-Learned Interatomic Potential Foundation Models*](https://arxiv.org/abs/2606.07327). arXiv:2606.07327, 2026.<br>What to focus on, what to skip, and two further optional papers are on the last slide of the [MLIP deck](slides/mlip/mlip.html). Discussed Mon, Sep 28 --- [discussion questions](reading-2-questions.html). | **Sat, Sep 26** |
 | **Reading 3** | Zhang, Wayment-Steele, Brixi, Wang, Kern, Ovchinnikov, [*Protein language models learn evolutionary statistics of interacting sequence motifs*](https://doi.org/10.1073/pnas.2406285121). PNAS, 2024.<br>Li, Amini, Yue, Yang, Lu, [*Feature reuse and scaling: understanding transfer learning with protein language models*](https://proceedings.mlr.press/v235/li24a.html). ICML 2024 (PMLR 235).<br>[Background slides, instructions, and discussion questions](slides/reading-3-background/reading-3-background.html). Submitted on a [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSdpu2SzyhuWZepSK9rTydbITt6ssEzq6cNAKureNFaYAyHoCQ/viewform), not Gradescope. Discussed Wed, Oct 14 --- [your answers, by question](reading-3-answers.html). | **Fri, Oct 9**; free extension for everyone until Mon, Oct 12 |
 | **[HW2](homework/hw2.pdf)** | Train an atom-level transformer on SMILES and probe what it learned; fit a machine-learned potential to a Lennard-Jones cluster | Fri, Oct 30 |
-| **Project proposal** | Half a page: the problem, the data or simulator, what you will have to show, and who you are working with. Required for 3 credits, graded; optional otherwise. Submitted on Gradescope. [Details](syllabus.html#project). | Fri, Nov 6 |
-| **Reading 4** | Zeni et al., [*A generative model for inorganic materials design*](https://doi.org/10.1038/s41586-025-08628-5) (MatterGen). Nature 639, 624--632, 2025.<br>MatterGen applies diffusion to crystals (atom types, positions, and the unit cell). Read it against the [diffusion deck](slides/diffusion/diffusion.html). Discussed Wed, Nov 11. | **Sat, Nov 7** |
-| **Reading 5** | Watson et al., [*De novo design of protein structure and function with RFdiffusion*](https://doi.org/10.1038/s41586-023-06415-8). Nature 620, 1089--1100, 2023.<br>RFdiffusion applies diffusion to protein backbones. Discussed Wed, Nov 11 together with Reading 4. | **Tue, Nov 10** |
+| **Project proposal** | Between half and one page: the problem, the data or simulator, what you will have to show, and who you are working with if anyone. Required for 3 credits, graded; optional otherwise. Submitted on Gradescope. [Details](syllabus.html#project). | Fri, Nov 6 |
+| **Reading 4** | Zeni et al., [*A generative model for inorganic materials design*](https://doi.org/10.1038/s41586-025-08628-5) (MatterGen). Nature 639, 624--632, 2025. Discussed Wed, Nov 11. | **Mon, Nov 9** |
+| **HW3** | Build your own AI co-scientist, targeted for release on Mon Nov 2 | **Fri, Nov 13** |
+| **HW4** | Black-box optimization for design, targeted for release on Wed, Nov 18 | **Mon, Nov 30** |
 
 ---
 
@@ -55,7 +56,6 @@ reading.
 | [Guest lecture: Scott Clark](scott-clark.html) --- *Accelerating Science with AI: Surfing the Frontier Between the Bitter Lesson and No Free Lunch* | 1 | Mon, Nov 9 |
 | Paper Discussion: MatterGen (Reading 4) | 1 | Wed, Nov 11 |
 | Virtual cell models | 1 | Fri, Nov 13 |
-| Paper Discussion: RFDiffusion (Reading 5) | 1 | Mon, Nov 16 |
 | Vision and Materials Characterization | 2 | Wed, Nov 18 -- Fri, Nov 20 |
 | Project work session | 1 | Mon, Nov 23 |
 | **No class** --- Thanksgiving Break | | Wed, Nov 25 and Fri, Nov 27 |
@@ -88,11 +88,6 @@ registration option requires.
 
 I aim to post slide decks before lecture. Lecture recordings go on Canvas, not here ---
 [why](syllabus.html#recordings).
-
-**The reading for each unit is announced before the session**, on the last slide of that unit's
-deck, and appears in the table at the top of this page. The
-[topics page](topics.html) shows the kind of paper each topic covers, but that list is provisional
-and still being built out --- do not work from it.
 
 ---
 
