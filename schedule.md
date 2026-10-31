@@ -50,7 +50,7 @@ reading.
 | [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html), finished | 1 | Fri, Oct 16 |
 | [Agents for science](slides/agents-for-science/agents-for-science.html) | 3 | Mon, Oct 19 -- Fri, Oct 23 |
 | [Diffusion](slides/diffusion/diffusion.html) | 3 | Fri, Oct 23 -- Wed, Oct 28 |
-| AlphaFold and structure prediction *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
+| [AlphaFold and structure prediction](slides/alphafold/alphafold.html) *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
 | Vision and Materials Characterization *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
 | Guest lecture: Scott Clark | 1 | Mon, Nov 9 |
 | Paper Discussion: Generative Design (Readings 4 and 5) | 1 | Wed, Nov 11 |
