@@ -91,7 +91,7 @@ expect it to be more substantial.
 | **Proposal** | Between half and one page: the problem, the data or simulator, what you will have to show, who you are working with | Fri, Nov 6 |
 | **Work session** | One class meeting to work on projects and get feedback | Mon, Nov 23 |
 | **Presentation** | In class, to the whole group. At least 20 minutes each including questions; everyone presents, including teams | Mon, Nov 30 -- Fri, Dec 4 |
-| **Report** | Written, workshop-paper length --- roughly 6--8 pages plus references | Mon, Dec 7 |
+| **Report** | Written, workshop-paper length --- roughly 6--8 pages plus references | Final exam period (Dec 11 -- 19); date set by the registrar |
 
 **Full instructions for each deliverable are on the [project page](project.html).**
 

@@ -24,7 +24,7 @@ reading.
 | **HW3** | Build your own AI co-scientist, targeted for release on Mon Nov 2 | **Fri, Nov 13** |
 | **HW4** | Black-box optimization for design, targeted for release on Wed, Nov 18 | **Mon, Nov 30** |
 | **Project presentation** | In class, at least 20 minutes each including questions. Everyone presents, including teams. Order announced after proposals are in. Required for 3 credits, graded; optional otherwise. [Details](project.html#presentation). | Mon, Nov 30 -- Fri, Dec 4 |
-| **Project report** | Workshop-paper length, 6--8 pages plus references. Submitted on Gradescope. [Details](project.html#report). | Mon, Dec 7 |
+| **Project report** | Workshop-paper length, 6--8 pages plus references. Submitted on Gradescope. [Details](project.html#report). | Final exam period (Dec 11 -- 19); date set by the registrar |
 
 ---
 
