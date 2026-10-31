@@ -99,8 +99,7 @@ Work alone or in pairs. Pairs are expected to produce correspondingly more, and 
 what.
 
 During the presentations, the class is asked for constructive thoughts on each talk, so that
-authors can refine the work before the report is due. Commenting on your classmates' presentations
-is part of the project grade.
+authors can refine the work before the report is due. These comments are not graded.
 
 ### Using AI on the project
 

@@ -62,7 +62,7 @@ The registrar sets the due date for final projects; yours is **Fri, Dec 18 at 2:
 
 ## <a name="comments"></a>Comments on classmates' presentations
 
-When you are in the audience, you give each speaker constructive comments, so authors can refine their work before the report is due. Say what was convincing, what was not, and what you would try. Comments are collected after each talk; the way to submit them will be announced in class. Writing useful comments is part of the project grade. There are no comments on the written reports.
+When you are in the audience, you give each speaker constructive comments, so authors can refine their work before the report is due. Say what was convincing, what was not, and what you would try. Comments are collected after each talk; the way to submit them will be announced in class. The comments are not graded; they are there to help the authors. There are no comments on the written reports.
 
 ## How the project is evaluated
 
