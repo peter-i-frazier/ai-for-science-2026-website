@@ -68,18 +68,9 @@ Back in Upson Fri, Nov 6.
 
 ---
 
-## Slides, Reading, Homework
+## Lecture Recordings
 
-Each assignment has a no-AI Part A and an AI-encouraged Part B; the
-[syllabus](syllabus.html#homework) has the rules. **Topics and dates are planned** and move with
-the units; due dates are confirmed at release.
-
-**2 credits S/U** does not require homework. See [the syllabus](syllabus.html) for what each
-registration option requires.
-
-I aim to post slide decks before lecture. 
-
-Lecture recordings go on Canvas, not here --- [why](syllabus.html#recordings).
+Lecture recordings are on Canvas rather than here (see [why](syllabus.html#recordings)). If you would like access and are not on Canvas, please ask the instructor.
 
 ---
 
