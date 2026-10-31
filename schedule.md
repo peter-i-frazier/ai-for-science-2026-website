@@ -52,7 +52,7 @@ reading.
 | [Diffusion](slides/diffusion/diffusion.html) | 3 | Fri, Oct 23 -- Wed, Oct 28 |
 | [AlphaFold and structure prediction](slides/alphafold/alphafold.html) *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
 | Vision and Materials Characterization *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
-| Guest lecture: Scott Clark | 1 | Mon, Nov 9 |
+| [Guest lecture: Scott Clark](scott-clark.html) --- *Accelerating Science with AI: Surfing the Frontier Between the Bitter Lesson and No Free Lunch* | 1 | Mon, Nov 9 |
 | Paper Discussion: Generative Design (Readings 4 and 5) | 1 | Wed, Nov 11 |
 | Virtual cell models | 2 | Fri, Nov 13 -- Mon, Nov 16 |
 | Black-box optimization and self-driving labs | 2 | Wed, Nov 18 -- Fri, Nov 20 |
