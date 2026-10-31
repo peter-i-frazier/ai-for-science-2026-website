@@ -68,26 +68,18 @@ Back in Upson Fri, Nov 6.
 
 ---
 
-## Planned Homework
+## Slides, Reading, Homework
 
 Each assignment has a no-AI Part A and an AI-encouraged Part B; the
 [syllabus](syllabus.html#homework) has the rules. **Topics and dates are planned** and move with
 the units; due dates are confirmed at release.
 
-| | Topic | Released | Due |
-|---|---|---|---|
-| **HW3** | Build your own AI co-scientist | Mon, Nov 2 | Fri, Nov 13 |
-| **HW4** | Black-box optimization for design | Wed, Nov 18 | Mon, Nov 30 |
-
 **2 credits S/U** does not require homework. See [the syllabus](syllabus.html) for what each
 registration option requires.
 
----
+I aim to post slide decks before lecture. 
 
-## Slides and reading
-
-I aim to post slide decks before lecture. Lecture recordings go on Canvas, not here ---
-[why](syllabus.html#recordings).
+Lecture recordings go on Canvas, not here --- [why](syllabus.html#recordings).
 
 ---
 
