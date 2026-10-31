@@ -11,7 +11,7 @@ The project is **required for 3 credits, graded**, and optional for everyone els
 | [Proposal](#proposal) | Fri, Nov 6 |
 | Work session in class | Mon, Nov 23 |
 | [Presentation](#presentation) | Mon, Nov 30 -- Fri, Dec 4 (order announced after proposals are in) |
-| [Report](#report) | During the final exam period (Dec 11 -- 19); date set by the registrar |
+| [Report](#report) | Fri, Dec 18, 2:00pm |
 | [Comments on classmates' reports](#comments) | After the reports are in (date announced in class) |
 
 ## What to do
@@ -48,9 +48,9 @@ A good talk answers these in order: what is the question, why is it hard, what d
 
 Send your slides as a PDF to me by 9pm the night before your slot.
 
-## <a name="report"></a>Report --- due in the final exam period
+## <a name="report"></a>Report --- Fri, Dec 18, 2:00pm
 
-The registrar sets the due date for final projects, and it falls in the final exam period (Dec 11--19). I will post the date here as soon as it is assigned. Written like a workshop paper: **6--8 pages plus references**, as a PDF on Gradescope. One report per team.
+The registrar sets the due date for final projects; yours is **Fri, Dec 18 at 2:00pm**, during the final exam period. Written like a workshop paper: **6--8 pages plus references**, as a PDF on Gradescope. One report per team.
 
 - **State the question and the claim** in the first paragraph. A reader should know what you found before page two.
 - **Say what you did precisely enough to repeat it**: data, model, hyperparameters, baselines, and how you evaluated. Link your code (a repository or a notebook).
