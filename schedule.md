@@ -48,7 +48,7 @@ Past dates are what we covered. Future dates are planned and may shift by a sess
 | Paper Discussion: [Protein Language Models](slides/reading-3-background/reading-3-background.html) | 1 | Wed, Oct 14 |
 | [Prompting, reasoning, tool use, and agents](slides/reasoning-and-tools/reasoning-and-tools.html), finished | 1 | Fri, Oct 16 |
 | [Agents for science](slides/agents-for-science/agents-for-science.html) | 3 | Mon, Oct 19 -- Fri, Oct 23 |
-| [Diffusion](slides/diffusion/diffusion.html) | 3 | Fri, Oct 23 -- Wed, Oct 28 |
+| [Diffusion](slides/diffusion/diffusion.html) | 2 | Mon, Oct 25 -- Wed, Oct 28 |
 | [AlphaFold and structure prediction](slides/alphafold/alphafold.html) *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
 | Black-box optimization and self-driving labs *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
 | [Guest lecture: Scott Clark](scott-clark.html) --- *Accelerating Science with AI: Surfing the Frontier Between the Bitter Lesson and No Free Lunch* | 1 | Mon, Nov 9 |
