@@ -1,12 +1,8 @@
 ---
 ---
-# Schedule
+# Lecture Schedule
 
 Past dates are what we covered. Future dates are planned and may shift by a session or two.
-
----
-
-## Lectures and Links to Slides
 
 | Lecture w/ Link to Slides | Num. Sessions | Dates |
 |---|---|---|
