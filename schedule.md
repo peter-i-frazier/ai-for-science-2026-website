@@ -2,7 +2,8 @@
 ---
 # Lecture Schedule
 
-Past dates are what we covered. Future dates are planned and may shift by a session or two.
+Assignment deadlines, including reading, homework, and project deliverables, have moved to [Assignments](assignments.html).
+Below, past dates are what we covered. Future dates are planned and may shift a bit.
 
 | Lecture w/ Link to Slides | Num. Sessions | Dates |
 |---|---|---|
