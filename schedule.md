@@ -6,11 +6,7 @@ Past dates are what we covered. Future dates are planned and may shift by a sess
 
 ---
 
-## Assigned Reading and Homework
-
-Everything assigned so far, in due-date order. Reading is submitted on Gradescope by 5pm on the
-due date; the [syllabus](syllabus.html#papers) has the rules, including the no-LLM rule for
-reading.
+## Assignments
 
 | | What | Due |
 |---|---|---|
