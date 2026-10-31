@@ -51,11 +51,12 @@ reading.
 | [Agents for science](slides/agents-for-science/agents-for-science.html) | 3 | Mon, Oct 19 -- Fri, Oct 23 |
 | [Diffusion](slides/diffusion/diffusion.html) | 3 | Fri, Oct 23 -- Wed, Oct 28 |
 | [AlphaFold and structure prediction](slides/alphafold/alphafold.html) *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
-| Vision and Materials Characterization *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
+| Black-box optimization and self-driving labs *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
 | [Guest lecture: Scott Clark](scott-clark.html) --- *Accelerating Science with AI: Surfing the Frontier Between the Bitter Lesson and No Free Lunch* | 1 | Mon, Nov 9 |
-| Paper Discussion: Generative Design (Readings 4 and 5) | 1 | Wed, Nov 11 |
-| Virtual cell models | 2 | Fri, Nov 13 -- Mon, Nov 16 |
-| Black-box optimization and self-driving labs | 2 | Wed, Nov 18 -- Fri, Nov 20 |
+| Paper Discussion: MatterGen (Reading 4) | 1 | Wed, Nov 11 |
+| Virtual cell models | 1 | Fri, Nov 13 |
+| Paper Discussion: RFDiffusion (Reading 5) | 1 | Mon, Nov 16 |
+| Vision and Materials Characterization | 2 | Wed, Nov 18 -- Fri, Nov 20 |
 | Project work session | 1 | Mon, Nov 23 |
 | **No class** --- Thanksgiving Break | | Wed, Nov 25 and Fri, Nov 27 |
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
@@ -64,9 +65,6 @@ reading.
 **Mon, Nov 2 and Wed, Nov 4 are Zoom only, for everyone.** The instructor is at the INFORMS Annual
 Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting.
 Back in Upson Fri, Nov 6.
-
-Science units follow the machinery they need --- molecular property prediction in week two, before
-transformers.
 
 ---
 
