@@ -57,4 +57,4 @@ The comments aren't graded. They're there to help the authors before the report 
 
 ## <a name="report"></a>Report --- Fri, Dec 18, 2:00pm
 
-The registrar sets the due date for final projects. Ours is Fri, Dec 18 at 2:00pm, during the final exam period. Write it like a workshop paper: 6--8 pages of content plus as much additional space as you'd like for references. You may also have optional supplementary information that is as long as you'd like but I only guarantee that I'll read the main content when grading. Upload the report as a PDF on Gradescope.  Upload one report per team, when working in pairs.
+The registrar sets the due date for final projects. Ours is Fri, Dec 18 at 2:00pm, during the final exam period. Write it like a workshop paper: 6--8 pages of content plus as much additional space as you'd like for references. You may also have optional supplementary information that is as long as you'd like but it should be possible to understand and evaluate the report based on what is in the main content. Upload the report as a PDF on Gradescope.  Upload one report per team, when working in pairs.
