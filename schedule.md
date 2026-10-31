@@ -1,8 +1,11 @@
 ---
 ---
+
+Assignment deadlines, including reading, homework, and project deliverables, have moved to **[Assignments](assignments.html)**.
+
+
 # Lecture Schedule
 
-Assignment deadlines, including reading, homework, and project deliverables, have moved to [Assignments](assignments.html).
 Below, past dates are what we covered. Future dates are planned and may shift a bit.
 
 | Lecture w/ Link to Slides | Num. Sessions | Dates |
