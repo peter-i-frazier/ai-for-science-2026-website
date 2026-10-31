@@ -19,7 +19,7 @@ layout: default
 {%- endcomment -%}
 {%- assign here = page.url -%}
 {%- if here == "/" -%}{%- assign here = "/index.html" -%}{%- endif -%}
-{%- assign nav_items = "/index.html,Home|/schedule.html,Schedule|/syllabus.html,Syllabus|/topics.html,Topics" | split: "|" -%}
+{%- assign nav_items = "/index.html,Home|/schedule.html,Schedule|/assignments.html,Assignments|/project.html,Project|/syllabus.html,Syllabus|/topics.html,Topics" | split: "|" -%}
 <nav class="site-nav" role="navigation" aria-label="Course pages">
   {% for item in nav_items %}{% assign parts = item | split: "," %}
   {% if parts[0] == here %}<a href="{{ parts[0] | relative_url }}" class="current" aria-current="page">{{ parts[1] }}</a>
