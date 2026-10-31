@@ -37,7 +37,7 @@ Past dates are what we covered. Future dates are planned and may shift by a sess
 | Paper Discussion: MatterGen (Reading 4) | 1 | Wed, Nov 11 |
 | Virtual cell models | 1 | Fri, Nov 13 |
 | Vision and Materials Characterization | 2 | Wed, Nov 18 -- Fri, Nov 20 |
-| Project work session | 1 | Mon, Nov 23 |
+| Buffer | 1 | Mon, Nov 23 |
 | **No class** --- Thanksgiving Break | | Wed, Nov 25 and Fri, Nov 27 |
 | Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
 | Wrap-up | 1 | Mon, Dec 7 (last day of instruction) |
