@@ -90,15 +90,10 @@ expect it to be more substantial.
 |---|---|---|
 | **Proposal** | Between half and one page: the problem, the data or simulator, what you will have to show, who you are working with | Fri, Nov 6 |
 | **Work session** | One class meeting to work on projects and get feedback | Mon, Nov 23 |
-| **Presentation** | In class, to the whole group. Length is set once we know how many projects there are | Mon, Nov 30 -- Fri, Dec 4 |
-| **Report** | Written, workshop-paper length --- roughly 6--8 pages plus references | Last week of classes |
+| **Presentation** | In class, to the whole group. At least 20 minutes each including questions; everyone presents, including teams | Mon, Nov 30 -- Fri, Dec 4 |
+| **Report** | Written, workshop-paper length --- roughly 6--8 pages plus references | Mon, Dec 7 |
 
-**The proposal.** Between half a page and one page, as a PDF on Gradescope. Say four things: the problem and why it
-matters; the data or simulator you will use, and whether you already have access to it; what you
-will have to show at the end (a result, a comparison, a reproduced figure, a review); and who you
-are working with. Pairs submit one proposal. It is not graded for being right --- I read every one
-and reply with feedback, and you can change course afterward. If you are unsure whether an idea
-is too big, send it anyway.
+**Full instructions for each deliverable are on the [project page](project.html).**
 
 Work alone or in pairs. Pairs are expected to produce correspondingly more, and to say who did
 what.
