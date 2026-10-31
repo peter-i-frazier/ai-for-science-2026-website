@@ -6,6 +6,8 @@ Questions for the Wed, Nov 11 discussion of Zeni et al., [*A generative model fo
 
 The [diffusion deck](slides/diffusion/diffusion.html) is the background, especially the conditioning and guidance slides.
 
+**Submit on this [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSd_4bs9IbzuN6hZxlxX6D4e5O25nuCzh9x1O-Y7XKd7j2rRwQ/viewform)**, not Gradescope, by Mon, Nov 9: summarize the paper, rank the three questions you most want to discuss, and answer your top two (a paragraph each). On Wed, Nov 11 you will work in groups by question. Read the paper and write your answers without an LLM.
+
 ## 1. How the model works
 
 Look at the description of MatterGen in the main paper in the paragraph beginning,
