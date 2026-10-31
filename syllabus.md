@@ -98,9 +98,9 @@ expect it to be more substantial.
 Work alone or in pairs. Pairs are expected to produce correspondingly more, and to say who did
 what.
 
-After the presentations, the class is asked for constructive thoughts on each report, so that
-authors can refine the work. Reading and commenting on your classmates' projects is part of the
-project grade.
+During the presentations, the class is asked for constructive thoughts on each talk, so that
+authors can refine the work before the report is due. Commenting on your classmates' presentations
+is part of the project grade.
 
 ### Using AI on the project
 

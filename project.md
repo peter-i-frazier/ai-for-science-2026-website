@@ -12,7 +12,7 @@ The project is **required for 3 credits, graded**, and optional for everyone els
 | Work session in class | Mon, Nov 23 |
 | [Presentation](#presentation) | Mon, Nov 30 -- Fri, Dec 4 (order announced after proposals are in) |
 | [Report](#report) | Fri, Dec 18, 2:00pm |
-| [Comments on classmates' reports](#comments) | After the reports are in (date announced in class) |
+| [Comments on classmates' presentations](#comments) | During the presentations, Mon, Nov 30 -- Fri, Dec 4 |
 
 ## What to do
 
@@ -60,9 +60,9 @@ The registrar sets the due date for final projects; yours is **Fri, Dec 18 at 2:
 - **For a team**, add a short paragraph on who did what.
 - **Note at the top which AI tools you used and where.** You may use whatever tools you like, and you must be able to explain what your code and your tools are doing.
 
-## <a name="comments"></a>Comments on classmates' reports
+## <a name="comments"></a>Comments on classmates' presentations
 
-After the reports are in, you read two or three classmates' reports and write constructive comments, so authors can refine their work. The aim is useful suggestions: what was convincing, what was not, and what you would try. Reading and commenting is part of the project grade. Assignments and the deadline are announced in class.
+When you are in the audience, you give each speaker constructive comments, so authors can refine their work before the report is due. Say what was convincing, what was not, and what you would try. Comments are collected after each talk; the way to submit them will be announced in class. Writing useful comments is part of the project grade. There are no comments on the written reports.
 
 ## How the project is evaluated
 
