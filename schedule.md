@@ -64,13 +64,7 @@ Past dates are what we covered. Future dates are planned and may shift by a sess
 Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting.
 Back in Upson Fri, Nov 6.
 
----
-
-## Lecture Recordings
-
-Lecture recordings are on Canvas rather than here (see [why](syllabus.html#recordings)). If you would like access and are not on Canvas, please ask the instructor.
-
----
+**Lecture recordings** are on Canvas rather than here (see [why](syllabus.html#recordings)). If you would like access and are not on Canvas, please ask the instructor.
 
 <p class="image-credit" markdown="0">
 Claude was used in the preparation of this webpage.
