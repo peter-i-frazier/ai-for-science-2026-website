@@ -4,6 +4,8 @@
 
 **Mon, Nov 9, 9:05--9:55am**, Upson Hall 222. The usual [Zoom link](syllabus.html#zoom) is available for Cornell Tech students.
 
+Scott and June Andrews also hold a [panel discussion](june-andrews.html) Tue, Nov 10, 12:00pm, 453 Rhodes Hall. Open to everyone.
+
 <img src="images/scott-clark.jpg" alt="Scott Clark" style="float:right; width:220px; margin:0 0 1em 1.5em;">
 
 ## Accelerating Science with AI: Surfing the Frontier Between the Bitter Lesson and No Free Lunch

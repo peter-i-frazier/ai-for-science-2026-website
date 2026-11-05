@@ -34,6 +34,7 @@ Below, past dates are what we covered. Future dates are planned and may shift a 
 | [AlphaFold and structure prediction](slides/alphafold/alphafold.html) *(Mon, Nov 2: Zoom only)* | 2 | Fri, Oct 30 -- Mon, Nov 2 |
 | [Black-box optimization and self-driving labs](slides/black-box-optimization/black-box-optimization.html) *(Wed, Nov 4: Zoom only)* | 2 | Wed, Nov 4 -- Fri, Nov 6 |
 | [Guest lecture: Scott Clark](scott-clark.html) --- *Accelerating Science with AI: Surfing the Frontier Between the Bitter Lesson and No Free Lunch* | 1 | Mon, Nov 9 |
+| *Not a class meeting, open to all:* [Panel with June Andrews and Scott Clark](june-andrews.html) --- *Applying Math in the Household: The AI Architecture Behind The Home CEO*, 12:00pm, 453 Rhodes | | Tue, Nov 10 |
 | Paper Discussion: MatterGen (Reading 4) | 1 | Wed, Nov 11 |
 | Virtual cell models | 1 | Fri, Nov 13 |
 | Vision and Materials Characterization | 2 | Wed, Nov 18 -- Fri, Nov 20 |
