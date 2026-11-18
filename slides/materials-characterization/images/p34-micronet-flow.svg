@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 495" width="900" height="495" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="190" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">1. Pretrain on a classification task</text>
+<text x="500" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">2. Copy the encoder</text>
+<text x="790" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">3. Fine-tune</text>
+<rect x="20" y="60" width="150" height="100" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="95.0" y="83.5" text-anchor="middle" font-size="16" fill="#333">MicroNet:</text><text x="95.0" y="104.5" text-anchor="middle" font-size="16" fill="#333">over 100,000</text><text x="95.0" y="125.5" text-anchor="middle" font-size="16" fill="#333">micrographs,</text><text x="95.0" y="146.5" text-anchor="middle" font-size="16" fill="#333">54 classes</text>
+<line x1="170" y1="110" x2="210" y2="110" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="210" y="75" width="160" height="70" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="290.0" y="104.5" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">classifier:</text><text x="290.0" y="125.5" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">encoder + head</text>
+<line x1="370" y1="110" x2="430" y2="110" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="430" y="75" width="130" height="70" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="495.0" y="104.5" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">encoder</text><text x="495.0" y="125.5" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">copied</text>
+<line x1="560" y1="110" x2="620" y2="110" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="620" y="75" width="130" height="70" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="685.0" y="104.5" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">segmentation</text><text x="685.0" y="125.5" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">network</text>
+<text x="715" y="172" text-anchor="middle" font-size="15" fill="#B31B1B" font-weight="bold">MicroNet start</text>
+<rect x="20" y="230" width="150" height="100" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="95.0" y="264.0" text-anchor="middle" font-size="16" fill="#333">ImageNet:</text><text x="95.0" y="285.0" text-anchor="middle" font-size="16" fill="#333">photographs of</text><text x="95.0" y="306.0" text-anchor="middle" font-size="16" fill="#333">everyday objects</text>
+<line x1="170" y1="280" x2="210" y2="280" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="210" y="245" width="160" height="70" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="290.0" y="274.5" text-anchor="middle" font-size="16" fill="#333">classifier:</text><text x="290.0" y="295.5" text-anchor="middle" font-size="16" fill="#333">encoder + head</text>
+<line x1="370" y1="280" x2="430" y2="280" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="430" y="245" width="130" height="70" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="495.0" y="274.5" text-anchor="middle" font-size="16" fill="#333">encoder</text><text x="495.0" y="295.5" text-anchor="middle" font-size="16" fill="#333">copied</text>
+<line x1="560" y1="280" x2="620" y2="280" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="620" y="245" width="130" height="70" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="685.0" y="274.5" text-anchor="middle" font-size="16" fill="#333">segmentation</text><text x="685.0" y="295.5" text-anchor="middle" font-size="16" fill="#333">network</text>
+<text x="715" y="342" text-anchor="middle" font-size="15" fill="#555" font-weight="bold">ImageNet start</text>
+<rect x="775" y="105" width="115" height="110" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="832.5" y="133.5" text-anchor="middle" font-size="15" fill="#333">trained on</text><text x="832.5" y="154.5" text-anchor="middle" font-size="15" fill="#333">one image</text><text x="832.5" y="175.5" text-anchor="middle" font-size="15" fill="#333">of a Ni</text><text x="832.5" y="196.5" text-anchor="middle" font-size="15" fill="#333">superalloy</text>
+<line x1="750" y1="110" x2="775" y2="140" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<line x1="750" y1="280" x2="775" y2="190" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="40" y="392" width="820" height="70" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="450.0" y="432.0" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">MicroNet start: 72.2% lower relative IoU error than the ImageNet start, one-shot</text>
+<line x1="450" y1="345" x2="450" y2="392" stroke="#999" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="450.0" y="487" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; source: Stuckner, Harder, Smith, npj Comput. Mater. 8:200 (2022), Fig. 1 and abstract</text>
+</svg>

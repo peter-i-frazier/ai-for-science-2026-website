@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="220" y="28" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Real vision modules</text>
+<text x="220" y="50" text-anchor="middle" font-size="15" fill="#555">all Omni3D-Bench questions</text>
+<text x="20" y="91" text-anchor="start" font-size="15" fill="#B31B1B" font-weight="bold">GPT-4o, answering directly</text>
+<rect x="20" y="99" width="141.57" height="24" rx="2" fill="#B31B1B" stroke="none" stroke-width="0"/>
+<text x="169.57" y="117" text-anchor="start" font-size="15" fill="#333" font-weight="bold">42.9%</text>
+<text x="20" y="159" text-anchor="start" font-size="15" fill="#333">VADAR</text>
+<rect x="20" y="167" width="133.32" height="24" rx="2" fill="#8a9aa6" stroke="none" stroke-width="0"/>
+<text x="161.32" y="185" text-anchor="start" font-size="15" fill="#333" font-weight="bold">40.4%</text>
+<text x="20" y="227" text-anchor="start" font-size="15" fill="#333">ViperGPT</text>
+<rect x="20" y="235" width="88.11" height="24" rx="2" fill="#8a9aa6" stroke="none" stroke-width="0"/>
+<text x="116.11" y="253" text-anchor="start" font-size="15" fill="#333" font-weight="bold">26.7%</text>
+<text x="20" y="295" text-anchor="start" font-size="15" fill="#333">VisProg</text>
+<rect x="20" y="303" width="44.550000000000004" height="24" rx="2" fill="#8a9aa6" stroke="none" stroke-width="0"/>
+<text x="72.55000000000001" y="321" text-anchor="start" font-size="15" fill="#333" font-weight="bold">13.5%</text>
+<text x="680" y="28" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Oracle (perfect) vision modules</text>
+<text x="680" y="50" text-anchor="middle" font-size="15" fill="#555">50-question subset</text>
+<text x="480" y="91" text-anchor="start" font-size="15" fill="#333">VADAR</text>
+<rect x="480" y="99" width="311.52000000000004" height="24" rx="2" fill="#8a9aa6" stroke="none" stroke-width="0"/>
+<text x="799.52" y="117" text-anchor="start" font-size="15" fill="#333" font-weight="bold">94.4%</text>
+<text x="480" y="159" text-anchor="start" font-size="15" fill="#333">VisProg</text>
+<rect x="480" y="167" width="217.8" height="24" rx="2" fill="#8a9aa6" stroke="none" stroke-width="0"/>
+<text x="705.8" y="185" text-anchor="start" font-size="15" fill="#333" font-weight="bold">66.0%</text>
+<text x="480" y="227" text-anchor="start" font-size="15" fill="#333">ViperGPT</text>
+<rect x="480" y="235" width="181.17" height="24" rx="2" fill="#8a9aa6" stroke="none" stroke-width="0"/>
+<text x="669.17" y="253" text-anchor="start" font-size="15" fill="#333" font-weight="bold">54.9%</text>
+<text x="480" y="295" text-anchor="start" font-size="15" fill="#B31B1B" font-weight="bold">GPT-4o, answering directly</text>
+<rect x="480" y="303" width="177.21" height="24" rx="2" fill="#B31B1B" stroke="none" stroke-width="0"/>
+<text x="665.21" y="321" text-anchor="start" font-size="15" fill="#333" font-weight="bold">53.7%</text>
+<line x1="450" y1="70" x2="450" y2="340" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="450.0" y="372" text-anchor="middle" font-size="12" fill="#777">chart drawn for this course; Marsili et al., arXiv:2502.06787, Table 1 (left) and Table 2 (right); accuracy %</text>
+</svg>

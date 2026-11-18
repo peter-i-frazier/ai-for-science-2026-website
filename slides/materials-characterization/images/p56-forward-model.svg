@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" width="900" height="470" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker></defs>
+<text x="20" y="28" text-anchor="start" font-size="16" fill="#333" font-weight="bold">Forward model: how the world turns the unknown x into the measurement y</text>
+<rect x="20" y="50" width="150" height="70" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="95.0" y="80.75" text-anchor="middle" font-size="15" fill="#333">Unknown x</text>
+<text x="95.0" y="99.75" text-anchor="middle" font-size="15" fill="#333">(true image)</text>
+<line x1="170" y1="85" x2="245" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="245" y="45" width="250" height="80" rx="6" fill="#e9eef2" stroke="#B31B1B" stroke-width="2"/>
+<text x="370.0" y="71.25" text-anchor="middle" font-size="15" fill="#B31B1B" font-weight="bold">Forward model</text>
+<text x="370.0" y="90.25" text-anchor="middle" font-size="15" fill="#B31B1B" font-weight="bold">MRI: keep some lines</text>
+<text x="370.0" y="109.25" text-anchor="middle" font-size="15" fill="#B31B1B" font-weight="bold">of k-space, add noise</text>
+<line x1="495" y1="85" x2="570" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="570" y="50" width="150" height="70" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="645.0" y="80.75" text-anchor="middle" font-size="15" fill="#333">Measurement y</text>
+<text x="645.0" y="99.75" text-anchor="middle" font-size="15" fill="#333">(partial, noisy)</text>
+<line x1="720" y1="85" x2="770" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="770" y="50" width="110" height="70" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="825.0" y="80.75" text-anchor="middle" font-size="15" fill="#333">Estimate</text>
+<text x="825.0" y="99.75" text-anchor="middle" font-size="15" fill="#333">of x</text>
+<text x="20" y="175" text-anchor="start" font-size="16" fill="#333" font-weight="bold">Two ways to build the reconstruction step</text>
+<rect x="20" y="190" width="400" height="100" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="220.0" y="225.6" text-anchor="middle" font-size="16" fill="#333">End-to-end network</text>
+<text x="220.0" y="245.6" text-anchor="middle" font-size="16" fill="#333">trained on pairs of (y, x)</text>
+<text x="220.0" y="265.6" text-anchor="middle" font-size="16" fill="#333">from one forward model</text>
+<rect x="480" y="190" width="400" height="100" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="680.0" y="225.6" text-anchor="middle" font-size="16" fill="#B31B1B">Diffusion prior plus the forward model</text>
+<text x="680.0" y="245.6" text-anchor="middle" font-size="16" fill="#B31B1B">prior: what images look like</text>
+<text x="680.0" y="265.6" text-anchor="middle" font-size="16" fill="#B31B1B">forward model: used at solve time</text>
+<text x="20" y="330" text-anchor="start" font-size="16" fill="#333" font-weight="bold">Change the forward model (MRI: sampled lines go from vertical to horizontal):</text>
+<rect x="20" y="345" width="400" height="70" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="220.0" y="385.95" text-anchor="middle" font-size="17" fill="#333">End-to-end: moves 9.58 dB on average</text>
+<rect x="480" y="345" width="400" height="70" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="680.0" y="385.95" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">Diffusion methods: move 0.48 dB on average</text>
+<text x="450" y="442" text-anchor="middle" font-size="14" fill="#777">dB (PSNR): higher means closer to the true image; a larger move means the method broke more.</text>
+<text x="450.0" y="462" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Zheng et al., arXiv:2503.11043</text>
+</svg>

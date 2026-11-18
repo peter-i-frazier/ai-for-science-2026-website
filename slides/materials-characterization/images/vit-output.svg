@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" width="760" height="340" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<rect x="20" y="40" width="64" height="36" rx="0" fill="#B31B1B" stroke="#333" stroke-width="2"/>
+<rect x="20" y="88" width="64" height="36" rx="0" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<rect x="20" y="136" width="64" height="36" rx="0" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<rect x="20" y="184" width="64" height="36" rx="0" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<rect x="20" y="232" width="64" height="36" rx="0" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<text x="52" y="288" text-anchor="middle" font-size="20" fill="#333">...</text>
+<text x="52" y="305" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">output vectors</text>
+<text x="52" y="63" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">[class]</text>
+<text x="52" y="111" text-anchor="middle" font-size="13" fill="#555">patch 1</text>
+<text x="52" y="159" text-anchor="middle" font-size="13" fill="#555">patch 2</text>
+<text x="52" y="207" text-anchor="middle" font-size="13" fill="#555">patch 3</text>
+<text x="52" y="255" text-anchor="middle" font-size="13" fill="#555">patch 4</text>
+<line x1="88" y1="58" x2="300" y2="58" stroke="#B31B1B" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="305" y="28" width="150" height="62" rx="8" fill="#B31B1B"/>
+<text x="380" y="55" text-anchor="middle" font-size="18" fill="#fff" font-weight="bold">head</text>
+<text x="380" y="76" text-anchor="middle" font-size="13" fill="#fff">(small network)</text>
+<line x1="460" y1="58" x2="510" y2="58" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="520" y="54" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">one label for the</text>
+<text x="520" y="74" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">whole image</text>
+<text x="305" y="110" text-anchor="start" font-size="14" fill="#555">image-level tasks: classification</text>
+<line x1="88" y1="106" x2="300" y2="205" stroke="#999" stroke-width="1.6"/>
+<line x1="88" y1="154" x2="300" y2="211" stroke="#999" stroke-width="1.6"/>
+<line x1="88" y1="202" x2="300" y2="217" stroke="#999" stroke-width="1.6"/>
+<line x1="88" y1="250" x2="300" y2="223" stroke="#999" stroke-width="1.6"/>
+<rect x="305" y="175" width="150" height="62" rx="8" fill="#B31B1B"/>
+<text x="380" y="202" text-anchor="middle" font-size="18" fill="#fff" font-weight="bold">head</text>
+<text x="380" y="223" text-anchor="middle" font-size="13" fill="#fff">on each patch</text>
+<line x1="460" y1="206" x2="510" y2="206" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="520" y="165" width="34" height="34" rx="0" fill="#e07b7b" stroke="#333" stroke-width="1.5"/>
+<rect x="554" y="165" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
+<rect x="588" y="165" width="34" height="34" rx="0" fill="#e07b7b" stroke="#333" stroke-width="1.5"/>
+<rect x="520" y="199" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
+<rect x="554" y="199" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
+<rect x="588" y="199" width="34" height="34" rx="0" fill="#e07b7b" stroke="#333" stroke-width="1.5"/>
+<rect x="520" y="233" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
+<rect x="554" y="233" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
+<rect x="588" y="233" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
+<text x="572" y="290" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">a label per patch: a mask</text>
+<text x="305" y="262" text-anchor="start" font-size="14" fill="#555">patch-level tasks: segmentation</text>
+<text x="380.0" y="332" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; heads as in Dosovitskiy et al., arXiv:2010.11929, Sec. 3.1</text>
+</svg>

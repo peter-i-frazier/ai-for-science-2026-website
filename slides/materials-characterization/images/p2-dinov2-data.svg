@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 440" width="900" height="440" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker></defs>
+<rect x="20" y="40" width="185" height="110" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.2"/>
+<text x="112.5" y="68" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Uncurated web</text>
+<text x="112.5" y="92" text-anchor="middle" font-size="14" fill="#333">1.2 billion images,</text>
+<text x="112.5" y="110" text-anchor="middle" font-size="14" fill="#333">from crawled web</text>
+<text x="112.5" y="128" text-anchor="middle" font-size="14" fill="#333">pages</text>
+<line x1="208" y1="95" x2="237" y2="95" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="240" y="40" width="185" height="110" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.2"/>
+<text x="332.5" y="68" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Remove near-copies</text>
+<text x="332.5" y="92" text-anchor="middle" font-size="14" fill="#333">less redundancy,</text>
+<text x="332.5" y="110" text-anchor="middle" font-size="14" fill="#333">more variety</text>
+<line x1="428" y1="95" x2="457" y2="95" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="460" y="40" width="185" height="110" rx="8" fill="#fff" stroke="#B31B1B" stroke-width="2.2"/>
+<text x="552.5" y="68" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">Retrieve look-alikes</text>
+<text x="552.5" y="92" text-anchor="middle" font-size="14" fill="#333">of the curated images:</text>
+<text x="552.5" y="110" text-anchor="middle" font-size="14" fill="#333">4 nearest neighbors</text>
+<text x="552.5" y="128" text-anchor="middle" font-size="14" fill="#333">each (by embedding)</text>
+<line x1="648" y1="95" x2="677" y2="95" stroke="#B31B1B" stroke-width="2.6" marker-end="url(#r)"/>
+<rect x="680" y="40" width="185" height="110" rx="8" fill="#B31B1B" stroke="#B31B1B" stroke-width="2.2"/>
+<text x="772.5" y="68" text-anchor="middle" font-size="17" fill="#fff" font-weight="bold">LVD-142M</text>
+<text x="772.5" y="92" text-anchor="middle" font-size="14" fill="#fff">142 million images,</text>
+<text x="772.5" y="110" text-anchor="middle" font-size="14" fill="#fff">no labels or text</text>
+<text x="772.5" y="128" text-anchor="middle" font-size="14" fill="#fff">used to pick them</text>
+<rect x="460" y="190" width="185" height="100" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.2"/>
+<text x="552.5" y="218" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Curated sets</text>
+<text x="552.5" y="242" text-anchor="middle" font-size="14" fill="#333">ImageNet-22k and -1k,</text>
+<text x="552.5" y="260" text-anchor="middle" font-size="14" fill="#333">Google Landmarks,</text>
+<text x="552.5" y="278" text-anchor="middle" font-size="14" fill="#333">fine-grained sets</text>
+<line x1="552.5" y1="188" x2="552.5" y2="154" stroke="#B31B1B" stroke-width="2.6" marker-end="url(#r)"/>
+<line x1="772.5" y1="154" x2="772.5" y2="318" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="680" y="320" width="185" height="92" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.2"/>
+<text x="772.5" y="348" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Train ViT-g</text>
+<text x="772.5" y="372" text-anchor="middle" font-size="14" fill="#333">1 billion weights,</text>
+<text x="772.5" y="390" text-anchor="middle" font-size="14" fill="#333">no labels</text>
+<line x1="677" y1="366" x2="560" y2="366" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<text x="620" y="350" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">distill</text>
+<text x="620" y="392" text-anchor="middle" font-size="14" fill="#555">(copy its outputs)</text>
+<rect x="340" y="335" width="80" height="62" rx="8" fill="#fff" stroke="#B31B1B" stroke-width="2.2"/>
+<text x="380" y="372" text-anchor="middle" font-size="18" fill="#B31B1B" font-weight="bold">ViT-S</text>
+<rect x="235" y="335" width="80" height="62" rx="8" fill="#fff" stroke="#B31B1B" stroke-width="2.2"/>
+<text x="275" y="372" text-anchor="middle" font-size="18" fill="#B31B1B" font-weight="bold">ViT-B</text>
+<rect x="130" y="335" width="80" height="62" rx="8" fill="#fff" stroke="#B31B1B" stroke-width="2.2"/>
+<text x="170" y="372" text-anchor="middle" font-size="18" fill="#B31B1B" font-weight="bold">ViT-L</text>
+<text x="250" y="322" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">smaller models</text>
+<text x="450.0" y="432" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; steps and numbers from Oquab et al. (arXiv:2304.07193), Sec. 3 and 5</text>
+</svg>

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 290" width="900" height="290" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+  </defs>
+  <!-- 4x4 masked image: 4 visible of 16 (75% hidden) -->
+  <g stroke="#333" stroke-width="1.5">
+    <rect x="20" y="40" width="40" height="40" fill="#bbb"/><rect x="60" y="40" width="40" height="40" fill="#e4e4e4"/><rect x="100" y="40" width="40" height="40" fill="#e4e4e4"/><rect x="140" y="40" width="40" height="40" fill="#e4e4e4"/>
+    <rect x="20" y="80" width="40" height="40" fill="#e4e4e4"/><rect x="60" y="80" width="40" height="40" fill="#999"/><rect x="100" y="80" width="40" height="40" fill="#e4e4e4"/><rect x="140" y="80" width="40" height="40" fill="#e4e4e4"/>
+    <rect x="20" y="120" width="40" height="40" fill="#e4e4e4"/><rect x="60" y="120" width="40" height="40" fill="#e4e4e4"/><rect x="100" y="120" width="40" height="40" fill="#e4e4e4"/><rect x="140" y="120" width="40" height="40" fill="#777"/>
+    <rect x="20" y="160" width="40" height="40" fill="#e4e4e4"/><rect x="60" y="160" width="40" height="40" fill="#e4e4e4"/><rect x="100" y="160" width="40" height="40" fill="#aaa"/><rect x="140" y="160" width="40" height="40" fill="#e4e4e4"/>
+  </g>
+  <g fill="#fff" stroke="#B31B1B" stroke-width="3"><rect x="20" y="40" width="40" height="40"/><rect x="60" y="80" width="40" height="40"/><rect x="140" y="120" width="40" height="40"/><rect x="100" y="160" width="40" height="40"/></g>
+  <g fill="#bbb" opacity="0.0"></g>
+  <text x="100" y="228" text-anchor="middle" font-size="15" fill="#333">1. Hide 75% of the patches</text>
+  <text x="100" y="248" text-anchor="middle" font-size="13" fill="#777">(red = visible)</text>
+  <line x1="195" y1="120" x2="245" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- encoder -->
+  <rect x="250" y="75" width="130" height="90" rx="8" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <text x="315" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Encoder</text>
+  <text x="315" y="134" text-anchor="middle" font-size="13" fill="#333">sees only the</text>
+  <text x="315" y="150" text-anchor="middle" font-size="13" fill="#333">visible patches</text>
+  <text x="315" y="228" text-anchor="middle" font-size="15" fill="#333">2. Encode what is visible</text>
+  <line x1="385" y1="120" x2="435" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- decoder -->
+  <rect x="440" y="75" width="130" height="90" rx="8" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <text x="505" y="112" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Decoder</text>
+  <text x="505" y="134" text-anchor="middle" font-size="13" fill="#333">small; guesses</text>
+  <text x="505" y="150" text-anchor="middle" font-size="13" fill="#333">the hidden patches</text>
+  <text x="505" y="228" text-anchor="middle" font-size="15" fill="#333">3. Fill in the rest</text>
+  <line x1="575" y1="120" x2="625" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- reconstruction vs truth -->
+  <rect x="630" y="55" width="120" height="130" rx="8" fill="#B31B1B"/>
+  <text x="690" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#fff">Loss</text>
+  <text x="690" y="124" text-anchor="middle" font-size="13" fill="#fff">pixel error between</text>
+  <text x="690" y="142" text-anchor="middle" font-size="13" fill="#fff">guess and the truth,</text>
+  <text x="690" y="160" text-anchor="middle" font-size="13" fill="#fff">hidden patches only</text>
+  <text x="690" y="228" text-anchor="middle" font-size="15" fill="#333">4. Score the guess</text>
+  <text x="450" y="280" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; recipe from He et al., "Masked autoencoders are scalable vision learners," arXiv:2111.06377</text>
+</svg>

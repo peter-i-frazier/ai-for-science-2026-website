@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="900" height="450" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker></defs>
+<clipPath id="bb0"><rect x="20" y="60" width="100" height="100"/></clipPath>
+<g clip-path="url(#bb0)">
+<g transform="translate(70.0 110.0)  translate(-50.0 -50.0)">
+<polygon points="50.7,41.3 14.9,69.7 0.0,65.6 0.0,38.3 50.1,39.6" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="24.9,75.2 14.9,69.7 50.7,41.3 55.3,47.4 56.7,62.4" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="47.8,0.0 64.3,0.0 65.2,10.7 44.3,11.9" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="30.4,100.0 0.0,100.0 0.0,65.6 14.9,69.7 24.9,75.2 31.9,88.7" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="41.9,14.3 54.9,35.5 50.1,39.6 0.0,38.3 0.0,11.2" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="100.0,23.7 100.0,61.8 93.6,57.2 92.0,26.9" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="55.3,47.4 50.7,41.3 50.1,39.6 54.9,35.5 79.1,30.2 87.8,55.4" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="100.0,15.4 100.0,23.7 92.0,26.9 79.1,30.2 54.9,35.5 41.9,14.3 44.3,11.9 65.2,10.7" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="100.0,77.8 100.0,100.0 30.4,100.0 31.9,88.7 77.6,74.2" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="31.9,88.7 24.9,75.2 56.7,62.4 77.6,74.2" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="64.3,0.0 100.0,0.0 100.0,15.4 65.2,10.7" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="100.0,61.8 100.0,77.8 77.6,74.2 56.7,62.4 55.3,47.4 87.8,55.4 93.6,57.2" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,0.0 47.8,0.0 44.3,11.9 41.9,14.3 0.0,11.2" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="92.0,26.9 93.6,57.2 87.8,55.4 79.1,30.2" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+</g></g>
+<rect x="20" y="60" width="100" height="100" rx="0" fill="none" stroke="#333" stroke-width="2"/>
+<text x="70" y="188" text-anchor="middle" font-size="16" fill="#333">your image</text>
+<line x1="128" y1="110" x2="178" y2="110" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="185" y="55" width="200" height="110" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.5"/>
+<text x="285" y="102" text-anchor="middle" font-size="22" fill="#333" font-weight="bold">Backbone</text>
+<text x="285" y="130" text-anchor="middle" font-size="16" fill="#333">a large network</text>
+<line x1="392" y1="110" x2="440" y2="110" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="448" y="44" width="56" height="22" rx="0" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="476" y="60" text-anchor="middle" font-size="14" fill="#333">0.8</text>
+<rect x="448" y="66" width="56" height="22" rx="0" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="476" y="82" text-anchor="middle" font-size="14" fill="#333">-1.2</text>
+<rect x="448" y="88" width="56" height="22" rx="0" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="476" y="104" text-anchor="middle" font-size="14" fill="#333">0.1</text>
+<rect x="448" y="110" width="56" height="22" rx="0" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="476" y="126" text-anchor="middle" font-size="14" fill="#333">2.3</text>
+<rect x="448" y="132" width="56" height="22" rx="0" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="476" y="148" text-anchor="middle" font-size="14" fill="#333">-0.4</text>
+<rect x="448" y="154" width="56" height="22" rx="0" fill="#fff" stroke="#333" stroke-width="1.5"/>
+<text x="476" y="170" text-anchor="middle" font-size="14" fill="#333">1.0</text>
+<text x="476" y="192" text-anchor="middle" font-size="16" fill="#333">feature vector</text>
+<text x="476" y="210" text-anchor="middle" font-size="14" fill="#555">(a list of numbers)</text>
+<line x1="512" y1="110" x2="560" y2="110" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="567" y="65" width="120" height="90" rx="8" fill="#B31B1B" stroke="#B31B1B" stroke-width="2"/>
+<text x="627" y="108" text-anchor="middle" font-size="22" fill="#fff" font-weight="bold">Head</text>
+<text x="627" y="132" text-anchor="middle" font-size="15" fill="#fff">small model</text>
+<line x1="694" y1="110" x2="742" y2="110" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="748" y="52" width="142" height="32" rx="16" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="819" y="74" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">a label</text>
+<rect x="748" y="92" width="142" height="32" rx="16" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="819" y="114" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">a mask</text>
+<rect x="748" y="132" width="142" height="32" rx="16" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="819" y="154" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">a measurement</text>
+<line x1="20" y1="232" x2="880" y2="232" stroke="#bbb" stroke-width="1.5"/>
+<text x="20" y="261" text-anchor="start" font-size="19" fill="#333" font-weight="bold">Train from scratch</text>
+<rect x="20" y="279" width="150" height="44" rx="6" fill="#B31B1B" stroke="#B31B1B" stroke-width="2"/>
+<text x="95" y="308" text-anchor="middle" font-size="17" fill="#fff" font-weight="bold">Backbone</text>
+<line x1="176" y1="301" x2="214" y2="301" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="220" y="279" width="90" height="44" rx="6" fill="#B31B1B" stroke="#B31B1B" stroke-width="2"/>
+<text x="265" y="308" text-anchor="middle" font-size="17" fill="#fff" font-weight="bold">Head</text>
+<text x="335" y="297" text-anchor="start" font-size="16" fill="#333">backbone and head both learn from your labels</text>
+<text x="335" y="319" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">needs many labels</text>
+<text x="20" y="361" text-anchor="start" font-size="19" fill="#333" font-weight="bold">Pretrained and frozen</text>
+<rect x="20" y="379" width="150" height="44" rx="6" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<text x="95" y="408" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Backbone</text>
+<line x1="176" y1="401" x2="214" y2="401" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="220" y="379" width="90" height="44" rx="6" fill="#B31B1B" stroke="#B31B1B" stroke-width="2"/>
+<text x="265" y="408" text-anchor="middle" font-size="17" fill="#fff" font-weight="bold">Head</text>
+<text x="335" y="397" text-anchor="start" font-size="16" fill="#333">the backbone stays fixed; only the head learns</text>
+<text x="335" y="419" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">needs few labels</text>
+<text x="880" y="262" text-anchor="end" font-size="14" fill="#B31B1B" font-weight="bold">red = trained on your labels</text>
+<text x="450.0" y="442" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; the numbers in the vector are invented</text>
+</svg>

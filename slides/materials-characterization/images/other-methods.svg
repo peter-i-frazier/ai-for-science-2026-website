@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 270" width="900" height="270" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="155" y="28" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">X-ray diffraction</text>
+<rect x="20" y="45" width="270" height="150" fill="#fff" stroke="#333" stroke-width="2"/>
+<circle cx="110.0" cy="120.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="132.0" cy="120.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="154.0" cy="120.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="176.0" cy="120.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="198.0" cy="120.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="110.0" cy="142.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="132.0" cy="142.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="154.0" cy="142.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="176.0" cy="142.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="198.0" cy="142.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="110.0" cy="164.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="132.0" cy="164.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="154.0" cy="164.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="176.0" cy="164.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<circle cx="198.0" cy="164.0" r="5" fill="#555" stroke="none" stroke-width="1"/>
+<line x1="40" y1="60" x2="140" y2="115" stroke="#B31B1B" stroke-width="3" marker-end="url(#a)"/>
+<line x1="155" y1="115" x2="270" y2="62" stroke="#B31B1B" stroke-width="3" marker-end="url(#a)"/>
+<text x="155" y="220" text-anchor="middle" font-size="14" fill="#333">X-rays scatter off atomic planes</text>
+<text x="155" y="242" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">angles of the peaks give crystal structure</text>
+<text x="450" y="28" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">Transmission electron microscopy</text>
+<rect x="315" y="45" width="270" height="150" fill="#fff" stroke="#333" stroke-width="2"/>
+<line x1="450" y1="55" x2="450" y2="95" stroke="#B31B1B" stroke-width="3" marker-end="url(#a)"/>
+<rect x="370" y="100" width="160" height="14" fill="#b9b9b9" stroke="#333" stroke-width="2"/>
+<line x1="450" y1="116" x2="450" y2="160" stroke="#B31B1B" stroke-width="3" marker-end="url(#a)"/>
+<text x="450" y="182" text-anchor="middle" font-size="13" fill="#555">detector below the sample</text>
+<text x="450" y="220" text-anchor="middle" font-size="14" fill="#333">electrons pass through a thin slice</text>
+<text x="450" y="242" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">images down to single atoms</text>
+<text x="745" y="28" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">Atomic force microscopy</text>
+<rect x="610" y="45" width="270" height="150" fill="#fff" stroke="#333" stroke-width="2"/>
+<polyline points="630,165 636,163 642,160 648,158 654,156 660,155 666,153 672,152 678,151 684,151 690,151 696,151 702,152 708,153 714,155 720,157 726,159 732,161 738,163 744,165 750,162 756,150 762,148 768,146 774,144 780,143 786,142 792,141 798,141 804,141 810,152 816,152 822,154 828,155 834,157 840,159 846,161 852,163 858,164 864,162 870,160 876,158" fill="none" stroke="#333" stroke-width="3"/>
+<polygon points="730,95 760,95 745,148" fill="#B31B1B"/>
+<text x="745" y="220" text-anchor="middle" font-size="14" fill="#333">a sharp tip is dragged over the surface</text>
+<text x="745" y="242" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">a height map of the surface</text>
+<text x="450.0" y="262" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; schematic, not to scale</text>
+</svg>

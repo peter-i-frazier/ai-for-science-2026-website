@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 445" width="900" height="445" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="450.0" y="28" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">Setup: one micrograph in, one of three labels out</text>
+<rect x="15" y="40" width="130" height="90" rx="6" fill="#cfcfcf" stroke="#333" stroke-width="2"/>
+<text x="80.0" y="80.0" text-anchor="middle" font-size="15" fill="#222">micrograph</text>
+<text x="80.0" y="100.0" text-anchor="middle" font-size="15" fill="#222">(one of 600)</text>
+<line x1="145" y1="85" x2="183" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="185" y="40" width="210" height="90" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="290.0" y="70.0" text-anchor="middle" font-size="15" fill="#B31B1B">VGG16, pretrained</text>
+<text x="290.0" y="90.0" text-anchor="middle" font-size="15" fill="#B31B1B">on ImageNet</text>
+<text x="290.0" y="110.0" text-anchor="middle" font-size="15" fill="#B31B1B">(frozen, not retrained)</text>
+<line x1="395" y1="85" x2="433" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="435" y="40" width="120" height="90" rx="6" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<text x="495.0" y="70.0" text-anchor="middle" font-size="15" fill="#222">a vector of</text>
+<text x="495.0" y="90.0" text-anchor="middle" font-size="15" fill="#222">numbers</text>
+<text x="495.0" y="110.0" text-anchor="middle" font-size="15" fill="#222">(features)</text>
+<line x1="555" y1="85" x2="593" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="595" y="40" width="130" height="90" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="660.0" y="70.0" text-anchor="middle" font-size="15" fill="#222">linear SVM</text>
+<text x="660.0" y="90.0" text-anchor="middle" font-size="15" fill="#222">trained on the</text>
+<text x="660.0" y="110.0" text-anchor="middle" font-size="15" fill="#222">600 labels</text>
+<line x1="725" y1="85" x2="753" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="755" y="40" width="135" height="28" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="822.5" y="59.0" text-anchor="middle" font-size="14" fill="#222">spheroidite</text>
+<rect x="755" y="72" width="135" height="28" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="822.5" y="91.0" text-anchor="middle" font-size="14" fill="#222">carbide network</text>
+<rect x="755" y="104" width="135" height="28" rx="6" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="822.5" y="123.0" text-anchor="middle" font-size="14" fill="#222">pearlite</text>
+<text x="450.0" y="192" text-anchor="middle" font-size="18" fill="#222" font-weight="bold">Accuracy at telling the three classes apart (600 micrographs, cross-validated)</text>
+<text x="333" y="250" text-anchor="end" font-size="16" fill="#222">raw pixels</text>
+<rect x="345" y="225" width="254.37999999999997" height="38" fill="#888"/>
+<text x="607.38" y="251" text-anchor="start" font-size="16" fill="#222" font-weight="bold">55.3%</text>
+<text x="333" y="308" text-anchor="end" font-size="16" fill="#222">best hand-designed (SIFT)</text>
+<rect x="345" y="283" width="445.28" height="38" fill="#888"/>
+<text x="798.28" y="309" text-anchor="start" font-size="16" fill="#222" font-weight="bold">96.8%</text>
+<text x="333" y="366" text-anchor="end" font-size="16" fill="#222">frozen VGG16 features</text>
+<rect x="345" y="341" width="454.94" height="38" fill="#B31B1B"/>
+<text x="807.94" y="367" text-anchor="start" font-size="16" fill="#222" font-weight="bold">98.9%</text>
+<line x1="498.17999999999995" y1="215" x2="498.17999999999995" y2="387" stroke="#333" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="504.17999999999995" y="407" text-anchor="start" font-size="15" fill="#333">chance: 33%</text>
+<line x1="345" y1="215" x2="345" y2="387" stroke="#333" stroke-width="2"/>
+<text x="450.0" y="437" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Table 2 (UHCS-600) of DeCost, Francis, Holm, arXiv:1702.01117</text>
+</svg>

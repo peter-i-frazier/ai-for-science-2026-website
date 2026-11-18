@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 430" width="900" height="430" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker></defs>
+<text x="225" y="32" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">Language model</text>
+<text x="675" y="32" text-anchor="middle" font-size="20" fill="#333" font-weight="bold">Image model</text>
+<line x1="450" y1="15" x2="450" y2="415" stroke="#ccc" stroke-width="1.5"/>
+<rect x="50" y="100" width="47" height="40" rx="0" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="73.5" y="127" text-anchor="middle" font-size="18" fill="#333">The</text>
+<rect x="103" y="100" width="47" height="40" rx="0" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="126.5" y="127" text-anchor="middle" font-size="18" fill="#333">cat</text>
+<rect x="156" y="100" width="47" height="40" rx="0" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="179.5" y="127" text-anchor="middle" font-size="18" fill="#333">sat</text>
+<rect x="209" y="100" width="36" height="40" rx="0" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="227.0" y="127" text-anchor="middle" font-size="18" fill="#333">on</text>
+<rect x="251" y="100" width="47" height="40" rx="0" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="274.5" y="127" text-anchor="middle" font-size="18" fill="#333">the</text>
+<rect x="304" y="100" width="54" height="40" rx="0" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
+<text x="331" y="128" text-anchor="middle" font-size="22" fill="#B31B1B" font-weight="bold">?</text>
+<rect x="605" y="50" width="28" height="28" rx="0" fill="rgb(210,210,210)" stroke="#555" stroke-width="1"/>
+<rect x="633" y="50" width="28" height="28" rx="0" fill="rgb(150,150,150)" stroke="#555" stroke-width="1"/>
+<rect x="661" y="50" width="28" height="28" rx="0" fill="rgb(180,180,180)" stroke="#555" stroke-width="1"/>
+<rect x="689" y="50" width="28" height="28" rx="0" fill="rgb(120,120,120)" stroke="#555" stroke-width="1"/>
+<rect x="717" y="50" width="28" height="28" rx="0" fill="rgb(200,200,200)" stroke="#555" stroke-width="1"/>
+<rect x="605" y="78" width="28" height="28" rx="0" fill="rgb(140,140,140)" stroke="#555" stroke-width="1"/>
+<rect x="633" y="78" width="28" height="28" rx="0" fill="rgb(190,190,190)" stroke="#555" stroke-width="1"/>
+<rect x="661" y="78" width="28" height="28" rx="0" fill="rgb(100,100,100)" stroke="#555" stroke-width="1"/>
+<rect x="689" y="78" width="28" height="28" rx="0" fill="rgb(170,170,170)" stroke="#555" stroke-width="1"/>
+<rect x="717" y="78" width="28" height="28" rx="0" fill="rgb(215,215,215)" stroke="#555" stroke-width="1"/>
+<rect x="605" y="106" width="28" height="28" rx="0" fill="rgb(195,195,195)" stroke="#555" stroke-width="1"/>
+<rect x="633" y="106" width="28" height="28" rx="0" fill="rgb(120,120,120)" stroke="#555" stroke-width="1"/>
+<rect x="661" y="106" width="28" height="28" rx="0" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
+<text x="675.0" y="127" text-anchor="middle" font-size="18" fill="#B31B1B" font-weight="bold">?</text>
+<rect x="689" y="106" width="28" height="28" rx="0" fill="rgb(185,185,185)" stroke="#555" stroke-width="1"/>
+<rect x="717" y="106" width="28" height="28" rx="0" fill="rgb(130,130,130)" stroke="#555" stroke-width="1"/>
+<rect x="605" y="134" width="28" height="28" rx="0" fill="rgb(110,110,110)" stroke="#555" stroke-width="1"/>
+<rect x="633" y="134" width="28" height="28" rx="0" fill="rgb(205,205,205)" stroke="#555" stroke-width="1"/>
+<rect x="661" y="134" width="28" height="28" rx="0" fill="rgb(175,175,175)" stroke="#555" stroke-width="1"/>
+<rect x="689" y="134" width="28" height="28" rx="0" fill="rgb(140,140,140)" stroke="#555" stroke-width="1"/>
+<rect x="717" y="134" width="28" height="28" rx="0" fill="rgb(190,190,190)" stroke="#555" stroke-width="1"/>
+<rect x="605" y="162" width="28" height="28" rx="0" fill="rgb(180,180,180)" stroke="#555" stroke-width="1"/>
+<rect x="633" y="162" width="28" height="28" rx="0" fill="rgb(135,135,135)" stroke="#555" stroke-width="1"/>
+<rect x="661" y="162" width="28" height="28" rx="0" fill="rgb(200,200,200)" stroke="#555" stroke-width="1"/>
+<rect x="689" y="162" width="28" height="28" rx="0" fill="rgb(115,115,115)" stroke="#555" stroke-width="1"/>
+<rect x="717" y="162" width="28" height="28" rx="0" fill="rgb(165,165,165)" stroke="#555" stroke-width="1"/>
+<text x="225" y="222" text-anchor="middle" font-size="16" fill="#555">hide the next word</text>
+<line x1="225" y1="232" x2="225" y2="256" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="150" y="260" width="150" height="44" rx="6" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<text x="225" y="289" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">network</text>
+<line x1="225" y1="308" x2="225" y2="336" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<text x="225" y="360" text-anchor="middle" font-size="16" fill="#333">guess: compare with the</text>
+<text x="225" y="380" text-anchor="middle" font-size="16" fill="#333">word that was hidden</text>
+<text x="225" y="404" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">the label is in the text</text>
+<text x="675" y="222" text-anchor="middle" font-size="16" fill="#555">hide a patch of the image</text>
+<line x1="675" y1="232" x2="675" y2="256" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="600" y="260" width="150" height="44" rx="6" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<text x="675" y="289" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">network</text>
+<line x1="675" y1="308" x2="675" y2="336" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<text x="675" y="360" text-anchor="middle" font-size="16" fill="#333">guess: compare with the</text>
+<text x="675" y="380" text-anchor="middle" font-size="16" fill="#333">patch that was hidden</text>
+<text x="675" y="404" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">the label is in the image</text>
+<text x="450.0" y="422" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; the example sentence and pixel values are invented</text>
+</svg>

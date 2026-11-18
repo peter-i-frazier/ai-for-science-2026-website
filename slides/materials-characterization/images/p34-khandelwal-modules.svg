@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 330" width="900" height="330" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="225" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Modules chosen for each benchmark</text>
+<text x="675" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">One module set for every benchmark</text>
+<rect x="20" y="55" width="125" height="38" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="82.5" y="79.0" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">module</text>
+<rect x="160" y="55" width="125" height="38" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="222.5" y="79.0" text-anchor="middle" font-size="14" fill="#333">unused</text>
+<rect x="300" y="55" width="125" height="38" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="362.5" y="79.0" text-anchor="middle" font-size="14" fill="#333">unused</text>
+<rect x="20" y="105" width="125" height="38" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="82.5" y="129.0" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">module</text>
+<rect x="160" y="105" width="125" height="38" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="222.5" y="129.0" text-anchor="middle" font-size="14" fill="#333">unused</text>
+<rect x="300" y="105" width="125" height="38" rx="8" fill="#fff" stroke="#333" stroke-width="2"/><text x="362.5" y="129.0" text-anchor="middle" font-size="14" fill="#333">unused</text>
+<line x1="220" y1="165" x2="220" y2="205" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="90" y="205" width="260" height="80" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="220.0" y="229.0" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">+6.2%</text><text x="220.0" y="250.0" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">ViperGPT's gain over</text><text x="220.0" y="271.0" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">BLIP-2 on GQA</text>
+<rect x="470" y="55" width="125" height="38" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="532.5" y="79.0" text-anchor="middle" font-size="14" fill="#333">module</text>
+<rect x="610" y="55" width="125" height="38" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="672.5" y="79.0" text-anchor="middle" font-size="14" fill="#333">module</text>
+<rect x="750" y="55" width="125" height="38" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="812.5" y="79.0" text-anchor="middle" font-size="14" fill="#333">module</text>
+<rect x="470" y="105" width="125" height="38" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="532.5" y="129.0" text-anchor="middle" font-size="14" fill="#333">module</text>
+<rect x="610" y="105" width="125" height="38" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="672.5" y="129.0" text-anchor="middle" font-size="14" fill="#333">module</text>
+<rect x="750" y="105" width="125" height="38" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="812.5" y="129.0" text-anchor="middle" font-size="14" fill="#333">module</text>
+<line x1="670" y1="165" x2="670" y2="205" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="540" y="205" width="260" height="80" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="670.0" y="229.0" text-anchor="middle" font-size="16" fill="#333">+2.1%</text><text x="670.0" y="250.0" text-anchor="middle" font-size="16" fill="#333">ViperGPT's gain over</text><text x="670.0" y="271.0" text-anchor="middle" font-size="16" fill="#333">BLIP-2 on GQA</text>
+<line x1="450" y1="50" x2="450" y2="290" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="450.0" y="322" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Khandelwal, Pavlick, Sun, arXiv:2311.06411; module chips are generic</text>
+</svg>

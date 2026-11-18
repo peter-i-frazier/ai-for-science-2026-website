@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 388" width="800" height="388" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<rect x="40" y="40" width="70" height="70" rx="0" fill="#e9eef2" stroke="#777" stroke-width="1"/>
+<text x="75.0" y="83.0" text-anchor="middle" font-size="24" fill="#333">1</text>
+<rect x="110" y="40" width="70" height="70" rx="0" fill="#e9eef2" stroke="#777" stroke-width="1"/>
+<text x="145.0" y="83.0" text-anchor="middle" font-size="24" fill="#333">3</text>
+<rect x="180" y="40" width="70" height="70" rx="0" fill="#f3e3e3" stroke="#777" stroke-width="1"/>
+<text x="215.0" y="83.0" text-anchor="middle" font-size="24" fill="#333">2</text>
+<rect x="250" y="40" width="70" height="70" rx="0" fill="#f3e3e3" stroke="#777" stroke-width="1"/>
+<text x="285.0" y="83.0" text-anchor="middle" font-size="24" fill="#333">0</text>
+<rect x="40" y="110" width="70" height="70" rx="0" fill="#e9eef2" stroke="#777" stroke-width="1"/>
+<text x="75.0" y="153.0" text-anchor="middle" font-size="24" fill="#333">4</text>
+<rect x="110" y="110" width="70" height="70" rx="0" fill="#e9eef2" stroke="#777" stroke-width="1"/>
+<text x="145.0" y="153.0" text-anchor="middle" font-size="24" fill="#333">2</text>
+<rect x="180" y="110" width="70" height="70" rx="0" fill="#f3e3e3" stroke="#777" stroke-width="1"/>
+<text x="215.0" y="153.0" text-anchor="middle" font-size="24" fill="#333">5</text>
+<rect x="250" y="110" width="70" height="70" rx="0" fill="#f3e3e3" stroke="#777" stroke-width="1"/>
+<text x="285.0" y="153.0" text-anchor="middle" font-size="24" fill="#333">1</text>
+<rect x="40" y="180" width="70" height="70" rx="0" fill="#e3f1e3" stroke="#777" stroke-width="1"/>
+<text x="75.0" y="223.0" text-anchor="middle" font-size="24" fill="#333">0</text>
+<rect x="110" y="180" width="70" height="70" rx="0" fill="#e3f1e3" stroke="#777" stroke-width="1"/>
+<text x="145.0" y="223.0" text-anchor="middle" font-size="24" fill="#333">1</text>
+<rect x="180" y="180" width="70" height="70" rx="0" fill="#f5efd9" stroke="#777" stroke-width="1"/>
+<text x="215.0" y="223.0" text-anchor="middle" font-size="24" fill="#333">3</text>
+<rect x="250" y="180" width="70" height="70" rx="0" fill="#f5efd9" stroke="#777" stroke-width="1"/>
+<text x="285.0" y="223.0" text-anchor="middle" font-size="24" fill="#333">2</text>
+<rect x="40" y="250" width="70" height="70" rx="0" fill="#e3f1e3" stroke="#777" stroke-width="1"/>
+<text x="75.0" y="293.0" text-anchor="middle" font-size="24" fill="#333">2</text>
+<rect x="110" y="250" width="70" height="70" rx="0" fill="#e3f1e3" stroke="#777" stroke-width="1"/>
+<text x="145.0" y="293.0" text-anchor="middle" font-size="24" fill="#333">6</text>
+<rect x="180" y="250" width="70" height="70" rx="0" fill="#f5efd9" stroke="#777" stroke-width="1"/>
+<text x="215.0" y="293.0" text-anchor="middle" font-size="24" fill="#333">1</text>
+<rect x="250" y="250" width="70" height="70" rx="0" fill="#f5efd9" stroke="#777" stroke-width="1"/>
+<text x="285.0" y="293.0" text-anchor="middle" font-size="24" fill="#333">4</text>
+<rect x="40" y="40" width="140" height="140" rx="0" fill="none" stroke="#B31B1B" stroke-width="3.5"/>
+<rect x="180" y="40" width="140" height="140" rx="0" fill="none" stroke="#B31B1B" stroke-width="3.5"/>
+<rect x="40" y="180" width="140" height="140" rx="0" fill="none" stroke="#B31B1B" stroke-width="3.5"/>
+<rect x="180" y="180" width="140" height="140" rx="0" fill="none" stroke="#B31B1B" stroke-width="3.5"/>
+<text x="180" y="350" text-anchor="middle" font-size="17" fill="#333">a 4 x 4 feature map</text>
+<line x1="335" y1="180" x2="520" y2="180" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="430" y="136" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">keep the largest</text>
+<text x="430" y="156" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">number in each</text>
+<text x="430" y="176" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">2 x 2 block</text>
+<rect x="530" y="110" width="70" height="70" rx="0" fill="#e9eef2" stroke="#B31B1B" stroke-width="3.5"/>
+<text x="565.0" y="153.0" text-anchor="middle" font-size="24" fill="#333" font-weight="bold">4</text>
+<rect x="600" y="110" width="70" height="70" rx="0" fill="#f3e3e3" stroke="#B31B1B" stroke-width="3.5"/>
+<text x="635.0" y="153.0" text-anchor="middle" font-size="24" fill="#333" font-weight="bold">5</text>
+<rect x="530" y="180" width="70" height="70" rx="0" fill="#e3f1e3" stroke="#B31B1B" stroke-width="3.5"/>
+<text x="565.0" y="223.0" text-anchor="middle" font-size="24" fill="#333" font-weight="bold">6</text>
+<rect x="600" y="180" width="70" height="70" rx="0" fill="#f5efd9" stroke="#B31B1B" stroke-width="3.5"/>
+<text x="635.0" y="223.0" text-anchor="middle" font-size="24" fill="#333" font-weight="bold">4</text>
+<text x="600" y="280" text-anchor="middle" font-size="17" fill="#333">a 2 x 2 map: a quarter as many numbers</text>
+<text x="400.0" y="380" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; the numbers are invented</text>
+</svg>

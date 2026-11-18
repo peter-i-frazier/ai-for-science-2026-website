@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 315" width="760" height="315" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<rect x="60" y="30" width="110" height="46" rx="6" fill="#e9eef2" stroke="#333" stroke-width="2.5"/>
+<text x="115" y="58" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">Electron gun</text>
+<line x1="115" y1="80" x2="115" y2="200" stroke="#B31B1B" stroke-width="3" marker-end="url(#a)"/>
+<text x="130" y="135" text-anchor="start" font-size="15" fill="#B31B1B" font-weight="bold">electron beam</text>
+<rect x="20" y="215" width="190" height="40" fill="#b9b9b9" stroke="#333" stroke-width="2"/>
+<text x="115" y="241" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">sample surface</text>
+<line x1="115" y1="215" x2="300" y2="155" stroke="#555" stroke-width="2.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<line x1="115" y1="215" x2="300" y2="210" stroke="#555" stroke-width="2.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<line x1="115" y1="215" x2="300" y2="100" stroke="#555" stroke-width="2.4" stroke-dasharray="6 4" marker-end="url(#a)"/>
+<rect x="305" y="133" width="20" height="44" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="335" y="152" text-anchor="start" font-size="16" fill="#333" font-weight="bold">Secondary electrons</text>
+<text x="335" y="172" text-anchor="start" font-size="14" fill="#555">from the top few nanometres: surface shape</text>
+<rect x="305" y="188" width="20" height="44" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="335" y="207" text-anchor="start" font-size="16" fill="#333" font-weight="bold">Backscattered electrons</text>
+<text x="335" y="227" text-anchor="start" font-size="14" fill="#555">bounce off atoms: heavier atoms look brighter</text>
+<rect x="305" y="78" width="20" height="44" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="335" y="97" text-anchor="start" font-size="16" fill="#333" font-weight="bold">X-rays</text>
+<text x="335" y="117" text-anchor="start" font-size="14" fill="#555">carry the element's identity</text>
+<text x="380" y="292" text-anchor="middle" font-size="14" fill="#555">each signal needs its own detector; the beam visits one spot at a time, and each spot's signal becomes one pixel</text>
+<text x="380.0" y="307" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; simplified from standard SEM descriptions</text>
+</svg>

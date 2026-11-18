@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+  </defs>
+  <!-- input -->
+  <rect x="20" y="40" width="190" height="90" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="115" y="70" text-anchor="middle" font-size="17" font-weight="bold" fill="#333">Image + question</text>
+  <text x="115" y="96" text-anchor="middle" font-size="14" fill="#333">"How many grains are</text>
+  <text x="115" y="114" text-anchor="middle" font-size="14" fill="#333">smaller than 50 nm?"</text>
+  <line x1="215" y1="85" x2="265" y2="85" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- code LLM -->
+  <rect x="270" y="40" width="190" height="90" rx="8" fill="#B31B1B"/>
+  <text x="365" y="78" text-anchor="middle" font-size="17" font-weight="bold" fill="#fff">Code LLM</text>
+  <text x="365" y="102" text-anchor="middle" font-size="14" fill="#fff">sees only the API</text>
+  <text x="365" y="120" text-anchor="middle" font-size="14" fill="#fff">(not the image)</text>
+  <line x1="465" y1="85" x2="515" y2="85" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- program -->
+  <rect x="520" y="20" width="360" height="130" rx="8" fill="#f4f4f4" stroke="#333" stroke-width="2"/>
+  <g font-family="Menlo, Courier, monospace" font-size="14" fill="#222">
+    <text x="535" y="48">def run(image):</text>
+    <text x="555" y="72">grains = find(image, "grain")</text>
+    <text x="555" y="96">areas = [measure(g) for g in grains]</text>
+    <text x="555" y="120">return sum(a &lt; 50 for a in areas)</text>
+  </g>
+  <!-- execute -->
+  <line x1="700" y1="155" x2="700" y2="205" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="712" y="186" font-size="14" fill="#333">run it</text>
+  <!-- vision modules -->
+  <rect x="520" y="210" width="360" height="80" rx="8" fill="#fff" stroke="#333" stroke-width="2"/>
+  <text x="700" y="238" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Vision modules the program calls</text>
+  <text x="700" y="262" text-anchor="middle" font-size="14" fill="#333">detector · segmenter · depth · VLM question-answering</text>
+  <!-- answer -->
+  <line x1="515" y1="250" x2="465" y2="250" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <rect x="270" y="210" width="190" height="80" rx="8" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
+  <text x="365" y="245" text-anchor="middle" font-size="17" font-weight="bold" fill="#B31B1B">Answer</text>
+  <text x="365" y="268" text-anchor="middle" font-size="14" fill="#333">plus a readable program</text>
+  <text x="450" y="328" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; pipeline as described in ViperGPT and VisProg</text>
+</svg>

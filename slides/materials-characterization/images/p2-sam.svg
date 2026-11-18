@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 365" width="900" height="365" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker></defs>
+<clipPath id="sa0"><rect x="20" y="40" width="120" height="120"/></clipPath>
+<g clip-path="url(#sa0)">
+<g transform="translate(80.0 100.0)  translate(-60.0 -60.0)">
+<polygon points="100.2,94.0 61.3,106.4 40.0,85.9 88.8,74.6" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="120.0,99.4 120.0,120.0 86.1,120.0 104.3,95.5" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="86.1,120.0 60.9,120.0 61.3,106.4 100.2,94.0 104.3,95.5" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,80.2 0.0,41.0 27.3,40.2 39.0,51.7 26.5,80.7 25.5,81.0" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="120.0,45.4 120.0,99.4 104.3,95.5 100.2,94.0 88.8,74.6 98.5,49.2" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="94.3,0.0 120.0,0.0 120.0,44.9 108.9,29.1" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="77.3,29.7 87.2,46.3 39.0,51.7 27.3,40.2 32.3,2.5" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="98.5,49.2 88.8,74.6 40.0,85.9 26.5,80.7 39.0,51.7 87.2,46.3" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,0.0 31.6,0.0 32.3,2.5 27.3,40.2 0.0,41.0" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="60.9,120.0 12.7,120.0 25.5,81.0 26.5,80.7 40.0,85.9 61.3,106.4" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="85.4,11.8 108.9,29.1 120.0,44.9 120.0,45.4 98.5,49.2 87.2,46.3 77.3,29.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="87.1,0.0 94.3,0.0 108.9,29.1 85.4,11.8" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="31.6,0.0 87.1,0.0 85.4,11.8 77.3,29.7 32.3,2.5" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="12.7,120.0 0.0,120.0 0.0,80.2 25.5,81.0" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+</g></g>
+<rect x="20" y="40" width="120" height="120" rx="0" fill="none" stroke="#333" stroke-width="2"/>
+<circle cx="75" cy="105" r="8" fill="#B31B1B" stroke="#fff" stroke-width="2"/>
+<text x="80" y="188" text-anchor="middle" font-size="16" fill="#333">image</text>
+<line x1="146" y1="100" x2="190" y2="100" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="195" y="40" width="190" height="120" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.5"/>
+<text x="290" y="72" text-anchor="middle" font-size="19" fill="#B31B1B" font-weight="bold">Image encoder</text>
+<text x="290" y="98" text-anchor="middle" font-size="15" fill="#333">a ViT pretrained as</text>
+<text x="290" y="117" text-anchor="middle" font-size="15" fill="#333">a masked autoencoder</text>
+<text x="290" y="146" text-anchor="middle" font-size="15" fill="#555">runs once per image</text>
+<line x1="391" y1="100" x2="440" y2="100" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="446" y="66" width="17" height="17" rx="0" fill="rgb(150,150,150)" stroke="#777" stroke-width="1"/>
+<rect x="463" y="66" width="17" height="17" rx="0" fill="rgb(204,204,204)" stroke="#777" stroke-width="1"/>
+<rect x="480" y="66" width="17" height="17" rx="0" fill="rgb(168,168,168)" stroke="#777" stroke-width="1"/>
+<rect x="497" y="66" width="17" height="17" rx="0" fill="rgb(222,222,222)" stroke="#777" stroke-width="1"/>
+<rect x="446" y="83" width="17" height="17" rx="0" fill="rgb(150,150,150)" stroke="#777" stroke-width="1"/>
+<rect x="463" y="83" width="17" height="17" rx="0" fill="rgb(204,204,204)" stroke="#777" stroke-width="1"/>
+<rect x="480" y="83" width="17" height="17" rx="0" fill="rgb(168,168,168)" stroke="#777" stroke-width="1"/>
+<rect x="497" y="83" width="17" height="17" rx="0" fill="rgb(222,222,222)" stroke="#777" stroke-width="1"/>
+<rect x="446" y="100" width="17" height="17" rx="0" fill="rgb(150,150,150)" stroke="#777" stroke-width="1"/>
+<rect x="463" y="100" width="17" height="17" rx="0" fill="rgb(204,204,204)" stroke="#777" stroke-width="1"/>
+<rect x="480" y="100" width="17" height="17" rx="0" fill="rgb(168,168,168)" stroke="#777" stroke-width="1"/>
+<rect x="497" y="100" width="17" height="17" rx="0" fill="rgb(222,222,222)" stroke="#777" stroke-width="1"/>
+<rect x="446" y="117" width="17" height="17" rx="0" fill="rgb(150,150,150)" stroke="#777" stroke-width="1"/>
+<rect x="463" y="117" width="17" height="17" rx="0" fill="rgb(204,204,204)" stroke="#777" stroke-width="1"/>
+<rect x="480" y="117" width="17" height="17" rx="0" fill="rgb(168,168,168)" stroke="#777" stroke-width="1"/>
+<rect x="497" y="117" width="17" height="17" rx="0" fill="rgb(222,222,222)" stroke="#777" stroke-width="1"/>
+<text x="480" y="158" text-anchor="middle" font-size="14" fill="#555">image</text>
+<text x="480" y="175" text-anchor="middle" font-size="14" fill="#555">embedding</text>
+<text x="80" y="268" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">prompt:</text>
+<circle cx="75" cy="298" r="9" fill="#B31B1B"/>
+<text x="80" y="335" text-anchor="middle" font-size="16" fill="#333">a click</text>
+<line x1="146" y1="298" x2="190" y2="298" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<rect x="195" y="255" width="190" height="86" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.5"/>
+<text x="290" y="288" text-anchor="middle" font-size="19" fill="#B31B1B" font-weight="bold">Prompt encoder</text>
+<text x="290" y="312" text-anchor="middle" font-size="15" fill="#333">turns the click into</text>
+<text x="290" y="331" text-anchor="middle" font-size="15" fill="#333">vectors</text>
+<rect x="530" y="140" width="200" height="130" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.5"/>
+<text x="630" y="176" text-anchor="middle" font-size="19" fill="#B31B1B" font-weight="bold">Mask decoder</text>
+<text x="630" y="202" text-anchor="middle" font-size="14" fill="#333">combines both;</text>
+<text x="630" y="220" text-anchor="middle" font-size="14" fill="#333">about 50 ms on a CPU</text>
+<text x="630" y="238" text-anchor="middle" font-size="14" fill="#333">once the image is encoded</text>
+<line x1="512" y1="100" x2="528" y2="170" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<line x1="391" y1="298" x2="528" y2="238" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<line x1="736" y1="205" x2="758" y2="205" stroke="#555" stroke-width="2.6" marker-end="url(#a)"/>
+<clipPath id="sb0"><rect x="765" y="50" width="70" height="70"/></clipPath>
+<g clip-path="url(#sb0)">
+<g transform="translate(800.0 85.0)  translate(-35.0 -35.0)">
+<polygon points="58.5,54.8 35.7,62.0 23.3,50.1 51.8,43.5" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="70.0,58.0 70.0,70.0 50.2,70.0 60.8,55.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="50.2,70.0 35.5,70.0 35.7,62.0 58.5,54.8 60.8,55.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,51.3 0.0,23.9 15.9,23.4 22.7,30.1 15.4,47.1" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="70.0,26.5 70.0,58.0 60.8,55.7 58.5,54.8 51.8,43.5 58.1,26.9" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="40.0,0.0 70.0,0.0 70.0,26.5 58.1,26.9 56.6,26.4" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="19.0,0.0 40.0,0.0 56.6,26.4 22.7,30.1 15.9,23.4" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="58.1,26.9 51.8,43.5 23.3,50.1 15.4,47.1 22.7,30.1 56.6,26.4" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,0.0 19.0,0.0 15.9,23.4 0.0,23.9" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="35.5,70.0 0.0,70.0 0.0,51.3 15.4,47.1 23.3,50.1 35.7,62.0" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+</g></g>
+<rect x="765" y="50" width="70" height="70" rx="0" fill="none" stroke="#333" stroke-width="2"/>
+<circle cx="800" cy="85" r="28" fill="#B31B1B" fill-opacity="0.5" stroke="#B31B1B" stroke-width="2"/>
+<text x="800" y="140" text-anchor="middle" font-size="14" fill="#333">whole</text>
+<clipPath id="sb1"><rect x="765" y="150" width="70" height="70"/></clipPath>
+<g clip-path="url(#sb1)">
+<g transform="translate(800.0 185.0)  translate(-35.0 -35.0)">
+<polygon points="58.5,54.8 35.7,62.0 23.3,50.1 51.8,43.5" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="70.0,58.0 70.0,70.0 50.2,70.0 60.8,55.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="50.2,70.0 35.5,70.0 35.7,62.0 58.5,54.8 60.8,55.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,51.3 0.0,23.9 15.9,23.4 22.7,30.1 15.4,47.1" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="70.0,26.5 70.0,58.0 60.8,55.7 58.5,54.8 51.8,43.5 58.1,26.9" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="40.0,0.0 70.0,0.0 70.0,26.5 58.1,26.9 56.6,26.4" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="19.0,0.0 40.0,0.0 56.6,26.4 22.7,30.1 15.9,23.4" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="58.1,26.9 51.8,43.5 23.3,50.1 15.4,47.1 22.7,30.1 56.6,26.4" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,0.0 19.0,0.0 15.9,23.4 0.0,23.9" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="35.5,70.0 0.0,70.0 0.0,51.3 15.4,47.1 23.3,50.1 35.7,62.0" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+</g></g>
+<rect x="765" y="150" width="70" height="70" rx="0" fill="none" stroke="#333" stroke-width="2"/>
+<circle cx="800" cy="185" r="21" fill="#B31B1B" fill-opacity="0.5" stroke="#B31B1B" stroke-width="2"/>
+<text x="800" y="240" text-anchor="middle" font-size="14" fill="#333">part</text>
+<clipPath id="sb2"><rect x="765" y="250" width="70" height="70"/></clipPath>
+<g clip-path="url(#sb2)">
+<g transform="translate(800.0 285.0)  translate(-35.0 -35.0)">
+<polygon points="58.5,54.8 35.7,62.0 23.3,50.1 51.8,43.5" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="70.0,58.0 70.0,70.0 50.2,70.0 60.8,55.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="50.2,70.0 35.5,70.0 35.7,62.0 58.5,54.8 60.8,55.7" fill="rgb(165,165,165)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,51.3 0.0,23.9 15.9,23.4 22.7,30.1 15.4,47.1" fill="rgb(220,220,220)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="70.0,26.5 70.0,58.0 60.8,55.7 58.5,54.8 51.8,43.5 58.1,26.9" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="40.0,0.0 70.0,0.0 70.0,26.5 58.1,26.9 56.6,26.4" fill="rgb(195,195,195)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="19.0,0.0 40.0,0.0 56.6,26.4 22.7,30.1 15.9,23.4" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="58.1,26.9 51.8,43.5 23.3,50.1 15.4,47.1 22.7,30.1 56.6,26.4" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="0.0,0.0 19.0,0.0 15.9,23.4 0.0,23.9" fill="rgb(135,135,135)" stroke="rgb(40,40,40)" stroke-width="1"/>
+<polygon points="35.5,70.0 0.0,70.0 0.0,51.3 15.4,47.1 23.3,50.1 35.7,62.0" fill="rgb(105,105,105)" stroke="rgb(40,40,40)" stroke-width="1"/>
+</g></g>
+<rect x="765" y="250" width="70" height="70" rx="0" fill="none" stroke="#333" stroke-width="2"/>
+<circle cx="800" cy="285" r="13" fill="#B31B1B" fill-opacity="0.5" stroke="#B31B1B" stroke-width="2"/>
+<text x="800" y="340" text-anchor="middle" font-size="14" fill="#333">subpart</text>
+<text x="800" y="28" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">masks (3 per click)</text>
+<text x="450.0" y="357" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; components from Kirillov et al. (arXiv:2304.02643), Sec. 3; images are synthetic</text>
+</svg>

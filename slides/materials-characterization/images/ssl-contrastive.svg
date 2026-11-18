@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 340" width="900" height="340" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+    <marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker>
+  </defs>
+  <!-- source image A -->
+  <rect x="20" y="105" width="90" height="90" fill="#d9d9d9" stroke="#333" stroke-width="2"/>
+  <g fill="#9a9a9a"><ellipse cx="50" cy="135" rx="14" ry="11"/><ellipse cx="85" cy="125" rx="11" ry="14"/><ellipse cx="65" cy="170" rx="15" ry="11"/></g>
+  <text x="65" y="215" text-anchor="middle" font-size="15" fill="#333">image A</text>
+  <!-- two views -->
+  <line x1="115" y1="135" x2="165" y2="80" stroke="#555" stroke-width="2.2" marker-end="url(#a)"/>
+  <line x1="115" y1="165" x2="165" y2="220" stroke="#555" stroke-width="2.2" marker-end="url(#a)"/>
+  <rect x="170" y="45" width="80" height="80" fill="#d9d9d9" stroke="#333" stroke-width="2"/>
+  <g fill="#9a9a9a"><ellipse cx="200" cy="72" rx="20" ry="16"/><ellipse cx="236" cy="100" rx="12" ry="14"/></g>
+  <text x="210" y="142" text-anchor="middle" font-size="13" fill="#333">view 1: crop</text>
+  <rect x="170" y="180" width="80" height="80" fill="#a8a8a8" stroke="#333" stroke-width="2"/>
+  <g fill="#6f6f6f"><ellipse cx="195" cy="205" rx="12" ry="9"/><ellipse cx="226" cy="198" rx="9" ry="12"/><ellipse cx="205" cy="240" rx="13" ry="9"/></g>
+  <text x="210" y="278" text-anchor="middle" font-size="13" fill="#333">view 2: flip, darker</text>
+  <!-- encoder -->
+  <line x1="255" y1="85" x2="320" y2="85" stroke="#555" stroke-width="2.2" marker-end="url(#a)"/>
+  <line x1="255" y1="220" x2="320" y2="220" stroke="#555" stroke-width="2.2" marker-end="url(#a)"/>
+  <rect x="325" y="55" width="120" height="60" rx="8" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <text x="385" y="92" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Encoder</text>
+  <rect x="325" y="190" width="120" height="60" rx="8" fill="#fff" stroke="#333" stroke-width="2.5"/>
+  <text x="385" y="227" text-anchor="middle" font-size="16" font-weight="bold" fill="#333">Encoder</text>
+  <text x="385" y="150" text-anchor="middle" font-size="12" fill="#777">same weights</text>
+  <text x="385" y="166" text-anchor="middle" font-size="12" fill="#777">in both</text>
+  <!-- embeddings -->
+  <line x1="450" y1="85" x2="520" y2="85" stroke="#555" stroke-width="2.2" marker-end="url(#a)"/>
+  <line x1="450" y1="220" x2="520" y2="220" stroke="#555" stroke-width="2.2" marker-end="url(#a)"/>
+  <rect x="525" y="62" width="80" height="46" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
+  <text x="565" y="92" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">z1</text>
+  <rect x="525" y="197" width="80" height="46" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
+  <text x="565" y="227" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">z2</text>
+  <!-- pull together -->
+  <line x1="565" y1="114" x2="565" y2="190" stroke="#B31B1B" stroke-width="3" marker-end="url(#g)"/>
+  <line x1="565" y1="190" x2="565" y2="114" stroke="#B31B1B" stroke-width="3" marker-end="url(#g)"/>
+  <text x="580" y="156" font-size="15" fill="#B31B1B" font-weight="bold">pull together</text>
+  <!-- other image -->
+  <rect x="740" y="110" width="80" height="80" fill="#c4c4c4" stroke="#333" stroke-width="2"/>
+  <g fill="#8c8c8c"><ellipse cx="765" cy="135" rx="14" ry="10"/><ellipse cx="800" cy="165" rx="12" ry="14"/></g>
+  <text x="780" y="210" text-anchor="middle" font-size="15" fill="#333">image B (any other)</text>
+  <line x1="735" y1="150" x2="640" y2="95" stroke="#555" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
+  <text x="690" y="318" text-anchor="middle" font-size="15" fill="#555" font-weight="bold">push apart: z1 and z2 from the embedding of any view of B</text>
+  <text x="450" y="336" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; recipe from Chen et al., SimCLR, ICML 2020, arXiv:2002.05709</text>
+</svg>

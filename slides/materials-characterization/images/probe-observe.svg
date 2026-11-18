@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 245" width="900" height="245" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="450" y="28" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Shoot a probe at the material, record what comes out</text>
+<rect x="20" y="70" width="190" height="110" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="115" y="100" text-anchor="middle" font-size="17" fill="#333">visible light</text>
+<text x="115" y="126" text-anchor="middle" font-size="17" fill="#333">electrons</text>
+<text x="115" y="152" text-anchor="middle" font-size="17" fill="#333">X-rays</text>
+<text x="115" y="178" text-anchor="middle" font-size="17" fill="#333">ions</text>
+<text x="115" y="205" text-anchor="middle" font-size="14" fill="#555">the probe</text>
+<line x1="215" y1="125" x2="330" y2="125" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="335" y="90" width="200" height="70" fill="#b9b9b9" stroke="#333" stroke-width="2"/>
+<text x="435" y="132" text-anchor="middle" font-size="19" fill="#333" font-weight="bold">material</text>
+<text x="435" y="205" text-anchor="middle" font-size="14" fill="#555">the probe is absorbed, scattered or bent</text>
+<line x1="540" y1="125" x2="655" y2="125" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="660" y="70" width="220" height="110" fill="#fff" stroke="#333" stroke-width="2"/>
+<text x="770" y="105" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">an image</text>
+<text x="770" y="133" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">a diffraction pattern</text>
+<text x="770" y="161" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">a spectrum</text>
+<text x="770" y="205" text-anchor="middle" font-size="14" fill="#555">what the detector records</text>
+<text x="450.0" y="237" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course</text>
+</svg>

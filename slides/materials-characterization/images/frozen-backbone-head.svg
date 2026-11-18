@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" width="900" height="250" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker>
+  </defs>
+  <rect x="20" y="70" width="110" height="100" fill="#d9d9d9" stroke="#333" stroke-width="2"/>
+  <g fill="#9a9a9a"><ellipse cx="55" cy="100" rx="16" ry="12"/><ellipse cx="98" cy="95" rx="12" ry="16"/><ellipse cx="75" cy="145" rx="17" ry="12"/></g>
+  <text x="75" y="196" text-anchor="middle" font-size="16" fill="#333">your micrograph</text>
+  <line x1="135" y1="120" x2="190" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- frozen backbone -->
+  <rect x="195" y="55" width="210" height="130" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2.5"/>
+  <text x="300" y="100" text-anchor="middle" font-size="20" font-weight="bold" fill="#333">Pretrained backbone</text>
+  <text x="300" y="126" text-anchor="middle" font-size="16" fill="#333">weights frozen</text>
+  <text x="300" y="148" text-anchor="middle" font-size="16" fill="#333">(never updated)</text>
+  <line x1="410" y1="120" x2="455" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- vector -->
+  <g stroke="#333" stroke-width="1.5" fill="#fff"><rect x="460" y="95" width="30" height="50"/><rect x="490" y="95" width="30" height="50"/><rect x="520" y="95" width="30" height="50"/></g>
+  <text x="505" y="172" text-anchor="middle" font-size="15" fill="#333">feature vector</text>
+  <line x1="555" y1="120" x2="600" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <!-- head -->
+  <rect x="605" y="70" width="140" height="100" rx="8" fill="#B31B1B"/>
+  <text x="675" y="110" text-anchor="middle" font-size="19" font-weight="bold" fill="#fff">Small head</text>
+  <text x="675" y="134" text-anchor="middle" font-size="15" fill="#fff">trained on</text>
+  <text x="675" y="153" text-anchor="middle" font-size="15" fill="#fff">your labels</text>
+  <line x1="750" y1="120" x2="790" y2="120" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
+  <text x="798" y="116" font-size="17" font-weight="bold" fill="#B31B1B">label</text>
+  <text x="798" y="136" font-size="17" font-weight="bold" fill="#B31B1B">or mask</text>
+  <text x="450" y="238" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; only the red box is trained</text>
+</svg>

@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 380" width="900" height="380" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker><marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#B31B1B"/></marker></defs>
+<text x="75" y="30" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">2D particle images</text>
+<rect x="20" y="45" width="38" height="38" rx="3" fill="#888" stroke="#333" stroke-width="1.5"/>
+<circle cx="39" cy="64" r="8" fill="#ccc"/>
+<rect x="20" y="87" width="38" height="38" rx="3" fill="#888" stroke="#333" stroke-width="1.5"/>
+<circle cx="39" cy="106" r="10" fill="#ccc"/>
+<rect x="62" y="45" width="38" height="38" rx="3" fill="#888" stroke="#333" stroke-width="1.5"/>
+<circle cx="81" cy="64" r="10" fill="#ccc"/>
+<rect x="62" y="87" width="38" height="38" rx="3" fill="#888" stroke="#333" stroke-width="1.5"/>
+<circle cx="81" cy="106" r="12" fill="#ccc"/>
+<rect x="104" y="45" width="38" height="38" rx="3" fill="#888" stroke="#333" stroke-width="1.5"/>
+<circle cx="123" cy="64" r="12" fill="#ccc"/>
+<rect x="104" y="87" width="38" height="38" rx="3" fill="#888" stroke="#333" stroke-width="1.5"/>
+<circle cx="123" cy="106" r="8" fill="#ccc"/>
+<text x="75" y="150" text-anchor="middle" font-size="14" fill="#777">(noisy, unlabeled)</text>
+<line x1="150" y1="85" x2="200" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<rect x="200" y="50" width="130" height="70" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="265.0" y="80.6" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">Encoder</text>
+<text x="265.0" y="100.6" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">(neural net)</text>
+<line x1="330" y1="85" x2="370" y2="85" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="485" y="30" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">latent space (low-dimensional)</text>
+<rect x="375" y="45" width="220" height="190" rx="4" fill="#fff" stroke="#333" stroke-width="2"/>
+<circle cx="395.0" cy="185.0" r="3.5" fill="#667"/>
+<circle cx="398.1" cy="181.4" r="3.5" fill="#667"/>
+<circle cx="401.1" cy="177.8" r="3.5" fill="#667"/>
+<circle cx="404.2" cy="163.3" r="3.5" fill="#667"/>
+<circle cx="407.2" cy="159.9" r="3.5" fill="#667"/>
+<circle cx="410.3" cy="156.7" r="3.5" fill="#667"/>
+<circle cx="413.3" cy="142.7" r="3.5" fill="#667"/>
+<circle cx="416.4" cy="139.9" r="3.5" fill="#667"/>
+<circle cx="419.4" cy="137.4" r="3.5" fill="#667"/>
+<circle cx="422.5" cy="124.1" r="3.5" fill="#667"/>
+<circle cx="425.5" cy="122.3" r="3.5" fill="#667"/>
+<circle cx="428.6" cy="109.7" r="3.5" fill="#667"/>
+<circle cx="431.6" cy="108.6" r="3.5" fill="#667"/>
+<circle cx="434.7" cy="107.8" r="3.5" fill="#667"/>
+<circle cx="437.7" cy="96.4" r="3.5" fill="#667"/>
+<circle cx="440.8" cy="96.5" r="3.5" fill="#667"/>
+<circle cx="443.8" cy="97.0" r="3.5" fill="#667"/>
+<circle cx="446.9" cy="86.9" r="3.5" fill="#667"/>
+<circle cx="449.9" cy="88.3" r="3.5" fill="#667"/>
+<circle cx="453.0" cy="90.1" r="3.5" fill="#667"/>
+<circle cx="456.0" cy="81.3" r="3.5" fill="#667"/>
+<circle cx="459.1" cy="84.0" r="3.5" fill="#667"/>
+<circle cx="462.1" cy="76.1" r="3.5" fill="#667"/>
+<circle cx="465.2" cy="79.5" r="3.5" fill="#667"/>
+<circle cx="468.2" cy="83.3" r="3.5" fill="#667"/>
+<circle cx="471.3" cy="76.5" r="3.5" fill="#667"/>
+<circle cx="474.3" cy="81.1" r="3.5" fill="#667"/>
+<circle cx="477.4" cy="85.9" r="3.5" fill="#667"/>
+<circle cx="480.4" cy="80.0" r="3.5" fill="#667"/>
+<circle cx="483.5" cy="85.5" r="3.5" fill="#667"/>
+<circle cx="486.5" cy="91.1" r="3.5" fill="#667"/>
+<circle cx="489.6" cy="86.0" r="3.5" fill="#667"/>
+<circle cx="492.6" cy="92.1" r="3.5" fill="#667"/>
+<circle cx="495.7" cy="87.4" r="3.5" fill="#667"/>
+<circle cx="498.7" cy="93.8" r="3.5" fill="#667"/>
+<circle cx="501.8" cy="100.4" r="3.5" fill="#667"/>
+<circle cx="504.8" cy="96.1" r="3.5" fill="#667"/>
+<circle cx="507.9" cy="102.9" r="3.5" fill="#667"/>
+<circle cx="510.9" cy="109.8" r="3.5" fill="#667"/>
+<circle cx="514.0" cy="105.7" r="3.5" fill="#667"/>
+<circle cx="517.0" cy="112.7" r="3.5" fill="#667"/>
+<circle cx="520.1" cy="119.8" r="3.5" fill="#667"/>
+<circle cx="523.1" cy="115.9" r="3.5" fill="#667"/>
+<circle cx="526.2" cy="123.1" r="3.5" fill="#667"/>
+<circle cx="529.2" cy="119.3" r="3.5" fill="#667"/>
+<circle cx="532.3" cy="126.5" r="3.5" fill="#667"/>
+<circle cx="535.3" cy="133.8" r="3.5" fill="#667"/>
+<circle cx="538.4" cy="130.1" r="3.5" fill="#667"/>
+<circle cx="541.4" cy="137.5" r="3.5" fill="#667"/>
+<circle cx="544.5" cy="144.9" r="3.5" fill="#667"/>
+<circle cx="547.5" cy="141.4" r="3.5" fill="#667"/>
+<circle cx="550.6" cy="149.0" r="3.5" fill="#667"/>
+<circle cx="553.6" cy="156.6" r="3.5" fill="#667"/>
+<circle cx="556.7" cy="153.4" r="3.5" fill="#667"/>
+<circle cx="559.7" cy="161.2" r="3.5" fill="#667"/>
+<circle cx="562.8" cy="158.1" r="3.5" fill="#667"/>
+<circle cx="565.8" cy="166.2" r="3.5" fill="#667"/>
+<circle cx="568.9" cy="174.4" r="3.5" fill="#667"/>
+<circle cx="571.9" cy="171.7" r="3.5" fill="#667"/>
+<circle cx="575.0" cy="180.1" r="3.5" fill="#667"/>
+<circle cx="486.5" cy="91.1" r="8" fill="none" stroke="#B31B1B" stroke-width="3"/>
+<text x="485" y="258" text-anchor="middle" font-size="14" fill="#777">one dot = one particle</text>
+<line x1="595" y1="140" x2="690" y2="140" stroke="#B31B1B" stroke-width="2.4" marker-end="url(#r)"/>
+<text x="642" y="124" text-anchor="middle" font-size="14" fill="#B31B1B">pick a point</text>
+<rect x="690" y="100" width="110" height="70" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
+<text x="745.0" y="130.6" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">Decoder</text>
+<text x="745.0" y="150.6" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">(neural net)</text>
+<line x1="800" y1="135" x2="825" y2="135" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="850" y="100" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">3D density</text>
+<ellipse cx="862" cy="150" rx="34" ry="30" fill="#bcd" stroke="#333" stroke-width="2"/>
+<ellipse cx="852" cy="145" rx="14" ry="14" fill="#9ab"/>
+<text x="450" y="305" text-anchor="middle" font-size="16" fill="#333">Moving along the dots, then decoding, plays out a molecule changing shape.</text>
+<text x="450" y="332" text-anchor="middle" font-size="16" fill="#555">Classical methods instead sort the particles into a few separate classes.</text>
+<text x="450.0" y="372" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course (dots invented); after Zhong et al., Nature Methods 18:176, 2021</text>
+</svg>
