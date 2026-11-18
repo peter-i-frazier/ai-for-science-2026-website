@@ -39,5 +39,4 @@
 <line x1="498.17999999999995" y1="215" x2="498.17999999999995" y2="387" stroke="#333" stroke-width="2" stroke-dasharray="6 4"/>
 <text x="504.17999999999995" y="407" text-anchor="start" font-size="15" fill="#333">chance: 33%</text>
 <line x1="345" y1="215" x2="345" y2="387" stroke="#333" stroke-width="2"/>
-<text x="450.0" y="437" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Table 2 (UHCS-600) of DeCost, Francis, Holm, arXiv:1702.01117</text>
 </svg>

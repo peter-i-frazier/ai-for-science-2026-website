@@ -37,5 +37,4 @@
 <text x="742" y="220" text-anchor="middle" font-size="14" fill="#333">trained to map y straight to x</text>
 <text x="742" y="238" text-anchor="middle" font-size="14" fill="#333">for one specific A;</text>
 <text x="742" y="256" text-anchor="middle" font-size="14" fill="#333">retrain if A changes</text>
-<text x="450" y="322" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; MRI example, shapes invented</text>
 </svg>

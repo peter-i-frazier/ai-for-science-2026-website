@@ -114,5 +114,4 @@
 <circle cx="800" cy="285" r="13" fill="#B31B1B" fill-opacity="0.5" stroke="#B31B1B" stroke-width="2"/>
 <text x="800" y="340" text-anchor="middle" font-size="14" fill="#333">subpart</text>
 <text x="800" y="28" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">masks (3 per click)</text>
-<text x="450.0" y="357" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; components from Kirillov et al. (arXiv:2304.02643), Sec. 3; images are synthetic</text>
 </svg>

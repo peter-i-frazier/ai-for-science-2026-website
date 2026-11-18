@@ -42,5 +42,4 @@
 <text x="36" y="352" text-anchor="start" font-size="17" fill="#B31B1B" font-weight="bold">GPT-5.1 456   |   Gemini-2.5-Pro 468   |   Gemini-3-Pro 335</text>
 <text x="20" y="405" text-anchor="start" font-size="16" fill="#333" font-weight="bold">B-Clean: drop every question that any of the three answers blind.</text>
 <text x="20" y="433" text-anchor="start" font-size="16" fill="#333">1,042 questions become 240. GPT-5.1 accuracy on them: 61.5% falls to 15.4%.</text>
-<text x="450.0" y="462" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Asadi et al., arXiv:2603.21687</text>
 </svg>

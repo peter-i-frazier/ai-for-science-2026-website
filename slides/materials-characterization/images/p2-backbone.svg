@@ -68,5 +68,4 @@
 <text x="335" y="397" text-anchor="start" font-size="16" fill="#333">the backbone stays fixed; only the head learns</text>
 <text x="335" y="419" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">needs few labels</text>
 <text x="880" y="262" text-anchor="end" font-size="14" fill="#B31B1B" font-weight="bold">red = trained on your labels</text>
-<text x="450.0" y="442" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; the numbers in the vector are invented</text>
 </svg>

@@ -35,5 +35,4 @@
 <polygon points="730,95 760,95 745,148" fill="#B31B1B"/>
 <text x="745" y="220" text-anchor="middle" font-size="14" fill="#333">a sharp tip is dragged over the surface</text>
 <text x="745" y="242" text-anchor="middle" font-size="14" fill="#B31B1B" font-weight="bold">a height map of the surface</text>
-<text x="450.0" y="262" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; schematic, not to scale</text>
 </svg>

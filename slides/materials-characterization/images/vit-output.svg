@@ -39,5 +39,4 @@
 <rect x="588" y="233" width="34" height="34" rx="0" fill="#7bb0e0" stroke="#333" stroke-width="1.5"/>
 <text x="572" y="290" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">a label per patch: a mask</text>
 <text x="305" y="262" text-anchor="start" font-size="14" fill="#555">patch-level tasks: segmentation</text>
-<text x="380.0" y="332" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; heads as in Dosovitskiy et al., arXiv:2010.11929, Sec. 3.1</text>
 </svg>

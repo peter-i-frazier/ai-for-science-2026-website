@@ -28,5 +28,4 @@
 <text x="20" y="303" text-anchor="start" font-size="16" fill="#333">and keeps the original pixel-by-pixel error.</text>
 <text x="20" y="345" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">No network is trained beforehand. With 50 simulator runs it cut the median error</text>
 <text x="20" y="373" text-anchor="start" font-size="16" fill="#B31B1B" font-weight="bold">by up to 290x against standard Bayesian optimization (synthetic thick specimen).</text>
-<text x="450.0" y="432" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Yoon et al., arXiv:2609.02126</text>
 </svg>

@@ -94,5 +94,4 @@
 <ellipse cx="852" cy="145" rx="14" ry="14" fill="#9ab"/>
 <text x="450" y="305" text-anchor="middle" font-size="16" fill="#333">Moving along the dots, then decoding, plays out a molecule changing shape.</text>
 <text x="450" y="332" text-anchor="middle" font-size="16" fill="#555">Classical methods instead sort the particles into a few separate classes.</text>
-<text x="450.0" y="372" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course (dots invented); after Zhong et al., Nature Methods 18:176, 2021</text>
 </svg>

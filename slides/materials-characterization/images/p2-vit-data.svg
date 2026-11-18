@@ -81,5 +81,4 @@
 <text x="760" y="320" text-anchor="middle" font-size="15" fill="#555">on the biggest set</text>
 <line x1="615" y1="20" x2="615" y2="320" stroke="#ccc" stroke-width="1.5"/>
 <line x1="280" y1="20" x2="280" y2="320" stroke="#ccc" stroke-width="1.5"/>
-<text x="450.0" y="337" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; set sizes from Dosovitskiy et al. (arXiv:2010.11929), Sec. 4.1 (JFT: 303M)</text>
 </svg>

@@ -43,5 +43,4 @@
 <text x="815" y="290" text-anchor="middle" font-size="20" fill="#333">...</text>
 <text x="815" y="305" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">N + 1 vectors out</text>
 <text x="440" y="345" text-anchor="middle" font-size="14" fill="#555">Layer norm rescales the vectors before each block. Blocks repeat: 12 in ViT-Base.</text>
-<text x="440.0" y="367" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; block structure from Dosovitskiy et al., arXiv:2010.11929, Sec. 3.1</text>
 </svg>

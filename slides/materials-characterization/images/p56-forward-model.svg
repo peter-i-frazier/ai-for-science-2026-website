@@ -32,5 +32,4 @@
 <rect x="480" y="345" width="400" height="70" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="2"/>
 <text x="680.0" y="385.95" text-anchor="middle" font-size="17" fill="#B31B1B" font-weight="bold">Diffusion methods: move 0.48 dB on average</text>
 <text x="450" y="442" text-anchor="middle" font-size="14" fill="#777">dB (PSNR): higher means closer to the true image; a larger move means the method broke more.</text>
-<text x="450.0" y="462" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Zheng et al., arXiv:2503.11043</text>
 </svg>

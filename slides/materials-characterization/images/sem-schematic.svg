@@ -19,5 +19,4 @@
 <text x="335" y="97" text-anchor="start" font-size="16" fill="#333" font-weight="bold">X-rays</text>
 <text x="335" y="117" text-anchor="start" font-size="14" fill="#555">carry the element's identity</text>
 <text x="380" y="292" text-anchor="middle" font-size="14" fill="#555">each signal needs its own detector; the beam visits one spot at a time, and each spot's signal becomes one pixel</text>
-<text x="380.0" y="307" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; simplified from standard SEM descriptions</text>
 </svg>

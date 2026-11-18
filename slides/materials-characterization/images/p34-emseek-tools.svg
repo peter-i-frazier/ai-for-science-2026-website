@@ -12,5 +12,4 @@
 <rect x="690.0" y="40" width="200" height="64" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="790.0" y="66.5" text-anchor="middle" font-size="16" fill="#333">consistency</text><text x="790.0" y="87.5" text-anchor="middle" font-size="16" fill="#333">checks</text>
 <line x1="569.0" y1="160" x2="790" y2="104" stroke="#666" stroke-width="2" marker-end="url(#a)"/>
 <text x="450" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">five fixed tools, called by the LLM</text>
-<text x="450.0" y="432" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; tools as listed in the EMSeek abstract (Chen, Yuan, You, Sci. Adv. 12(14):eaed0583)</text>
 </svg>

@@ -34,5 +34,4 @@
 <line x1="20" y1="446" x2="880" y2="446" stroke="#ccc" stroke-width="1.2"/>
 <rect x="270" y="462" width="120" height="34" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="330.0" y="484.0" text-anchor="middle" font-size="15" fill="#333">unchanged</text>
 <rect x="410" y="462" width="160" height="34" rx="8" fill="#fbeaea" stroke="#B31B1B" stroke-width="2.5"/><text x="490.0" y="484.0" text-anchor="middle" font-size="15" fill="#B31B1B" font-weight="bold">trained by you</text>
-<text x="450.0" y="522" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; rows follow Cellpose 2.0, MicroNet, MatSAM and DINOv2 as cited in this part</text>
 </svg>

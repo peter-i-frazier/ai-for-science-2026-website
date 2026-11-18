@@ -196,5 +196,4 @@
 <line x1="575" y1="30" x2="860" y2="30" stroke="#B31B1B" stroke-width="2"/>
 <text x="718" y="22" text-anchor="middle" font-size="16" fill="#B31B1B" font-weight="bold">head: your task</text>
 <text x="450" y="305" text-anchor="middle" font-size="14" fill="#555">5 x 5 filters, no padding: 28 - 5 + 1 = 24, pooling halves it, and so on. The 256 numbers are the feature vector.</text>
-<text x="440.0" y="327" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; a small CNN of the LeNet type (LeCun et al., Proc. IEEE 1998); sizes computed for this input</text>
 </svg>

@@ -57,5 +57,4 @@
 <text x="690" y="40" text-anchor="middle" font-size="16" fill="#333" font-weight="bold">one vector per patch, plus one extra [class] vector</text>
 <text x="690" y="270" text-anchor="middle" font-size="14" fill="#555">a learned position vector is added to each patch vector</text>
 <text x="690" y="292" text-anchor="middle" font-size="14" fill="#555">all vectors have the same length D</text>
-<text x="440.0" y="327" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; steps from Dosovitskiy et al., arXiv:2010.11929, Fig. 1 and Sec. 3.1</text>
 </svg>

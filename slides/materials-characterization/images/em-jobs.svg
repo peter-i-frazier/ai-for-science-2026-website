@@ -80,5 +80,4 @@
 <line x1="786" y1="105" x2="816" y2="81" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
 <text x="774" y="238" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Tracked objects</text>
 <text x="774" y="260" text-anchor="middle" font-size="14" fill="#555">across video frames</text>
-<text x="450.0" y="277" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; jobs from Jacobs, Comput. Mater. Sci. 211:111527, 2022; shapes are invented</text>
 </svg>

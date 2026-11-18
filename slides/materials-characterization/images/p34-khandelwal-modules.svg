@@ -19,5 +19,4 @@
 <line x1="670" y1="165" x2="670" y2="205" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
 <rect x="540" y="205" width="260" height="80" rx="8" fill="#e9eef2" stroke="#888" stroke-width="2"/><text x="670.0" y="229.0" text-anchor="middle" font-size="16" fill="#333">+2.1%</text><text x="670.0" y="250.0" text-anchor="middle" font-size="16" fill="#333">ViperGPT's gain over</text><text x="670.0" y="271.0" text-anchor="middle" font-size="16" fill="#333">BLIP-2 on GQA</text>
 <line x1="450" y1="50" x2="450" y2="290" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6 4"/>
-<text x="450.0" y="322" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; numbers from Khandelwal, Pavlick, Sun, arXiv:2311.06411; module chips are generic</text>
 </svg>

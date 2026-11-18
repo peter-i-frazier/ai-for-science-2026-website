@@ -40,5 +40,4 @@
 <text x="20" y="320" text-anchor="start" font-size="16" fill="#333">The VLM only places points; the segmenter draws the outlines. No person clicks.</text>
 <text x="20" y="348" text-anchor="start" font-size="16" fill="#333">Score (AP50) of the whole chain: 0.247 before adapting the VLM, 0.736 after.</text>
 <text x="20" y="372" text-anchor="start" font-size="14" fill="#777">Red = the part trained; grey = frozen.</text>
-<text x="450.0" y="412" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; after Fig. 1 of Mohinta and Cardona, arXiv:2609.14080</text>
 </svg>

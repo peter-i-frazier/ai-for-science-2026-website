@@ -34,5 +34,4 @@
   <line x1="760" y1="135" x2="805" y2="135" stroke="#555" stroke-width="2.5" marker-end="url(#a)"/>
   <rect x="810" y="100" width="75" height="70" rx="6" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
   <text x="847" y="141" text-anchor="middle" font-size="16" font-weight="bold" fill="#B31B1B">text</text>
-  <text x="450" y="312" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; layout follows LLaVA (Liu et al., NeurIPS 2023)</text>
 </svg>

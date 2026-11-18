@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="900" height="350" font-family="Helvetica, Arial, sans-serif">
+<defs><marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#555"/></marker></defs>
+<text x="450" y="30" text-anchor="middle" font-size="17" fill="#333" font-weight="bold">Many images x fit the same measurements y. A prior says which to prefer.</text>
+<rect x="20" y="55" width="270" height="170" rx="8" fill="#fff" stroke="#333" stroke-width="2.5"/>
+<text x="155" y="88" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Hand-written prior</text>
+<text x="155" y="120" text-anchor="middle" font-size="15" fill="#333">regularized least squares,</text>
+<text x="155" y="144" text-anchor="middle" font-size="15" fill="#333">compressed sensing:</text>
+<text x="155" y="168" text-anchor="middle" font-size="15" fill="#333">the prior is a formula</text>
+<text x="155" y="192" text-anchor="middle" font-size="15" fill="#333">(smooth, sparse)</text>
+<rect x="312" y="55" width="270" height="170" rx="8" fill="#fff" stroke="#333" stroke-width="2.5"/>
+<text x="447" y="88" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Statistical prior</text>
+<text x="447" y="120" text-anchor="middle" font-size="15" fill="#333">Bayesian inference:</text>
+<text x="447" y="144" text-anchor="middle" font-size="15" fill="#333">a probability model of images,</text>
+<text x="447" y="168" text-anchor="middle" font-size="15" fill="#333">giving likely reconstructions</text>
+<text x="447" y="192" text-anchor="middle" font-size="15" fill="#333">and their uncertainty</text>
+<rect x="604" y="55" width="270" height="170" rx="8" fill="#fff" stroke="#B31B1B" stroke-width="3"/>
+<text x="739" y="88" text-anchor="middle" font-size="18" fill="#B31B1B" font-weight="bold">Learned prior</text>
+<text x="739" y="120" text-anchor="middle" font-size="15" fill="#333">networks and diffusion models</text>
+<text x="739" y="144" text-anchor="middle" font-size="15" fill="#333">trained on example images</text>
+<text x="739" y="168" text-anchor="middle" font-size="15" fill="#333">supply the prior</text>
+<text x="739" y="192" text-anchor="middle" font-size="15" fill="#333">(Part 6)</text>
+<line x1="150" y1="232" x2="750" y2="232" stroke="#555" stroke-width="2.4" marker-end="url(#a)"/>
+<text x="450" y="262" text-anchor="middle" font-size="14" fill="#555">more of the prior is learned from data</text>
+<rect x="20" y="278" width="860" height="40" rx="8" fill="#e9eef2" stroke="#333" stroke-width="2"/>
+<text x="450" y="304" text-anchor="middle" font-size="15" fill="#333" font-weight="bold">All of them use the forward model A, the known physics of how an image becomes measurements</text>
+</svg>

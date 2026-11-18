@@ -29,5 +29,4 @@
 <rect x="480" y="303" width="177.21" height="24" rx="2" fill="#B31B1B" stroke="none" stroke-width="0"/>
 <text x="665.21" y="321" text-anchor="start" font-size="15" fill="#333" font-weight="bold">53.7%</text>
 <line x1="450" y1="70" x2="450" y2="340" stroke="#ccc" stroke-width="1.5" stroke-dasharray="6 4"/>
-<text x="450.0" y="372" text-anchor="middle" font-size="12" fill="#777">chart drawn for this course; Marsili et al., arXiv:2502.06787, Table 1 (left) and Table 2 (right); accuracy %</text>
 </svg>

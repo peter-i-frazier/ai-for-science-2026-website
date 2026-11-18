@@ -991,5 +991,5 @@
 <line x1="214" y1="94" x2="430" y2="20" stroke="#B31B1B" stroke-width="1.5" stroke-dasharray="6 4"/>
 <line x1="214" y1="184" x2="430" y2="380" stroke="#B31B1B" stroke-width="1.5" stroke-dasharray="6 4"/>
 <text x="610.0" y="408" text-anchor="middle" font-size="16" fill="#333">the red 10 x 10 patch, as numbers: 0 is black, 255 is white</text>
-<text x="420.0" y="432" text-anchor="middle" font-size="12" fill="#777">MNIST test image 0 (LeCun, Cortes, Burges; yann.lecun.com/exdb/mnist); diagram drawn for this course</text>
+<text x="420.0" y="432" text-anchor="middle" font-size="12" fill="#777">MNIST test image 0 (LeCun, Cortes, Burges)</text>
 </svg>

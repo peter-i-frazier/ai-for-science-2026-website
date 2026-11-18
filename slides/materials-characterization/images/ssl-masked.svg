@@ -35,5 +35,4 @@
   <text x="690" y="142" text-anchor="middle" font-size="13" fill="#fff">guess and the truth,</text>
   <text x="690" y="160" text-anchor="middle" font-size="13" fill="#fff">hidden patches only</text>
   <text x="690" y="228" text-anchor="middle" font-size="15" fill="#333">4. Score the guess</text>
-  <text x="450" y="280" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; recipe from He et al., "Masked autoencoders are scalable vision learners," arXiv:2111.06377</text>
 </svg>

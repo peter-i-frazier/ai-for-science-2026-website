@@ -42,5 +42,4 @@
   <text x="780" y="210" text-anchor="middle" font-size="15" fill="#333">image B (any other)</text>
   <line x1="735" y1="150" x2="640" y2="95" stroke="#555" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#a)"/>
   <text x="690" y="318" text-anchor="middle" font-size="15" fill="#555" font-weight="bold">push apart: z1 and z2 from the embedding of any view of B</text>
-  <text x="450" y="336" text-anchor="middle" font-size="12" fill="#777">diagram drawn for this course; recipe from Chen et al., SimCLR, ICML 2020, arXiv:2002.05709</text>
 </svg>
