@@ -49,7 +49,7 @@ No scientific background will be assumed. Scientific concepts will be explained 
 way.
 ## Homework
 
-Homework will be used to help students practice core ideas, where this practice is beneficial. We intend to have four homeworks in the course.
+Homework will be used to help students practice core ideas, where this practice is beneficial. There are three homeworks in the course.
 
 **Each assignment has two parts.**
 
