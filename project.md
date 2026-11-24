@@ -7,7 +7,7 @@ The project is required for students taking the course for 3 credits, as describ
 | What | When |
 |---|---|
 | [Proposal](#proposal) | Fri, Nov 6 |
-| [Presentation](#presentation) | Mon, Nov 30 -- Fri, Dec 4 |
+| [Presentation](#presentation) | Wed, Dec 2 or Fri, Dec 4 -- Mon, Dec 7 |
 | [Comments on classmates' presentations](#comments) | During the presentations |
 | [Report](#report) | Fri, Dec 18, 2:00pm |
 
@@ -35,13 +35,15 @@ Half a page to one page, as a PDF on Gradescope. One per team, with both names. 
 
 Peter will read every proposal and reply within 3 days, usually about scope. You can change direction afterward. If you're not sure whether an idea is too big, send it anyway.
 
-## <a name="presentation"></a>Presentation --- Mon, Nov 30 -- Fri, Dec 4
+## <a name="presentation"></a>Presentation --- Wed, Dec 2 or Fri, Dec 4 -- Mon, Dec 7
 
 Each project will give an oral presentation with slides in class.
 
 Everyone presents. If you're on a team, each of you speaks for part of the slot.
 
-I am planning on allocating 20 minutes for each project presentation, including questions, though this may shift a bit.  I'll set the exact length and the order once the proposals are in.
+Plan on giving a 10 minute presentation.
+
+Presentations will be either on Dec 2, 4, and 7, or just on Dec 4 and 7, depending on availability and the number of optional presentations.  If you are giving a presentation, fill out [this form](https://forms.gle/vuq81YVEVmD9Ncwp7) before Wed, Nov 25 to say when you can present.  I'll announce the schedule after that.
 
 Send me your slides as a PDF by 9pm the night before your slot.
 

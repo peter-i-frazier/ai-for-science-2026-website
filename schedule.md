@@ -40,8 +40,8 @@ Below, past dates are what we covered. Future dates are planned and may shift a 
 | [Vision and Materials Characterization](slides/materials-characterization/materials-characterization.html) | 2 | Wed, Nov 18 -- Fri, Nov 20 |
 | Virtual cell models | 1 | Mon, Nov 23 |
 | **No class** --- Thanksgiving Break | | Wed, Nov 25 and Fri, Nov 27 |
-| Project presentations | 3 | Mon, Nov 30 -- Fri, Dec 4 |
-| Wrap-up | 1 | Mon, Dec 7 (last day of instruction) |
+| [Vision and Materials Characterization](slides/materials-characterization/materials-characterization.html), continued | 1 | Mon, Nov 30 |
+| [Project presentations](project.html#presentation) | 2--3 | Wed, Dec 2 or Fri, Dec 4 -- Mon, Dec 7 (last day of instruction) |
 
 **Mon, Nov 2 and Wed, Nov 4 are Zoom only, for everyone.** The instructor is at the INFORMS Annual
 Meeting in San Francisco. Same time, [same Zoom link](syllabus.html#zoom), no in-person meeting.
