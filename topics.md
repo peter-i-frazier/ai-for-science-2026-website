@@ -117,7 +117,7 @@ Session 5 is this topic's celebrated-result-versus-critique pairing.
 
 ## 5. Virtual cell models
 
-**Taught:** Fri Nov 13 -- Mon Nov 16.
+**Planned:** Wed Dec 2, or dropped.
 
 Foundation models trained on single-cell transcriptomics, aiming at a model that predicts how a
 cell responds to a perturbation it has never seen. Same recipe as protein language models — mask,
@@ -175,7 +175,7 @@ pretrain at scale, fine-tune — applied to a much noisier measurement.
 
 ## 10. Computer vision and inverse problems in characterization
 
-**Taught:** Mon Sep 21 -- Wed Sep 23.
+**Taught:** Wed Nov 18 -- Mon Nov 23, continuing Mon Nov 30.
 
 <!-- units/09.md leaves open whether this is taught on CNNs or vision
      transformers. The papers are unaffected either way, but if it moves to
